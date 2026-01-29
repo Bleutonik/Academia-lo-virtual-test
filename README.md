@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Academia LoVirtual
 
-## Project info
+Plataforma de formación para Asistentes Virtuales.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologías
 
-## How can I edit this code?
+**Frontend:**
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
 
-There are several ways of editing your application.
+**Backend:**
+- Node.js + Express
+- PostgreSQL
+- JWT Authentication
 
-**Use Lovable**
+## Desarrollo Local
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Frontend
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Instalar dependencias
+npm install
 
-**Use your preferred IDE**
+# Crear archivo de entorno
+cp .env.example .env
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Ejecutar servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Ir a la carpeta del servidor
+cd server
 
-**Use GitHub Codespaces**
+# Instalar dependencias
+npm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Crear archivo de entorno
+cp .env.example .env
+# Editar .env con tu DATABASE_URL de PostgreSQL
 
-## What technologies are used for this project?
+# Ejecutar servidor
+npm run dev
+```
 
-This project is built with:
+## Despliegue
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Backend en Railway
 
-## How can I deploy this project?
+1. Crear cuenta en [Railway](https://railway.app)
+2. Crear nuevo proyecto
+3. Agregar PostgreSQL desde "Add Database"
+4. Crear nuevo servicio desde GitHub (seleccionar carpeta `server`)
+5. Configurar variables de entorno:
+   - `DATABASE_URL` (se configura automáticamente con PostgreSQL)
+   - `JWT_SECRET` (crear una clave secreta fuerte)
+   - `FRONTEND_URL` (URL de Vercel, ej: `https://tu-app.vercel.app`)
+   - `NODE_ENV=production`
+6. Deploy automático al hacer push
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Frontend en Vercel
 
-## Can I connect a custom domain to my Lovable project?
+1. Crear cuenta en [Vercel](https://vercel.com)
+2. Importar repositorio de GitHub
+3. Configurar:
+   - **Framework Preset:** Vite
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Agregar variable de entorno:
+   - `VITE_API_URL` = URL de tu backend en Railway (ej: `https://tu-api.railway.app`)
+5. Deploy
 
-Yes, you can!
+### Pasos para GitHub
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+# Inicializar git (si no está inicializado)
+git init
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Agregar todos los archivos
+git add .
+
+# Crear commit inicial
+git commit -m "Initial commit: Academia LoVirtual"
+
+# Agregar repositorio remoto
+git remote add origin https://github.com/tu-usuario/academia-lovirtual.git
+
+# Push a GitHub
+git push -u origin main
+```
+
+## Credenciales de Prueba
+
+- **Usuario:** admin
+- **Contraseña:** admin123
+
+## Estructura del Proyecto
+
+```
+academia-lovirtual/
+├── src/                    # Frontend React
+│   ├── components/         # Componentes UI
+│   ├── contexts/           # Context providers
+│   ├── data/              # Datos de cursos
+│   ├── pages/             # Páginas
+│   └── services/          # API client
+├── server/                 # Backend Node.js
+│   ├── index.js           # Servidor Express
+│   └── package.json
+├── .env.example           # Variables de entorno (frontend)
+└── vercel.json            # Config Vercel
+```

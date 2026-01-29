@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CoursesCarousel from "@/components/CoursesCarousel";
 import StatsSection from "@/components/StatsSection";
@@ -9,6 +10,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Navbar />
       <main className="flex-grow">
         <Hero />
         <CoursesCarousel />

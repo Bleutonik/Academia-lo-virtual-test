@@ -6,91 +6,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CourseCard, { Course } from "./CourseCard";
-import {
-  Rocket,
-  Calculator,
-  Briefcase,
-  Users,
-  Palette,
-  Globe,
-  Brain,
-} from "lucide-react";
-
-const courses: Course[] = [
-  {
-    id: 1,
-    title: "Introducción a LoVirtual",
-    link: "https://intro-lovirtual.lovable.app/",
-    duration: "2 Semanas",
-    lessons: "10 Lecciones",
-    description:
-      "El primer paso de tu carrera. Conoce nuestra cultura, historia y las bases para ser un Asistente Virtual exitoso.",
-    icon: <Rocket className="w-7 h-7" />,
-  },
-  {
-    id: 2,
-    title: "Contabilidad para AVs",
-    link: "https://cursocontabilidad.lovable.app/",
-    duration: "4 Semanas",
-    lessons: "9 Módulos",
-    description:
-      "Domina la gestión financiera, conciliaciones, flujo de caja y conviértete en un asesor proactivo.",
-    icon: <Calculator className="w-7 h-7" />,
-  },
-  {
-    id: 3,
-    title: "Administración y Gestión",
-    link: "https://lovirtualadmin.lovable.app/",
-    duration: "3 Semanas",
-    lessons: "8 Módulos",
-    description:
-      "Herramientas de organización, manejo de agendas ejecutivas y liderazgo de procesos administrativos.",
-    icon: <Briefcase className="w-7 h-7" />,
-  },
-  {
-    id: 4,
-    title: "Community Management (CM)",
-    link: "https://lovirtualcm.lovable.app/",
-    duration: "4 Semanas",
-    lessons: "12 Lecciones",
-    description:
-      "Gestión de redes sociales, creación de contenido estratégico y métricas para marcas globales.",
-    icon: <Users className="w-7 h-7" />,
-  },
-  {
-    id: 5,
-    title: "Diseño Gráfico Corporativo",
-    link: "https://lovirtualgrafico.lovable.app/",
-    duration: "4 Semanas",
-    lessons: "10 Lecciones",
-    description:
-      "Domina la identidad visual, Canva, herramientas de Adobe y crea piezas de impacto.",
-    icon: <Palette className="w-7 h-7" />,
-  },
-  {
-    id: 6,
-    title: "Inglés para Negocios",
-    link: "https://lovirtualus.lovable.app/",
-    duration: "Continua",
-    lessons: "Práctica Diaria",
-    description:
-      "Perfecciona tu comunicación en inglés para interactuar con clientes internacionales con confianza.",
-    icon: <Globe className="w-7 h-7" />,
-  },
-  {
-    id: 7,
-    title: "Inteligencia Artificial",
-    link: "https://lovirtual-ia.lovable.app/",
-    duration: "3 Semanas",
-    lessons: "8 Módulos",
-    description:
-      "Domina las herramientas de IA para optimizar tu productividad y ofrecer soluciones innovadoras a tus clientes.",
-    icon: <Brain className="w-7 h-7" />,
-  },
-];
+import CourseCard from "./CourseCard";
+import { coursesData } from "@/data/courses";
 
 const CoursesCarousel = () => {
+  const courses = coursesData.map(course => ({
+    id: course.id,
+    title: course.title,
+    slug: course.slug,
+    duration: course.duration,
+    totalLessons: course.totalLessons,
+    description: course.description,
+    icon: course.icon,
+    color: course.color,
+    moduleIds: course.modules.map(m => m.id)
+  }));
+
   return (
     <section id="cursos" className="py-16 lg:py-20 px-4 lg:px-6 bg-background scroll-mt-20">
       <div className="container max-w-7xl mx-auto">
