@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = 'https://academia-lo-virtual-test-production.up.railway.app';
 
 class ApiService {
   private token: string | null = null;
