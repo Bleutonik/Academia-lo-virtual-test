@@ -54,7 +54,7 @@ const CoursesCarousel = () => {
                 className="basis-full md:basis-1/2 lg:basis-1/3"
               >
                 <div className="p-2">
-                  <CourseCard course={course} index={index} />
+                  <CourseCard course={course} index={index} showButton={false} />
                 </div>
               </CarouselItem>
             ))}

@@ -22,9 +22,10 @@ export interface Course {
 interface CourseCardProps {
   course: Course;
   index: number;
+  showButton?: boolean;
 }
 
-const CourseCard = ({ course, index }: CourseCardProps) => {
+const CourseCard = ({ course, index, showButton = true }: CourseCardProps) => {
   const { getCourseProgress, isCourseComplete } = useProgress();
   const progress = getCourseProgress(course.id, course.moduleIds);
   const completed = isCourseComplete(course.id, course.moduleIds);
@@ -78,15 +79,17 @@ const CourseCard = ({ course, index }: CourseCardProps) => {
         )}
 
         {/* CTA Button */}
-        <Button
-          asChild
-          className={`w-full bg-gradient-to-r ${course.color} hover:opacity-90 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg group`}
-        >
-          <Link to={`/curso/${course.slug}`}>
-            {completed ? "Ver certificado" : progress > 0 ? "Continuar" : "Iniciar Curso"}
-            <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
+        {showButton && (
+          <Button
+            asChild
+            className={`w-full bg-gradient-to-r ${course.color} hover:opacity-90 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg group`}
+          >
+            <Link to={`/curso/${course.slug}`}>
+              {completed ? "Ver certificado" : progress > 0 ? "Continuar" : "Iniciar Curso"}
+              <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        )}
       </div>
     </motion.div>
   );
