@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LogIn, User, Lock, GraduationCap, Eye, EyeOff } from "lucide-react";
+import { LogIn, User, Lock, GraduationCap, Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -157,20 +157,21 @@ const LoginPage = () => {
                 )}
               </Button>
             </form>
-
-            {/* Info Box */}
-            <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-              <p className="text-sm text-muted-foreground text-center">
-                <strong>Credenciales de prueba:</strong><br />
-                Usuario: <code className="bg-muted px-1 rounded">admin</code><br />
-                Contraseña: <code className="bg-muted px-1 rounded">admin123</code>
-              </p>
-            </div>
           </CardContent>
         </Card>
 
+        {/* Back Button */}
+        <Button
+          variant="ghost"
+          className="w-full mt-4"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Atrás
+        </Button>
+
         {/* Footer */}
-        <p className="text-center text-sm text-muted-foreground mt-6">
+        <p className="text-center text-sm text-muted-foreground mt-4">
           Plataforma exclusiva para estudiantes registrados.<br />
           Contacta al administrador para obtener acceso.
         </p>
