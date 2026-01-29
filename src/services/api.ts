@@ -115,6 +115,28 @@ class ApiService {
     });
   }
 
+  // File Upload
+  async uploadFiles(files: File[]): Promise<UploadedFile[]> {
+    const formData = new FormData();
+    files.forEach(file => formData.append('files', file));
+
+    const response = await fetch(`${API_URL}/api/upload`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.token}`,
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ error: 'Error al subir archivos' }));
+      throw new Error(error.error || 'Error al subir archivos');
+    }
+
+    const data = await response.json();
+    return data.files;
+  }
+
   // Submissions
   async submitSprint(data: SubmitSprintData) {
     return this.request<{ id: number; message: string }>('/api/submissions', {
@@ -188,6 +210,14 @@ export interface Progress {
   };
 }
 
+export interface UploadedFile {
+  filename: string;
+  originalName: string;
+  mimetype: string;
+  size: number;
+  url: string;
+}
+
 export interface SprintSubmission {
   id: number;
   userId?: number;
@@ -199,6 +229,7 @@ export interface SprintSubmission {
   moduleName: string;
   sprintTitle: string;
   answers: { taskId: string; question: string; answer: string }[];
+  attachments?: UploadedFile[];
   status: 'pending' | 'approved' | 'rejected';
   feedback?: string;
   submittedAt: string;
@@ -213,6 +244,7 @@ export interface SubmitSprintData {
   moduleName: string;
   sprintTitle: string;
   answers: { taskId: string; question: string; answer: string }[];
+  attachments?: UploadedFile[];
 }
 
 export interface Certificates {

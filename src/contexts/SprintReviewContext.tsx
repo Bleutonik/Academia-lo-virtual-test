@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import api, { SprintSubmission as ApiSubmission, SubmitSprintData } from '@/services/api';
+import api, { SprintSubmission as ApiSubmission, SubmitSprintData, UploadedFile } from '@/services/api';
 import { useAuth } from './AuthContext';
 
 export interface SprintSubmission {
@@ -15,6 +15,7 @@ export interface SprintSubmission {
   moduleName: string;
   sprintTitle: string;
   answers: { taskId: string; question: string; answer: string }[];
+  attachments?: UploadedFile[];
   submittedAt: string;
   status: 'pending' | 'approved' | 'rejected';
   reviewedAt?: string;
@@ -72,6 +73,7 @@ export const SprintReviewProvider: React.FC<{ children: ReactNode }> = ({ childr
         moduleName: s.moduleName,
         sprintTitle: s.sprintTitle,
         answers: s.answers,
+        attachments: s.attachments,
         submittedAt: s.submittedAt,
         status: s.status,
         reviewedAt: s.reviewedAt,

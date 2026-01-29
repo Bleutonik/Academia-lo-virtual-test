@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Zap, CheckCircle, Clock, Send, XCircle, AlertTriangle } from "lucide-react";
+import { Zap, CheckCircle, Clock, Send, AlertTriangle, Upload, X, FileText, Image as ImageIcon, File } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +11,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useSprintReview } from "@/contexts/SprintReviewContext";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
+import api, { UploadedFile } from "@/services/api";
 
 interface SprintContentProps {
   course: CourseData;
@@ -31,6 +32,11 @@ const SprintContent = ({ course, module, onComplete }: SprintContentProps) => {
   } = useSprintReview();
 
   const [answers, setAnswers] = useState<{ [key: string]: string }>({});
+  const [files, setFiles] = useState<File[]>([]);
+  const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
+  const [isUploading, setIsUploading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const sprint = module.sprint;
 
@@ -56,7 +62,55 @@ const SprintContent = ({ course, module, onComplete }: SprintContentProps) => {
 
   const allAnswered = sprint.tasks.every(task => answers[task.id]?.trim().length > 0);
 
-  const handleSubmit = () => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const newFiles = Array.from(e.target.files);
+      const totalFiles = files.length + newFiles.length;
+
+      if (totalFiles > 5) {
+        toast({
+          title: "Límite excedido",
+          description: "Solo puedes adjuntar hasta 5 archivos.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      // Check file sizes (max 10MB each)
+      const oversizedFiles = newFiles.filter(f => f.size > 10 * 1024 * 1024);
+      if (oversizedFiles.length > 0) {
+        toast({
+          title: "Archivo muy grande",
+          description: "Cada archivo debe ser menor a 10MB.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      setFiles([...files, ...newFiles]);
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setFiles(files.filter((_, i) => i !== index));
+  };
+
+  const getFileIcon = (file: File) => {
+    if (file.type.startsWith('image/')) {
+      return <ImageIcon className="w-4 h-4" />;
+    } else if (file.type.includes('pdf')) {
+      return <FileText className="w-4 h-4" />;
+    }
+    return <File className="w-4 h-4" />;
+  };
+
+  const formatFileSize = (bytes: number) => {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  };
+
+  const handleSubmit = async () => {
     if (!isAuthenticated || !currentUser) {
       toast({
         title: "Inicia sesión",
@@ -76,30 +130,64 @@ const SprintContent = ({ course, module, onComplete }: SprintContentProps) => {
       return;
     }
 
-    // Prepare answers array
-    const answersArray = sprint.tasks.map(task => ({
-      taskId: task.id,
-      question: task.question,
-      answer: answers[task.id]
-    }));
+    setIsSubmitting(true);
 
-    submitSprint({
-      oddsId: course.id,
-      oddsSlug: course.slug,
-      moduleId: module.id,
-      sprintId: sprint.id,
-      userId: currentUser.id,
-      userName: currentUser.fullName,
-      courseName: course.title,
-      moduleName: module.title,
-      sprintTitle: sprint.title,
-      answers: answersArray
-    });
+    try {
+      // Upload files first if there are any
+      let attachments: UploadedFile[] = [];
+      if (files.length > 0) {
+        setIsUploading(true);
+        try {
+          attachments = await api.uploadFiles(files);
+          setUploadedFiles(attachments);
+        } catch (error) {
+          toast({
+            title: "Error al subir archivos",
+            description: error instanceof Error ? error.message : "No se pudieron subir los archivos",
+            variant: "destructive"
+          });
+          setIsUploading(false);
+          setIsSubmitting(false);
+          return;
+        }
+        setIsUploading(false);
+      }
 
-    toast({
-      title: "Sprint enviado",
-      description: "Tu sprint ha sido enviado para revisión. Recibirás retroalimentación pronto.",
-    });
+      // Prepare answers array
+      const answersArray = sprint.tasks.map(task => ({
+        taskId: task.id,
+        question: task.question,
+        answer: answers[task.id]
+      }));
+
+      await submitSprint({
+        courseId: course.id,
+        courseSlug: course.slug,
+        courseName: course.title,
+        moduleId: module.id,
+        moduleName: module.title,
+        sprintTitle: sprint.title,
+        answers: answersArray,
+        attachments: attachments
+      });
+
+      toast({
+        title: "Sprint enviado",
+        description: "Tu sprint ha sido enviado para revisión. Recibirás retroalimentación pronto.",
+      });
+
+      // Clear files after successful submission
+      setFiles([]);
+      setUploadedFiles([]);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "No se pudo enviar el sprint",
+        variant: "destructive"
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   // Show approved state
@@ -279,16 +367,92 @@ const SprintContent = ({ course, module, onComplete }: SprintContentProps) => {
         </motion.div>
       ))}
 
+      {/* File Upload Section */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Upload className="w-5 h-5" />
+            Archivos Adjuntos (Opcional)
+          </CardTitle>
+          <CardDescription>
+            Puedes adjuntar capturas de pantalla, documentos o archivos relacionados con tu trabajo.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleFileChange}
+            multiple
+            accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip,.rar"
+            className="hidden"
+          />
+
+          <div
+            onClick={() => fileInputRef.current?.click()}
+            className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
+          >
+            <Upload className="w-10 h-10 mx-auto text-muted-foreground mb-3" />
+            <p className="text-sm font-medium">Haz clic para seleccionar archivos</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Máximo 5 archivos, 10MB cada uno. Formatos: imágenes, PDF, documentos Office, ZIP
+            </p>
+          </div>
+
+          {/* File List */}
+          {files.length > 0 && (
+            <div className="mt-4 space-y-2">
+              <p className="text-sm font-medium">Archivos seleccionados ({files.length}/5):</p>
+              {files.map((file, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-3 bg-muted/50 rounded-lg"
+                >
+                  <div className="flex items-center gap-3">
+                    {getFileIcon(file)}
+                    <div>
+                      <p className="text-sm font-medium truncate max-w-[200px]">{file.name}</p>
+                      <p className="text-xs text-muted-foreground">{formatFileSize(file.size)}</p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => removeFile(index)}
+                  >
+                    <X className="w-4 h-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
       {/* Submit Button */}
       <div className="flex justify-end pt-4">
         <Button
           size="lg"
           onClick={handleSubmit}
-          disabled={!allAnswered || !isAuthenticated}
+          disabled={!allAnswered || !isAuthenticated || isSubmitting || isUploading}
           className={`bg-gradient-to-r ${course.color}`}
         >
-          <Send className="w-4 h-4 mr-2" />
-          {rejected ? 'Reenviar Sprint' : 'Enviar Sprint para Revisión'}
+          {isUploading ? (
+            <>
+              <span className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              Subiendo archivos...
+            </>
+          ) : isSubmitting ? (
+            <>
+              <span className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              Enviando...
+            </>
+          ) : (
+            <>
+              <Send className="w-4 h-4 mr-2" />
+              {rejected ? 'Reenviar Sprint' : 'Enviar Sprint para Revisión'}
+            </>
+          )}
         </Button>
       </div>
 

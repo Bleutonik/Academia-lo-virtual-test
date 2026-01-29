@@ -4,9 +4,52 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Create uploads directory if it doesn't exist
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+// Multer configuration for file uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, uploadsDir);
+  },
+  filename: (req, file, cb) => {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB limit
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = /jpeg|jpg|png|gif|pdf|doc|docx|xls|xlsx|ppt|pptx|txt|zip|rar/;
+    const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = allowedTypes.test(file.mimetype) ||
+                     file.mimetype.includes('image') ||
+                     file.mimetype.includes('pdf') ||
+                     file.mimetype.includes('document') ||
+                     file.mimetype.includes('sheet') ||
+                     file.mimetype.includes('presentation') ||
+                     file.mimetype.includes('text') ||
+                     file.mimetype.includes('zip') ||
+                     file.mimetype.includes('rar');
+
+    if (extname || mimetype) {
+      return cb(null, true);
+    }
+    cb(new Error('Tipo de archivo no permitido'));
+  }
+});
 
 // Database connection
 const pool = new Pool({
@@ -20,6 +63,9 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+
+// Serve uploaded files
+app.use('/uploads', express.static(uploadsDir));
 
 // JWT Secret
 const JWT_SECRET = process.env.JWT_SECRET || 'academia-lovirtual-secret-key-2024';
@@ -94,12 +140,25 @@ const initDB = async () => {
         module_name VARCHAR(200) NOT NULL,
         sprint_title VARCHAR(200) NOT NULL,
         answers JSONB NOT NULL,
+        attachments JSONB DEFAULT '[]',
         status VARCHAR(20) DEFAULT 'pending',
         feedback TEXT,
         reviewed_by INTEGER REFERENCES users(id),
         reviewed_at TIMESTAMP,
         submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
+    `);
+
+    // Add attachments column if it doesn't exist (for existing databases)
+    await pool.query(`
+      DO $$
+      BEGIN
+        IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                       WHERE table_name='sprint_submissions' AND column_name='attachments')
+        THEN
+          ALTER TABLE sprint_submissions ADD COLUMN attachments JSONB DEFAULT '[]';
+        END IF;
+      END $$;
     `);
 
     await pool.query(`
@@ -473,19 +532,44 @@ app.post('/api/progress/sprint', authenticateToken, async (req, res) => {
   }
 });
 
+// ==================== FILE UPLOAD ROUTES ====================
+
+// Upload files
+app.post('/api/upload', authenticateToken, upload.array('files', 5), (req, res) => {
+  try {
+    if (!req.files || req.files.length === 0) {
+      return res.status(400).json({ error: 'No se subieron archivos' });
+    }
+
+    const baseUrl = process.env.API_URL || `http://localhost:${PORT}`;
+    const files = req.files.map(file => ({
+      filename: file.filename,
+      originalName: file.originalname,
+      mimetype: file.mimetype,
+      size: file.size,
+      url: `${baseUrl}/uploads/${file.filename}`
+    }));
+
+    res.json({ files });
+  } catch (error) {
+    console.error('Upload error:', error);
+    res.status(500).json({ error: 'Error al subir archivos' });
+  }
+});
+
 // ==================== SPRINT SUBMISSION ROUTES ====================
 
-// Submit sprint
+// Submit sprint with attachments
 app.post('/api/submissions', authenticateToken, async (req, res) => {
   try {
-    const { courseId, courseSlug, courseName, moduleId, moduleName, sprintTitle, answers } = req.body;
+    const { courseId, courseSlug, courseName, moduleId, moduleName, sprintTitle, answers, attachments } = req.body;
 
     const result = await pool.query(`
       INSERT INTO sprint_submissions
-        (user_id, course_id, course_slug, course_name, module_id, module_name, sprint_title, answers)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        (user_id, course_id, course_slug, course_name, module_id, module_name, sprint_title, answers, attachments)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING *
-    `, [req.user.id, courseId, courseSlug, courseName, moduleId, moduleName, sprintTitle, JSON.stringify(answers)]);
+    `, [req.user.id, courseId, courseSlug, courseName, moduleId, moduleName, sprintTitle, JSON.stringify(answers), JSON.stringify(attachments || [])]);
 
     res.status(201).json({
       id: result.rows[0].id,
@@ -517,6 +601,7 @@ app.get('/api/submissions/me', authenticateToken, async (req, res) => {
       moduleName: row.module_name,
       sprintTitle: row.sprint_title,
       answers: row.answers,
+      attachments: row.attachments || [],
       status: row.status,
       feedback: row.feedback,
       submittedAt: row.submitted_at,
@@ -551,6 +636,7 @@ app.get('/api/submissions', authenticateToken, requireAdmin, async (req, res) =>
       moduleName: row.module_name,
       sprintTitle: row.sprint_title,
       answers: row.answers,
+      attachments: row.attachments || [],
       status: row.status,
       feedback: row.feedback,
       submittedAt: row.submitted_at,
@@ -586,6 +672,7 @@ app.get('/api/submissions/pending', authenticateToken, requireAdmin, async (req,
       moduleName: row.module_name,
       sprintTitle: row.sprint_title,
       answers: row.answers,
+      attachments: row.attachments || [],
       status: row.status,
       feedback: row.feedback,
       submittedAt: row.submitted_at
