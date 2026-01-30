@@ -594,6 +594,8 @@ app.get('/api/submissions/me', authenticateToken, async (req, res) => {
 
     const submissions = result.rows.map(row => ({
       id: row.id,
+      userId: row.user_id,
+      userName: row.user_name,
       oddsSlug: row.course_slug,
       courseId: row.course_id,
       courseName: row.course_name,

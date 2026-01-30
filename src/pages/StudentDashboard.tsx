@@ -1,5 +1,5 @@
-import { useEffect, useCallback } from "react";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   BookOpen, LogOut, Award, Clock, CheckCircle, XCircle,
@@ -18,17 +18,10 @@ import * as Icons from "lucide-react";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
   const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress } = useProgress();
-  const { getSubmissionsByUser, refreshSubmissions } = useSprintReview();
-
-  // Memoize refresh function
-  const loadDashboardData = useCallback(async () => {
-    if (isAuthenticated && currentUser) {
-      await Promise.all([refreshProgress(), refreshSubmissions()]);
-    }
-  }, [isAuthenticated, currentUser, refreshProgress, refreshSubmissions]);
+  const { getSubmissionsByUser, refreshSubmissions, submissions } = useSprintReview();
+  const [isRefreshing, setIsRefreshing] = useState(true);
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -37,10 +30,49 @@ const StudentDashboard = () => {
     }
   }, [isAuthenticated, currentUser, navigate, authLoading]);
 
-  // Refresh data when dashboard loads or user navigates here
+  // Refresh data every time the component mounts or becomes visible
   useEffect(() => {
-    loadDashboardData();
-  }, [location.key, loadDashboardData]);
+    let isMounted = true;
+
+    const loadData = async () => {
+      if (isAuthenticated && currentUser) {
+        setIsRefreshing(true);
+        try {
+          await refreshProgress();
+          await refreshSubmissions();
+        } catch (error) {
+          console.error('Error refreshing data:', error);
+        }
+        if (isMounted) {
+          setIsRefreshing(false);
+        }
+      }
+    };
+
+    // Load data on mount
+    loadData();
+
+    // Also refresh when page becomes visible (user returns to tab)
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        loadData();
+      }
+    };
+
+    // Refresh when window gains focus
+    const handleFocus = () => {
+      loadData();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      isMounted = false;
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [isAuthenticated, currentUser]); // Re-run if auth changes
 
   if (authLoading || !isAuthenticated || !currentUser) {
     return (
