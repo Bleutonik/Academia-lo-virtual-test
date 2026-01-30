@@ -44,6 +44,7 @@ interface ProgressContextType {
   earnCertificate: (courseId: string, courseName: string) => Promise<CertificateData>;
   hasCertificate: (courseId: string) => boolean;
   getCertificate: (courseId: string) => CertificateData | undefined;
+  refreshProgress: () => Promise<void>;
 }
 
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
@@ -300,6 +301,11 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     return certificates.find(c => c.courseId === courseId);
   };
 
+  const refreshProgress = async () => {
+    await loadProgress();
+    await loadCertificates();
+  };
+
   return (
     <ProgressContext.Provider value={{
       progress,
@@ -318,7 +324,8 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
       getCourseProgress,
       earnCertificate,
       hasCertificate,
-      getCertificate
+      getCertificate,
+      refreshProgress
     }}>
       {children}
     </ProgressContext.Provider>

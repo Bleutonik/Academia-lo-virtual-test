@@ -19,8 +19,8 @@ import * as Icons from "lucide-react";
 const StudentDashboard = () => {
   const navigate = useNavigate();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
-  const { getCourseProgress, isCourseComplete, hasCertificate } = useProgress();
-  const { getSubmissionsByUser } = useSprintReview();
+  const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress } = useProgress();
+  const { getSubmissionsByUser, refreshSubmissions } = useSprintReview();
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -28,6 +28,14 @@ const StudentDashboard = () => {
       navigate("/login", { replace: true });
     }
   }, [isAuthenticated, currentUser, navigate, authLoading]);
+
+  // Refresh data when dashboard loads
+  useEffect(() => {
+    if (isAuthenticated && currentUser) {
+      refreshProgress();
+      refreshSubmissions();
+    }
+  }, [isAuthenticated, currentUser]);
 
   if (authLoading || !isAuthenticated || !currentUser) {
     return (

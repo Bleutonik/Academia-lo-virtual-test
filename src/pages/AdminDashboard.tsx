@@ -56,8 +56,8 @@ import { useToast } from "@/hooks/use-toast";
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading } = useAuth();
-  const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission } = useSprintReview();
+  const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading, refreshUsers } = useAuth();
+  const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, refreshSubmissions } = useSprintReview();
 
   const [activeTab, setActiveTab] = useState("overview");
   const [searchTerm, setSearchTerm] = useState("");
@@ -86,6 +86,14 @@ const AdminDashboard = () => {
       navigate("/login", { replace: true });
     }
   }, [isAdmin, navigate, authLoading]);
+
+  // Refresh data when dashboard loads
+  useEffect(() => {
+    if (isAdmin) {
+      refreshSubmissions();
+      refreshUsers();
+    }
+  }, [isAdmin]);
 
   if (authLoading || !isAdmin) {
     return (
