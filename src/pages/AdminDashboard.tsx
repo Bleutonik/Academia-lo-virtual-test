@@ -865,97 +865,101 @@ const AdminDashboard = () => {
 
       {/* Review Dialog */}
       <Dialog open={isReviewOpen} onOpenChange={setIsReviewOpen}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
+        <DialogContent className="max-w-2xl max-h-[85vh] flex flex-col p-0">
+          <DialogHeader className="px-6 pt-6 pb-4 border-b">
             <DialogTitle>Revisar Sprint</DialogTitle>
             <DialogDescription>
               {selectedSubmission?.userName} - {selectedSubmission?.courseName}
             </DialogDescription>
           </DialogHeader>
+
           {selectedSubmission && (
-            <div className="space-y-4 py-4">
-              <div className="flex items-center gap-2">
-                <Badge variant={
-                  selectedSubmission.status === 'approved' ? 'default' :
-                  selectedSubmission.status === 'rejected' ? 'destructive' : 'secondary'
-                }>
-                  {selectedSubmission.status === 'approved' ? 'Aprobado' :
-                   selectedSubmission.status === 'rejected' ? 'Rechazado' : 'Pendiente'}
-                </Badge>
-                <span className="text-sm text-muted-foreground">
-                  Enviado: {new Date(selectedSubmission.submittedAt).toLocaleString()}
-                </span>
-              </div>
-
+            <div className="flex-1 overflow-y-auto px-6 py-4 scroll-smooth">
               <div className="space-y-4">
-                <h4 className="font-semibold">{selectedSubmission.sprintTitle}</h4>
-                {selectedSubmission.answers.map((answer, index) => (
-                  <Card key={answer.taskId}>
-                    <CardContent className="pt-4">
-                      <p className="font-medium text-sm mb-2">
-                        Pregunta {index + 1}: {answer.question}
-                      </p>
-                      <div className="bg-muted p-3 rounded-lg">
-                        <p className="text-sm whitespace-pre-wrap">{answer.answer}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                <div className="flex items-center gap-2">
+                  <Badge variant={
+                    selectedSubmission.status === 'approved' ? 'default' :
+                    selectedSubmission.status === 'rejected' ? 'destructive' : 'secondary'
+                  }>
+                    {selectedSubmission.status === 'approved' ? 'Aprobado' :
+                     selectedSubmission.status === 'rejected' ? 'Rechazado' : 'Pendiente'}
+                  </Badge>
+                  <span className="text-sm text-muted-foreground">
+                    Enviado: {new Date(selectedSubmission.submittedAt).toLocaleString()}
+                  </span>
+                </div>
 
-              {/* Attachments Section */}
-              {selectedSubmission.attachments && selectedSubmission.attachments.length > 0 && (
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm">Archivos Adjuntos ({selectedSubmission.attachments.length})</h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    {selectedSubmission.attachments.map((file, index) => (
-                      <a
-                        key={index}
-                        href={file.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                      >
-                        {file.mimetype.startsWith('image/') ? (
-                          <img src={file.url} alt={file.originalName} className="w-10 h-10 object-cover rounded" />
-                        ) : (
-                          <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center">
-                            <Eye className="w-5 h-5 text-primary" />
-                          </div>
-                        )}
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium truncate">{file.originalName}</p>
-                          <p className="text-xs text-muted-foreground">
-                            {(file.size / 1024).toFixed(1)} KB
-                          </p>
+                <div className="space-y-4">
+                  <h4 className="font-semibold">{selectedSubmission.sprintTitle}</h4>
+                  {selectedSubmission.answers.map((answer, index) => (
+                    <Card key={answer.taskId}>
+                      <CardContent className="pt-4">
+                        <p className="font-medium text-sm mb-2">
+                          Pregunta {index + 1}: {answer.question}
+                        </p>
+                        <div className="bg-muted p-3 rounded-lg">
+                          <p className="text-sm whitespace-pre-wrap">{answer.answer}</p>
                         </div>
-                      </a>
-                    ))}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+
+                {/* Attachments Section */}
+                {selectedSubmission.attachments && selectedSubmission.attachments.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-sm">Archivos Adjuntos ({selectedSubmission.attachments.length})</h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      {selectedSubmission.attachments.map((file, index) => (
+                        <a
+                          key={index}
+                          href={file.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                        >
+                          {file.mimetype.startsWith('image/') ? (
+                            <img src={file.url} alt={file.originalName} className="w-10 h-10 object-cover rounded" />
+                          ) : (
+                            <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center">
+                              <Eye className="w-5 h-5 text-primary" />
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium truncate">{file.originalName}</p>
+                            <p className="text-xs text-muted-foreground">
+                              {(file.size / 1024).toFixed(1)} KB
+                            </p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {selectedSubmission.status === 'pending' && (
-                <div className="space-y-2">
-                  <Label>Retroalimentación</Label>
-                  <Textarea
-                    placeholder="Escribe tu retroalimentación para el estudiante..."
-                    value={reviewFeedback}
-                    onChange={(e) => setReviewFeedback(e.target.value)}
-                    rows={4}
-                  />
-                </div>
-              )}
+                {selectedSubmission.status === 'pending' && (
+                  <div className="space-y-2">
+                    <Label>Retroalimentación</Label>
+                    <Textarea
+                      placeholder="Escribe tu retroalimentación para el estudiante..."
+                      value={reviewFeedback}
+                      onChange={(e) => setReviewFeedback(e.target.value)}
+                      rows={4}
+                    />
+                  </div>
+                )}
 
-              {selectedSubmission.feedback && selectedSubmission.status !== 'pending' && (
-                <div className="bg-muted p-4 rounded-lg">
-                  <p className="text-sm font-medium mb-1">Retroalimentación:</p>
-                  <p className="text-sm">{selectedSubmission.feedback}</p>
-                </div>
-              )}
+                {selectedSubmission.feedback && selectedSubmission.status !== 'pending' && (
+                  <div className="bg-muted p-4 rounded-lg">
+                    <p className="text-sm font-medium mb-1">Retroalimentación:</p>
+                    <p className="text-sm">{selectedSubmission.feedback}</p>
+                  </div>
+                )}
+              </div>
             </div>
           )}
-          <DialogFooter>
+
+          <DialogFooter className="px-6 py-4 border-t">
             {selectedSubmission?.status === 'pending' && (
               <>
                 <Button variant="outline" onClick={() => setIsReviewOpen(false)}>
