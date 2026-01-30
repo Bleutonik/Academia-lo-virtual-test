@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import api, { SprintSubmission as ApiSubmission, SubmitSprintData, UploadedFile } from '@/services/api';
 import { useAuth } from './AuthContext';
 
@@ -52,7 +52,7 @@ export const SprintReviewProvider: React.FC<{ children: ReactNode }> = ({ childr
     }
   }, [isAuthenticated, currentUser]);
 
-  const refreshSubmissions = async () => {
+  const refreshSubmissions = useCallback(async () => {
     try {
       let apiSubmissions: ApiSubmission[];
 
@@ -84,7 +84,7 @@ export const SprintReviewProvider: React.FC<{ children: ReactNode }> = ({ childr
     } catch (error) {
       console.error('Failed to load submissions:', error);
     }
-  };
+  }, [isAdmin]);
 
   const submitSprint = async (submission: SubmitSprintData) => {
     try {

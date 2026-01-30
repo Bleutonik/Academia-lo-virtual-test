@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import api from '@/services/api';
 import { useAuth } from './AuthContext';
 
@@ -65,7 +65,7 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     }
   }, [isAuthenticated, currentUser]);
 
-  const loadProgress = async () => {
+  const loadProgress = useCallback(async () => {
     try {
       const apiProgress = await api.getProgress();
       const userProgress: UserProgress = {};
@@ -87,9 +87,9 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     } catch (error) {
       console.error('Failed to load progress:', error);
     }
-  };
+  }, []);
 
-  const loadCertificates = async () => {
+  const loadCertificates = useCallback(async () => {
     try {
       const apiCertificates = await api.getCertificates();
       const certs: CertificateData[] = Object.entries(apiCertificates).map(([courseId, cert]) => ({
@@ -107,7 +107,7 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     } catch (error) {
       console.error('Failed to load certificates:', error);
     }
-  };
+  }, [currentUser?.fullName]);
 
   const userName = currentUser?.fullName || '';
 
@@ -301,10 +301,10 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     return certificates.find(c => c.courseId === courseId);
   };
 
-  const refreshProgress = async () => {
+  const refreshProgress = useCallback(async () => {
     await loadProgress();
     await loadCertificates();
-  };
+  }, [loadProgress, loadCertificates]);
 
   return (
     <ProgressContext.Provider value={{

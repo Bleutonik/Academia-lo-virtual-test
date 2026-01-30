@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useEffect, useCallback } from "react";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   BookOpen, LogOut, Award, Clock, CheckCircle, XCircle,
@@ -18,9 +18,17 @@ import * as Icons from "lucide-react";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
   const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress } = useProgress();
   const { getSubmissionsByUser, refreshSubmissions } = useSprintReview();
+
+  // Memoize refresh function
+  const loadDashboardData = useCallback(async () => {
+    if (isAuthenticated && currentUser) {
+      await Promise.all([refreshProgress(), refreshSubmissions()]);
+    }
+  }, [isAuthenticated, currentUser, refreshProgress, refreshSubmissions]);
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -29,13 +37,10 @@ const StudentDashboard = () => {
     }
   }, [isAuthenticated, currentUser, navigate, authLoading]);
 
-  // Refresh data when dashboard loads
+  // Refresh data when dashboard loads or user navigates here
   useEffect(() => {
-    if (isAuthenticated && currentUser) {
-      refreshProgress();
-      refreshSubmissions();
-    }
-  }, [isAuthenticated, currentUser]);
+    loadDashboardData();
+  }, [location.key, loadDashboardData]);
 
   if (authLoading || !isAuthenticated || !currentUser) {
     return (

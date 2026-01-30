@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import api, { User as ApiUser, CreateUserData } from '@/services/api';
 
 export interface User {
@@ -62,14 +62,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
   }, [currentUser]);
 
-  const refreshUsers = async () => {
+  const refreshUsers = useCallback(async () => {
     try {
       const fetchedUsers = await api.getUsers();
       setUsers(fetchedUsers as User[]);
     } catch (error) {
       console.error('Failed to fetch users:', error);
     }
-  };
+  }, []);
 
   const login = async (username: string, password: string): Promise<{ success: boolean; message: string }> => {
     try {

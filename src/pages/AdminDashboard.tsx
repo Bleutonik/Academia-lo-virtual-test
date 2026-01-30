@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Users, BookOpen, ClipboardCheck, Settings, LogOut, Plus,
@@ -55,6 +55,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { toast } = useToast();
   const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading, refreshUsers } = useAuth();
   const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, refreshSubmissions } = useSprintReview();
@@ -80,6 +81,13 @@ const AdminDashboard = () => {
     isActive: true
   });
 
+  // Memoize refresh function
+  const loadDashboardData = useCallback(async () => {
+    if (isAdmin) {
+      await Promise.all([refreshSubmissions(), refreshUsers()]);
+    }
+  }, [isAdmin, refreshSubmissions, refreshUsers]);
+
   // Redirect if not admin
   useEffect(() => {
     if (!authLoading && !isAdmin) {
@@ -87,13 +95,10 @@ const AdminDashboard = () => {
     }
   }, [isAdmin, navigate, authLoading]);
 
-  // Refresh data when dashboard loads
+  // Refresh data when dashboard loads or user navigates here
   useEffect(() => {
-    if (isAdmin) {
-      refreshSubmissions();
-      refreshUsers();
-    }
-  }, [isAdmin]);
+    loadDashboardData();
+  }, [location.key, loadDashboardData]);
 
   if (authLoading || !isAdmin) {
     return (
