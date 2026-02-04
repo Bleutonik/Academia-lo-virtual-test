@@ -4298,5 +4298,4174 @@ Cada distracción tiene costo triple:
         }
       }
     ]
+  },
+  {
+    id: "diseno-grafico",
+    title: "Diseño Gráfico para Asistentes Virtuales",
+    slug: "diseno-grafico",
+    description: "Domina los fundamentos del diseño gráfico profesional. Desde percepción visual y psicología del color hasta identidad de marca, flujos de trabajo y comunicación con clientes.",
+    duration: "~25 horas",
+    totalLessons: "20 Lecciones + Proyectos Prácticos",
+    icon: "Palette",
+    color: "from-purple-500 to-pink-500",
+    certificate: {
+      title: "Certificado en Diseño Gráfico para Asistentes Virtuales",
+      description: "Ha completado satisfactoriamente el curso de Diseño Gráfico con dominio en fundamentos visuales, branding e identidad de marca"
+    },
+    modules: [
+      {
+        id: "mod-dg-1",
+        title: "Fundamentos de Diseño y Brief Creativo",
+        description: "Domina los principios científicos del diseño visual, psicología del color, tipografía estratégica y el proceso de conceptualización creativa",
+        theory: [
+          {
+            id: "lesson-dg-1-1",
+            title: "La Ciencia de la Percepción Visual",
+            content: `# La Ciencia de la Percepción Visual
+
+## Introducción
+
+Antes de diseñar, debemos entender cómo el cerebro humano procesa la información visual. La neurociencia del diseño revela que el **90% de la información** transmitida al cerebro es visual, y procesamos imágenes **60,000 veces más rápido** que texto.
+
+---
+
+## Principios Fundamentales
+
+### 1. Jerarquía Visual
+
+El cerebro busca orden. Lo que se ve primero define la importancia percibida.
+
+**Patrones de Lectura:**
+
+| Patrón | Uso | Implicación |
+|--------|-----|-------------|
+| **Patrón F** | Páginas con mucho texto | Info crítica arriba y a la izquierda |
+| **Patrón Z** | Páginas con poco texto | CTA idealmente abajo-derecha |
+
+**Dato importante:** Los estudios de eye-tracking de Nielsen Norman Group muestran que en páginas de resultados de búsqueda, los usuarios casi nunca miran el lado derecho.
+
+---
+
+### 2. Contraste y Diferenciación
+
+Sin contraste suficiente, todos los elementos compiten igual y ninguno destaca.
+
+**Formas de lograr contraste:**
+- **Tamaño:** grande vs pequeño
+- **Color:** claro vs oscuro, complementarios
+- **Peso:** bold vs light
+- **Forma:** orgánico vs geométrico
+- **Textura:** suave vs rugoso
+- **Dirección:** horizontal vs vertical
+
+---
+
+### 3. Alineación (Orden Invisible)
+
+La alineación crea conexiones visuales implícitas. La desalineación (incluso de pocos píxeles) genera una sensación subliminal de "algo está mal".
+
+**Tipos de alineación:**
+- **Izquierda:** La más natural para idiomas occidentales
+- **Centrada:** Formal, tradicional, pero dificulta escaneo
+- **Derecha:** Inusual, crea tensión visual (usar con propósito)
+- **Justificada:** Solo para bloques de texto largos, evitar en web
+
+---
+
+### 4. Espacio Negativo
+
+El espacio vacío no es desperdicio; es una herramienta activa de diseño:
+
+✓ Dirige la atención a lo importante
+✓ Comunica premium y sofisticación
+✓ Reduce la fatiga visual
+✓ Mejora la comprensión y retención
+
+> **Ejemplo:** Las marcas de lujo usan abundante espacio negativo. Las marcas "baratas" llenan cada centímetro.
+
+---
+
+## Teoría del Color Digital
+
+### RGB vs CMYK
+
+| Característica | RGB | CMYK |
+|----------------|-----|------|
+| Modelo | Aditivo (luz) | Sustractivo (tinta) |
+| Uso | Pantallas, web, apps | Impresión |
+| Rango | 16.7 millones de colores | Gamut más limitado |
+
+**Importante para accesibilidad:**
+- WCAG requiere ratio mínimo de **4.5:1** para texto normal
+- El contraste de luminosidad es más importante que el contraste de tono
+
+---
+
+## Tip Práctico
+
+> Antes de empezar cualquier diseño, define tu sistema de jerarquía: ¿qué es lo MÁS importante que debe ver el usuario? Diseña ESO primero, luego añade elementos secundarios.
+
+## Reflexión
+
+Abre el sitio web de tu marca favorita y entrecierra los ojos hasta que todo se vea borroso. ¿Qué elementos sigues distinguiendo? Esos son los que tienen mayor peso visual.
+`
+          },
+          {
+            id: "lesson-dg-1-2",
+            title: "Psicología del Color Aplicada",
+            content: `# Psicología del Color Aplicada al Diseño
+
+## Introducción
+
+El color influye entre el **62% y el 90%** de la evaluación inicial de un producto. No es decoración; es comunicación. Cada color evoca asociaciones emocionales, culturales y psicológicas.
+
+---
+
+## Impacto Emocional de los Colores
+
+### Azul
+- **Transmite:** Seguridad, lógica, confianza, profesionalismo
+- **Usado por:** Bancos, tecnológicas, redes sociales (Facebook, LinkedIn, PayPal)
+- **Precaución:** Puede percibirse frío o impersonal si se usa solo
+
+### Turquesa
+- Ubicado entre azul y verde
+- **Transmite:** Calma, claridad mental, comunicación, frescura
+- **Usado por:** Salud, bienestar, tecnología humanizada
+
+### Verde
+- **Transmite:** Naturaleza, crecimiento, salud, dinero
+- **Usado por:** Salud, finanzas, productos ecológicos (Spotify, Starbucks)
+
+### Rojo
+- **Transmite:** Urgencia, pasión, energía, peligro
+- El color más "ruidoso" visualmente - acelera el pulso
+- **Usado por:** CTAs, ofertas, alimentación (Coca-Cola, Netflix)
+- **Precaución:** Sobreuso causa fatiga
+
+### Naranja
+- **Transmite:** Energía, creatividad, accesibilidad
+- Menos agresivo que rojo pero igualmente llamativo
+- **Usado por:** Tecnología accesible, creatividad (Amazon)
+
+### Amarillo
+- **Transmite:** Optimismo, alegría, atención, advertencia
+- **Precaución:** Sobre blanco es invisible; necesita alto contraste
+
+### Morado
+- **Transmite:** Creatividad, lujo, misterio, espiritualidad
+- **Usado por:** Belleza, lujo, tecnología premium (Twitch)
+
+### Negro
+- **Transmite:** Elegancia, poder, sofisticación, lujo
+- **Usado por:** Moda, tecnología premium (Chanel, Apple)
+
+---
+
+## La Regla 60-30-10
+
+Proporciones matemáticas para paletas equilibradas:
+
+| Proporción | Uso | Ejemplo |
+|------------|-----|---------|
+| **60%** | Color neutro/dominante | Fondo, canvas principal |
+| **30%** | Color secundario/marca | Headers, iconos, navegación |
+| **10%** | Color acento/acción | CTAs, alertas, elementos destacados |
+
+---
+
+## Consideraciones Culturales
+
+| Color | Occidente | Asia |
+|-------|-----------|------|
+| Blanco | Pureza | Luto (partes de Asia) |
+| Rojo | Peligro | Suerte/prosperidad (China) |
+| Verde | Seguro/go | Islam (Medio Oriente) |
+
+---
+
+## Tip Práctico
+
+> Crea tus paletas en **HSL** (Hue, Saturation, Lightness) en lugar de HEX. Te permite ajustar luminosidad y saturación manteniendo el tono, facilitando crear variantes claras/oscuras para estados hover, disabled, etc.
+
+## Reflexión
+
+Piensa en 3 marcas que asocias inmediatamente con un color específico. ¿Qué sentirías si cambiaran a un color completamente diferente?
+`
+          },
+          {
+            id: "lesson-dg-1-3",
+            title: "Tipografía y Voz de Marca",
+            content: `# Tipografía y Voz de Marca
+
+## Introducción
+
+La tipografía es la voz de la marca. Así como una persona comunica tanto con qué dice como con cómo lo dice, una marca comunica a través del contenido y la tipografía que lo presenta.
+
+---
+
+## Categorías Tipográficas
+
+### Serif (Con Remates)
+- **Personalidad:** Tradición, confianza, elegancia, autoridad
+- **Subcategorías:**
+  - Old Style (Garamond): Clásico, literario
+  - Transitional (Times): Equilibrado, periodístico
+  - Modern (Bodoni): Moda, lujo, alto contraste
+  - Slab Serif (Rockwell): Robusto, técnico
+- **Mejor para:** Cuerpos de texto largo, marcas tradicionales
+
+### Sans Serif (Sin Remates)
+- **Personalidad:** Modernidad, simplicidad, accesibilidad
+- **Subcategorías:**
+  - Grotesque (Helvetica): Neutral, corporativo
+  - Geometric (Futura, Montserrat): Moderno, geométrico
+  - Humanist (Open Sans): Cálido, legible
+- **Mejor para:** Digital, interfaces, startups
+
+### Display/Decorativas
+- Diseñadas para impacto en tamaños grandes
+- **Uso:** SOLO títulos y elementos destacados, NUNCA cuerpo
+
+### Script/Manuscritas
+- Imitan escritura a mano
+- **Precaución:** Muy difíciles de leer en tamaños pequeños
+
+---
+
+## Micro-Tipografía
+
+### Kerning
+- Espacio entre pares específicos de letras
+- Crítico en logotipos y títulos grandes
+
+### Tracking (letter-spacing)
+- Espacio uniforme entre todas las letras
+- Aumentar en mayúsculas pequeñas mejora legibilidad
+
+### Leading (line-height)
+- Espacio entre líneas de texto
+- **Regla general:** 120-150% del tamaño de fuente para cuerpo
+
+---
+
+## Jerarquía Tipográfica
+
+| Nivel | Uso | Características |
+|-------|-----|-----------------|
+| H1 | El más grande | Una por página |
+| H2 | Secciones principales | Clara diferenciación de H1 |
+| H3 | Subsecciones | Más pequeño que H2 |
+| Body | Lectura sostenida | El más legible |
+| Caption | Info secundaria | Metadata, legal |
+
+---
+
+## Combinación de Fuentes
+
+**Máximo 2-3 familias por proyecto:**
+
+✓ **Contraste con propósito:** Serif para títulos + Sans para cuerpo
+✓ **Afinidad invisible:** Deben compartir algo (altura x, proporciones)
+
+**Ejemplo clásico:**
+- Headlines: Playfair Display (serif display)
+- Body: Source Sans Pro (sans humanista)
+
+---
+
+## Tip Práctico
+
+> Antes de elegir tipografías, escribe 3 adjetivos que describan la personalidad de la marca. Luego busca tipografías que encarnen esos adjetivos.
+
+## Reflexión
+
+¿Puedes reconocer algunas marcas solo por su tipografía? (Google, Coca-Cola, FedEx, Apple) ¿Qué hace que sean tan memorables?
+`
+          },
+          {
+            id: "lesson-dg-1-4",
+            title: "El Brief Creativo Profesional",
+            content: `# El Brief Creativo: Fundamento Estratégico
+
+## Introducción
+
+El brief de diseño es la piedra angular de cualquier proyecto creativo exitoso. Los proyectos con brief bien estructurado tienen un **60% menos de revisiones** y se completan un **40% más rápido**.
+
+---
+
+## Las Tres Verdades del Brief
+
+| Verdad | Preguntas Clave |
+|--------|-----------------|
+| **Del Negocio** | ¿Por qué este proyecto ahora? ¿Qué métricas queremos impactar? |
+| **De la Audiencia** | ¿Quién consumirá esto? ¿Qué les importa? |
+| **Creativa** | ¿Qué territorio visual está disponible? ¿Qué hará esto memorable? |
+
+---
+
+## El Costo de No Tener Brief
+
+Sin brief claro, los proyectos sufren de:
+- **Scope creep:** El proyecto crece sin control
+- **Revisiones infinitas:** Sin criterios, todo es opinión
+- **Frustración mutua:** Cliente y diseñador hablan idiomas diferentes
+- **Resultados mediocres:** Sin dirección clara, el diseño es genérico
+
+---
+
+## Anatomía del Brief Profesional
+
+### Sección 1: Contexto
+- Antecedentes: ¿Por qué existe este proyecto?
+- Problema a resolver: La raíz, no el síntoma
+- Oportunidad: ¿Qué ganamos si es exitoso?
+
+### Sección 2: Objetivos SMART
+- **S**pecific: Define exactamente qué lograr
+- **M**easurable: Incluye métricas cuantificables
+- **A**chievable: Realista con recursos disponibles
+- **R**elevant: Alineado con objetivos de negocio
+- **T**ime-bound: Con fecha límite clara
+
+### Sección 3: Audiencia
+- Perfil demográfico
+- Perfil psicográfico
+- Comportamientos y hábitos
+
+### Sección 4: Mensaje
+- Mensaje principal (una oración)
+- Mensajes de soporte (2-3)
+- Tono de voz
+
+### Sección 5: Especificaciones
+- Lista de entregables exactos
+- Formatos y dimensiones
+- Restricciones técnicas y legales
+
+### Sección 6: Gestión
+- Cronograma con milestones
+- Presupuesto aprobado
+- Stakeholders y proceso de aprobación
+
+---
+
+## Ejemplo de Brief Transformado
+
+**Antes:** "Necesitamos un logo moderno"
+
+**Después:** "Necesitamos diferenciarnos de 3 competidores específicos, proyectar credibilidad para contratos enterprise, y funcionar tanto en LinkedIn como en tarjetas físicas."
+
+---
+
+## Tip Práctico
+
+> Antes de cualquier reunión de brief, envía un cuestionario de pre-trabajo: "¿Qué 3 marcas admiras y por qué?" "¿Cuál es el mayor problema de negocio que enfrentas?"
+
+## Reflexión
+
+Piensa en un proyecto pasado con muchas revisiones. ¿Qué preguntas no hiciste al inicio? ¿Qué información asumiste que debiste confirmar?
+`
+          },
+          {
+            id: "lesson-dg-1-5",
+            title: "Del Insight al Concepto Creativo",
+            content: `# Del Insight al Concepto Creativo
+
+## Introducción
+
+El concepto creativo es donde la estrategia se transforma en dirección visual. Es la "gran idea" que unifica todas las piezas de comunicación y les da sentido.
+
+---
+
+## El Proceso de Conceptualización
+
+### Fase 1: Inmersión (1-3 horas)
+- Relee el brief completo
+- Investiga la competencia
+- Busca referencias de inspiración
+
+### Fase 2: Destilación (30-60 min)
+
+**Insight = Verdad del producto + Verdad de la audiencia**
+
+**Ejemplo:**
+- Producto: Software de contabilidad para freelancers
+- Verdad del producto: Automatiza tareas que odian hacer
+- Verdad de la audiencia: Eligieron libertad, pero la administración les roba esa libertad
+- **Insight:** "La verdadera libertad está en no pensar en facturas"
+- **Concepto:** "Facturación invisible"
+
+### Fase 3: Ideación Divergente (2-4 horas)
+- Genera 15-20 conceptos sin juzgar
+- Usa técnicas: mapas mentales, asociación libre
+- Incluye ideas "locas"
+
+### Fase 4: Evaluación Convergente
+Filtra usando criterios del brief:
+✓ ¿Cumple el objetivo de negocio?
+✓ ¿Resuena con la audiencia?
+✓ ¿Es diferenciador?
+✓ ¿Es ejecutable?
+✓ ¿Es memorable?
+
+### Fase 5: Desarrollo
+Para cada concepto finalista:
+1. El Insight (1-2 oraciones)
+2. La Gran Idea (frase memorable)
+3. El Territorio Visual (mood board)
+4. Ejecución Ejemplo
+5. Extensibilidad
+
+---
+
+## El Concepto Como Sistema
+
+Un buen concepto debe poder responder:
+- ¿Cómo se ve un post de Instagram bajo este concepto?
+- ¿Cómo se ve un email bajo este concepto?
+- ¿Cómo sería una campaña navideña bajo este concepto?
+
+---
+
+## Técnicas de Ideación
+
+| Técnica | Pregunta |
+|---------|----------|
+| **Reversión** | ¿Qué haría lo opuesto a la competencia? |
+| **Analogía** | ¿Qué otra industria resuelve un problema similar? |
+| **Extremos** | ¿Cómo sería con presupuesto ilimitado? |
+| **Persona** | ¿Cómo resolvería esto [artista que admiras]? |
+
+---
+
+## La Regla de las 3 Opciones
+
+Al presentar, ofrece:
+1. **Evolutiva:** Mejora segura del status quo
+2. **Equilibrada:** Tu recomendación real
+3. **Revolucionaria:** Arriesgada pero memorable
+
+---
+
+## Tip Práctico
+
+> Cuando presentes conceptos, explica el "por qué" antes del "qué". No muestres el diseño inmediatamente; primero establece contexto, insight y lógica estratégica.
+
+## Reflexión
+
+Piensa en una campaña que te impactó. ¿Puedes identificar el concepto detrás? ¿Qué insight crees que descubrieron?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Fundamentos y Brief Creativo",
+          description: "Aplica los principios de diseño y desarrolla un brief profesional",
+          tasks: [
+            {
+              id: "task-dg-1-1",
+              question: "Analiza una página web que consideres bien diseñada. Identifica: jerarquía visual (qué se ve primero), uso del espacio negativo, paleta de colores (regla 60-30-10), y tipografías utilizadas. Explica por qué funciona."
+            },
+            {
+              id: "task-dg-1-2",
+              question: "Crea un brief creativo completo para un negocio ficticio o real. Debe incluir: contexto, objetivos SMART, perfil de audiencia, mensaje clave, y lista de entregables."
+            },
+            {
+              id: "task-dg-1-3",
+              question: "A partir de tu brief, desarrolla un concepto creativo con: insight (verdad del producto + verdad de la audiencia), gran idea (frase memorable), y descripción del territorio visual que utilizarías."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Fundamentos de Diseño",
+          description: "Evalúa tus conocimientos sobre percepción visual, color, tipografía y brief creativo",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es el objetivo principal de un brief de diseño?", options: ["Documentar el presupuesto", "Conectar la visión del cliente con la ejecución creativa", "Listar herramientas de software", "Registrar diseños anteriores"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué método se recomienda para definir objetivos de diseño?", options: ["Método aleatorio", "Método SMART", "Método rápido", "Método creativo"], correctAnswer: 1 },
+            { id: "q3", question: "¿Cuántos conceptos creativos se recomienda generar antes de filtrar?", options: ["Solo 1, el mejor", "Exactamente 3", "Al menos 10-15", "No importa la cantidad"], correctAnswer: 2 },
+            { id: "q4", question: "En la regla 60-30-10, ¿qué representa el 10%?", options: ["Color de fondo", "Tipografía principal", "Color de acento/CTAs", "Espacio negativo"], correctAnswer: 2 },
+            { id: "q5", question: "¿Qué tipo de tipografía es mejor para interfaces digitales?", options: ["Serif tradicional", "Sans Serif", "Script decorativa", "Display grande"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-dg-2",
+        title: "Identidad Visual y Branding",
+        description: "Aprende a construir identidades de marca consistentes, sistemas de color profesionales, manuales de marca y auditorías de calidad visual",
+        theory: [
+          {
+            id: "lesson-dg-2-1",
+            title: "Fundamentos de Identidad Visual",
+            content: `# Fundamentos de Identidad Visual y Consistencia de Marca
+
+## Introducción
+
+La consistencia de marca es presentar una identidad visual y verbal uniforme en todos los puntos de contacto. Las marcas consistentes ven un aumento de hasta **33% en ingresos** según estudios de Lucidpress.
+
+---
+
+## Pilares de la Consistencia
+
+### Consistencia Visual
+
+**Elementos a mantener alineados:**
+
+| Elemento | Qué definir |
+|----------|-------------|
+| **Logotipo** | Versiones, proporciones, espacios de respeto |
+| **Colores** | Códigos en todos los sistemas (HEX, RGB, CMYK, Pantone) |
+| **Tipografía** | Familias, jerarquías, pesos permitidos |
+| **Fotografía** | Iluminación, color grading, composición |
+| **Iconografía** | Estilo, peso de línea, nivel de detalle |
+
+### Consistencia Verbal
+
+- **Tono de voz:** ¿Formal o casual? ¿Serio o juguetón?
+- **Vocabulario:** Palabras que usa vs palabras que evita
+- **Estructura:** ¿Oraciones cortas o complejas? ¿Tutear o usted?
+
+---
+
+## Consistencia ≠ Aburrimiento
+
+La consistencia es sobre la esencia, no la ejecución exacta.
+
+**Adaptación válida:**
+✓ Diferentes tonos para diferentes audiencias (B2B formal, B2C casual)
+✓ Visuales adaptados a plataformas (LinkedIn profesional, TikTok dinámico)
+✓ Campañas especiales que "rompen" reglas estratégicamente
+
+---
+
+## El Test del Parpadeo
+
+Cubre el logo de cualquier material de la marca. ¿Sigues reconociendo que es de esa marca?
+
+Si no, hay un problema de consistencia.
+
+> Las marcas más fuertes son reconocibles por su paleta, tipografía y estilo visual ANTES de ver el logo.
+
+---
+
+## Ejemplos de Consistencia
+
+**Apple:** Reconocible por minimalismo extremo, espacios en blanco generosos, fotografía perfecta. La experiencia es inconfundiblemente Apple sin el logo.
+
+**Coca-Cola:** Mantiene su rojo icónico (PMS 484) pero adapta comunicación desde nostálgica hasta juvenil. La esencia permanece constante.
+
+---
+
+## El Costo de la Inconsistencia
+
+- **Confusión:** ¿Es esta la misma empresa que vi ayer?
+- **Desconfianza:** Si no cuidan su imagen, ¿cuidarán mi pedido?
+- **Dilución:** Cada pieza inconsistente no suma al equity de marca
+- **Ineficiencia:** Sin reglas claras, cada diseño empieza de cero
+
+---
+
+## Tip Práctico
+
+> Realiza el "Test del Parpadeo" regularmente: toma 10 piezas de la marca, quita los logos, mézclalas con competidores. ¿Puedes identificar las tuyas en 2 segundos?
+`
+          },
+          {
+            id: "lesson-dg-2-2",
+            title: "Sistemas de Color para Marcas",
+            content: `# Psicología del Color y Sistemas Cromáticos para Marcas
+
+## Introducción
+
+El color aumenta el reconocimiento de marca hasta un **80%** y el 85% de los consumidores citan el color como la razón principal de compra.
+
+---
+
+## Construyendo un Sistema de Color
+
+### Estructura del Sistema
+
+| Tipo | Cantidad | Uso |
+|------|----------|-----|
+| **Primarios** | 1-2 | Logo y elementos principales |
+| **Secundarios** | 2-3 | Complementan, dan flexibilidad |
+| **Neutros** | 2-3 | Fondos, textos (blancos, grises, negros) |
+| **Semánticos** | 4 | Error (rojo), éxito (verde), advertencia, info |
+
+### Especificaciones Técnicas
+
+Cada color debe definirse en:
+- **HEX:** #0066CC (web)
+- **RGB:** 0, 102, 204 (pantallas)
+- **CMYK:** 100, 60, 0, 0 (impresión)
+- **Pantone:** 2935 C (impresión premium)
+
+---
+
+## Ejemplo de Sistema Completo
+
+**Fintech Disruptiva:**
+
+| Color | Código | Transmite |
+|-------|--------|-----------|
+| Primario: Azul eléctrico | #0066FF | Confianza + modernidad |
+| Secundario: Verde menta | #00D9A5 | Crecimiento, dinero positivo |
+| Acento: Morado | #7B61FF | Innovación |
+| Neutro oscuro | #1A1A2E | Profesionalismo |
+| Neutro claro | #FFFFFF | Limpieza |
+
+---
+
+## Errores Comunes
+
+**Error por contexto:** Una app de meditación usó rojo como primario ("para ser diferentes"). El rojo contradecía el mensaje de calma. Después de cambiar a azules y verdes, conversiones subieron 40%.
+
+**Error cultural:** Marca de bodas occidental se expandió a China con blanco y negro "elegante". En China, son colores de funerales. Rediseñaron con rojo y dorado.
+
+---
+
+## Accesibilidad y Contraste
+
+### Ratios WCAG
+
+| Uso | Ratio mínimo |
+|-----|--------------|
+| Texto normal | 4.5:1 |
+| Texto grande | 3:1 |
+| Elementos UI | 3:1 |
+
+### Modo Oscuro
+
+No es simplemente invertir colores:
+- Reducir brillo de blancos (no usar #FFFFFF puro)
+- Ajustar saturación (muy saturados "vibran")
+- Mantener jerarquía con tonos de gris
+- Probar colores de acento en ambos modos
+
+---
+
+## Tip Práctico
+
+> Siempre prueba tu paleta en escala de grises. Si no hay suficiente contraste de luminosidad, habrá problemas de accesibilidad. Un diseño que funciona en blanco y negro funcionará en color.
+
+## Reflexión
+
+Piensa en 3 marcas que reconoces por su color. ¿Qué pasaría si Coca-Cola fuera azul o Facebook rojo?
+`
+          },
+          {
+            id: "lesson-dg-2-3",
+            title: "Tipografía Estratégica para Marcas",
+            content: `# Tipografía Estratégica: Más Allá de Elegir Fuentes
+
+## Introducción
+
+La tipografía correcta puede aumentar la comprensión lectora en un **20%** y el tiempo de permanencia en un sitio significativamente.
+
+---
+
+## Jerarquía Tipográfica
+
+Una jerarquía clara guía al lector sin esfuerzo consciente.
+
+| Nivel | Uso | Características |
+|-------|-----|-----------------|
+| **H1 - Headlines** | El más prominente | Puede usar display expresiva |
+| **H2/H3 - Subheadlines** | Organiza secciones | Conecta con H1 pero más contenido |
+| **Body** | Texto principal | Extremadamente legible (16-18px web) |
+| **Supporting** | Captions, footnotes | Más pequeño pero legible |
+| **UI Elements** | Botones, labels | Claridad sobre estilo |
+
+---
+
+## Combinación de Fuentes
+
+### Principios
+
+1. **Contraste con propósito:** Combina categorías diferentes (serif + sans)
+2. **Afinidad invisible:** Deben compartir algo (altura x, proporciones)
+3. **Máximo 2-3 fuentes:** Headlines, body, y opcionalmente UI
+
+### Ejemplo de Sistema
+
+| Uso | Fuente | Por qué |
+|-----|--------|---------|
+| Headlines | Playfair Display | Serif display, autoridad |
+| Body | Source Sans Pro | Sans humanista, legibilidad |
+| Código/UI | IBM Plex Mono | Monoespaciada, claridad |
+
+---
+
+## Consideraciones Técnicas
+
+### Licencias
+¿Es gratuita para uso comercial? ¿Web y print? ¿App?
+
+### Performance Web
+- Cada weight adicional añade tiempo de carga
+- Considera variable fonts para optimizar
+
+### Fallbacks
+¿Qué fuente del sistema se usa si la principal no carga?
+
+**Ejemplo CSS:** font-family: 'Playfair Display', Georgia, serif;
+
+---
+
+## Ejemplo Práctico
+
+**Sistema para banco digital:**
+- **Headline:** GT America (sans geometric - modernidad, confianza)
+- **Body:** Inter (sans humanist - legibilidad digital superior)
+- **UI:** System fonts para performance
+
+Resultado: Moderno pero accesible, diferenciado de bancos tradicionales.
+
+---
+
+## Error Común
+
+Usar el mismo tamaño y peso para títulos, subtítulos y cuerpo, cambiando solo el color. Resultado: usuarios no saben qué leer primero, tiempo en página cae 40%.
+
+**Solución:** Jerarquía clara (32px bold / 20px medium / 16px regular)
+
+---
+
+## Tip Práctico
+
+> Antes de elegir tipografías, escribe 5 adjetivos de la personalidad de marca. Para cada fuente candidata, pregunta: ¿Esta fuente comunica estos adjetivos?
+
+## Reflexión
+
+Toma un texto y renderízalo en 5 tipografías diferentes. Sin leer el contenido, ¿qué asumes sobre el emisor en cada caso?
+`
+          },
+          {
+            id: "lesson-dg-2-4",
+            title: "Manuales de Marca Efectivos",
+            content: `# Construcción de Manuales de Marca Efectivos
+
+## Introducción
+
+Un manual de marca es la constitución de la identidad visual. Pero el manual más completo es inútil si nadie lo consulta. El desafío es crear documentación completa pero accesible.
+
+---
+
+## Estructura del Manual
+
+### Sección 1: Fundamentos
+- Visión, misión, valores
+- Historia y propósito
+- Personalidad de marca
+- Tono de voz con ejemplos
+
+### Sección 2: Logotipo
+- Versiones aprobadas (horizontal, vertical, monocromático)
+- Construcción y proporciones
+- Espacios de respeto
+- Tamaños mínimos (digital e impreso)
+- Uso sobre fondos
+- **Usos incorrectos** (con ejemplos visuales)
+
+### Sección 3: Colores
+- Primarios con todos los códigos
+- Secundarios y neutros
+- Proporciones de uso (60-30-10)
+- Combinaciones permitidas
+- Ratios de accesibilidad
+
+### Sección 4: Tipografía
+- Familias y jerarquías
+- Tamaños, pesos, line-heights
+- Fallbacks para cada contexto
+
+### Sección 5: Fotografía e Ilustración
+- Estilo fotográfico
+- Tratamiento de imágenes
+- Estilo de iconografía
+
+### Sección 6: Aplicaciones
+Ejemplos en contexto real (web, social, email, print)
+
+---
+
+## Sistema de Capas para Usabilidad
+
+| Capa | Contenido | Formato |
+|------|-----------|---------|
+| **Quick Reference** | Solo lo esencial | 1-2 páginas, poster |
+| **Guía Operativa** | Info completa para diseñadores | 10-20 páginas, PDF/web |
+| **Documentación Completa** | Todo el detalle | Archivo maestro |
+
+---
+
+## Formatos Modernos
+
+- **Guías interactivas:** Frontify, Zeroheight, Notion
+- **Design systems en Figma:** Componentes + documentación
+- **Websites de marca internos**
+- **Integración con DAM** (Digital Asset Management)
+
+---
+
+## Qué NO Hacer
+
+**Manual de 85 páginas en PDF** → nadie lo abre, encontrar info toma 10 minutos, cada diseño es inconsistente.
+
+**Solución:** Guía interactiva con búsqueda + quick reference de una página.
+
+---
+
+## Sección "Qué NO Hacer"
+
+En lugar de solo texto "No estirar el logo", muestra:
+- Logo estirado horizontalmente ❌
+- Logo con sombra añadida ❌
+- Logo sobre fondo sin contraste ❌
+
+Lo visual es más memorable y claro.
+
+---
+
+## Tip Práctico
+
+> Incluye siempre un contacto de "soporte de marca" para dudas no cubiertas. Esto te da visibilidad sobre qué información falta y permite actualizar proactivamente.
+
+## Reflexión
+
+Piensa en la última guía de marca que consultaste. ¿Fue fácil encontrar lo que necesitabas? ¿Cómo la mejorarías?
+`
+          },
+          {
+            id: "lesson-dg-2-5",
+            title: "Auditorías de Marca",
+            content: `# Auditorías de Marca y Control de Calidad Visual
+
+## Introducción
+
+Las auditorías de marca son el "chequeo médico" que detecta inconsistencias antes de que erosionen el brand equity. Sin auditorías regulares, la marca se fragmenta silenciosamente.
+
+---
+
+## Proceso en 5 Fases
+
+### Fase 1: Inventario
+
+Recopila todos los touchpoints:
+
+**Materiales impresos:**
+- Tarjetas, papelería, brochures
+- Packaging, señalética
+
+**Presencia digital:**
+- Website (todas las páginas)
+- Apps, emails, firmas
+- Documentos y presentaciones
+
+**Redes sociales:**
+- Perfiles, posts, stories, ads
+
+**Materiales de partners:**
+- Co-branding, portales de distribuidores
+
+### Fase 2: Captura
+Para cada touchpoint: screenshot, URL, fecha, responsable.
+
+### Fase 3: Evaluación
+
+**Checklist por elemento:**
+
+☐ **Logotipo:** ¿Versión correcta? ¿Proporciones respetadas?
+☐ **Colores:** ¿Códigos exactos? ¿Contraste de accesibilidad?
+☐ **Tipografía:** ¿Familias correctas? ¿Jerarquías respetadas?
+☐ **Tono de voz:** ¿Consistente? ¿Apropiado para el canal?
+
+### Fase 4: Documentación
+
+Categoriza por severidad:
+
+| Nivel | Descripción | Acción |
+|-------|-------------|--------|
+| 🔴 **Crítico** | Daña activamente la marca | Inmediata |
+| 🟠 **Alto** | Inconsistencia notable | Próximo ciclo |
+| 🟡 **Medio** | Desviación menor | Cuando sea conveniente |
+| 🟢 **Bajo** | Oportunidad de optimización | Próxima versión |
+
+### Fase 5: Acción
+- Prioriza: severidad × impacto × facilidad
+- Asigna responsables y fechas
+- Comunica a equipos afectados
+- Programa verificación
+
+---
+
+## Frecuencia Recomendada
+
+| Tipo | Frecuencia |
+|------|------------|
+| Auditoría completa | Anual |
+| Revisión canales principales | Trimestral |
+| Nuevos materiales | Continuo (antes de publicar) |
+| Post-campañas | Después de cada lanzamiento |
+
+---
+
+## Hallazgo Crítico (Ejemplo Real)
+
+"Portal de partners externos (200+ partners) muestra paleta anterior y tipografía incorrecta. Partners crean materiales co-branded con elementos obsoletos."
+
+**Impacto:** Dilución multiplicada por red de partners.
+
+**Acción:** Actualización prioritaria + comunicación urgente + assets actualizados.
+
+---
+
+## Tip Práctico
+
+> Crea un "embajador de marca" en cada departamento con acceso a assets actualizados. Descentraliza el cuidado sin perder control.
+
+## Reflexión
+
+Si realizaras una auditoría hoy, ¿cuáles serían los 3 problemas más probables? ¿Por qué no se han corregido?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Identidad Visual",
+          description: "Desarrolla elementos de identidad de marca y documentación",
+          tasks: [
+            {
+              id: "task-dg-2-1",
+              question: "Crea un sistema de color completo para una marca (real o ficticia): 2 colores primarios, 2 secundarios, 3 neutros. Incluye códigos HEX, RGB y describe el razonamiento psicológico detrás de cada elección."
+            },
+            {
+              id: "task-dg-2-2",
+              question: "Diseña un mini manual de marca (quick reference de 1-2 páginas) que incluya: versiones del logo con usos correctos e incorrectos, paleta de colores con proporciones, y sistema tipográfico."
+            },
+            {
+              id: "task-dg-2-3",
+              question: "Realiza una auditoría básica de una marca existente (puede ser local o conocida). Evalúa su consistencia en 3 canales diferentes (web, redes sociales, material impreso/físico) y documenta 3 hallazgos con recomendaciones."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Identidad Visual",
+          description: "Evalúa tus conocimientos sobre branding y consistencia de marca",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué es la consistencia de marca?", options: ["Cambiar el logo frecuentemente", "Presentar la marca igual en todas las plataformas", "Usar diferentes colores por campaña", "Modificar el mensaje según el cliente"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué significa BAM en gestión de marca?", options: ["Brand Automatic Management", "Brand Asset Management", "Business Asset Monitoring", "Brand Analysis Method"], correctAnswer: 1 },
+            { id: "q3", question: "¿Cada cuánto se recomienda una auditoría completa de marca?", options: ["Anualmente", "Mensualmente", "Solo al inicio", "Nunca"], correctAnswer: 0 },
+            { id: "q4", question: "¿Qué debe incluir siempre un manual de marca?", options: ["Solo el logo", "Usos correctos e incorrectos del logo", "Solo colores", "Solo tipografías"], correctAnswer: 1 },
+            { id: "q5", question: "En una auditoría, ¿qué severidad tiene un logo incorrecto en material de alto impacto?", options: ["Bajo", "Medio", "Alto", "Crítico"], correctAnswer: 3 }
+          ]
+        }
+      },
+      {
+        id: "mod-dg-3",
+        title: "Herramientas y Flujos de Trabajo",
+        description: "Domina el ecosistema de herramientas profesionales, diseño multi-formato, sistemas de diseño escalables y automatización del flujo creativo",
+        theory: [
+          {
+            id: "lesson-dg-3-1",
+            title: "Ecosistema de Herramientas Profesionales",
+            content: `# Ecosistema de Herramientas para Flujos de Diseño Profesional
+
+## Introducción
+
+La diferencia entre un freelancer que trabaja 60 horas semanales y uno que trabaja 35 con los mismos resultados frecuentemente está en la eficiencia de sus sistemas y herramientas.
+
+---
+
+## Mapeo del Ecosistema
+
+### 1. Gestión de Proyectos
+
+| Escala | Herramienta | Características |
+|--------|-------------|-----------------|
+| Freelancer | Trello, Notion, Todoist | Simple, visual, gratis |
+| Equipo pequeño | Asana, Monday | Robusto, integraciones |
+| Agencia | Productive, Teamwork | Gestión + rentabilidad |
+
+### 2. Diseño y Creación
+
+**Diseño UI/Web:**
+- **Figma:** Estándar de la industria, colaborativo, web-based
+- **Sketch:** Mac only, maduro pero perdiendo terreno
+- **Adobe XD:** Integración con CC
+
+**Diseño gráfico/print:**
+- **Adobe Illustrator:** Vectores, logos, print
+- **Adobe Photoshop:** Fotos, composición
+- **Affinity:** Alternativa sin suscripción
+
+**Motion/Video:**
+- **After Effects:** Estándar para motion graphics
+- **Premiere Pro:** Edición de video
+- **DaVinci Resolve:** Alternativa gratuita potente
+
+### 3. Colaboración y Comunicación
+
+| Propósito | Herramientas |
+|-----------|--------------|
+| Comunicación | Slack, Teams, Discord |
+| Archivos | Google Drive, Dropbox |
+| Feedback asíncrono | Loom, Figma comments |
+
+### 4. Automatización
+
+- **Zapier:** 5000+ apps, interfaz amigable
+- **Make:** Más potente, curva mayor
+- **Figma plugins:** Automatizan tareas comunes
+
+---
+
+## Stack Recomendado
+
+### Freelancer Eficiente (~$50/mes)
+- Notion (proyectos + CRM + docs)
+- Figma (todo el diseño)
+- Google Drive (archivos finales)
+- Loom (presentaciones asíncronas)
+- Calendly (scheduling)
+
+### Estudio Pequeño (~$300/mes)
+- Asana (proyectos)
+- Figma (diseño)
+- Slack (comunicación)
+- Google Workspace (docs + email)
+- Zapier (automatizaciones)
+
+---
+
+## Ejemplo de Automatización
+
+**Cuando proyecto en Asana cambia a "Completado":**
+1. Zapier mueve archivos finales a carpeta de archivo
+2. Envía email al cliente con link de descarga
+3. Crea entrada en spreadsheet de proyectos
+4. Programa survey de satisfacción para 7 días después
+
+**Ahorro:** 5 horas/semana
+
+---
+
+## Tip Práctico
+
+> No intentes implementar todo de una vez. Empieza con una herramienta nueva, úsala 2 semanas, luego añade la siguiente. Un stack simple bien usado supera a uno complejo que nadie entiende.
+
+## Reflexión
+
+Mapea tu flujo actual desde que recibes un proyecto hasta que lo entregas. ¿Dónde hay fricción? ¿Qué información buscas repetidamente?
+`
+          },
+          {
+            id: "lesson-dg-3-2",
+            title: "Diseño Multi-Formato",
+            content: `# Diseño Multi-Formato: De Social Media a Print
+
+## Introducción
+
+Una campaña puede necesitar stories verticales (9:16), posts cuadrados (1:1), banners horizontales (16:9), emails, landing pages y material impreso. Diseñar eficientemente requiere un enfoque sistemático.
+
+---
+
+## Formatos Esenciales
+
+### Redes Sociales
+
+| Plataforma | Formato | Dimensiones |
+|------------|---------|-------------|
+| Instagram Feed | Cuadrado | 1080×1080 (1:1) |
+| Instagram Feed | Vertical | 1080×1350 (4:5) mejor engagement |
+| Instagram Story/Reel | Vertical | 1080×1920 (9:16) |
+| Facebook Post | Horizontal | 1200×630 (1.9:1) |
+| LinkedIn Post | Horizontal | 1200×627 (1.91:1) |
+| Twitter/X | Horizontal | 1200×675 (16:9) |
+
+### Display Advertising (IAB)
+- Medium Rectangle: 300×250 (más común)
+- Leaderboard: 728×90
+- Mobile Leaderboard: 320×50
+
+### Print
+- Tarjeta presentación: 90×55mm
+- A4: 210×297mm (+ 3-5mm bleed)
+- Poster A3: 297×420mm
+
+---
+
+## Estrategia Mobile-First
+
+Diseña primero para el formato más restrictivo (story vertical) donde cada píxel cuenta.
+
+**Orden recomendado:**
+1. **Story (9:16)** - Más restrictivo
+2. **Feed cuadrado (1:1)** - Espacio limitado
+3. **Feed horizontal (16:9)** - Espacio moderado
+4. **Banner web** - Más espacio horizontal
+5. **Print** - Máximo espacio
+
+---
+
+## Sistema de Zonas Seguras
+
+Define un área central con elementos esenciales:
+- Logo/marca
+- Headline principal
+- CTA o mensaje clave
+- Producto/imagen hero
+
+Esta zona debe permanecer visible sin importar cómo se recorte.
+
+---
+
+## Templates en Figma
+
+1. Usa **Auto Layout** para que componentes se adapten
+2. Crea **variantes** para diferentes proporciones
+3. Usa **constraints** para reposicionamiento automático
+4. Exporta todo con un clic usando plugins
+
+---
+
+## Texto Adaptativo
+
+| Formato | Headline mínimo | Body mínimo |
+|---------|-----------------|-------------|
+| Story | 32px | 16px |
+| Display ads | 24px (300×250) | Ajustar según tamaño |
+| Print | Considerar distancia de lectura |
+
+---
+
+## Ejemplo Práctico
+
+**Campaña Black Friday:**
+1. Diseño Story con zona segura: logo arriba, "50% OFF" centrado, "Comprar ahora" abajo
+2. En post cuadrado: mismo texto central, añado productos en esquinas
+3. En banner horizontal: productos van a los lados
+4. En email: mensaje central se mantiene, productos debajo
+
+---
+
+## Tip Práctico
+
+> Crea un "kit de exportación" con todos los formatos que regularmente necesitas. Invierte 2 horas configurándolo una vez, ahorra 30 minutos en cada campaña futura.
+
+## Reflexión
+
+En tu última campaña multi-formato, ¿cuánto tiempo dedicaste a adaptar vs diseñar desde cero? ¿Qué harías diferente?
+`
+          },
+          {
+            id: "lesson-dg-3-3",
+            title: "Sistemas de Diseño Escalables",
+            content: `# Sistemas de Diseño y Componentes Escalables
+
+## Introducción
+
+Un sistema de diseño (design system) es una colección de componentes reutilizables, guías y principios que permiten crear experiencias consistentes a escala.
+
+---
+
+## Anatomía de un Design System
+
+### Nivel 1: Design Tokens
+
+Los valores fundamentales:
+
+**Colores:**
+- Primitivos: blue-500, gray-100 (valores base)
+- Semánticos: primary, error, success (significado)
+- Component-specific: button-primary (uso)
+
+**Tipografía:**
+- Font families, sizes (12, 14, 16, 18, 24, 32...)
+- Weights (400, 500, 600, 700), line heights
+
+**Espaciado:**
+- Scale consistente: 4, 8, 12, 16, 24, 32, 48, 64...
+
+**Otros:**
+- Border radius, shadows, breakpoints, transitions
+
+### Nivel 2: Componentes
+
+**Átomos (básicos):**
+- Button, Input, Checkbox, Badge, Icon
+
+**Moléculas (combinaciones):**
+- Form field (label + input + helper + error)
+- Card (image + title + description + CTA)
+
+**Organismos (secciones):**
+- Header, Footer, Sidebar, Modal
+
+### Nivel 3: Patrones
+
+Soluciones a problemas comunes:
+- Autenticación (login, registro)
+- Onboarding, navegación
+- Feedback (toasts, modals)
+- Data display (tablas, grids)
+
+### Nivel 4: Documentación
+
+Cada componente documenta:
+- Descripción y propósito
+- Cuándo usar (y cuándo NO)
+- Variantes, props, estados
+- Ejemplos y accesibilidad
+
+---
+
+## ROI del Design System
+
+**Antes:** 3 pantallas/semana, onboarding 3 semanas
+**Después:** 8 pantallas/semana, onboarding 1 semana
+
+---
+
+## Estructura en Figma
+
+**Estructura:**
+- 📁 Design System
+  - 📄 Tokens (colores, tipografía, spacing)
+  - 📄 Foundations (grids, iconografía)
+  - 📄 Components (todos los componentes)
+  - 📄 Patterns (soluciones comunes)
+  - 📄 Templates (páginas tipo)
+
+---
+
+## Componente Bien Documentado
+
+**Button - Primary**
+- **Uso:** CTAs principales, una por sección visible
+- **Variantes:** size (sm, md, lg), state (default, hover, loading, disabled)
+- **No usar:** Para acciones destructivas, navegación secundaria
+- **Accesibilidad:** Mínimo 44px touch target, contraste 4.5:1
+
+---
+
+## Tip Práctico
+
+> No construyas un design system completo de una vez. Empieza con tokens básicos y 5-10 componentes más usados. Expande basado en necesidades reales.
+
+## Reflexión
+
+En tu último proyecto grande, ¿cuántas veces recreaste el mismo botón o card con pequeñas variaciones? ¿Cuánto tiempo perdiste en inconsistencias?
+`
+          },
+          {
+            id: "lesson-dg-3-4",
+            title: "Automatización del Flujo Creativo",
+            content: `# Automatización y Optimización del Flujo Creativo
+
+## Introducción
+
+Diseñadores pasan hasta **40% de su tiempo** en tareas operativas que podrían automatizarse. La automatización libera tiempo para trabajo creativo de alto valor.
+
+---
+
+## Identificando Candidatos
+
+**Señales de que algo debe automatizarse:**
+✓ Lo haces más de 3 veces por semana
+✓ Es mecánico y no requiere creatividad
+✓ Tiene pasos predecibles y consistentes
+✓ Errores humanos son frecuentes
+✓ Te genera frustración
+
+---
+
+## Candidatos Comunes
+
+### Procesamiento de imágenes
+- Redimensionar para múltiples formatos
+- Aplicar ajustes de color consistentes
+- Comprimir para web
+- Renombrar archivos masivamente
+
+### Exportación
+- Exportar artboards a múltiples formatos
+- Generar versiones @1x, @2x, @3x
+- Organizar exports en carpetas
+
+### Flujos de trabajo
+- Crear estructura de carpetas para nuevos proyectos
+- Mover archivos completados a archivo
+- Notificar stakeholders de entregas
+
+---
+
+## Herramientas de Automatización
+
+### Dentro de Apps
+
+| App | Herramienta | Uso |
+|-----|-------------|-----|
+| Photoshop | Actions | Secuencias de pasos |
+| Photoshop | Batch Processing | Actions a carpetas |
+| Illustrator | Actions + Scripts | Operaciones complejas |
+| Figma | Plugins + API | Automatizaciones avanzadas |
+
+### Entre Apps
+
+- **Zapier:** Popular, 5000+ apps, amigable
+- **Make:** Más potente, curva mayor
+- **n8n:** Open source, gratuito
+
+---
+
+## Ejemplos Prácticos
+
+### Action de Photoshop "Web Ready"
+1. Resize al lado mayor a 2000px
+2. Convertir a sRGB
+3. Smart sharpen (0.3px, 50%)
+4. Export como JPEG quality 85%
+5. Añadir sufijo "-web" al nombre
+
+**Resultado:** Tarea de 2 min → 3 segundos
+
+### Zapier para Entregas
+**Trigger:** Proyecto en Asana marcado "Completado"
+**Acciones:**
+1. Mover archivos a "Entregados" en Drive
+2. Enviar email al cliente con link
+3. Crear fila en spreadsheet
+4. Programar encuesta para 7 días después
+
+---
+
+## Cálculo de ROI
+
+**Cálculo:**
+- Tiempo para crear automatización: 2 horas
+- Tiempo ahorrado por uso: 5 minutos
+- Usos por mes: 100
+- Ahorro mensual: 500 min = 8.3 horas
+- ROI: Recuperas inversión en semana 1
+
+---
+
+## Tip Práctico
+
+> Documenta cada automatización: qué hace, cómo usarla, requisitos. Tu yo de 6 meses no recordará cómo funciona. Además, permite compartir con el equipo.
+
+## Reflexión
+
+Esta semana, lleva registro de tareas repetitivas. ¿Cuánto tiempo podrías recuperar si las automatizaras?
+`
+          },
+          {
+            id: "lesson-dg-3-5",
+            title: "Entrega Profesional de Proyectos",
+            content: `# Entrega Profesional y Handoff de Proyectos
+
+## Introducción
+
+La entrega no es enviar un ZIP con archivos; es asegurar que el cliente reciba exactamente lo que necesita, organizado para uso inmediato, con documentación clara.
+
+---
+
+## Estructura de Entrega Profesional
+
+**Estructura de carpetas:**
+- 📁 [Cliente]_[Proyecto]_Entrega_[Fecha]
+  - 📁 01_Archivos_Editables
+    - Proyecto_Principal.fig / .ai / .psd
+    - Fuentes_Utilizadas.zip (con licencias)
+  - 📁 02_Logotipos
+    - 📁 Principal (todas las variantes)
+    - 📁 Secundario
+    - 📁 Favicon
+  - 📁 03_Formatos_Digitales
+    - 📁 Web (PNG, JPEG optimizados)
+    - 📁 Redes_Sociales
+    - 📁 Email
+  - 📁 04_Formatos_Impresion
+    - 📁 Alta_Resolucion (TIFF, PDF/X con bleed)
+  - 📁 05_Documentacion
+    - Manual_de_Marca.pdf
+  - 📄 README.txt
+  - 📄 Licencias.txt
+
+---
+
+## Contenido del README
+
+**Ejemplo de README:**
+
+PROYECTO: [Nombre] | CLIENTE: [Cliente] | FECHA: [Fecha]
+
+**GUÍA RÁPIDA:**
+- Para web: /03_Formatos_Digitales/Web/
+- Para impresión: /04_Formatos_Impresion/
+- Para redes: /03_Formatos_Digitales/Redes_Sociales/
+
+**COLORES:** Primario: HEX #XXXXXX | RGB X,X,X | CMYK X,X,X,X
+
+**TIPOGRAFÍAS:** Principal: [Nombre] - [Dónde obtenerla]
+
+**¿PREGUNTAS?** Contactar antes de modificar.
+
+---
+
+## Formatos por Uso
+
+| Uso | Formatos | Notas |
+|-----|----------|-------|
+| Web | JPEG, PNG, SVG, WebP | Quality 80-85% |
+| Impresión | PDF/X, TIFF | 300dpi, CMYK, bleed |
+| Pantalla | PNG @1x, @2x, @3x | Para Retina/HiDPI |
+
+---
+
+## Checklist Pre-Entrega
+
+☐ Todos los archivos abren correctamente
+☐ Nomenclatura consistente y descriptiva
+☐ Fuentes incluidas o en curvas
+☐ Colores en espacio correcto
+☐ README completo
+☐ Sin archivos temporales
+☐ Link de descarga probado
+
+---
+
+## Capacitación del Cliente
+
+La entrega ideal incluye:
+1. Email con link + resumen escrito
+2. **Video Loom** de 5-10 min mostrando contenido
+3. Sesión en vivo (30-60 min) si amerita
+4. Soporte post-entrega (típico: 30 días)
+
+---
+
+## Ejemplo de Éxito
+
+Cliente recibió carpeta perfectamente organizada, README con instrucciones, video Loom, y sesión de 45 min.
+
+**Resultado:** Cero preguntas de soporte, 3 referidos el siguiente año: "la entrega más profesional que he recibido".
+
+---
+
+## Tip Práctico
+
+> Crea un template de estructura de carpetas y README que reutilices. Los clientes recurrentes apreciarán saber exactamente dónde encontrar todo.
+
+## Reflexión
+
+Piensa en la última entrega que recibiste como cliente. ¿Fue fácil entender qué hacer? ¿Tus entregas pasan ese test?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Herramientas y Flujos",
+          description: "Optimiza tu flujo de trabajo y crea sistemas eficientes",
+          tasks: [
+            {
+              id: "task-dg-3-1",
+              question: "Mapea tu flujo de trabajo actual desde que recibes un proyecto hasta que lo entregas. Identifica 3 puntos de fricción y propón una solución (herramienta o automatización) para cada uno."
+            },
+            {
+              id: "task-dg-3-2",
+              question: "Crea un template de exportación multi-formato en tu herramienta de diseño preferida. Debe incluir al menos 5 formatos diferentes (story, post cuadrado, banner, etc.) con sistema de zonas seguras documentado."
+            },
+            {
+              id: "task-dg-3-3",
+              question: "Diseña una estructura de entrega profesional completa: carpetas organizadas, README con guía de uso, y checklist de verificación pre-entrega. Aplícalo a un proyecto real o simulado."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Herramientas y Flujos",
+          description: "Evalúa tus conocimientos sobre herramientas y procesos profesionales",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué establece la regla 60-30-10 en diseño UI?", options: ["Tiempo por fase", "Distribución de colores", "Porcentaje texto vs imágenes", "Cantidad de reuniones"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuál es la estrategia recomendada para múltiples formatos?", options: ["Diseñar para el más grande primero", "Diseñar para el más restrictivo primero", "Diseñar todos al mismo tiempo", "Solo diseñar para web"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué tipo de tareas son candidatas ideales para automatización?", options: ["Tareas creativas únicas", "Tareas repetitivas basadas en reglas", "Reuniones con clientes", "Conceptualización"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué es un Design Token?", options: ["Un logo", "Valores fundamentales reutilizables (colores, spacing)", "Un tipo de fuente", "Un plugin de Figma"], correctAnswer: 1 },
+            { id: "q5", question: "Una entrega profesional debe incluir:", options: ["Solo los archivos", "Archivos + README + estructura organizada", "Solo el PDF final", "Link de WeTransfer"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-dg-4",
+        title: "Feedback y Comunicación con Clientes",
+        description: "Aprende a recibir e interpretar feedback, iterar inteligentemente y presentar propuestas de diseño de manera persuasiva",
+        theory: [
+          {
+            id: "lesson-dg-4-1",
+            title: "Psicología del Feedback",
+            content: `# Psicología del Feedback: Recibirlo Sin Sufrirlo
+
+## Introducción
+
+El diseño es personal; la crítica se siente personal. Pero la capacidad de recibir feedback sin reacción defensiva es lo que separa a diseñadores que crecen de los que se estancan.
+
+---
+
+## La Neurociencia del Feedback
+
+Cuando recibimos crítica, la **amígdala** (centro del miedo) se activa antes que la **corteza prefrontal** (pensamiento racional). Por eso sentimos la reacción emocional antes de analizarla.
+
+**Síntomas físicos:**
+- Aceleración del pulso
+- Tensión muscular
+- Respiración superficial
+- Impulso de interrumpir o defenderse
+
+---
+
+## Técnicas para Manejar la Reacción
+
+### 1. La Pausa de 3 Segundos
+Antes de responder, cuenta mentalmente hasta 3. Da tiempo al cerebro racional.
+
+### 2. Respiración Consciente
+Una respiración profunda reinicia el sistema nervioso.
+
+### 3. Reformulación Mental
+Cambia "me están atacando" por "me están dando información para mejorar".
+
+### 4. Postura Física
+Postura abierta (brazos descruzados) influye en el estado mental.
+
+---
+
+## Protocolo de Recepción
+
+| Paso | Acción |
+|------|--------|
+| **1. Escucha** | No interrumpas, toma notas, asiente |
+| **2. Clarifica** | "¿Puedes darme un ejemplo específico?" |
+| **3. Reformula** | "Si entiendo bien, lo que dices es..." |
+| **4. Agradece** | "Gracias por tomarte el tiempo" (no implica acuerdo) |
+
+---
+
+## Tipos de Feedback
+
+### Específico y Accionable
+"El botón debería ser más grande y en verde"
+→ Fácil de implementar. Evalúa mérito y actúa.
+
+### Vago
+"No me convence" / "Le falta algo"
+→ Requiere excavación. Pregunta hasta llegar a la raíz.
+
+### Basado en Gusto Personal
+"No me gusta el azul" (sin razón de negocio)
+→ Educación gentil sobre decisiones estratégicas.
+
+### Contradictorio
+"Hazlo más limpio" + "Añade más información"
+→ Clarifica prioridades. No puedes hacer ambos.
+
+---
+
+## El Diario de Feedback
+
+Registra:
+- Feedback recibido (textual)
+- Tu reacción inicial
+- La acción que tomaste
+- El resultado
+
+**Busca patrones:** Si múltiples personas dan el mismo feedback repetidamente, es área de mejora sistemática.
+
+---
+
+## Tip Práctico
+
+> Antes de reuniones de feedback, recuérdate: "El objetivo es mejorar el trabajo, no ganar una discusión." Este mindset cambia toda tu energía.
+
+## Reflexión
+
+Piensa en la última vez que recibiste feedback que te molestó. ¿Cuál fue tu reacción interna vs externa? Con distancia, ¿tenía algo de válido?
+`
+          },
+          {
+            id: "lesson-dg-4-2",
+            title: "Interpretación Estratégica de Comentarios",
+            content: `# Interpretación Estratégica de Comentarios del Cliente
+
+## Introducción
+
+El cliente rara vez articula exactamente lo que necesita. Tu trabajo es traducir declaraciones superficiales en problemas reales y soluciones efectivas.
+
+---
+
+## Traducción de Feedback Común
+
+| El cliente dice | Probablemente significa | Preguntar |
+|-----------------|------------------------|-----------|
+| "Hazlo pop" | Falta contraste, jerarquía débil | "¿Qué elemento debería destacar más?" |
+| "Se ve muy simple" | Ansiedad de espacio vacío | "¿Hay información adicional que incluir?" |
+| "Más premium" | Más espacio en blanco, tipografía refinada | "¿Qué marcas consideras premium?" |
+| "Más moderno" | Temor de parecer anticuado | "¿Qué marcas te parecen modernas?" |
+| "Hazlo más grande" | El elemento no destaca | "¿Es porque no se ve o porque quieres más énfasis?" |
+
+---
+
+## Framework de Categorización
+
+| Categoría | Descripción | Acción |
+|-----------|-------------|--------|
+| **Correcciones Objetivas** | Errores, typos, datos incorrectos | Implementar inmediatamente |
+| **Mejoras Alineadas** | Mejora cumplimiento de objetivos | Prioridad alta, discutir soluciones |
+| **Preferencias sin Impacto** | Gustos que no afectan objetivos | Discutir, explicar, negociar |
+| **Cambios Dañinos** | Perjudicarían el proyecto | Educar con datos, proponer alternativas |
+
+---
+
+## El Método de los 5 Por Qués
+
+**Cliente:** "Haz el logo más grande"
+- ¿Por qué? → "Porque no se nota"
+- ¿Por qué no se nota? → "Hay muchas cosas compitiendo"
+- ¿Por qué tantas cosas? → "Legal pidió añadir disclaimer"
+- ¿Por qué disclaimer tan prominente? → "No sé, así lo pusieron"
+
+**Solución real:** Reorganizar para que legal esté menos prominente, no agrandar logo.
+
+---
+
+## Preguntas Estratégicas Pre-Feedback
+
+Antes de que den feedback abierto, guía:
+- "¿Cuál fue tu primera impresión?"
+- "¿Qué te gusta más de esta propuesta?"
+- "¿Cómo crees que reaccionará tu audiencia?"
+- "¿Hay algo que sientes que falta?"
+
+---
+
+## Documentación Post-Reunión
+
+**Plantilla de email:**
+
+Resumen de feedback - [Proyecto] - [Fecha]
+
+Asistentes: [nombres]
+
+**Feedback recibido:**
+1. [Punto textual]
+2. [Punto textual]
+
+**Interpretación y acciones:**
+1. [Tu interpretación + solución]
+
+**Próximos pasos:**
+- [Acción] - [Responsable] - [Fecha]
+
+Por favor confirmen que refleja la conversación.
+
+---
+
+## Defensa con Datos
+
+**Cliente:** Quiere carrusel de 8 slides en la home.
+
+**Respuesta:** "Entiendo que quieres mostrar todo. Los datos de UX muestran que solo 2-3% de usuarios pasan del tercer slide. ¿Qué te parece si destacamos los 3 más importantes y creamos sección dedicada para el resto?"
+
+---
+
+## Tip Práctico
+
+> Cuando no entiendas feedback, nunca asumas. La frase "Ayúdame a entender qué quieres decir con..." muestra humildad y evita trabajo rehecho.
+
+## Reflexión
+
+Recuerda un proyecto donde implementaste literalmente todo el feedback y el resultado fue mediocre. ¿Qué traducción no hiciste?
+`
+          },
+          {
+            id: "lesson-dg-4-3",
+            title: "Iteración Inteligente",
+            content: `# Iteración Inteligente: Mejorar Sin Perder la Esencia
+
+## Introducción
+
+El peligro de la iteración mal manejada es el "diseño por comité" donde cada stakeholder añade su preferencia hasta que el resultado es un Frankenstein sin personalidad.
+
+---
+
+## Gestión Estructurada de Iteraciones
+
+### En el Acuerdo Inicial
+- Número de rondas incluidas (típico: 2-3)
+- Qué constituye una "ronda" (feedback consolidado)
+- Costo de rondas adicionales
+- Timeline por ronda
+
+### Estructura Recomendada
+
+| Ronda | Foco | Esperar |
+|-------|------|---------|
+| **1: Validación** | ¿Dirección correcta? ¿Mensaje claro? | Cambios potencialmente significativos |
+| **2: Refinamiento** | Ajustes específicos, detalles | Cambios menores a moderados |
+| **3: Aprobación** | Solo correcciones de errores | Aprobación o micro-ajustes |
+
+---
+
+## Control de Versiones
+
+**Nomenclatura:**
+- v1.0 - Concepto inicial presentado
+- v1.1 - Ajustes post feedback ronda 1
+- v2.0 - Nueva dirección (si hubo cambio mayor)
+- v2.1 - Ajustes post feedback ronda 2
+- vFINAL - Versión aprobada
+
+**Regla de oro:** Guarda cada versión. Nunca sobrescribas.
+
+---
+
+## Señales de Alarma
+
+⚠️ Ya no puedes explicar el concepto en una oración
+⚠️ Los cambios se contradicen entre sí
+⚠️ El diseño ya no cumple los objetivos del brief
+⚠️ Cada iteración añade sin quitar nada
+⚠️ Sientes que "arreglas" en lugar de "mejoras"
+⚠️ Más de 4 rondas y cliente sigue insatisfecho
+
+---
+
+## Qué Hacer Cuando Esto Ocurre
+
+1. **Pausa el trabajo** - No sigas en dirección incorrecta
+
+2. **Conversación honesta:**
+   "Noto dificultad para llegar a una versión satisfactoria. ¿Podemos revisar los objetivos originales?"
+
+3. **Comparación visual:**
+   Versión original vs actual. "¿Seguimos resolviendo el mismo problema?"
+
+4. **Opciones claras:**
+   - A) Volver a versión anterior + cambios específicos
+   - B) Redefinir objetivos + nuevo concepto
+   - C) Continuar aceptando consecuencias
+
+---
+
+## Defender vs Ceder
+
+| Defiende cuando... | Cede cuando... |
+|--------------------|----------------|
+| Cambio contradice objetivos del brief | Es preferencia estética sin impacto |
+| Daña usabilidad/accesibilidad | Cliente tiene info del mercado que no tienes |
+| Tienes datos que respaldan | La batalla no vale el costo de relación |
+| Crea inconsistencia con sistema | Es cambio menor con fuerte opinión del cliente |
+
+---
+
+## El Cementerio de Ideas
+
+Archiva conceptos descartados:
+- Clientes a veces cambian de opinión
+- Pueden servir para otros proyectos
+- Documenta tu proceso creativo
+- Demuestra trabajo realizado si hay disputas
+
+---
+
+## Tip Práctico
+
+> Nunca elimines versiones anteriores. Cuando el cliente dice "preferíamos algo anterior", poder mostrarla inmediatamente te da credibilidad.
+
+## Reflexión
+
+En un proyecto con muchas iteraciones, ¿el resultado final fue mejor que versiones intermedias? ¿En qué momento dejó de mejorar?
+`
+          },
+          {
+            id: "lesson-dg-4-4",
+            title: "Presentación Persuasiva de Propuestas",
+            content: `# Presentación Persuasiva de Propuestas de Diseño
+
+## Introducción
+
+Un diseño brillante presentado pobremente será rechazado; un diseño bueno presentado brillantemente será celebrado. La presentación determina si tu trabajo se implementa, se modifica innecesariamente, o se descarta.
+
+---
+
+## Estructura de Presentación Efectiva
+
+### Parte 1: Contexto (2-3 min)
+
+**Recordatorio del brief:**
+"El objetivo acordado es [X]. La audiencia es [Y]. El mensaje clave es [Z]."
+
+**Resumen del feedback anterior (si aplica):**
+"En la última ronda mencionaron [feedback]. Esta propuesta lo aborda."
+
+**Expectativas:**
+"Hoy muestro [X opciones]. Necesito de ustedes [tipo de feedback]."
+
+### Parte 2: Presentación del Diseño (5-10 min)
+
+Para cada opción:
+1. **Muestra en contexto** - Mockups realistas, no archivos planos
+2. **Explica el razonamiento** - "Elegimos esta tipografía porque..."
+3. **Conecta con el brief** - "Esto resuelve el objetivo de [X] porque..."
+
+### Parte 3: Tu Recomendación (2 min)
+
+**Sé claro y decisivo:**
+"De estas opciones, mi recomendación profesional es [X] porque [razones 1, 2, 3]."
+
+> Nunca digas: "Todas son buenas, ustedes decidan." Eso abdica tu responsabilidad profesional.
+
+### Parte 4: Discusión Guiada
+
+Preguntas específicas (no "¿qué opinan?"):
+- "¿Este diseño comunica [mensaje clave] claramente?"
+- "¿Cómo creen que reaccionará [audiencia]?"
+- "¿Hay algo que les preocupe respecto a [objetivo]?"
+
+---
+
+## Formatos de Presentación
+
+| Formato | Ventajas | Tips |
+|---------|----------|------|
+| **En vivo** | Controlas ritmo, observas reacciones | Prepara deck, no dejes que salten adelante |
+| **Asíncrono (Loom)** | Cliente ve cuando está enfocado | 5-10 min máximo, termina con preguntas |
+| **Documento** | Cuando no hay alternativa | Incluye texto explicativo, mockups, recomendación clara |
+
+---
+
+## Mockups de Contexto
+
+**Nunca presentes:**
+❌ JPG plano del diseño
+❌ Figma sin preparar
+❌ Sin escala ni contexto
+
+**Siempre presenta:**
+✅ En dispositivo realista
+✅ En contexto de uso
+✅ A escala que simule experiencia real
+
+---
+
+## Manejo de Objeciones
+
+| Objeción | Respuesta |
+|----------|-----------|
+| "¿Podemos ver otro color?" | "¿Qué te motiva a explorar otro color? Así muestro la opción más relevante." |
+| "Mi [esposo/jefe] dice que..." | "¿Esa persona está en nuestro público objetivo?" |
+| "No estoy seguro, algo no me convence" | "¿Podemos explorar qué genera esa sensación?" |
+| "¿Y si hacemos X en su lugar?" | "¿Qué problema resolvería eso?" |
+
+---
+
+## Ejemplo Efectivo
+
+"En nuestra última reunión mencionaste que el mensaje no era claro. Para esta versión, simplifiqué el headline a una oración, añadí subtítulo de soporte, y moví el CTA donde naturalmente cae la mirada según el F-pattern.
+
+[Muestra mockup en iPhone]
+
+Así se vería en el contexto real. Mi recomendación es la Opción A porque logra el balance entre claridad e impacto. ¿Este mensaje ahora es claro para ti?"
+
+---
+
+## Tip Práctico
+
+> Graba un video de 3-5 min explicando cada propuesta aunque la presentación sea en vivo. Sirve como respaldo para ausentes y referencia posterior.
+
+## Reflexión
+
+Piensa en la mejor presentación de diseño que hayas visto. ¿Qué la hizo efectiva? ¿Qué técnicas puedes incorporar?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Feedback y Comunicación",
+          description: "Practica la comunicación profesional con clientes",
+          tasks: [
+            {
+              id: "task-dg-4-1",
+              question: "Describe una situación real o hipotética donde recibiste/recibirías feedback negativo sobre un diseño. Aplica el protocolo de recepción (escucha, clarifica, reformula, agradece) y documenta cómo responderías profesionalmente."
+            },
+            {
+              id: "task-dg-4-2",
+              question: "Toma un feedback vago ('hazlo pop', 'más moderno', 'no me convence') y desarrolla las preguntas de clarificación que harías. Luego propón 2 posibles interpretaciones y soluciones para cada una."
+            },
+            {
+              id: "task-dg-4-3",
+              question: "Crea un script de presentación para un proyecto de diseño (real o simulado). Incluye: contexto (brief resumido), explicación del razonamiento de diseño, tu recomendación clara, y 3 preguntas guiadas para el cliente."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Feedback y Comunicación",
+          description: "Evalúa tus conocimientos sobre comunicación profesional con clientes",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué debes hacer primero al recibir feedback negativo?", options: ["Defender tu trabajo inmediatamente", "Escuchar completamente antes de responder", "Ignorar el comentario", "Cambiar todo el diseño"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuántas rondas de revisión se recomiendan definir en un contrato?", options: ["Ilimitadas", "Solo 1", "Típicamente 2-3", "Al menos 10"], correctAnswer: 2 },
+            { id: "q3", question: "¿Cómo se recomienda presentar las revisiones al cliente?", options: ["Enviar archivos sin contexto", "Solo enviar la opción favorita", "Usar mockups en contexto con razonamiento", "Esperar a que pida ver opciones"], correctAnswer: 2 },
+            { id: "q4", question: "Cuando el cliente dice 'hazlo pop', probablemente significa:", options: ["Añadir más colores", "Falta contraste o jerarquía visual", "Hacer todo más grande", "Cambiar la tipografía"], correctAnswer: 1 },
+            { id: "q5", question: "En una presentación profesional, ¿debes dar tu recomendación?", options: ["No, el cliente debe decidir solo", "Sí, con razones claras", "Solo si lo piden", "Nunca, es imponer tu criterio"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "community-manager",
+    title: "Community Manager Profesional",
+    slug: "community-manager",
+    description: "Conviértete en un Community Manager estratégico. Domina auditorías digitales, herramientas profesionales, gestión de crisis, tendencias de IA y construye tu carrera en marketing digital.",
+    duration: "~30 horas",
+    totalLessons: "45 Lecciones + Sprints Prácticos",
+    icon: "Users",
+    color: "from-blue-500 to-cyan-500",
+    certificate: {
+      title: "Certificado en Community Management Profesional",
+      description: "Ha completado satisfactoriamente el curso de Community Manager con dominio en auditoría digital, herramientas, gestión de crisis y estrategia"
+    },
+    modules: [
+      {
+        id: "mod-cm-1",
+        title: "Auditoría de Presencia Digital",
+        description: "Domina el arte de evaluar y diagnosticar la salud digital de cualquier marca: identidad, redes sociales, SEO y publicidad",
+        theory: [
+          {
+            id: "lesson-cm-1-1",
+            title: "Introducción a la Auditoría Digital",
+            content: `# Introducción a la Auditoría Digital
+
+## ¿Qué es una Auditoría de Presencia Digital?
+
+Una auditoría de presencia digital es un análisis exhaustivo de todos los puntos de contacto que una marca tiene en el entorno online. Este proceso evalúa la coherencia, efectividad y rendimiento de la identidad digital de una organización.
+
+---
+
+## La Importancia en 2026
+
+En el ecosistema digital actual, la presencia online ya no es opcional: es el **primer punto de contacto** entre marcas y consumidores. El **87% de los clientes** investigan online antes de realizar cualquier compra o decisión de negocio.
+
+---
+
+## Componentes de una Auditoría
+
+| Componente | Qué Evalúa |
+|------------|------------|
+| **Identidad Visual** | Logo, colores, tipografía, consistencia |
+| **Sitio Web** | UX, velocidad, SEO técnico |
+| **Redes Sociales** | Engagement, crecimiento, contenido |
+| **SEO** | Posicionamiento, keywords, backlinks |
+| **Publicidad Digital** | ROAS, segmentación, creatividades |
+| **Reputación** | Menciones, sentimiento, reviews |
+
+---
+
+## Objetivo Principal
+
+El objetivo es identificar:
+- **Fortalezas** a potenciar
+- **Debilidades** a corregir
+- **Oportunidades** de crecimiento
+- **Amenazas** competitivas
+
+Este diagnóstico sirve como base para cualquier estrategia de marketing digital efectiva.
+
+---
+
+## Tip Práctico
+
+> Antes de comenzar cualquier auditoría, define claramente los KPIs que importan al negocio. Una auditoría sin métricas de referencia es solo una opinión.
+`
+          },
+          {
+            id: "lesson-cm-1-2",
+            title: "Análisis de Identidad Digital",
+            content: `# Análisis de Identidad Digital
+
+## ¿Qué es la Identidad Digital?
+
+La identidad digital es la representación de tu marca en el ecosistema online. Incluye elementos visuales (logo, colores, tipografía), verbales (tono de voz, mensajes clave) y experienciales (cómo se siente interactuar con la marca).
+
+---
+
+## Preguntas Clave de Auditoría
+
+Para auditar la identidad digital debes responder:
+
+1. ¿Es consistente la imagen de marca en todas las plataformas?
+2. ¿El tono de comunicación es coherente?
+3. ¿Los valores de marca se transmiten claramente?
+4. ¿La experiencia es uniforme en todos los canales?
+
+---
+
+## Matriz de Consistencia
+
+Crea una matriz donde evalúes cada canal contra los elementos de identidad:
+
+| Canal | Logo | Colores | Tono | Mensajes | Puntuación |
+|-------|------|---------|------|----------|------------|
+| Web | 5 | 5 | 4 | 5 | 4.75 |
+| Instagram | 5 | 4 | 3 | 4 | 4.0 |
+| LinkedIn | 4 | 5 | 5 | 4 | 4.5 |
+| Email | 3 | 4 | 4 | 3 | 3.5 |
+
+Califica de 1-5 la coherencia de cada elemento.
+
+---
+
+## Impacto de la Inconsistencia
+
+Las inconsistencias en identidad digital:
+- Reducen la **confianza del consumidor en un 67%**
+- Un cliente que encuentra diferentes "personalidades" de marca tiene **3x más probabilidades de abandonar**
+
+---
+
+## Tip Práctico
+
+> Haz capturas de pantalla de todos los canales de la marca y colócalas lado a lado. Las inconsistencias se vuelven inmediatamente evidentes cuando ves todo junto.
+`
+          },
+          {
+            id: "lesson-cm-1-3",
+            title: "Auditoría del Sitio Web",
+            content: `# Auditoría del Sitio Web
+
+## El Hub Central Digital
+
+El sitio web es el hub central de la presencia digital. Una auditoría web completa evalúa cuatro pilares fundamentales:
+
+---
+
+## Los 4 Pilares de Auditoría Web
+
+### 1. Rendimiento Técnico
+- Velocidad de carga
+- Mobile-first design
+- Core Web Vitals
+
+### 2. Experiencia de Usuario (UX)
+- Navegación intuitiva
+- Diseño accesible
+- Arquitectura de información
+
+### 3. SEO Técnico
+- Indexación correcta
+- Estructura de URLs
+- Metadatos optimizados
+
+### 4. Conversión
+- CTAs claros
+- Formularios funcionales
+- Embudos optimizados
+
+---
+
+## Herramientas Esenciales
+
+| Herramienta | Uso |
+|-------------|-----|
+| **Google PageSpeed Insights** | Velocidad y Core Web Vitals |
+| **Google Search Console** | SEO técnico e indexación |
+| **Hotjar / Microsoft Clarity** | Comportamiento de usuarios |
+| **Google Analytics 4** | Métricas de conversión |
+
+---
+
+## Métricas Clave
+
+| Métrica | Objetivo |
+|---------|----------|
+| Tiempo de carga | < 3 segundos |
+| Tasa de rebote | < 40% |
+| Páginas por sesión | > 2 |
+| Tiempo en sitio | > 2 minutos |
+
+---
+
+## Checklist de Auditoría Web
+
+- ☐ ¿El sitio carga en menos de 3 segundos?
+- ☐ ¿Es responsive y funciona bien en móvil?
+- ☐ ¿Tiene certificado SSL activo?
+- ☐ ¿La navegación es intuitiva?
+- ☐ ¿Los CTAs son claros y visibles?
+- ☐ ¿Los formularios funcionan correctamente?
+`
+          },
+          {
+            id: "lesson-cm-1-4",
+            title: "Evaluación de Redes Sociales",
+            content: `# Evaluación de Redes Sociales
+
+## Análisis por Plataforma
+
+Cada red social requiere un análisis específico. Evalúa estos 8 pilares fundamentales:
+
+| Pilar | Qué Evaluar | Herramientas |
+|-------|-------------|--------------|
+| **Perfil** | Bio, foto, enlaces, destacados | Manual |
+| **Frecuencia** | Posts/semana, consistencia | Metricool |
+| **Calidad** | Visual, copywriting, valor | Manual |
+| **Engagement** | Likes, comentarios, shares | Nativo + tools |
+| **Crecimiento** | Tendencia de seguidores | Social Blade |
+| **Respuesta** | Tiempo y calidad de replies | Manual |
+| **Contenido** | Mix de formatos | Análisis manual |
+| **Coherencia** | Alineación con marca | Matriz de consistencia |
+
+---
+
+## Engagement Rate Benchmarks 2026
+
+| Plataforma | Bajo | Promedio | Bueno | Excelente |
+|------------|------|----------|-------|-----------|
+| **Instagram** | <1% | 1-2% | 2-4% | >4% |
+| **LinkedIn** | <1% | 1-2% | 2-4% | >4% |
+| **TikTok** | <3% | 3-5% | 5-10% | >10% |
+| **Facebook** | <0.3% | 0.3-0.5% | 0.5-1% | >1% |
+| **Twitter/X** | <0.5% | 0.5-1% | 1-2% | >2% |
+
+**Fórmulas por plataforma:**
+- **Instagram:** (Likes + Comentarios + Saves) / Seguidores × 100
+- **LinkedIn:** (Reactions + Comentarios + Shares) / Seguidores × 100
+- **TikTok:** (Likes + Comentarios + Shares) / Vistas × 100
+
+---
+
+## Framework de Análisis de Contenido Top
+
+**Metodología de los 10 Posts:**
+
+1. Extrae los 10 posts con mejor engagement de los últimos 90 días
+2. Analiza cada uno con esta matriz:
+
+| Post | Formato | Tema | Hora | Hook | CTA | Engagement |
+|------|---------|------|------|------|-----|------------|
+| 1 | Carrusel | Educativo | 9am | Pregunta | Guardar | 5.2% |
+| 2 | Reel | BTS | 7pm | Curiosidad | Seguir | 8.1% |
+| ... | ... | ... | ... | ... | ... | ... |
+
+3. Identifica patrones: ¿Qué tienen en común los top performers?
+
+---
+
+## Matriz de Auditoría Competitiva
+
+Analiza **mínimo 5 competidores directos**:
+
+| Métrica | Tu Marca | Comp. A | Comp. B | Comp. C | Benchmark |
+|---------|----------|---------|---------|---------|-----------|
+| Seguidores | 10K | 25K | 8K | 45K | 22K |
+| Crecimiento/mes | +2% | +5% | +1% | +3% | +2.75% |
+| Posts/semana | 3 | 7 | 2 | 5 | 4.25 |
+| Engagement | 2.5% | 4.1% | 1.8% | 2.9% | 2.8% |
+| Formato top | Carrusel | Reels | Imagen | Stories | - |
+| Respuesta avg | 4h | 1h | 24h | 2h | 7.75h |
+
+**Análisis de gaps:**
+- ¿Qué formatos usan ellos que tú no?
+- ¿Qué temas cubren que tú ignoras?
+- ¿En qué horarios publican con éxito?
+
+---
+
+## Métricas Avanzadas a Evaluar
+
+**Más allá del engagement básico:**
+
+- **Saves/Guardados:** Indica contenido de alto valor
+- **Shares:** Indica contenido que la gente quiere asociar con su imagen
+- **DMs generados:** Indica conversión a conversación
+- **Link clicks:** Indica interés en acción
+- **Follower/Following ratio:** Indica autoridad percibida
+- **Comentarios con más de 5 palabras:** Indica engagement genuino
+
+---
+
+## Red Flags en Auditoría
+
+⚠️ Engagement rate < 1% con audiencia grande → posibles seguidores falsos
+⚠️ Picos de seguidores sin contenido viral → compra de followers
+⚠️ Comentarios genéricos repetitivos → bots o pods
+⚠️ Proporción likes/comentarios > 100:1 → audiencia pasiva
+⚠️ Sin respuestas a comentarios → falta de gestión de comunidad
+
+---
+
+## Tip Práctico
+
+> No te obsesiones con el número de seguidores. Un engagement rate del 5% con 5K seguidores (250 interacciones) es más valioso que 0.5% con 100K (500 interacciones de una audiencia no comprometida).
+`
+          },
+          {
+            id: "lesson-cm-1-5",
+            title: "Fundamentos de SEO",
+            content: `# Fundamentos de SEO
+
+## ¿Qué es SEO?
+
+SEO (Search Engine Optimization) es la disciplina de mejorar la visibilidad orgánica en buscadores. Una auditoría SEO evalúa tres pilares:
+
+---
+
+## Los 3 Pilares del SEO
+
+### 1. SEO Técnico
+- Rastreo e indexación
+- Velocidad de carga
+- Estructura del sitio
+
+### 2. SEO On-Page
+- Contenido de calidad
+- Keywords optimizadas
+- Meta tags
+
+### 3. SEO Off-Page
+- Backlinks de calidad
+- Autoridad de dominio
+- Menciones de marca
+
+---
+
+## Herramientas de Auditoría SEO
+
+| Herramienta | Uso | Costo |
+|-------------|-----|-------|
+| **Google Search Console** | Oficial de Google | Gratis |
+| **Semrush / Ahrefs** | Análisis completo | Pago |
+| **Screaming Frog** | Auditoría técnica | Freemium |
+| **PageSpeed Insights** | Rendimiento | Gratis |
+
+---
+
+## Checklist SEO Técnico
+
+- ☐ Sitemap.xml presente y actualizado
+- ☐ Robots.txt configurado correctamente
+- ☐ Sin errores de rastreo en Search Console
+- ☐ URLs amigables y descriptivas
+- ☐ Etiquetas canónicas correctas
+- ☐ Datos estructurados implementados
+- ☐ HTTPS activo en todo el sitio
+
+---
+
+## Análisis de Keywords
+
+Identifica las **20 palabras clave principales** para la marca:
+
+| Keyword | Posición Actual | Volumen | Dificultad |
+|---------|-----------------|---------|------------|
+| [término 1] | 15 | 5,400 | Media |
+| [término 2] | 8 | 2,900 | Baja |
+| [término 3] | No rankea | 12,000 | Alta |
+
+Identifica content gaps respecto a competidores.
+`
+          },
+          {
+            id: "lesson-cm-1-6",
+            title: "Creación del Informe de Auditoría",
+            content: `# Creación del Informe de Auditoría
+
+## Estructura del Informe Profesional
+
+Un informe de auditoría efectivo debe ser **claro, accionable y priorizado**:
+
+---
+
+## Estructura Recomendada
+
+### 1. Resumen Ejecutivo (1 página)
+- 3-5 hallazgos más importantes
+- Recomendaciones principales
+- Métricas clave de un vistazo
+
+### 2. Metodología
+- Herramientas utilizadas
+- Período de análisis
+- Alcance de la auditoría
+
+### 3. Hallazgos por Área
+- Identidad digital
+- Sitio web
+- Redes sociales
+- SEO
+- Publicidad
+
+### 4. Recomendaciones Priorizadas
+- Quick wins
+- Proyectos a mediano plazo
+- Iniciativas estratégicas
+
+### 5. Plan de Acción
+- Timeline de implementación
+- Recursos necesarios
+- KPIs de seguimiento
+
+---
+
+## Matriz de Priorización
+
+Usa una matriz de **Impacto vs Esfuerzo**:
+
+| Prioridad | Características | Acción |
+|-----------|-----------------|--------|
+| **Quick Wins** | Alto impacto, bajo esfuerzo | Inmediata |
+| **Proyectos Estratégicos** | Alto impacto, alto esfuerzo | Planificar |
+| **Mejoras Incrementales** | Bajo impacto, bajo esfuerzo | Cuando haya tiempo |
+| **Evitar** | Bajo impacto, alto esfuerzo | No priorizar |
+
+---
+
+## Visualización de Datos
+
+- Usa **gráficos** para comparativas
+- **Tablas** para métricas detalladas
+- **Código de colores** (rojo/amarillo/verde) para status
+- **Screenshots** para ilustrar problemas
+
+---
+
+## Tip Práctico
+
+> El resumen ejecutivo es lo más importante. Debe poder leerse en 2 minutos y contener TODO lo que un directivo necesita saber para tomar decisiones.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Auditoría Express de una Marca",
+          description: "Realiza una mini auditoría digital de una marca de tu elección",
+          tasks: [
+            {
+              id: "task-cm-1-1",
+              question: "Selecciona una marca local o pequeña empresa. Lista su nombre y todos sus canales digitales (web, redes sociales, etc.)."
+            },
+            {
+              id: "task-cm-1-2",
+              question: "Evalúa la identidad visual de la marca: ¿Es consistente el logo, colores y tipografía en todos sus canales? Lista 3 fortalezas y 3 debilidades."
+            },
+            {
+              id: "task-cm-1-3",
+              question: "Analiza sus últimas 5 publicaciones en redes sociales. Calcula el engagement rate aproximado e identifica el tipo de contenido más utilizado."
+            },
+            {
+              id: "task-cm-1-4",
+              question: "Escribe un mini informe (100-150 palabras) con las 3 recomendaciones principales para mejorar la presencia digital de la marca."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Auditoría Digital",
+          description: "Evalúa tus conocimientos sobre auditoría de presencia digital",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es el primer paso para realizar una auditoría de presencia digital?", options: ["Crear contenido nuevo", "Analizar la identidad de marca actual", "Cambiar todas las redes sociales", "Invertir en publicidad"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué herramienta es esencial para auditar el rendimiento de un sitio web?", options: ["Canva", "Google Analytics", "Hootsuite", "Buffer"], correctAnswer: 1 },
+            { id: "q3", question: "¿Cuál es un KPI clave para redes sociales?", options: ["Número de empleados", "Tasa de engagement", "Costo de oficina", "Número de productos"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué debe incluir un informe de auditoría?", options: ["Solo aspectos positivos", "Diagnóstico, hallazgos y recomendaciones", "Únicamente el presupuesto", "Solo capturas de pantalla"], correctAnswer: 1 },
+            { id: "q5", question: "¿Qué es el SEO on-page?", options: ["Publicidad en redes sociales", "Optimización dentro del sitio web", "Email marketing", "Diseño de logos"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-cm-2",
+        title: "Herramientas del Community Manager",
+        description: "Domina el ecosistema de herramientas profesionales: planificación, diseño, analítica, automatización e inteligencia artificial",
+        theory: [
+          {
+            id: "lesson-cm-2-1",
+            title: "Ecosistema de Herramientas 2026",
+            content: `# Ecosistema de Herramientas 2026
+
+## El CM Moderno
+
+El Community Manager de 2026 opera en un ecosistema de herramientas interconectadas. Ya no basta con dominar una o dos plataformas: se requiere fluidez en **planificación, diseño, analítica, automatización y gestión**.
+
+---
+
+## Categorías Esenciales
+
+| Categoría | Herramientas |
+|-----------|--------------|
+| **Planificación** | Hootsuite, Buffer, Metricool |
+| **Diseño** | Canva, CapCut, InVideo |
+| **Analítica** | GA4, Brand24, Talkwalker |
+| **Automatización** | Zapier, Make |
+| **Gestión** | Trello, Notion, Asana |
+| **IA** | ChatGPT, Claude, Midjourney |
+
+---
+
+## La Clave: Integración
+
+Las herramientas deben "hablar" entre sí para crear flujos eficientes:
+
+**Ejemplo de flujo integrado:**
+1. **Trello** → Planificar contenido
+2. **Canva** → Diseñar creatividades
+3. **Hootsuite** → Programar publicaciones
+4. **GA4** → Medir resultados
+5. **Zapier** → Automatizar reportes
+
+---
+
+## Criterios de Selección
+
+Al elegir herramientas, considera:
+
+- ✓ Curva de aprendizaje
+- ✓ Integraciones disponibles
+- ✓ Relación coste/beneficio
+- ✓ Escalabilidad
+- ✓ Soporte y comunidad
+- ✓ Alineación con tus necesidades
+
+---
+
+## Tip Práctico
+
+> No intentes dominar todas las herramientas a la vez. Empieza con una por categoría, úsala 2 semanas, luego añade la siguiente. Un stack simple bien usado supera a uno complejo que nadie entiende.
+`
+          },
+          {
+            id: "lesson-cm-2-2",
+            title: "Planificación: Hootsuite y Buffer",
+            content: `# Planificación y Programación: Hootsuite y Buffer
+
+## Gestión Centralizada
+
+Hootsuite y Buffer son herramientas líderes para gestionar múltiples redes sociales desde un solo dashboard. Permiten programar contenido, monitorizar menciones y analizar rendimiento.
+
+---
+
+## Hootsuite
+
+**Destaca por:**
+- Gestión de equipos con diferentes permisos
+- Streams personalizables para monitoreo en tiempo real
+- Integraciones robustas con CRMs
+- Reportes avanzados y personalizables
+
+**Ideal para:** Equipos y agencias con múltiples clientes
+
+---
+
+## Buffer
+
+**Destaca por:**
+- Interfaz simple e intuitiva
+- Extensión de navegador para compartir rápido
+- Sugerencias de mejor hora para publicar
+- Plan gratuito generoso para empezar
+
+**Ideal para:** Freelancers y pequeñas empresas
+
+---
+
+## Mejores Prácticas de Programación
+
+| Práctica | Beneficio |
+|----------|-----------|
+| Programa con 1-2 semanas de antelación | Consistencia garantizada |
+| Deja slots para contenido reactivo | Flexibilidad para tendencias |
+| Usa etiquetas para categorizar posts | Organización y análisis |
+| Revisa analytics semanalmente | Optimización continua |
+
+---
+
+## Tip Práctico
+
+> Programa tu contenido evergreen con semanas de anticipación, pero deja siempre 20% de capacidad para contenido reactivo y trending topics.
+`
+          },
+          {
+            id: "lesson-cm-2-3",
+            title: "Metricool: Gestión y Analítica",
+            content: `# Metricool: Gestión y Analítica Integrada
+
+## Plataforma Todo-en-Uno
+
+Metricool combina planificación, publicación, analítica y reportes en una interfaz amigable con excelente relación calidad-precio. Es especialmente popular en el mercado hispanohablante.
+
+---
+
+## Funcionalidades Clave
+
+- **Planificador visual** con drag-and-drop
+- **Análisis de competencia** integrado
+- **Métricas unificadas** de todas las redes
+- **Reportes automáticos** personalizables
+- **SmartLinks** para bio de Instagram
+
+---
+
+## Análisis de Competencia
+
+Metricool permite monitorizar hasta **5 competidores gratuitamente**:
+
+| Métrica | Tu Marca | Competidor A | Competidor B |
+|---------|----------|--------------|--------------|
+| Publicaciones/semana | 4 | 7 | 3 |
+| Engagement rate | 3.2% | 4.5% | 2.1% |
+| Crecimiento mensual | +2% | +5% | +1% |
+
+---
+
+## Flujo de Trabajo Recomendado
+
+| Día | Actividad |
+|-----|-----------|
+| **Lunes** | Revisión de métricas y planificación semanal |
+| **Miércoles** | Análisis de competencia |
+| **Viernes** | Programación de contenido próxima semana |
+| **Mensual** | Generación de reporte para cliente/dirección |
+
+---
+
+## Tip Práctico
+
+> Configura reportes automáticos que se envíen cada lunes. Así empiezas la semana con datos frescos sin esfuerzo manual.
+`
+          },
+          {
+            id: "lesson-cm-2-4",
+            title: "Diseño con Canva",
+            content: `# Diseño de Contenidos con Canva
+
+## Diseño Democratizado
+
+Canva ha democratizado el diseño gráfico. Con sus plantillas profesionales, cualquier CM puede crear contenido visual de alta calidad sin conocimientos avanzados de diseño.
+
+---
+
+## Funcionalidades Esenciales
+
+| Función | Uso |
+|---------|-----|
+| **Templates por plataforma** | Instagram, LinkedIn, TikTok, etc. |
+| **Brand Kit** | Colores, fuentes, logos consistentes |
+| **Magic Resize** | Adapta a diferentes formatos |
+| **Colaboración** | Trabajo en equipo en tiempo real |
+
+---
+
+## Canva AI (Magic Studio)
+
+Las funciones de IA de Canva en 2026:
+
+- **Magic Write** - Genera textos para diseños
+- **Background Remover** - Elimina fondos automáticamente
+- **Magic Resize** - Redimensiona inteligentemente
+- **Text to Image** - Genera imágenes desde prompts
+
+El CM de 2026 debe dominar estas funciones.
+
+---
+
+## Organización Profesional
+
+**Estructura de carpetas recomendada:**
+
+- 📁 Cliente A
+  - 📁 Brand Assets
+  - 📁 Instagram
+  - 📁 LinkedIn
+  - 📁 Historias
+- 📁 Cliente B
+  - ...
+
+---
+
+## Tip Práctico
+
+> Crea plantillas maestras para cada tipo de contenido recurrente (posts, stories, carruseles). Te ahorrará horas cada semana.
+`
+          },
+          {
+            id: "lesson-cm-2-5",
+            title: "Video con CapCut e InVideo",
+            content: `# Edición de Video: CapCut e InVideo
+
+## El Video Domina
+
+El video corto domina las redes sociales en 2026. **Reels, TikToks y Shorts** son formatos esenciales. CapCut e InVideo permiten crear contenido profesional sin experiencia previa.
+
+---
+
+## CapCut
+
+**Destaca por:**
+- Edición intuitiva en móvil y desktop
+- Efectos y transiciones trending
+- Sincronización automática con música
+- Subtítulos automáticos con IA
+- Exportación optimizada por plataforma
+
+**Ideal para:** Contenido rápido y trending
+
+---
+
+## InVideo
+
+**Destaca por:**
+- Templates profesionales listos para usar
+- Biblioteca de stock incluida
+- Edición colaborativa en la nube
+- Mejor para videos más largos
+
+**Ideal para:** Contenido corporativo y explicativo
+
+---
+
+## Workflow para Reels/TikTok
+
+| Elemento | Recomendación |
+|----------|---------------|
+| **Hook** | Primeros 3 segundos cautivadores |
+| **Duración** | 15-30 segundos óptimo |
+| **Subtítulos** | Siempre (80% ve sin sonido) |
+| **CTA** | Claro al final |
+| **Música** | Trending cuando sea apropiado |
+
+---
+
+## Tip Práctico
+
+> Graba siempre en vertical (9:16) para Reels y TikTok. Es más difícil adaptar horizontal a vertical que al revés.
+`
+          },
+          {
+            id: "lesson-cm-2-6",
+            title: "Google Analytics 4",
+            content: `# Google Analytics 4: Analítica Web
+
+## La Nueva Generación
+
+Google Analytics 4 es la nueva generación de analítica web. A diferencia de Universal Analytics, GA4 está **basado en eventos** y preparado para un mundo sin cookies de terceros.
+
+---
+
+## Conceptos Clave de GA4
+
+| Concepto | Descripción |
+|----------|-------------|
+| **Eventos** | Toda interacción es un evento |
+| **Parámetros** | Datos adicionales de cada evento |
+| **Conversiones** | Eventos importantes para el negocio |
+| **Audiencias** | Segmentos de usuarios |
+| **Exploraciones** | Análisis personalizados |
+
+---
+
+## Configuración Esencial para CM
+
+1. **Define conversiones relevantes**
+   - Formulario de contacto
+   - Descargas
+   - Compras
+
+2. **Crea eventos personalizados**
+   - Scroll depth
+   - Clics en CTAs
+   - Reproducciones de video
+
+3. **Configura audiencias para remarketing**
+   - Visitantes que no convirtieron
+   - Usuarios comprometidos
+
+4. **Conecta con Google Ads**
+
+---
+
+## Reportes Clave para CM
+
+| Reporte | Qué Muestra |
+|---------|-------------|
+| **Adquisición** | De dónde vienen los usuarios |
+| **Engagement** | Qué hacen en el sitio |
+| **Conversiones** | Objetivos cumplidos |
+| **Demografía** | Quiénes son tus usuarios |
+
+Enfócate en tráfico desde redes sociales y comportamiento de esos usuarios.
+
+---
+
+## Tip Práctico
+
+> Crea un dashboard personalizado con las 5-7 métricas más importantes para tu cliente. Menos es más cuando se trata de reportar.
+`
+          },
+          {
+            id: "lesson-cm-2-7",
+            title: "Automatización con Zapier",
+            content: `# Automatización: Zapier y Make
+
+## Multiplicadores de Productividad
+
+Zapier y Make permiten conectar aplicaciones y automatizar flujos de trabajo **sin código**. Son esenciales para el CM moderno.
+
+---
+
+## Zapier vs Make
+
+| Aspecto | Zapier | Make |
+|---------|--------|------|
+| **Facilidad** | Más simple | Más complejo |
+| **Integraciones** | +5000 apps | +1000 apps |
+| **Flujos** | Lineales | Complejos con ramificaciones |
+| **Precio** | Más caro | Más económico |
+
+---
+
+## Automatizaciones Útiles para CM
+
+**1. Nuevo post de blog → Compartir en redes**
+- Trigger: RSS del blog
+- Acción: Publicar en Twitter, LinkedIn, Facebook
+
+**2. Mención negativa → Alerta en Slack**
+- Trigger: Mention con sentimiento negativo
+- Acción: Mensaje en canal de alertas
+
+**3. Reporte semanal automático**
+- Trigger: Cada lunes a las 9am
+- Acción: Generar y enviar reporte por email
+
+**4. Nuevo lead → Secuencia completa**
+- Trigger: Formulario completado
+- Acciones: Añadir a CRM + Email de bienvenida + Notificación al equipo
+
+---
+
+## Ejemplo de Automatización
+
+**Cuando proyecto en Asana cambia a "Completado":**
+1. Mover archivos a carpeta de archivo
+2. Enviar email al cliente con link
+3. Crear entrada en spreadsheet
+4. Programar survey de satisfacción
+
+**Ahorro:** 5 horas/semana
+
+---
+
+## Tip Práctico
+
+> Empieza con una automatización simple que uses frecuentemente. Una vez funcione, añade complejidad gradualmente.
+`
+          },
+          {
+            id: "lesson-cm-2-8",
+            title: "IA para Community Managers",
+            content: `# Inteligencia Artificial para CM
+
+## La Transformación del Rol
+
+La IA ha transformado el trabajo del CM. En 2026, el rol ha pasado de crear contenido manualmente a **supervisar, editar y validar** contenido generado por IA. El CM es ahora un "director de orquesta".
+
+---
+
+## Ecosistema de Herramientas IA 2026
+
+| Categoría | Herramienta | Mejor Para | Costo |
+|-----------|-------------|------------|-------|
+| **Texto** | ChatGPT-4 | Versatilidad | $20/mes |
+| **Texto** | Claude | Análisis largo, ética | $20/mes |
+| **Texto** | Jasper | Marketing específico | $49/mes |
+| **Imágenes** | Midjourney | Calidad artística | $10/mes |
+| **Imágenes** | DALL-E 3 | Integración ChatGPT | Incluido |
+| **Video** | Runway | Edición IA | $15/mes |
+| **Video** | HeyGen | Avatares | $24/mes |
+| **Audio** | ElevenLabs | Voiceover realista | $5/mes |
+
+---
+
+## Framework de Prompt Engineering para CM
+
+**Estructura CRISP:**
+
+- **C**ontexto: "Eres un CM experto en [industria]"
+- **R**ol: "Actúa como [tipo de especialista]"
+- **I**nstrucción: "Escribe/Crea/Genera [tarea específica]"
+- **S**alida: "En formato de [estructura deseada]"
+- **P**arámetros: "Con máximo [límites], tono [estilo]"
+
+**Ejemplo completo:**
+"Eres un CM experto en moda sostenible (C). Actúa como copywriter creativo (R). Escribe 5 captions para Instagram sobre nuestra nueva colección de verano (I). En formato de: hook + descripción + CTA + hashtags (S). Máximo 150 caracteres por caption, tono fresco y juvenil, incluye emoji relevante (P)."
+
+---
+
+## Biblioteca de Prompts para CM
+
+**Para ideación:**
+"Dame 20 ideas de contenido para [marca/industria] que combinen [tendencia actual] con [valor de marca]. Formato: título + descripción breve + formato sugerido (reel/carrusel/post)"
+
+**Para copies:**
+"Escribe 3 versiones de caption para [tipo de post] de [marca]. Versión A: informativa. Versión B: emocional. Versión C: humorística. Incluye CTA y hashtags relevantes."
+
+**Para respuestas:**
+"Como CM de [marca], redacta respuesta a este comentario: [comentario]. Tono: [empático/profesional/divertido]. Objetivo: [resolver/agradecer/convertir]."
+
+**Para análisis:**
+"Analiza estos 10 posts de [competidor] y extrae: temas recurrentes, formato más usado, horarios de publicación, estilo de copywriting, CTAs utilizados."
+
+---
+
+## Flujo de Trabajo CM + IA Optimizado
+
+| Fase | Acción | Tiempo | % del Total |
+|------|--------|--------|-------------|
+| 1. Brief | Definir objetivo y parámetros | 5 min | 10% |
+| 2. Prompt | Escribir instrucciones precisas | 10 min | 20% |
+| 3. Generación | Output de IA | 2 min | 5% |
+| 4. Revisión | Verificar y fact-check | 15 min | 30% |
+| 5. Edición | Personalizar al tono de marca | 10 min | 20% |
+| 6. Optimización | Ajustar para plataforma | 5 min | 10% |
+| 7. Aprobación | Validación final | 3 min | 5% |
+
+**Total: 50 min vs 2-3 horas manual**
+
+---
+
+## Checklist de Validación de Contenido IA
+
+Antes de publicar contenido generado por IA:
+
+- ☐ ¿La información es factualmente correcta?
+- ☐ ¿Suena como la voz de la marca?
+- ☐ ¿Aporta valor real a la audiencia?
+- ☐ ¿Podría malinterpretarse o ofender?
+- ☐ ¿Está adaptado a la plataforma específica?
+- ☐ ¿Los hashtags son relevantes y actuales?
+- ☐ ¿El CTA es claro y apropiado?
+- ☐ ¿No hay "alucinaciones" o datos falsos?
+
+---
+
+## Limitaciones Críticas
+
+| Limitación | Impacto | Mitigación |
+|------------|---------|------------|
+| Alucinaciones | Info falsa publicada | Fact-check SIEMPRE |
+| Corte de conocimiento | Datos desactualizados | Verificar tendencias actuales |
+| Contenido genérico | Falta de diferenciación | Prompts específicos + edición |
+| Derechos de autor | Problemas legales | Revisar políticas de uso |
+| Falta de contexto | Mensajes inapropiados | Supervisión humana |
+
+---
+
+## Tip Práctico
+
+> Crea una "Biblioteca de Prompts" documentada para tu marca/clientes. Incluye prompts probados para cada tipo de contenido. Esto garantiza consistencia y ahorra tiempo de iteración.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Configura tu Stack de Herramientas",
+          description: "Crea cuentas y configura las herramientas básicas de Community Management",
+          tasks: [
+            {
+              id: "task-cm-2-1",
+              question: "Crea una cuenta en Canva y diseña un post de prueba para Instagram. Adjunta el enlace o captura del diseño."
+            },
+            {
+              id: "task-cm-2-2",
+              question: "Crea una cuenta gratuita en Buffer o Metricool. Conecta al menos una red social de prueba y describe tu experiencia."
+            },
+            {
+              id: "task-cm-2-3",
+              question: "Accede a la cuenta demo de Google Analytics 4 y familiarízate con el dashboard. Describe 3 métricas que consideres más relevantes para un CM."
+            },
+            {
+              id: "task-cm-2-4",
+              question: "Usa ChatGPT o Claude para generar 3 ideas de contenido para una marca ficticia. Incluye los prompts que utilizaste y las ideas generadas."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Herramientas del CM",
+          description: "Evalúa tus conocimientos sobre las herramientas profesionales",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué herramienta se especializa en programación de contenido?", options: ["Photoshop", "Hootsuite", "Final Cut Pro", "Microsoft Word"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué plataforma es ideal para diseño sin conocimientos técnicos?", options: ["Adobe Premiere", "Canva", "AutoCAD", "Excel"], correctAnswer: 1 },
+            { id: "q3", question: "¿Para qué sirve Google Analytics 4?", options: ["Crear videos", "Medir y analizar tráfico web", "Editar fotos", "Programar emails"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué herramienta permite automatizar tareas entre aplicaciones?", options: ["Canva", "Zapier", "Photoshop", "PowerPoint"], correctAnswer: 1 },
+            { id: "q5", question: "¿Cuál es una función principal de Metricool?", options: ["Edición de video profesional", "Análisis y planificación de redes sociales", "Creación de sitios web", "Diseño de logos"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-cm-3",
+        title: "Gestión de Crisis en Redes Sociales",
+        description: "Aprende a prevenir, detectar y gestionar crisis reputacionales con protocolos profesionales y comunicación estratégica",
+        theory: [
+          {
+            id: "lesson-cm-3-1",
+            title: "La Reputación como Activo Estratégico",
+            content: `# La Reputación Digital como Activo Estratégico
+
+## El Activo Más Volátil
+
+En el ecosistema digital de 2026, la reputación es el activo más volátil y valioso de una organización. Una crisis mal gestionada puede destruir en **horas** el valor construido durante **años**.
+
+---
+
+## La Oportunidad en la Crisis
+
+Sin embargo, un manejo profesional y transparente puede transformarse en una **oportunidad única**:
+
+- Demostrar la integridad de la marca
+- Reforzar la confianza de la comunidad
+- Salir fortalecido de la adversidad
+
+---
+
+## ¿Qué es una Crisis en Redes?
+
+Una crisis en redes sociales se define como una situación en la que la perspectiva o posición de la empresa es **criticada y repudiada** por el público, manifestándose a través de comentarios y críticas que **escalan rápidamente**.
+
+---
+
+## Objetivo de la Gestión de Crisis
+
+> Actuar con **estrategia**, no con **pánico**.
+
+Esto requiere:
+- Preparación previa
+- Protocolos claros
+- Equipo entrenado
+- Respuesta coordinada y profesional
+
+---
+
+## Tip Práctico
+
+> La mejor gestión de crisis es la prevención. Invierte tiempo en crear protocolos ANTES de necesitarlos, no durante la emergencia.
+`
+          },
+          {
+            id: "lesson-cm-3-2",
+            title: "Escucha Social: Sistema de Alerta Temprana",
+            content: `# Escucha Social Activa: Sistema de Alerta Temprana
+
+## Monitorización 24/7
+
+La monitorización en tiempo real es una función **crítica e innegociable**. El objetivo es detectar el **75% de los comentarios negativos** antes de que escalen a crisis.
+
+---
+
+## Herramientas de Escucha Social
+
+| Herramienta | Mejor Para |
+|-------------|------------|
+| **Brand24** | Monitoreo en tiempo real y alertas |
+| **Sprout Social** | Gestión integrada |
+| **Metricool** | Monitoreo básico |
+| **Hootsuite** | Streams personalizados |
+| **Google Alerts** | Complemento gratuito |
+
+---
+
+## Configuración de Alertas
+
+Monitoriza siempre:
+
+- ✓ Nombre de marca y variaciones
+- ✓ Nombres de productos/servicios
+- ✓ Nombres de directivos clave
+- ✓ Hashtags de campaña
+- ✓ Términos de crisis (queja, denuncia, estafa, etc.)
+
+---
+
+## Protocolo de Monitoreo
+
+| Frecuencia | Acción |
+|------------|--------|
+| **Cada 2 horas** | Revisión en horario laboral |
+| **Automático** | Alertas para sentimiento negativo |
+| **Inmediato** | Escalación si se detectan patrones |
+| **Siempre** | Documentación de todo incidente |
+
+---
+
+## Tip Práctico
+
+> Configura alertas por email Y por Slack/WhatsApp. Las crisis no esperan a que revises tu correo.
+`
+          },
+          {
+            id: "lesson-cm-3-3",
+            title: "El Equipo de Crisis",
+            content: `# Definición del Equipo de Crisis
+
+## Comunicación Centralizada
+
+Para evitar mensajes contradictorios, es imperativo centralizar la comunicación en un **equipo de crisis predefinido**. Cada miembro debe conocer su rol.
+
+---
+
+## Roles del Equipo
+
+### Community Manager
+- Monitorización 24/7 de todos los canales
+- Detección inicial y clasificación del riesgo
+- Ejecución de respuestas según protocolo
+- Documentación de la evolución
+
+### Social Media Manager
+- Redacción de comunicados y mensajes clave
+- Coordinación de la estrategia de respuesta
+- Enlace con el equipo directivo
+- Decisión sobre pausa de contenido programado
+
+### Director de Marketing / CEO
+- Aprobación de comunicados oficiales
+- Toma de decisiones estratégicas
+- Portavoz en casos graves
+- Contacto con medios si es necesario
+
+### Legal
+- Revisión de comunicaciones sensibles
+- Asesoramiento sobre implicaciones legales
+
+---
+
+## Matriz de Escalación
+
+| Nivel | Quién Actúa | Quién Aprueba |
+|-------|-------------|---------------|
+| Bajo | CM | CM |
+| Medio | CM + SMM | SMM |
+| Alto | Equipo completo | Director |
+| Crítico | Equipo + Legal | CEO |
+
+---
+
+## Tip Práctico
+
+> Ten una lista de contactos de emergencia con teléfonos personales. Durante una crisis a las 11pm, el email corporativo no sirve.
+`
+          },
+          {
+            id: "lesson-cm-3-4",
+            title: "Manual de Actuación",
+            content: `# Manual de Actuación y Mensajes Clave
+
+## El Recurso Más Valioso
+
+Un plan de crisis preaprobado es el recurso más valioso durante una emergencia. **Reduce el tiempo de respuesta** y minimiza errores humanos bajo presión.
+
+---
+
+## Componentes del Manual
+
+1. **Lista de contactos clave**
+   - Teléfono y email de todo el equipo
+
+2. **Protocolo por nivel de riesgo**
+   - Acciones específicas para cada nivel
+
+3. **Plantillas de mensajes preaprobados**
+   - Escenarios comunes cubiertos
+
+4. **Guía de tono y lenguaje**
+   - Qué decir y qué NO decir
+
+5. **Canales oficiales**
+   - Dónde comunicar qué tipo de mensaje
+
+---
+
+## Plantillas de Respuesta
+
+| Tipo | Ejemplo |
+|------|---------|
+| **Reconocimiento** | "Hemos visto tu mensaje y lo estamos revisando" |
+| **Disculpa** | "Lamentamos la experiencia que has tenido" |
+| **Escalación** | "Te enviamos un DM para ayudarte mejor" |
+| **En proceso** | "Estamos investigando y te informaremos" |
+
+---
+
+## Tiempos de Respuesta Objetivo
+
+| Nivel | Tiempo Máximo |
+|-------|---------------|
+| Bajo | 4 horas |
+| Medio | 2 horas |
+| Alto | 1 hora |
+| Crítico | 30 minutos |
+
+---
+
+## Tip Práctico
+
+> Revisa y actualiza el manual cada 6 meses. Los escenarios de crisis evolucionan y tu preparación debe evolucionar con ellos.
+`
+          },
+          {
+            id: "lesson-cm-3-5",
+            title: "Clasificación de Niveles de Riesgo",
+            content: `# Clasificación de Niveles de Riesgo
+
+## No Todo es Crisis
+
+No todas las situaciones negativas son crisis. Es crucial clasificar correctamente el nivel de riesgo para responder **proporcionalmente**.
+
+---
+
+## Matriz de Clasificación
+
+### Nivel Bajo
+- 1-2 comentarios negativos sin viralización
+- Queja puntual de cliente
+- Fácilmente resoluble
+- **Acción:** CM gestiona directamente
+
+### Nivel Medio
+- Múltiples comentarios sobre el mismo tema
+- Mención en blogs o medios menores
+- Potencial de escalada
+- **Acción:** SMM coordina, notifica a dirección
+
+### Nivel Alto
+- Viralización activa
+- Trending topic local
+- Cobertura en medios
+- **Acción:** Equipo completo activado
+
+### Nivel Crítico
+- Viralización masiva
+- Trending topic nacional
+- Impacto en ventas/reputación evidente
+- **Acción:** CEO involucrado, posible comunicado oficial
+
+---
+
+## Indicadores de Escalada
+
+⚠️ Velocidad de crecimiento de menciones
+⚠️ Participación de influencers
+⚠️ Cobertura de medios tradicionales
+⚠️ Cambio de sentimiento general
+⚠️ Hashtags negativos ganando tracción
+
+---
+
+## Tip Práctico
+
+> Mejor sobre-clasificar que sub-clasificar. Una crisis tratada como nivel medio cuando es nivel alto puede explotar. Lo contrario solo gasta algunos recursos extra.
+`
+          },
+          {
+            id: "lesson-cm-3-6",
+            title: "Protocolo de Respuesta Inmediata",
+            content: `# Protocolo de Respuesta Inmediata
+
+## La Regla de Oro: Los Primeros 60 Minutos
+
+Los primeros 60 minutos de una crisis son críticos. Estudios muestran que las marcas que responden en la primera hora tienen **63% más probabilidades** de contener la crisis exitosamente.
+
+---
+
+## Timeline de Respuesta Detallado
+
+### Minutos 0-15: DETECCIÓN Y EVALUACIÓN
+
+| Acción | Responsable | Entregable |
+|--------|-------------|------------|
+| Identificar origen | CM | Fuente primaria documentada |
+| Clasificar nivel | CM | Nivel asignado (1-4) |
+| Capturar evidencia | CM | Screenshots con timestamp |
+| Evaluar alcance | CM | Número de menciones, tendencia |
+
+**IMPORTANTE:** NO responder públicamente en esta fase.
+
+### Minutos 15-30: NOTIFICACIÓN Y COORDINACIÓN
+
+| Nivel | A quién notificar | Cómo |
+|-------|-------------------|------|
+| Bajo | SMM | Slack/Email |
+| Medio | SMM + Director | Llamada |
+| Alto | Equipo completo | Videollamada urgente |
+| Crítico | + CEO + Legal | War room |
+
+**Checklist de coordinación:**
+- ☐ Equipo notificado y disponible
+- ☐ Mensaje inicial redactado
+- ☐ Portavoz designado
+- ☐ Contenido programado pausado/revisado
+- ☐ Canales de escalación activos
+
+### Minutos 30-60: RESPUESTA INICIAL
+
+| Acción | Detalle |
+|--------|---------|
+| Publicar primer mensaje | En canal donde inició la crisis |
+| Activar monitoreo intensivo | Cada 5 minutos |
+| Documentar reacciones | Sentiment tracking |
+| Preparar Q&A | Anticipar preguntas |
+
+---
+
+## Plantillas de Primer Mensaje por Escenario
+
+**Queja de producto/servicio:**
+"Hemos visto tu experiencia con [producto] y lamentamos que no haya sido la esperada. Estamos investigando y un miembro de nuestro equipo te contactará por DM en los próximos minutos para resolver esto. 🤝"
+
+**Acusación de mal comportamiento:**
+"Tomamos muy en serio los reportes sobre [tema]. Estamos investigando internamente y compartiremos más información una vez tengamos los hechos claros. Mientras tanto, pueden contactarnos en [canal]."
+
+**Error de la marca:**
+"Cometimos un error y lo reconocemos. [Breve descripción]. Estamos trabajando para [solución]. Actualizaremos aquí en las próximas horas. Gracias por su paciencia."
+
+**Información falsa circulando:**
+"Hemos visto información incorrecta circulando sobre [tema]. Queremos aclarar: [hecho verificado]. Compartiremos un comunicado completo pronto."
+
+---
+
+## Lo que NUNCA hacer en los primeros 60 minutos
+
+| ❌ NO hacer | Por qué |
+|-------------|---------|
+| Borrar comentarios | Amplifica (efecto Streisand) |
+| Responder emocionalmente | Escala el conflicto |
+| Culpar a otros | Muestra falta de responsabilidad |
+| Dar explicaciones largas | Puede contradecirse después |
+| Prometer soluciones sin verificar | Puede no cumplirse |
+| Ignorar/silencio | Se interpreta como culpa |
+
+---
+
+## Dashboard de Crisis (Template)
+
+Durante la primera hora, actualiza cada 15 minutos:
+
+| Hora | Menciones | Sentiment | Acción Tomada | Próximo Paso |
+|------|-----------|-----------|---------------|--------------|
+| 10:00 | 15 | -80% | Detectado | Clasificar |
+| 10:15 | 45 | -75% | Clasificado Medio | Notificar |
+| 10:30 | 120 | -82% | Equipo reunido | Responder |
+| 10:45 | 150 | -70% | Mensaje publicado | Monitorear |
+| 11:00 | 140 | -55% | Respondiendo DMs | Preparar update |
+
+---
+
+## Tip Práctico
+
+> Prepara un "Kit de Crisis" con: lista de contactos de emergencia, plantillas de mensajes pre-aprobadas, accesos a todas las cuentas, y un documento con la cadena de aprobación. Tenlo accesible 24/7.
+`
+          },
+          {
+            id: "lesson-cm-3-7",
+            title: "Comunicación Durante la Crisis",
+            content: `# Comunicación Durante la Crisis
+
+## Principios Fundamentales
+
+| Principio | Significado |
+|-----------|-------------|
+| **Transparencia** | No mentir ni ocultar |
+| **Empatía** | Reconocer el impacto en afectados |
+| **Consistencia** | Mismo mensaje en todos los canales |
+| **Proactividad** | Adelantarse a las preguntas |
+
+---
+
+## Trolls vs Críticas Legítimas
+
+| Trolls | Críticas Legítimas |
+|--------|-------------------|
+| Buscan provocar | Buscan solución |
+| Sin queja real | Queja específica |
+| Suelen ser anónimos | Clientes reales |
+| **No alimentar, bloquear si violan normas** | **Responder profesionalmente** |
+
+---
+
+## Cuándo Guardar Silencio
+
+El silencio estratégico es válido cuando:
+
+- La respuesta puede empeorar las cosas
+- Hay implicaciones legales sin asesoramiento
+- El tema está muriendo naturalmente
+- No tienes información verificada
+
+> El silencio estratégico es diferente de ignorar.
+
+---
+
+## Errores Comunes a Evitar
+
+- ❌ Borrar comentarios negativos (amplifica)
+- ❌ Responder emocionalmente
+- ❌ Echar culpas
+- ❌ Prometer lo que no puedes cumplir
+- ❌ Usar humor inapropiado
+- ❌ Respuestas copiadas sin personalización
+
+---
+
+## Tip Práctico
+
+> Antes de publicar cualquier respuesta, pregúntate: "¿Cómo se vería esto en una captura de pantalla en un medio de comunicación?"
+`
+          },
+          {
+            id: "lesson-cm-3-8",
+            title: "Análisis Post-Crisis",
+            content: `# Fase Post-Crisis: Análisis y Aprendizaje
+
+## El Trabajo No Termina
+
+Una vez contenida la crisis, el trabajo no termina. La fase post-crisis es crucial para **aprender, mejorar y prevenir**.
+
+---
+
+## Reunión de Análisis (48 horas)
+
+Preguntas a responder:
+
+1. ¿Qué pasó exactamente?
+2. ¿Cómo respondimos?
+3. ¿Qué funcionó bien?
+4. ¿Qué podríamos haber hecho mejor?
+5. ¿Qué cambios debemos implementar?
+
+---
+
+## Documentación Requerida
+
+| Elemento | Detalle |
+|----------|---------|
+| **Cronología** | Línea de tiempo detallada |
+| **Métricas** | Alcance, sentimiento, pérdida de seguidores |
+| **Evidencia** | Screenshots y capturas |
+| **Comunicaciones** | Todo lo enviado |
+| **Feedback** | Reacciones recibidas |
+
+---
+
+## Actualización de Protocolos
+
+Después de cada crisis:
+
+- ✓ Incorporar nuevos escenarios al manual
+- ✓ Ajustar tiempos de respuesta si fueron insuficientes
+- ✓ Actualizar lista de contactos
+- ✓ Programar simulacros
+- ✓ Compartir aprendizajes con todo el equipo
+
+---
+
+## Tip Práctico
+
+> Crea un "post-mortem" formal después de cada crisis, incluso las pequeñas. Los patrones emergen cuando documentas consistentemente.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Simula una Crisis de Redes",
+          description: "Practica la respuesta a una crisis de reputación simulada",
+          tasks: [
+            {
+              id: "task-cm-3-1",
+              question: "Imagina que un cliente insatisfecho publica una queja viral sobre un producto defectuoso. Escribe el 'comentario viral' del cliente (máximo 280 caracteres)."
+            },
+            {
+              id: "task-cm-3-2",
+              question: "Usa la matriz de riesgo para clasificar el nivel de la crisis (bajo, medio, alto, crítico). Justifica tu clasificación en 2-3 oraciones."
+            },
+            {
+              id: "task-cm-3-3",
+              question: "Redacta la primera respuesta pública de la marca (empática, rápida, profesional). Máximo 300 caracteres."
+            },
+            {
+              id: "task-cm-3-4",
+              question: "Define 3 acciones de seguimiento para resolver la situación y recuperar la confianza. Incluye responsable y timeline para cada una."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Gestión de Crisis",
+          description: "Evalúa tus conocimientos sobre gestión de crisis en redes sociales",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es el primer paso ante una crisis en redes sociales?", options: ["Borrar todos los comentarios", "Evaluar la situación sin reaccionar impulsivamente", "Cerrar las redes sociales", "Culpar a otros"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué es el social listening?", options: ["Escuchar música en redes", "Monitorear menciones y conversaciones sobre la marca", "Grabar podcasts", "Crear playlists"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué debe contener un manual de crisis?", options: ["Solo números de teléfono", "Protocolos, portavoces y plantillas de respuesta", "Recetas de cocina", "Horarios de trabajo"], correctAnswer: 1 },
+            { id: "q4", question: "¿Cuándo se debe responder públicamente a una crisis?", options: ["Nunca", "Cuando afecta la reputación pública de la marca", "Solo si hay más de 1000 comentarios", "Después de un año"], correctAnswer: 1 },
+            { id: "q5", question: "¿Qué es un análisis post-crisis?", options: ["Borrar evidencia", "Evaluar qué funcionó y qué mejorar", "Ignorar lo sucedido", "Cambiar de marca"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-cm-4",
+        title: "Tendencias y Futuro del Marketing Digital",
+        description: "Prepárate para el futuro: IA generativa, análisis predictivo, psicología del consumidor y las habilidades que definirán el éxito profesional",
+        theory: [
+          {
+            id: "lesson-cm-4-1",
+            title: "El CM de 2026: Nuevo Paradigma",
+            content: `# El Community Manager de 2026: Nuevo Paradigma
+
+## De Ejecutor a Estratega
+
+El Community Manager de 2026 ha trascendido la simple publicación de contenido. Hoy es un **estratega** que valida producción de IA, gestiona crisis en tiempo real y construye comunidades basándose en datos.
+
+---
+
+## Evolución del Rol
+
+| Aspecto | CM 2024 | CM 2026 |
+|---------|---------|---------|
+| **Rol principal** | Operacional | Estratégico |
+| **Creación de contenido** | 70% manual | 80% supervisado por IA |
+| **Análisis** | Métricas básicas | Predictivo en tiempo real |
+| **Enfoque** | Ejecutar | Orquestar y validar |
+
+---
+
+## Skills Críticos del CM 2026
+
+- ✓ Dominio de redes sociales
+- ✓ Prompt engineering para IA
+- ✓ Análisis de datos avanzado
+- ✓ Psicología del consumidor
+- ✓ Gestión de crisis
+- ✓ Pensamiento estratégico
+
+---
+
+## El Valor Diferencial
+
+El valor ya no está en ejecutar tareas mecánicas (la IA lo hace), sino en:
+
+- **Criterio estratégico**
+- **Creatividad auténtica**
+- **Empatía humana**
+- **Conectar datos con decisiones de negocio**
+
+---
+
+## Tip Práctico
+
+> Dedica 20% de tu tiempo a aprender nuevas herramientas y tendencias. El CM que deja de aprender deja de ser relevante.
+`
+          },
+          {
+            id: "lesson-cm-4-2",
+            title: "IA Generativa en Marketing",
+            content: `# Inteligencia Artificial Generativa en Marketing
+
+## La Revolución Creativa
+
+La IA generativa ha revolucionado la creación de contenido. El CM debe dominar estas herramientas como **extensiones de su creatividad**.
+
+---
+
+## Herramientas por Tipo
+
+| Tipo | Herramientas |
+|------|--------------|
+| **Texto** | ChatGPT, Claude, Gemini |
+| **Imágenes** | Midjourney, DALL-E 3, Stable Diffusion |
+| **Video** | Runway, Pika, HeyGen |
+| **Audio** | ElevenLabs, Murf |
+
+---
+
+## Prompt Engineering para CM
+
+La calidad del output depende de la calidad del input.
+
+**Estructura de prompt efectivo:**
+1. **Rol:** "Actúa como..."
+2. **Contexto:** "Para una marca de..."
+3. **Tarea:** "Escribe 5 copies para..."
+4. **Formato:** "En formato de..."
+5. **Restricciones:** "Máximo X caracteres"
+
+---
+
+## Flujo de Trabajo con IA
+
+1. Brief claro de lo que necesitas
+2. Prompt inicial
+3. Revisión del output
+4. Iteración/refinamiento
+5. Edición humana final
+6. Adaptación al tono de marca
+
+> La IA no reemplaza tu criterio, lo amplifica.
+
+---
+
+## Limitaciones a Considerar
+
+- ⚠️ Puede "alucinar" información falsa
+- ⚠️ No tiene contexto actual
+- ⚠️ Genera contenido genérico sin guía clara
+- ⚠️ Derechos de autor en área gris legal
+
+---
+
+## Tip Práctico
+
+> Crea una biblioteca de prompts probados que funcionen para tu marca. Reutilizar prompts optimizados ahorra tiempo y mejora consistencia.
+`
+          },
+          {
+            id: "lesson-cm-4-3",
+            title: "Análisis Predictivo",
+            content: `# Análisis Predictivo en Tiempo Real
+
+## Anticiparse al Futuro
+
+El análisis predictivo usa datos históricos y machine learning para **anticipar comportamientos futuros**. En marketing, permite predecir qué contenido funcionará, cuándo publicar y qué audiencias convertirán.
+
+---
+
+## Herramientas de Análisis Predictivo
+
+| Herramienta | Capacidades |
+|-------------|-------------|
+| **Sprinklr** | IA predictiva integrada |
+| **Brandwatch** | Predicción de tendencias |
+| **Meta Business Suite** | Predicciones de rendimiento |
+| **GA4** | Segmentos predictivos |
+| **Crayon** | Inteligencia competitiva |
+
+---
+
+## Aplicaciones Prácticas
+
+- **Predicción de viralidad** de contenido
+- **Identificación de micro-tendencias** antes de que exploten
+- **Anticipación de crisis** por patrones de sentimiento
+- **Optimización de horarios** por predicción de engagement
+
+---
+
+## Mentalidad Data-Driven
+
+> Deja de publicar por intuición. Cada decisión debe estar respaldada por datos.
+
+**Ciclo de mejora:**
+Hipótesis → Experimento → Datos → Aprendizaje → Iteración
+
+El CM de 2026 es un **científico del comportamiento digital**.
+
+---
+
+## Tip Práctico
+
+> Antes de cada campaña, define qué métricas medirás y qué resultado considerarías exitoso. Sin esto, no hay aprendizaje real.
+`
+          },
+          {
+            id: "lesson-cm-4-4",
+            title: "Psicología del Consumidor Digital",
+            content: `# Psicología del Consumidor Digital
+
+## Principios que Impulsan el Engagement
+
+Las redes sociales explotan principios psicológicos fundamentales. Entenderlos te hace mejor CM:
+
+---
+
+## Principios Psicológicos Clave
+
+| Principio | Aplicación en Redes |
+|-----------|-------------------|
+| **Prueba social** | Mostrar seguidores, testimonios, números |
+| **Reciprocidad** | Dar valor genera ganas de devolver |
+| **Escasez** | Ofertas limitadas, countdown timers |
+| **Autoridad** | Expertos, certificaciones, premios |
+| **Consistencia** | Micro-compromisos que escalan |
+
+---
+
+## La Economía de la Atención
+
+El recurso más escaso es la atención. Tienes **3 segundos** para capturarla.
+
+**Estrategias:**
+- Hooks potentes al inicio
+- Patrones disruptivos (lo inesperado destaca)
+- Beneficio claro inmediato
+- Curiosity gaps
+
+---
+
+## Construcción de Comunidad
+
+Las comunidades fuertes comparten:
+
+- **Identidad común:** "Somos los que..."
+- **Rituales compartidos:** Contenido recurrente, inside jokes
+- **Enemigo común:** No negativo, pero un "otro"
+- **Exclusividad:** Sensación de pertenencia
+
+---
+
+## Engagement Profundo vs Vanity Metrics
+
+| Superficial | Profundo |
+|-------------|----------|
+| Likes | Comentarios con conversación |
+| Vistas | Saves |
+| Impresiones | Shares |
+| | DMs |
+
+Diseña contenido que genere **acción significativa**, no solo aprobación pasiva.
+
+---
+
+## Tip Práctico
+
+> Observa qué contenido guardas TÚ en Instagram. Eso es engagement profundo. Ahora crea contenido que otros quieran guardar.
+`
+          },
+          {
+            id: "lesson-cm-4-5",
+            title: "El CM como Estratega de Negocio",
+            content: `# El CM como Estratega de Negocio
+
+## Conectando con Resultados
+
+El CM de 2026 no solo gestiona redes, **conecta su trabajo con resultados de negocio**. Esto requiere entender el funnel completo.
+
+---
+
+## El Funnel de Marketing
+
+1. **Awareness** → Conocen la marca
+2. **Consideration** → Evalúan opciones
+3. **Conversion** → Compran/contratan
+4. **Retention** → Vuelven a comprar
+5. **Advocacy** → Recomiendan a otros
+
+El CM impacta en TODAS las etapas.
+
+---
+
+## Métricas que Importan al Negocio
+
+| No digas | Di |
+|----------|-----|
+| "Tuvimos 10K likes" | "Generamos 500 leads cualificados" |
+| "Crecimos seguidores" | "Coste por adquisición bajó 30%" |
+| "El post fue viral" | "Revenue atribuido a social: $50K" |
+
+Traduce tu trabajo al **idioma de dirección**.
+
+---
+
+## Atribución y ROI
+
+- ✓ Configura UTMs en todos los enlaces
+- ✓ Usa GA4 para tracking de conversiones
+- ✓ Implementa modelos de atribución multi-touch
+- ✓ Documenta el journey del cliente
+
+---
+
+## Presentar Resultados a Dirección
+
+**Estructura recomendada:**
+1. Objetivo del período
+2. Acciones realizadas
+3. Resultados (con números de negocio)
+4. Aprendizajes
+5. Plan para siguiente período
+
+---
+
+## Tip Práctico
+
+> Antes de cada reunión de resultados, pregúntate: "¿Qué decisión de negocio puede tomar mi jefe con esta información?" Si no hay decisión clara, replantea tu reporte.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Experimenta con IA Generativa",
+          description: "Aplica herramientas de IA para crear contenido de marketing",
+          tasks: [
+            {
+              id: "task-cm-4-1",
+              question: "Usa ChatGPT o Claude para crear 5 variaciones de un post promocional para una marca (puede ser ficticia). Incluye los prompts utilizados y las 5 versiones generadas."
+            },
+            {
+              id: "task-cm-4-2",
+              question: "Usa DALL-E, Midjourney, o Canva AI para generar una imagen para redes sociales. Describe el prompt utilizado y adjunta o describe la imagen resultante."
+            },
+            {
+              id: "task-cm-4-3",
+              question: "Pide a una IA que analice las tendencias actuales de marketing digital para 2026. Lista las 5 tendencias más relevantes que identificó."
+            },
+            {
+              id: "task-cm-4-4",
+              question: "Diseña un prompt reutilizable para generar contenido semanal para redes sociales. Documenta el prompt completo con todas sus variables."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Tendencias y Futuro",
+          description: "Evalúa tus conocimientos sobre las tendencias del marketing digital",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cómo está cambiando el rol del CM con la IA?", options: ["Será completamente reemplazado", "Se está volviendo más estratégico y menos operativo", "No hay ningún cambio", "Solo trabaja con robots"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué es la IA generativa?", options: ["IA que solo analiza datos", "IA capaz de crear contenido nuevo", "Un tipo de hardware", "Software de contabilidad"], correctAnswer: 1 },
+            { id: "q3", question: "¿Para qué sirve el análisis predictivo en marketing?", options: ["Predecir el clima", "Anticipar comportamientos y tendencias del consumidor", "Crear logos", "Editar videos"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué principio psicológico es útil en marketing digital?", options: ["Teoría de cuerdas", "Principio de escasez y urgencia", "Ley de gravedad", "Ecuación de Einstein"], correctAnswer: 1 },
+            { id: "q5", question: "¿Cuál es una tendencia emergente en marketing digital?", options: ["Fax marketing", "Marketing con inteligencia artificial", "Publicidad en periódicos", "Telemarketing tradicional"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-cm-5",
+        title: "Formación y Desarrollo Profesional",
+        description: "Construye tu carrera: certificaciones valoradas, portfolio profesional, optimización de LinkedIn y preparación para entrevistas",
+        theory: [
+          {
+            id: "lesson-cm-5-1",
+            title: "Por Qué las Certificaciones Importan",
+            content: `# Por Qué las Certificaciones Importan
+
+## Validación Profesional
+
+Las certificaciones profesionales son una forma tangible de demostrar competencias en un mercado laboral competitivo. No reemplazan la experiencia, pero la **complementan y validan**.
+
+---
+
+## Beneficios de las Certificaciones
+
+- ✓ Validación externa de conocimientos
+- ✓ Diferenciación en procesos de selección
+- ✓ Acceso a comunidades profesionales
+- ✓ Actualización estructurada de habilidades
+- ✓ Credibilidad ante clientes y empleadores
+
+---
+
+## No Todas Valen Igual
+
+**Prioriza certificaciones de:**
+- Plataformas oficiales (Meta, Google, HubSpot)
+- Reconocidas en tu mercado objetivo
+- Con contenido actualizado regularmente
+
+**Evita:**
+- Certificaciones de terceros desconocidos
+- Cursos sin respaldo de la industria
+- Títulos sin verificación posible
+
+---
+
+## Estrategia de Certificación
+
+1. **Empieza con gratuitas** (HubSpot, Google)
+2. **Construye base sólida** de conocimientos
+3. **Invierte en las de pago** que más valor aporten
+4. **Mantén actualizadas** las que expiran
+
+---
+
+## Tip Práctico
+
+> No colecciones certificaciones por coleccionar. Elige las que realmente se alineen con tus objetivos de carrera y dedica tiempo a dominar el contenido.
+`
+          },
+          {
+            id: "lesson-cm-5-2",
+            title: "Certificaciones Recomendadas",
+            content: `# Certificaciones Recomendadas
+
+## Las Más Valoradas en 2026
+
+### HubSpot Social Media Marketing
+- **Costo:** Gratis
+- **Validez:** No expira
+- **Contenido:** Inbound, estrategia social, ROI
+- **Ideal para:** Principiantes
+
+### Meta Certified Community Manager
+- **Costo:** ~$150 USD
+- **Validez:** 1 año
+- **Contenido:** Gestión de comunidades en Meta
+- **Ideal para:** Especialistas en Facebook/Instagram
+
+### Google Analytics 4
+- **Costo:** Gratis
+- **Validez:** 1 año
+- **Contenido:** Analítica web completa
+- **Ideal para:** Todos (casi obligatoria)
+
+### Hootsuite Social Marketing
+- **Costo:** ~$200 USD
+- **Validez:** 2 años
+- **Contenido:** Estrategia y gestión de redes
+- **Ideal para:** CM que usan Hootsuite
+
+---
+
+## Ruta Recomendada
+
+| Orden | Certificación | Por qué |
+|-------|---------------|---------|
+| 1 | HubSpot (gratis) | Base sólida, sin riesgo |
+| 2 | GA4 (gratis) | Fundamental para cualquier rol |
+| 3 | Meta (pago) | Alta demanda en el mercado |
+| 4 | Hootsuite (pago) | Diferenciación adicional |
+
+---
+
+## Tip Práctico
+
+> Añade las certificaciones a tu LinkedIn inmediatamente después de obtenerlas. Usa los badges digitales cuando estén disponibles.
+`
+          },
+          {
+            id: "lesson-cm-5-3",
+            title: "Construcción de Portfolio",
+            content: `# Construcción de Portfolio Profesional
+
+## Muestra, No Cuentes
+
+Un portfolio es **5x más efectivo** que un CV tradicional. Los recruiters dedican 7 segundos a un CV, pero 2-3 minutos a un buen portfolio.
+
+---
+
+## Estructura de Caso de Estudio (Método STAR-R)
+
+### S - Situación (20% del caso)
+- Cliente (anonimizado si necesario)
+- Industria y contexto
+- Desafío específico
+- Métricas iniciales
+
+### T - Tarea (10%)
+- Tu rol específico
+- Objetivos medibles
+- Timeline y restricciones
+
+### A - Acción (30%)
+- Estrategia desarrollada
+- Tácticas implementadas
+- Herramientas utilizadas
+- Decisiones clave tomadas
+
+### R - Resultado (30%)
+- Métricas antes vs después
+- % de mejora
+- ROI si es posible
+- Testimonios del cliente
+
+### R - Reflexión (10%)
+- Qué aprendiste
+- Qué harías diferente
+- Cómo aplicarías esto a otros proyectos
+
+---
+
+## Ejemplo de Caso de Estudio Completo
+
+**TÍTULO:** "Cómo aumentamos el engagement 340% para marca de moda sostenible"
+
+**SITUACIÓN:**
+Marca de ropa sostenible con 3K seguidores, engagement de 0.8%, sin estrategia definida. Objetivo: posicionarse como referente en moda ética.
+
+**MI ROL:**
+CM responsable de estrategia, contenido y comunidad. 3 meses de proyecto.
+
+**ACCIÓN:**
+- Auditoría completa de presencia digital
+- Redefinición de pilares de contenido (educación 40%, producto 30%, comunidad 30%)
+- Implementación de calendario editorial con 5 posts/semana
+- Estrategia de hashtags localizada
+- Programa de UGC con clientes
+- Respuesta a comentarios en <2 horas
+
+**RESULTADOS:**
+| Métrica | Antes | Después | Cambio |
+|---------|-------|---------|--------|
+| Seguidores | 3,000 | 12,500 | +317% |
+| Engagement | 0.8% | 3.5% | +337% |
+| Saves promedio | 5 | 45 | +800% |
+| Tráfico a web | 120/mes | 890/mes | +642% |
+| Conversiones | 8/mes | 34/mes | +325% |
+
+**REFLEXIÓN:**
+El contenido educativo sobre sostenibilidad fue el mayor driver. Para futuros proyectos similares, empezaría con esta estrategia desde el día 1.
+
+---
+
+## Proyectos Sin Clientes (Para Principiantes)
+
+**Opción 1: Auditoría No Solicitada**
+- Elige marca local que admires
+- Haz auditoría completa
+- Crea estrategia de mejora
+- Muéstrala como "caso de estudio conceptual"
+
+**Opción 2: Proyecto Ficticio**
+- Inventa marca (o usa brief de competencia online)
+- Desarrolla estrategia completa
+- Crea contenido de ejemplo
+- Documenta como si fuera real
+
+**Opción 3: Tu Marca Personal**
+- Tú eres el cliente
+- Documenta tu crecimiento
+- Muestra métricas de tu LinkedIn/Instagram profesional
+
+---
+
+## Formatos de Portfolio con Pros y Contras
+
+| Formato | Pros | Contras | Mejor Para |
+|---------|------|---------|------------|
+| **Notion** | Gratis, flexible, fácil actualizar | Menos "profesional" | Freelancers, juniors |
+| **Behance** | Comunidad, descubrimiento | Menos personalización | Roles creativos |
+| **Web propia** | Control total, SEO | Costo, mantenimiento | CM senior, agencias |
+| **PDF** | Envío directo, offline | Difícil actualizar | Aplicaciones específicas |
+| **Carrd** | Simple, barato, rápido | Limitado | Landing profesional |
+
+---
+
+## Tip Práctico
+
+> Actualiza tu portfolio cada mes con algo nuevo, aunque sea pequeño. Un portfolio "vivo" muestra que estás activo y en crecimiento. Un portfolio estático de hace 2 años genera desconfianza.
+`
+          },
+          {
+            id: "lesson-cm-5-4",
+            title: "LinkedIn para Marketing Digital",
+            content: `# LinkedIn para Profesionales del Marketing
+
+## Tu Perfil Trabaja 24/7
+
+Un perfil de LinkedIn optimizado es tu **mejor vendedor**: trabaja mientras duermes. Los perfiles completos reciben **40x más oportunidades** que los incompletos.
+
+---
+
+## Anatomía del Perfil Perfecto
+
+### Foto de Perfil (Primera Impresión)
+- Resolución mínima 400x400px
+- Tu cara ocupa 60% del encuadre
+- Fondo neutro o relacionado con tu industria
+- Sonrisa genuina, contacto visual
+- Vestimenta acorde a tu industria objetivo
+
+**Dato:** Perfiles con foto reciben 21x más visitas y 36x más mensajes.
+
+### Banner (1584x396px)
+Ideas efectivas:
+- Tu propuesta de valor en texto
+- Logos de empresas/clientes
+- Resultados clave ("+300% engagement")
+- Contacto o CTA
+
+### Headline (220 caracteres - aprovecha TODO)
+
+**Fórmula:** [Rol] + [A quién ayudas] + [Cómo lo haces] + [Resultado/Prueba social]
+
+**Ejemplos:**
+- ❌ "Community Manager en Empresa X"
+- ✓ "Community Manager | Ayudo a startups B2B a construir comunidades que convierten | +50 marcas | Ex-HubSpot"
+- ✓ "Especialista en Redes Sociales | De 0 a 100K seguidores para e-commerce | Estrategia + Contenido + Paid"
+
+### About/Acerca de (2600 caracteres)
+
+**Estructura que funciona:**
+
+**Hook (primeras 2 líneas visibles):**
+"¿Tu marca publica contenido pero no genera ventas? En los últimos 3 años, he ayudado a +50 empresas a transformar sus redes en máquinas de conversión."
+
+**Tu historia (2-3 párrafos):**
+Cómo llegaste aquí, qué te apasiona, tu enfoque único.
+
+**Resultados (bullet points):**
+• Aumenté engagement 340% para marca de moda en 3 meses
+• Gestioné crisis viral para fintech (convertida en PR positivo)
+• +500K seguidores gestionados en total
+
+**CTA claro:**
+"¿Tienes un proyecto? Escríbeme a [email] o agenda una llamada: [link]"
+
+---
+
+## Experiencia: Logros, No Tareas
+
+| ❌ No escribas | ✓ Escribe |
+|----------------|-----------|
+| "Responsable de redes sociales" | "Crecí comunidad de 5K a 45K en 8 meses" |
+| "Gestión de contenido" | "Publiqué +500 posts con engagement promedio 4.2%" |
+| "Atención al cliente digital" | "Reduje tiempo de respuesta de 24h a 2h" |
+| "Creación de reportes" | "Implementé dashboard que ahorró 5h/semana al equipo" |
+
+---
+
+## Estrategia de Contenido LinkedIn
+
+### Frecuencia Recomendada
+
+| Acción | Frecuencia | Impacto |
+|--------|------------|---------|
+| Publicar | 3-5 posts/semana | Alto |
+| Comentar en otros | 5-10/día | Muy alto |
+| Compartir con valor añadido | 1-2/semana | Medio |
+| Enviar mensajes | 5-10/semana | Medio |
+
+### Tipos de Posts que Funcionan
+
+1. **Storytelling personal** (tu mejor y peor momento profesional)
+2. **Lecciones aprendidas** (fracasos convertidos en aprendizaje)
+3. **Cómo hice X** (tutoriales, procesos)
+4. **Opiniones polarizantes** (con respeto y fundamento)
+5. **Datos/estadísticas** con tu análisis
+6. **Celebraciones de tu red** (generosidad visible)
+
+### Anatomía del Post Viral
+
+**Hook (primeras 2 líneas):** Captura atención
+**Historia/Problema:** Contexto relatable
+**Insight/Solución:** Tu aporte de valor
+**CTA:** Pregunta que invite a comentar
+
+---
+
+## Plantilla de Mensaje de Conexión
+
+**Para recruiters:**
+"Hola [nombre], vi que trabajas en [empresa] y me interesa mucho su enfoque en [tema específico]. Me encantaría conectar y aprender más sobre las oportunidades en marketing digital. Adjunto mi perfil con algunos resultados de mis últimos proyectos."
+
+**Para potenciales clientes:**
+"Hola [nombre], noté que [observación específica sobre su marca/contenido]. Tengo algunas ideas que podrían ayudar con [problema específico]. ¿Te interesaría una llamada de 15 minutos para compartirlas? Sin compromiso."
+
+---
+
+## Tip Práctico
+
+> La regla 10-4-1: Por cada 10 interacciones en posts de otros, crea 4 posts propios de valor y haz 1 promoción directa. La generosidad visible construye autoridad.
+`
+          },
+          {
+            id: "lesson-cm-5-5",
+            title: "Preparación para Entrevistas",
+            content: `# Preparación para Entrevistas de CM
+
+## Los Tres Tipos de Evaluación
+
+Las entrevistas para CM suelen combinar:
+1. Preguntas tradicionales
+2. Casos prácticos
+3. Revisión de portfolio
+
+---
+
+## Preguntas Frecuentes
+
+- ¿Cómo definirías una estrategia de redes desde cero?
+- ¿Cómo medirías el éxito de una campaña?
+- ¿Cómo manejarías una crisis en redes?
+- ¿Qué herramientas dominas?
+- ¿Cómo te mantienes actualizado?
+- Cuéntame sobre una campaña exitosa que hayas gestionado
+
+---
+
+## Casos Prácticos Comunes
+
+Pueden pedirte:
+- Crear estrategia para cliente hipotético
+- Analizar métricas y proponer mejoras
+- Redactar copies en el momento
+- Resolver escenario de crisis
+
+**Tip:** Practica pensando en voz alta
+
+---
+
+## Método STAR para Respuestas
+
+| Elemento | Qué incluir |
+|----------|-------------|
+| **S**ituación | Contexto del desafío |
+| **T**area | Tu responsabilidad específica |
+| **A**cción | Qué hiciste exactamente |
+| **R**esultado | Métricas y outcomes |
+
+---
+
+## Técnicas para Destacar
+
+- ✓ Lleva ejemplos concretos de tu trabajo
+- ✓ Haz preguntas inteligentes sobre la empresa
+- ✓ Muestra curiosidad y ganas de aprender
+- ✓ Investiga la empresa antes de la entrevista
+- ✓ Prepara preguntas para el entrevistador
+
+---
+
+## Tip Práctico
+
+> Grábate respondiendo las preguntas comunes. Te sorprenderá lo mucho que mejorarás al verte y ajustar. La práctica hace al maestro.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Prepara tu Perfil Profesional",
+          description: "Optimiza tu presencia profesional para destacar en el mercado",
+          tasks: [
+            {
+              id: "task-cm-5-1",
+              question: "Actualiza (o crea) tu headline de LinkedIn con palabras clave de marketing digital. Escribe tu nuevo headline (máximo 120 caracteres)."
+            },
+            {
+              id: "task-cm-5-2",
+              question: "Escribe tu elevator pitch: una presentación de 30 segundos sobre ti como profesional de marketing (máximo 100 palabras)."
+            },
+            {
+              id: "task-cm-5-3",
+              question: "Investiga 3 certificaciones gratuitas valoradas en marketing digital. Lista el nombre, plataforma, enlace y duración estimada de cada una."
+            },
+            {
+              id: "task-cm-5-4",
+              question: "Define un proyecto para tu portafolio: puede ser personal, ficticio o un caso de estudio. Describe el proyecto en 3-5 oraciones incluyendo objetivo, estrategia y métricas que medirías."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Desarrollo Profesional",
+          description: "Evalúa tus conocimientos sobre desarrollo de carrera en marketing digital",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Por qué son importantes las certificaciones?", options: ["No tienen ningún valor", "Validan conocimientos y mejoran empleabilidad", "Solo sirven para decoración", "Son obligatorias por ley"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué debe incluir un portafolio de CM?", options: ["Solo fotos personales", "Casos de éxito, métricas y ejemplos de trabajo", "Recetas favoritas", "Lista de películas"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué plataforma es esencial para networking profesional?", options: ["TikTok", "LinkedIn", "Snapchat", "Pinterest"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué certificación ofrece Google para marketing digital?", options: ["HubSpot Academy", "Google Analytics", "Meta Blueprint", "Hootsuite Academy"], correctAnswer: 1 },
+            { id: "q5", question: "¿Qué es importante preparar para una entrevista de CM?", options: ["Nada, improvisar es mejor", "Casos de éxito y métricas de resultados", "Solo el currículum", "Una canción"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
   }
 ];
