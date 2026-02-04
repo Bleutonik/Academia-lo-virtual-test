@@ -22,6 +22,7 @@ const ExamContent = ({ course, module }: ExamContentProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [passed, setPassed] = useState(false);
+  const [isRetrying, setIsRetrying] = useState(false);
 
   const exam = module.exam;
   const allAnswered = exam.questions.every(q => answers[q.id] !== undefined);
@@ -42,6 +43,7 @@ const ExamContent = ({ course, module }: ExamContentProps) => {
     setScore(calculatedScore);
     setPassed(hasPassed);
     setSubmitted(true);
+    setIsRetrying(false);
 
     markExamComplete(course.id, module.id, calculatedScore, hasPassed);
   };
@@ -51,9 +53,10 @@ const ExamContent = ({ course, module }: ExamContentProps) => {
     setSubmitted(false);
     setScore(0);
     setPassed(false);
+    setIsRetrying(true);
   };
 
-  if (alreadyCompleted && !submitted) {
+  if (alreadyCompleted && !submitted && !isRetrying) {
     const moduleDone = isModuleComplete(course.id, module.id);
 
     return (
