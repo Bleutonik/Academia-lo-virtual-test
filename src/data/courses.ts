@@ -8467,5 +8467,3849 @@ Pueden pedirte:
         }
       }
     ]
+  },
+  {
+    id: "contabilidad-asistentes",
+    title: "Contabilidad para Asistentes Virtuales",
+    slug: "contabilidad",
+    description: "Transforma tu rol de digitador a consultor estratégico. Domina conciliaciones, análisis financiero, gestión de flujo de caja y presentación ejecutiva para convertirte en un aliado indispensable para cualquier negocio.",
+    modules: [
+      {
+        id: "module-conta-intro",
+        title: "El Rol del Asistente Contable Proactivo",
+        description: "Descubre cómo transformar tu rol de digitador a consultor estratégico",
+        icon: "Briefcase",
+        lessons: [
+          {
+            id: "lesson-conta-intro-1",
+            title: "Más Allá de la Digitación",
+            duration: "15 min",
+            content: `# El Rol del Asistente Contable Proactivo
+
+## Más Allá de la Digitación
+
+Como Asistente Virtual Contable, tu rol trasciende el simple registro de transacciones. Eres un **aliado estratégico** que educa, orienta y anticipa las necesidades financieras de tus clientes.
+
+---
+
+## Nuestra Filosofía de Servicio
+
+> "El Asistente Virtual Contable no solo lleva cuentas; educa, orienta y es proactivo para el crecimiento del capital del cliente."
+
+---
+
+## Los 4 Pilares del Servicio Integral
+
+| Pilar | Descripción | Impacto |
+|-------|-------------|---------|
+| **Servicio Integral** | No solo registramos, analizamos y recomendamos | Decisiones informadas |
+| **Educación Financiera** | Enseñamos al cliente a entender sus números | Autonomía del cliente |
+| **Concientización Tributaria** | Preparamos para obligaciones fiscales con anticipación | Sin sorpresas de impuestos |
+| **Gestión Documental** | Organizamos información para decisiones ágiles | Eficiencia operativa |
+
+---
+
+## La Meta Final
+
+Tu objetivo como profesional contable proactivo es lograr:
+
+- **Planificación anticipada** de flujos y obligaciones
+- **Aumento de utilidades reales** mediante control y análisis
+- **Tranquilidad financiera** para que el cliente se enfoque en su negocio
+
+---
+
+## El Cambio de Mentalidad
+
+| Enfoque Tradicional | Enfoque Proactivo |
+|---------------------|-------------------|
+| Registro de datos | Análisis de información |
+| Reaccionar a problemas | Anticipar situaciones |
+| Entregar reportes | Explicar decisiones |
+| Cumplir tareas | Agregar valor |
+
+---
+
+## Tu Propuesta de Valor
+
+**El asistente contable tradicional dice:** "Aquí están tus reportes del mes"
+
+**El asistente contable proactivo dice:** "Aquí están tus reportes, pero más importante: detecté que tus gastos de marketing subieron 40% sin aumento en ventas. Deberíamos revisar la efectividad de esas campañas."
+
+> **Bienvenido a LoVirtual Academy.** Aquí formarás las competencias que te convertirán en un profesional indispensable para cualquier negocio.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Define tu Propuesta de Valor",
+          description: "Establece las bases de tu servicio contable proactivo",
+          tasks: [
+            {
+              id: "task-conta-intro-1",
+              question: "Escribe tu declaración de valor como asistente contable proactivo en 2-3 oraciones. ¿Qué problema resuelves y cómo te diferencias de un asistente tradicional?"
+            },
+            {
+              id: "task-conta-intro-2",
+              question: "Lista 5 preguntas proactivas que podrías hacer a un nuevo cliente para entender mejor su negocio (más allá de datos contables básicos)."
+            },
+            {
+              id: "task-conta-intro-3",
+              question: "Describe un escenario donde un asistente tradicional solo entregaría reportes, pero tú agregarías valor con análisis o recomendación."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Fundamentos del Rol Proactivo",
+          description: "Evalúa tu comprensión del rol del asistente contable proactivo",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es la filosofía principal del Asistente Virtual Contable según LoVirtual?", options: ["Solo registrar transacciones con precisión", "Educar, orientar y ser proactivo para el crecimiento del capital del cliente", "Entregar reportes mensuales al contador", "Automatizar todos los procesos contables"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuáles son los 4 pilares del servicio integral?", options: ["Velocidad, Precisión, Automatización, Reportes", "Servicio Integral, Educación Financiera, Concientización Tributaria, Gestión Documental", "Contabilidad, Finanzas, Impuestos, Auditoría", "Excel, QuickBooks, Facturación, Nómina"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué significa tener un 'enfoque proactivo' en contabilidad?", options: ["Trabajar más horas que los demás", "Anticipar situaciones y agregar valor, no solo reaccionar a problemas", "Usar software más avanzado", "Cobrar más por los servicios"], correctAnswer: 1 },
+            { id: "q4", question: "La meta final del asistente contable proactivo incluye:", options: ["Automatizar el 100% de los procesos", "Planificación anticipada y aumento de utilidades reales", "Eliminar la necesidad de un contador certificado", "Reducir el trabajo al mínimo posible"], correctAnswer: 1 },
+            { id: "q5", question: "¿Por qué es importante la educación financiera al cliente?", options: ["Para que el cliente haga su propia contabilidad", "Para que el cliente entienda sus números y tome mejores decisiones", "Para reducir nuestro trabajo futuro", "Es un requisito legal obligatorio"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-1",
+        title: "Fundamentos y Precisión Conceptual",
+        description: "Domina los conceptos base: caja vs. devengado, categorización y GAAP",
+        icon: "BookOpen",
+        lessons: [
+          {
+            id: "lesson-conta-1-1",
+            title: "Contabilidad de Caja vs. Devengado",
+            duration: "20 min",
+            content: `# Fundamentos y Precisión Conceptual
+
+## La Base de Todo: Entender Cómo Fluye el Dinero
+
+Antes de registrar cualquier transacción, debes comprender dos métodos fundamentales que cambian completamente cómo "vemos" la realidad financiera de un negocio.
+
+---
+
+## Método de Caja (Cash Basis)
+
+| Característica | Descripción |
+|----------------|-------------|
+| **Ingresos** | Se registran cuando recibes el dinero |
+| **Gastos** | Se registran cuando pagas efectivamente |
+| **Ventaja** | Más simple, ideal para pequeños negocios |
+| **Desventaja** | Puede distorsionar realidad en negocios con mucho crédito |
+
+---
+
+## Método de Devengado (Accrual Basis)
+
+| Característica | Descripción |
+|----------------|-------------|
+| **Ingresos** | Se registran cuando se genera el derecho (facturación) |
+| **Gastos** | Se registran cuando se genera la obligación |
+| **Ventaja** | Refleja mejor la realidad económica |
+| **Requisito** | Obligatorio para empresas medianas/grandes |
+
+---
+
+## Ejemplo Práctico Comparativo
+
+| Situación | Método Caja | Método Devengado |
+|-----------|-------------|------------------|
+| Facturas $10,000 el 15 de enero, cobra el 15 de febrero | Ingreso en febrero | Ingreso en enero |
+| Recibe factura de luz en diciembre, paga en enero | Gasto en enero | Gasto en diciembre |
+| Anticipo de cliente recibido hoy, servicio en 2 meses | Ingreso hoy | Ingreso en 2 meses |
+
+---
+
+## ¿Cuándo Usar Cada Método?
+
+**Método de Caja es ideal para:**
+- Freelancers y consultores independientes
+- Pequeños negocios con transacciones simples
+- Negocios que cobran al momento de la venta
+
+**Método de Devengado es necesario para:**
+- Empresas con inventario significativo
+- Negocios con muchas ventas a crédito
+- Empresas que requieren auditoría externa
+- Cualquier negocio que supere cierto umbral de ingresos
+
+---
+
+## Tu Responsabilidad
+
+> **Pregunta clave al inicio:** "¿Qué método contable utiliza este negocio?"
+
+Registrar una transacción con el método equivocado distorsiona completamente los estados financieros y puede generar problemas fiscales.
+`
+          },
+          {
+            id: "lesson-conta-1-2",
+            title: "Categorización y Principios GAAP",
+            duration: "20 min",
+            content: `# La Importancia de la Categorización y GAAP
+
+## La Categorización Exacta es Crítica
+
+Una transacción mal categorizada puede:
+
+- ❌ Distorsionar los reportes financieros
+- ❌ Generar errores en declaraciones de impuestos
+- ❌ Impedir análisis comparativos correctos
+- ❌ Afectar la toma de decisiones del cliente
+- ❌ Causar problemas en auditorías
+
+> **Regla de Oro:** Cuando dudes, investiga. Es mejor preguntar que asumir.
+
+---
+
+## Errores Comunes de Categorización
+
+| Error | Consecuencia | Corrección |
+|-------|--------------|------------|
+| Computadora en "Suministros de oficina" | Infla gastos, oculta activos | Activos Fijos → Depreciar |
+| Préstamo recibido como "Ingreso" | Paga impuestos sobre lo que no es ganancia | Pasivo → Préstamo por pagar |
+| Retiro de dueño como "Gasto" | Reduce utilidad artificialmente | Capital → Retiros |
+| Depósito de cliente como "Venta" | Reconoce ingreso antes de tiempo | Pasivo → Anticipo de clientes |
+
+---
+
+## Principios GAAP Básicos
+
+Los **Generally Accepted Accounting Principles** son las reglas del juego:
+
+### 1. Principio de Entidad
+El negocio es una entidad **separada** del dueño. Sus finanzas personales no se mezclan con las del negocio.
+
+### 2. Principio de Continuidad
+Asumimos que el negocio **seguirá operando** indefinidamente (no está en proceso de cierre).
+
+### 3. Principio de Consistencia
+Mantener los **mismos métodos** contables período a período para permitir comparaciones válidas.
+
+### 4. Principio de Materialidad
+Enfocarse en lo **significativo**. Un error de $5 no amerita el mismo tratamiento que uno de $5,000.
+
+---
+
+## Aplicación Práctica
+
+**Escenario:** El dueño paga la gasolina de su auto personal con la tarjeta de la empresa.
+
+- ❌ **Incorrecto:** Registrar como "Gasto de transporte del negocio"
+- ✅ **Correcto:** Registrar como "Retiro del dueño" o solicitar reembolso
+
+**¿Por qué?** El Principio de Entidad requiere separar gastos personales del negocio.
+
+---
+
+## Tu Compromiso con la Precisión
+
+> "Como asistente contable, tu reputación se construye sobre la **exactitud**. Un error pequeño hoy puede convertirse en un problema grande en auditoría."
+
+**Checklist antes de categorizar:**
+- [ ] ¿Entiendo la naturaleza de esta transacción?
+- [ ] ¿Tengo documentación de soporte?
+- [ ] ¿Esta categoría refleja la realidad económica?
+- [ ] ¿Es consistente con transacciones similares anteriores?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Análisis de Transacciones",
+          description: "Practica la categorización correcta de transacciones",
+          tasks: [
+            {
+              id: "task-conta-1-1",
+              question: "Un cliente paga $5,000 hoy por un servicio que entregarás en 3 meses. ¿Cómo lo registras bajo método devengado? Explica tu razonamiento."
+            },
+            {
+              id: "task-conta-1-2",
+              question: "El dueño compró una laptop de $1,500 para el negocio pero la pagó con su tarjeta personal. Describe los asientos contables necesarios."
+            },
+            {
+              id: "task-conta-1-3",
+              question: "Identifica el error en esta categorización: 'Compra de camioneta de reparto por $25,000 registrada como Gasto de transporte'. ¿Cómo debería registrarse correctamente?"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Fundamentos Contables",
+          description: "Evalúa tu comprensión de los conceptos base de contabilidad",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "En el método de caja, ¿cuándo se registra un ingreso?", options: ["Cuando se emite la factura", "Cuando se recibe el dinero efectivamente", "Cuando el cliente confirma recepción del producto", "Al final del mes contable"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué método refleja mejor la realidad económica de un negocio con muchas ventas a crédito?", options: ["Método de caja", "Método mixto", "Método de devengado", "Método de inventario"], correctAnswer: 2 },
+            { id: "q3", question: "¿Qué establece el Principio de Entidad en GAAP?", options: ["Que todas las entidades deben usar el mismo software", "Que el negocio es una entidad separada de su dueño", "Que solo entidades grandes necesitan contabilidad", "Que las entidades deben reportar anualmente"], correctAnswer: 1 },
+            { id: "q4", question: "Una transacción mal categorizada puede causar:", options: ["Solo errores estéticos en reportes", "Problemas en impuestos, análisis y toma de decisiones", "Únicamente multas menores", "No tiene consecuencias reales"], correctAnswer: 1 },
+            { id: "q5", question: "El Principio de Consistencia significa:", options: ["Todos los contadores deben usar los mismos métodos", "Mantener los mismos métodos contables período a período", "Ser consistente en los horarios de trabajo", "Usar siempre el mismo software"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-2",
+        title: "La Conciliación Manual en Excel",
+        description: "Domina el cruce manual de datos y detección de errores",
+        icon: "FileSpreadsheet",
+        lessons: [
+          {
+            id: "lesson-conta-2-1",
+            title: "Fundamentos de Conciliación Bancaria",
+            duration: "25 min",
+            content: `# La Conciliación Manual en Excel
+
+## ¿Por Qué No Confiar Ciegamente en la Automatización?
+
+Los bancos y software contables ofrecen conciliación automática, pero **ningún sistema es perfecto**. Razones para dominar la conciliación manual:
+
+- Transacciones duplicadas que el sistema no detecta
+- Fechas desfasadas entre banco y libros
+- Errores de importación de datos
+- Cheques pendientes de cobro
+- Depósitos en tránsito
+
+---
+
+## La Conciliación: Tu Momento de Verdad
+
+> La conciliación bancaria es donde demuestras tu valor. Es el proceso de hacer que el **saldo del banco coincida con el saldo en libros**, identificando y explicando cada diferencia.
+
+---
+
+## Conceptos Fundamentales
+
+### Cheque en Tránsito (Outstanding Check)
+
+**Definición:** Un cheque que ya registraste en tus libros contables, pero que el banco aún no ha procesado porque el beneficiario no lo ha cobrado.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Saldo en banco** | Mayor que libros |
+| **Acción** | Restar del saldo bancario en conciliación |
+| **¿Es error?** | NO, es diferencia de timing |
+
+**Ejemplo:** Emitiste cheque de $200 el 28 de enero. En tus libros ya está registrado (saldo = $9,800), pero el proveedor lo depositó hasta febrero. El banco muestra $10,000.
+
+---
+
+### Depósitos en Tránsito
+
+Depósitos que ya registraste en libros pero el banco aún no acreditó (por ejemplo, depósitos hechos después del horario de corte).
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Saldo en banco** | Menor que libros |
+| **Acción** | Sumar al saldo bancario en conciliación |
+| **¿Es error?** | NO, es diferencia de timing |
+
+---
+
+## El Cuadre Final
+
+Tu conciliación debe mostrar:
+
+**Formato estándar:**
+
+- Saldo según banco: $XX,XXX.XX
+- (+) Depósitos en tránsito: $X,XXX.XX
+- (-) Cheques en tránsito: $X,XXX.XX
+- (=) Saldo conciliado: $XX,XXX.XX
+- (=) Saldo según libros: $XX,XXX.XX ✓
+
+> **Recuerda:** Una diferencia de $0.01 es tan importante como una de $10,000. Ambas indican que algo no está bien.
+`
+          },
+          {
+            id: "lesson-conta-2-2",
+            title: "Técnicas de Cruce en Excel y Detección de Errores",
+            duration: "30 min",
+            content: `# Técnicas de Cruce en Excel
+
+## Preparación de Datos
+
+**Columnas necesarias:**
+- Fecha
+- Descripción
+- Monto (Débito/Crédito)
+- Saldo
+- Estado (Conciliado/Pendiente)
+
+---
+
+## Funciones Clave de Excel
+
+| Función | Uso | Ejemplo |
+|---------|-----|---------|
+| **BUSCARV (VLOOKUP)** | Encontrar transacciones coincidentes | =BUSCARV(A2,Banco!A:D,4,FALSO) |
+| **SUMAR.SI** | Totalizar por categoría | =SUMAR.SI(B:B,"Cheque",C:C) |
+| **COINCIDIR** | Identificar posición de valores | =COINCIDIR(A2,Banco!A:A,0) |
+| **CONTAR.SI** | Detectar duplicados | =CONTAR.SI(A:A,A2) |
+| **Formato Condicional** | Resaltar discrepancias | Valores >1 en rojo |
+
+---
+
+## Proceso Paso a Paso
+
+1. **Importa** el estado de cuenta bancario
+2. **Exporta** el libro mayor de la cuenta de banco
+3. **Ordena** ambos por fecha y monto
+4. **Cruza** usando BUSCARV o COINCIDIR
+5. **Marca** las transacciones que coinciden
+6. **Investiga** las que no coinciden
+7. **Documenta** las diferencias encontradas
+
+---
+
+## Errores Comunes y Cómo Detectarlos
+
+### Error de Transposición
+
+**Definición:** Los dígitos de un número se invierten al escribirlos.
+
+| Real | Registrado | Diferencia |
+|------|------------|------------|
+| $5,400 | $4,500 | $900 |
+| $1,234 | $1,324 | $90 |
+
+> **Truco profesional:** Si la diferencia es divisible exactamente entre 9, probablemente sea transposición.
+
+---
+
+### Cargos Bancarios No Registrados
+
+**Escenario:** Aparece cargo de $500 en banco pero no en libros. Es un seguro anual automático.
+
+**Acción correcta:**
+1. Identifica el cargo desconocido
+2. Investiga su origen (contacta al cliente si necesario)
+3. Registra el gasto en la categoría correcta
+4. Adjunta documentación de soporte
+5. Notifica al cliente sobre cargos automáticos que olvidó
+
+> ⚠️ **NUNCA** borres transacciones del banco ni las ignores.
+
+---
+
+## La Trampa de la "Diferencia Cero"
+
+> ⚠️ **Advertencia Crítica:** Que tu conciliación muestre diferencia de cero **NO significa que terminaste**. Debes revisar la **antigüedad** de las transacciones pendientes.
+
+### El Problema de Transacciones Antiguas
+
+Si tienes transacciones "pendientes de conciliar" de hace meses o años:
+- Cheques que nunca se cobraron (posible write-off)
+- Errores de duplicación antiguos
+- Transacciones fantasma que distorsionan registros
+
+**Recomendación:** Investiga cualquier transacción pendiente de más de 90 días. Propón al cliente limpiar partidas obsoletas mediante ajustes contables (write-offs).
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Conciliación Práctica",
+          description: "Aplica técnicas de conciliación bancaria",
+          tasks: [
+            {
+              id: "task-conta-2-1",
+              question: "El saldo del banco es $10,000 y el de libros es $9,800. Encontraste un cheque emitido hace 2 meses por $200 que el proveedor no ha cobrado. ¿Cómo clasificas esta diferencia y qué recomiendas al cliente?"
+            },
+            {
+              id: "task-conta-2-2",
+              question: "Al conciliar, encuentras dos cargos idénticos de $150 al mismo proveedor con la misma fecha. ¿Cuál es tu proceso de investigación?"
+            },
+            {
+              id: "task-conta-2-3",
+              question: "La diferencia en tu conciliación es de $63. ¿Qué tipo de error sospechas y por qué? (Pista: piensa en divisibilidad)"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Conciliación Bancaria",
+          description: "Evalúa tus habilidades de conciliación",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Un cargo aparece en el banco pero NO en libros. Es un seguro anual automático. ¿Qué haces?", options: ["Ignorarlo hasta el próximo mes", "Registrar el gasto inmediatamente en libros y adjuntar comprobante", "Borrar la transacción del banco"], correctAnswer: 1 },
+            { id: "q2", question: "El saldo del banco es $10,000 y libros $9,800. La diferencia de $200 es un cheque emitido hace 3 meses sin cobrar. ¿Cómo se clasifica?", options: ["Un error del banco", "Un cheque en tránsito (Outstanding Check)", "Un ingreso no registrado"], correctAnswer: 1 },
+            { id: "q3", question: "Encuentras dos cargos idénticos de $150 al mismo proveedor con la misma fecha. ¿Qué es lo más probable?", options: ["Cargo duplicado por error; alertar al cliente para solicitar reembolso", "Seguro compró dos cosas iguales; registras doble", "Borras uno sin consultar"], correctAnswer: 0 },
+            { id: "q4", question: "El cliente registró depósito de $4,500 pero el banco muestra $5,400. La diferencia es $900. ¿Qué tipo de error es?", options: ["Error de omisión", "Error de transposición (inversión de números)", "Fraude bancario"], correctAnswer: 1 },
+            { id: "q5", question: "Tu conciliación muestra diferencia cero, pero hay transacciones de hace más de un año sin conciliar. ¿Qué recomiendas?", options: ["Dejarlas ahí para siempre", "Investigar y proponer al cliente limpiarlas (Write-off)", "Cambiarles la fecha al día de hoy"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-3",
+        title: "Gestión de Cartera (Cuentas por Cobrar)",
+        description: "Seguimiento de facturas, etiqueta de cobro y reportes de antigüedad",
+        icon: "Receipt",
+        lessons: [
+          {
+            id: "lesson-conta-3-1",
+            title: "El Dinero que Te Deben",
+            duration: "20 min",
+            content: `# Gestión de Cartera (Cuentas por Cobrar - A/R)
+
+## El Dinero que Te Deben: Tu Responsabilidad
+
+Las Cuentas por Cobrar (Accounts Receivable o A/R) representan el dinero que los clientes deben al negocio. Una gestión deficiente de A/R puede **quebrar empresas rentables** por falta de liquidez.
+
+---
+
+## El Impacto Real
+
+> "Una venta no está completa hasta que el dinero está en el banco."
+
+**La paradoja del negocio rentable pero quebrado:**
+- Muchos negocios muestran utilidades en papel
+- Pero no pueden pagar sus obligaciones
+- Porque el dinero está "atrapado" en facturas sin cobrar
+
+---
+
+## Sistema de Alertas por Antigüedad
+
+| Días Vencido | Prioridad | Acción Requerida |
+|--------------|-----------|------------------|
+| **1-15 días** | Normal | Recordatorio amable |
+| **16-30 días** | Media | Llamada de seguimiento |
+| **31-60 días** | Alta | Comunicación formal |
+| **61-90 días** | Crítica | Escalamiento a gerencia |
+| **+90 días** | Urgente | Evaluar provisión de incobrable |
+
+---
+
+## La Etiqueta de Cobro: Cómo Cobrar Sin Perder al Cliente
+
+> El cobro es un arte. Un mal manejo puede dañar relaciones comerciales valiosas.
+
+### Principios del Cobro Profesional
+
+1. **Ser firme pero respetuoso**
+2. **Documentar cada comunicación**
+3. **Ofrecer soluciones, no solo presión**
+4. **Mantener la relación comercial**
+
+---
+
+## Plantillas de Comunicación
+
+### Primer Recordatorio (1-15 días)
+
+> "Estimado [Cliente], esperamos que todo esté bien. Le recordamos amablemente que la factura #XXX por $X,XXX venció el [fecha]. ¿Podemos ayudarle con algo para procesar el pago?"
+
+### Seguimiento Formal (30+ días)
+
+> "Estimado [Cliente], notamos que la factura #XXX permanece pendiente desde hace [X] días. Entendemos que pueden surgir situaciones, ¿podemos acordar un plan de pago que funcione para ambos?"
+
+### Escalamiento (60+ días)
+
+> "Estimado [Cliente], hemos intentado comunicarnos respecto a la factura #XXX de $X,XXX con [X] días de retraso. Es importante resolver esta situación esta semana para evitar afectar nuestra relación comercial. Por favor contáctenos hoy."
+`
+          },
+          {
+            id: "lesson-conta-3-2",
+            title: "Aging Reports e Indicadores Clave",
+            duration: "20 min",
+            content: `# Reportes de Antigüedad e Indicadores
+
+## El Aging Report: Tu Mapa del Tesoro
+
+El Aging Report muestra exactamente dónde está el dinero pendiente y su antigüedad.
+
+---
+
+## Estructura del Reporte
+
+| Cliente | Actual | 1-30 | 31-60 | 61-90 | +90 | Total |
+|---------|--------|------|-------|-------|-----|-------|
+| Cliente A | $500 | $0 | $200 | $0 | $0 | $700 |
+| Cliente B | $0 | $300 | $0 | $150 | $100 | $550 |
+| Cliente C | $1,000 | $0 | $0 | $0 | $0 | $1,000 |
+| **TOTAL** | **$1,500** | **$300** | **$200** | **$150** | **$100** | **$2,250** |
+
+---
+
+## Indicadores Clave (KPIs)
+
+### DSO (Days Sales Outstanding)
+
+**Definición:** Días promedio que toma cobrar las facturas.
+
+**Fórmula:** (Cuentas por Cobrar / Ventas a Crédito) × Días del período
+
+| DSO | Interpretación |
+|-----|----------------|
+| < 30 días | Excelente gestión de cobro |
+| 30-45 días | Normal para muchas industrias |
+| 45-60 días | Área de mejora |
+| > 60 días | Problema serio de cobranza |
+
+---
+
+### Índice de Morosidad
+
+**Fórmula:** (Cartera Vencida / Cartera Total) × 100
+
+| Índice | Interpretación |
+|--------|----------------|
+| < 5% | Saludable |
+| 5-15% | Atención requerida |
+| 15-30% | Problema significativo |
+| > 30% | Crisis de cobranza |
+
+---
+
+### Efectividad de Cobro
+
+**Fórmula:** (Monto Recuperado / Monto Vencido) × 100
+
+---
+
+## Tu Rol Proactivo
+
+> No esperes a que el cliente pague. **Anticipa, comunica y facilita** el proceso de cobro.
+
+### Acciones Proactivas
+
+1. **Envía recordatorio 3 días ANTES del vencimiento**
+2. **Ofrece múltiples métodos de pago**
+3. **Detecta patrones de morosidad por cliente**
+4. **Sugiere políticas de crédito más estrictas si es necesario**
+5. **Presenta el Aging Report mensualmente al cliente con análisis**
+
+---
+
+## Escenario de Alerta
+
+**Situación:** El 40% de la cartera tiene más de 60 días vencida.
+
+**Tu recomendación:**
+
+> "Esto representa un riesgo significativo para el flujo de caja. Sugiero: (1) Contactar a estos clientes esta semana, (2) Considerar provisionar un % como incobrable, (3) Revisar la política de crédito para nuevos clientes."
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Gestión de Cobranza",
+          description: "Practica técnicas de seguimiento de cartera",
+          tasks: [
+            {
+              id: "task-conta-3-1",
+              question: "Redacta un mensaje de cobro para una factura de $3,500 con 45 días de vencida. El cliente ha sido buen pagador históricamente."
+            },
+            {
+              id: "task-conta-3-2",
+              question: "El DSO de tu cliente es de 65 días cuando el promedio de la industria es 35 días. ¿Qué 3 acciones específicas recomendarías implementar?"
+            },
+            {
+              id: "task-conta-3-3",
+              question: "Crea un mini Aging Report con 5 clientes ficticios y calcula el índice de morosidad. Incluye recomendaciones basadas en tu análisis."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Cuentas por Cobrar",
+          description: "Evalúa tu comprensión de la gestión de cartera",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Por qué un negocio con utilidades puede tener problemas de liquidez?", options: ["Porque los reportes están mal", "Porque el dinero está atrapado en cuentas por cobrar sin cobrar", "Porque paga muchos impuestos", "Porque tiene demasiados empleados"], correctAnswer: 1 },
+            { id: "q2", question: "Una factura tiene 45 días de vencida. ¿Cuál es la acción apropiada?", options: ["Enviar recordatorio amable por email", "Ignorarla hasta que cumpla 60 días", "Comunicación formal y seguimiento directo", "Enviarla directamente a cobranza legal"], correctAnswer: 2 },
+            { id: "q3", question: "¿Qué significa DSO (Days Sales Outstanding)?", options: ["Días de stock en bodega", "Días promedio que toma cobrar las facturas", "Descuento por ventas ocasionales", "Días sin operaciones"], correctAnswer: 1 },
+            { id: "q4", question: "Al comunicarte con un cliente moroso, ¿cuál es el mejor enfoque?", options: ["Amenazar con acciones legales inmediatamente", "Ignorar la situación", "Ser firme pero respetuoso, ofreciendo soluciones", "Dejar de proveer servicios sin aviso"], correctAnswer: 2 },
+            { id: "q5", question: "El Aging Report muestra 40% de cartera con más de 60 días vencida. ¿Qué indica?", options: ["Es normal en cualquier negocio", "Problema serio de gestión de cobro que requiere acción inmediata", "El negocio es muy exitoso", "Los clientes son muy confiables"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-4",
+        title: "Investigación Analítica y Cierre de Mes",
+        description: "Checklist de cierre, investigación de transacciones y validación",
+        icon: "CheckSquare",
+        lessons: [
+          {
+            id: "lesson-conta-4-1",
+            title: "El Checklist de Cierre Mensual",
+            duration: "25 min",
+            content: `# Investigación Analítica y Cierre de Mes Integral
+
+## El Cierre: Tu Momento de Brillar
+
+El cierre de mes no es solo "cerrar los libros". Es tu oportunidad de demostrar profesionalismo, atención al detalle y valor agregado.
+
+---
+
+## El Checklist de Cierre Mensual
+
+### Semana 1 del Mes Siguiente
+
+**Transacciones:**
+- [ ] Conciliación bancaria completada
+- [ ] Todas las facturas de venta registradas
+- [ ] Facturas de proveedores ingresadas
+- [ ] Tarjetas de crédito conciliadas
+- [ ] Nómina registrada correctamente
+
+**Validaciones Críticas:**
+- [ ] No hay transacciones en "Ask my Accountant"
+- [ ] Cuentas de balance cuadradas
+- [ ] Ingresos clasificados correctamente
+- [ ] Gastos en las categorías apropiadas
+- [ ] Préstamos y pagos alineados
+
+---
+
+## Validación de Saldos de Balance
+
+| Cuenta | Debe ser igual a |
+|--------|------------------|
+| Bancos | Estado de cuenta conciliado |
+| Cuentas por Cobrar | Suma de facturas pendientes |
+| Cuentas por Pagar | Suma de facturas por pagar |
+| Préstamos | Saldo según acreedor |
+| Tarjetas de Crédito | Estado de cuenta |
+
+---
+
+## Señales de Alerta
+
+⚠️ **Investiga inmediatamente si ves:**
+
+- Saldos negativos donde no deberían existir
+- Diferencias con meses anteriores sin explicación
+- Cuentas con movimiento inusual
+- Transacciones grandes sin documentar
+- La cuenta "Ask my Accountant" con saldo
+
+---
+
+## Mentalidad de Cierre
+
+> "No cierro el mes hasta estar 100% seguro de que los números cuentan la historia correcta."
+
+**Tu compromiso:**
+- Cada transacción tiene categoría correcta
+- Cada saldo es verificable
+- Cada diferencia está explicada
+- Cada anomalía está documentada
+`
+          },
+          {
+            id: "lesson-conta-4-2",
+            title: "Investigación de Transacciones Sin Clasificar",
+            duration: "20 min",
+            content: `# Investigación de Transacciones Sin Clasificar
+
+## La Cuenta "Ask my Accountant"
+
+Esta cuenta (o equivalente) es donde van las transacciones que no se pudieron clasificar.
+
+> ⚠️ **Esta cuenta debe estar en $0 al cerrar el mes.**
+
+---
+
+## Proceso de Investigación
+
+### Paso 1: Identificar
+Lista todas las transacciones pendientes de clasificar.
+
+### Paso 2: Buscar Documentación
+- Revisa emails del cliente
+- Busca facturas o recibos
+- Consulta estados de cuenta
+
+### Paso 3: Contactar al Cliente
+Si no encuentras información, prepara preguntas específicas:
+- ¿Quién es el beneficiario/pagador?
+- ¿Cuál fue el propósito de la transacción?
+- ¿Hay factura o recibo de soporte?
+- ¿Es recurrente o extraordinario?
+- ¿Afecta impuestos de alguna manera?
+
+### Paso 4: Clasificar Correctamente
+Con la información obtenida, asigna la categoría apropiada.
+
+### Paso 5: Documentar
+Guarda la explicación y soporte para futuras referencias.
+
+---
+
+## Errores Comunes a Evitar
+
+| Error | Consecuencia | Solución |
+|-------|--------------|----------|
+| Clasificar en "Misceláneos" | Pierde visibilidad del gasto | Investigar y categorizar correctamente |
+| Asumir la categoría | Puede ser incorrecto | Siempre verificar con cliente |
+| Dejar para después | Se acumula y se olvida | Resolver antes de cerrar el mes |
+| No documentar | Se repetirá el problema | Crear nota para el futuro |
+
+---
+
+## El Reporte de Cierre
+
+Al finalizar, prepara un resumen ejecutivo:
+
+**REPORTE DE CIERRE - [MES/AÑO]**
+
+**Hallazgos Importantes:**
+1. [Descripción del hallazgo 1]
+2. [Descripción del hallazgo 2]
+
+**Transacciones Pendientes de Confirmación:** X
+
+**Ajustes Realizados:** X
+
+**Recomendaciones para el Próximo Mes:**
+- [Recomendación 1]
+- [Recomendación 2]
+
+**Status:** CERRADO / PENDIENTE
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Cierre de Mes",
+          description: "Practica el proceso de cierre mensual",
+          tasks: [
+            {
+              id: "task-conta-4-1",
+              question: "Crea tu propio checklist de cierre mensual personalizado con al menos 15 items, organizados por categoría (bancos, facturación, nómina, etc.)."
+            },
+            {
+              id: "task-conta-4-2",
+              question: "Hay una transacción de $2,500 en 'Ask my Accountant' con descripción 'TRF DIGITAL'. Describe tu proceso completo de investigación."
+            },
+            {
+              id: "task-conta-4-3",
+              question: "Redacta el template de tu Reporte de Cierre mensual que enviarías al cliente, incluyendo todas las secciones necesarias."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Cierre Mensual",
+          description: "Evalúa tu proceso de cierre de mes",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál debe ser el saldo de 'Ask my Accountant' al cerrar el mes?", options: ["Puede tener cualquier saldo razonable", "Debe ser $0 - todas las transacciones clasificadas", "Depende del tamaño del negocio", "Solo importa al cierre anual"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuál es el primer paso al investigar una transacción sin clasificar?", options: ["Clasificarla en gastos varios", "Eliminarla del sistema", "Identificarla y buscar documentación de soporte", "Esperar a que el cliente pregunte"], correctAnswer: 2 },
+            { id: "q3", question: "El saldo de Cuentas por Cobrar debe ser igual a:", options: ["El total de ventas del mes", "La suma de todas las facturas pendientes de cobro", "El saldo bancario", "Las utilidades del período"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué indica un saldo negativo en la cuenta de bancos?", options: ["Es normal en ciertos negocios", "Hay un error de registro o sobregiro que debe investigarse", "El banco cometió un error", "Se pagaron muchos impuestos"], correctAnswer: 1 },
+            { id: "q5", question: "El checklist de cierre mensual debe incluir:", options: ["Solo la conciliación bancaria", "Conciliación, registro de facturas, tarjetas, nómina y validación de cuentas", "Únicamente el cálculo de impuestos", "La firma del contador certificado"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-5",
+        title: "Análisis de Variación (P&L vs. Presupuesto)",
+        description: "Comparar real vs. planeado e identificar fugas de dinero",
+        icon: "TrendingUp",
+        lessons: [
+          {
+            id: "lesson-conta-5-1",
+            title: "El Arte de Explicar los Números",
+            duration: "25 min",
+            content: `# Análisis de Variación (P&L vs. Presupuesto)
+
+## El Arte de Explicar los Números
+
+Un Estado de Resultados (P&L - Profit & Loss) cuenta una historia. Tu trabajo es **descifrar esa historia** y comunicarla de manera que el cliente pueda tomar acción.
+
+---
+
+## ¿Qué es el Análisis de Variación?
+
+Es la comparación entre:
+- **Lo Real:** Lo que efectivamente ocurrió
+- **Lo Planeado:** El presupuesto o expectativa
+
+La diferencia entre ambos es la **variación**, y tu trabajo es explicar el **por qué**.
+
+---
+
+## Tipos de Variaciones
+
+| Tipo | Significado | Color Típico | Ejemplo |
+|------|-------------|--------------|---------|
+| **Favorable** | Mejor que lo esperado | Verde | Gastos menores al presupuesto |
+| **Desfavorable** | Peor que lo esperado | Rojo | Ingresos menores al plan |
+
+---
+
+## Cálculo de Variación
+
+**Variación Absoluta:** Real - Presupuesto
+
+**Variación Porcentual:** (Variación / Presupuesto) × 100
+
+**Regla general:** Investiga variaciones mayores al 10% o montos absolutos significativos.
+
+---
+
+## Preguntas Clave para Investigar
+
+1. ¿Fue un evento único o recurrente?
+2. ¿Es una diferencia de timing?
+3. ¿Hay un error de clasificación (CAPEX vs OPEX)?
+4. ¿Falta algún accrual?
+5. ¿Hay factores externos que lo expliquen?
+
+---
+
+## Comunicación al Cliente
+
+> El cliente no quiere un reporte técnico. Quiere **respuestas claras**.
+
+### Estructura de Explicación
+
+1. **Resumen ejecutivo:** "Este mes tuviste $X más/menos de utilidad que lo planeado"
+2. **Factores principales:** "Las 3 razones más importantes son..."
+3. **Recomendaciones:** "Para el próximo mes, sugiero..."
+
+### Ejemplo de Comunicación Efectiva
+
+❌ **Mal:** "La variación en gastos operativos fue de -$3,500 representando un 15% desfavorable sobre el presupuesto de la categoría 6200."
+
+✅ **Bien:** "Gastaste $3,500 más de lo planeado en operaciones, principalmente por la reparación de emergencia del aire acondicionado. Esto fue un evento único que no debería repetirse."
+`
+          },
+          {
+            id: "lesson-conta-5-2",
+            title: "Timing, CAPEX vs OPEX y Accruals",
+            duration: "30 min",
+            content: `# Conceptos Clave para el Análisis
+
+## Timing Difference (Diferencia Temporal)
+
+**Definición:** Un gasto grande se paga en un solo mes, pero su beneficio se extiende a varios meses.
+
+### Ejemplo Clásico
+
+| Concepto | Valor |
+|----------|-------|
+| Presupuesto de Marketing mensual | $2,000 |
+| Gasto real en Marzo | $5,000 |
+| Razón | Pagó campaña anual completa |
+| ¿Es problema? | **NO**, es diferencia de timing |
+
+**Cómo explicarlo:** "Es una variación temporal. El gasto es alto ahora pero será $0 los próximos meses. En el año, estarás dentro del presupuesto."
+
+---
+
+## CAPEX vs. OPEX: Clasificación Crítica
+
+| Concepto | Significado | Ejemplos | Tratamiento |
+|----------|-------------|----------|-------------|
+| **CAPEX** | Gastos que se convierten en activos | Computadoras, muebles, maquinaria | Activo Fijo → Depreciar |
+| **OPEX** | Gastos operativos del día a día | Reparaciones, suministros, servicios | Gasto del período |
+
+### Error Grave Común
+
+❌ Clasificar una computadora Mac de $2,500 como "Reparación de Oficina"
+
+**Impacto del error:**
+- Infla los gastos del mes artificialmente
+- Distorsiona análisis de variación (300% de aumento en "Reparaciones")
+- Afecta la toma de decisiones del cliente
+
+**Solución:** Mover a Activos Fijos y depreciar según vida útil.
+
+---
+
+## Accruals (Devengados)
+
+**Definición:** Registrar un gasto (o ingreso) en el mes que **ocurre**, aunque se **pague** después.
+
+### Ejemplo de Nómina
+
+| Concepto | Detalle |
+|----------|---------|
+| Nómina de última semana de Enero | Se paga el 5 de Febrero |
+| ¿Cuándo se registra el gasto? | En **Enero** (cuando se trabajó) |
+| Si no hay accrual | Enero parece más rentable de lo real |
+
+**Por qué importa:** Si ves variación "favorable" en nómina, verifica si falta registrar un accrual. Puede que no sea buena noticia, sino registro incompleto.
+
+---
+
+## La Paradoja: Alta Utilidad pero Sin Efectivo
+
+> **Concepto Crítico:** Tener ventas altas y utilidades altas **NO garantiza** tener dinero en el banco.
+
+**El diagnóstico:**
+- Cliente tiene alta "Utilidad Neta" pero no puede pagar sus cuentas
+- Revisas el Balance: ¿Aumentaron las "Cuentas por Cobrar"?
+- Significa: Ventas registradas (en papel) pero no cobradas (en efectivo)
+
+**Tu recomendación:** "Tienes un problema de **cobranza**, no de ventas. Hay que gestionar las Cuentas por Cobrar."
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Análisis de Variación",
+          description: "Practica el análisis y explicación de variaciones",
+          tasks: [
+            {
+              id: "task-conta-5-1",
+              question: "El presupuesto de Suministros era $500 pero el gasto real fue $2,800. Al revisar, ves una compra de laptop de $2,300. Explica el error y cómo corregirlo con términos que el cliente entienda."
+            },
+            {
+              id: "task-conta-5-2",
+              question: "Crea una tabla de variaciones para 5 categorías de gastos (inventadas) con: presupuesto, real, variación absoluta, variación %, y una explicación breve para cada una."
+            },
+            {
+              id: "task-conta-5-3",
+              question: "El cliente dice 'Tengo muchas ganancias pero no tengo dinero'. ¿Cómo le explicas esta paradoja y qué le recomiendas investigar?"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Análisis de Variación",
+          description: "Evalúa tu capacidad de análisis financiero",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "El presupuesto de Marketing era $2,000 pero el gasto fue $5,000 por una campaña anual. ¿Cómo explicas esta variación?", options: ["Gastaste demasiado, hay que cortar gastos", "Es una variación temporal; será $0 los próximos meses", "Alguien cometió un error contable"], correctAnswer: 1 },
+            { id: "q2", question: "Una computadora Mac de $2,500 está clasificada como 'Reparaciones de Oficina'. ¿Cuál es el error?", options: ["Error de clasificación CAPEX vs OPEX; debe ir a Activos Fijos", "No hay error, es una reparación costosa", "Debes aumentar el presupuesto de reparaciones"], correctAnswer: 0 },
+            { id: "q3", question: "Ingresos están 20% abajo y Costo de Ventas también 20% abajo. ¿Qué indica?", options: ["La eficiencia se mantiene; la baja en costos es coherente con la baja en ventas", "El negocio está perdiendo dinero por robo", "Los proveedores bajaron los precios"], correctAnswer: 0 },
+            { id: "q4", question: "El cliente tiene alta Utilidad Neta pero poco dinero en banco, y las Cuentas por Cobrar aumentaron. ¿Cuál es tu diagnóstico?", options: ["El banco escondió el dinero", "Hay ventas registradas pero no cobradas; problema de cobranza", "La contabilidad está mal hecha"], correctAnswer: 1 },
+            { id: "q5", question: "Hay variación 'favorable' en Nómina pero contrataron gente nueva. ¿Qué investigas?", options: ["Nada, es buena noticia", "Si falta procesar quincena o hay accruals pendientes", "Pedir un bono por ahorro"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-6",
+        title: "Gestión de Cuentas por Pagar y Flujo de Caja",
+        description: "Organización de facturas, programación de pagos y liquidez",
+        icon: "CreditCard",
+        lessons: [
+          {
+            id: "lesson-conta-6-1",
+            title: "El Otro Lado de la Moneda: A/P",
+            duration: "20 min",
+            content: `# Gestión de Cuentas por Pagar (A/P) y Flujo de Caja
+
+## El Otro Lado de la Moneda
+
+Si las Cuentas por Cobrar son el dinero que te deben, las **Cuentas por Pagar (A/P)** son el dinero que debes.
+
+---
+
+## Beneficios de una Gestión Inteligente de A/P
+
+- ✅ Mantener buenas relaciones con proveedores
+- ✅ Evitar cargos por mora
+- ✅ Optimizar el flujo de caja
+- ✅ Aprovechar descuentos por pronto pago
+
+---
+
+## Sistema de Gestión de Facturas
+
+| Etapa | Descripción |
+|-------|-------------|
+| **1. Recepción** | Fecha de ingreso al sistema |
+| **2. Verificación** | Confirmar que el servicio/producto fue recibido |
+| **3. Aprobación** | Autorización para pago |
+| **4. Programación** | Fecha de pago planificada |
+| **5. Ejecución** | Pago realizado |
+| **6. Archivo** | Documentación guardada |
+
+---
+
+## Información Clave por Factura
+
+**Datos esenciales a registrar:**
+- Número de factura
+- Proveedor
+- Fecha de emisión
+- Fecha de vencimiento
+- Monto
+- Términos de pago (Net 30, 2/10 Net 30, etc.)
+- Estado (Pendiente/Programada/Pagada)
+
+---
+
+## Términos de Pago Comunes
+
+| Término | Significado |
+|---------|-------------|
+| **Net 30** | Pago total en 30 días |
+| **Net 60** | Pago total en 60 días |
+| **2/10 Net 30** | 2% descuento si pagas en 10 días, o total en 30 |
+| **COD** | Contra entrega (Cash on Delivery) |
+| **CIA** | Pago anticipado (Cash in Advance) |
+
+---
+
+## Ejemplo: Descuento 2/10 Net 30
+
+**Situación:** Factura de $10,000 con términos 2/10 Net 30
+
+| Opción | Monto a Pagar | Cuándo |
+|--------|---------------|--------|
+| Con descuento | $9,800 | En 10 días |
+| Sin descuento | $10,000 | En 30 días |
+
+**Ahorro:** $200
+
+**Tasa anualizada equivalente:** ~36%
+
+> **Decisión:** Si tienes el efectivo disponible, aprovecha el descuento.
+`
+          },
+          {
+            id: "lesson-conta-6-2",
+            title: "Programación Estratégica de Pagos",
+            duration: "20 min",
+            content: `# Programación Estratégica de Pagos
+
+## El Balance: No Demasiado Rápido, No Demasiado Tarde
+
+> "No se trata de pagar lo más rápido posible, ni de retener lo más posible. Se trata de **optimizar el flujo**."
+
+---
+
+## Factores para Programar Pagos
+
+| Factor | Impacto en Decisión |
+|--------|---------------------|
+| Descuento por pronto pago | Pagar antes si descuento > costo de oportunidad |
+| Flujo de caja disponible | No comprometer liquidez operativa |
+| Relación con proveedor | Proveedores críticos = prioridad |
+| Términos contractuales | Respetar acuerdos |
+
+---
+
+## Evitando Recargos por Mora
+
+Los cargos por pago tardío:
+- ❌ Aumentan costos innecesariamente
+- ❌ Dañan la relación comercial
+- ❌ Pueden afectar términos futuros
+- ❌ Reflejan desorganización
+
+### Estrategia Preventiva
+
+1. Calendario de vencimientos visible
+2. Alertas 7 días antes del vencimiento
+3. Revisión semanal de A/P
+4. Comunicación proactiva si habrá retraso
+
+---
+
+## El Ciclo de Conversión de Efectivo
+
+**Fórmula:**
+
+Días de Inventario + Días de Cobro - Días de Pago = Ciclo de Efectivo
+
+**Meta:** Minimizar el ciclo para tener más efectivo disponible.
+
+### Ejemplo
+
+| Concepto | Días |
+|----------|------|
+| Inventario en bodega | 30 días |
+| Tiempo para cobrar ventas | 45 días |
+| Tiempo para pagar proveedores | 30 días |
+| **Ciclo de Efectivo** | **45 días** |
+
+---
+
+## Reportes Clave de A/P
+
+1. **Aging de A/P:** Similar al de A/R, muestra antigüedad de deudas
+2. **Forecast de Pagos:** Proyección de salidas de efectivo
+3. **Vendor Summary:** Resumen por proveedor
+
+---
+
+## Comunicación Proactiva
+
+**Si vas a retrasarte en un pago:**
+
+> "Estimado [Proveedor], le escribo para informarle que tendremos un retraso de [X] días en el pago de la factura #XXX. Estamos trabajando para resolver la situación y esperamos completar el pago el [fecha]. Agradecemos su comprensión y nos disculpamos por cualquier inconveniente."
+
+**SIEMPRE:** Comunica ANTES de que venza, no después.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Gestión de Pagos",
+          description: "Practica la programación estratégica de pagos",
+          tasks: [
+            {
+              id: "task-conta-6-1",
+              question: "Tienes una factura de $5,000 con términos 2/10 Net 30. Calcula: (a) ahorro con descuento, (b) tasa anualizada equivalente del descuento, (c) tu recomendación si el cliente tiene $6,000 en banco."
+            },
+            {
+              id: "task-conta-6-2",
+              question: "Crea un calendario de pagos para la próxima semana con 5 facturas ficticias, priorizadas según criterios estratégicos. Explica tu razonamiento."
+            },
+            {
+              id: "task-conta-6-3",
+              question: "Redacta un mensaje proactivo a un proveedor avisando que el pago se retrasará 10 días, ofreciendo una solución parcial."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Cuentas por Pagar",
+          description: "Evalúa tu gestión de pagos a proveedores",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Un proveedor ofrece '2/10 Net 30'. ¿Qué significa?", options: ["Pagar 2% ahora y el resto en 10 días", "2% de descuento si pagas en 10 días, total completo si pagas en 30", "Pagar en 2 cuotas", "El precio aumenta 2% después de 10 días"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuál es el riesgo de pagar todas las facturas inmediatamente?", options: ["No hay ningún riesgo", "Puede comprometer la liquidez operativa del negocio", "Los proveedores pueden desconfiar", "Es ilegal en algunos países"], correctAnswer: 1 },
+            { id: "q3", question: "El Ciclo de Conversión de Efectivo mide:", options: ["La velocidad del software contable", "El tiempo entre pagar a proveedores y cobrar a clientes", "La cantidad de cuentas bancarias", "El número de empleados en finanzas"], correctAnswer: 1 },
+            { id: "q4", question: "Si vas a retrasarte en un pago, la mejor práctica es:", options: ["Ignorar las llamadas del proveedor", "Comunicar proactivamente ANTES del vencimiento y negociar", "Pagar una parte sin avisar", "Esperar a que te demanden"], correctAnswer: 1 },
+            { id: "q5", question: "¿Por qué verificar que el producto/servicio fue recibido antes de aprobar una factura?", options: ["Es solo formalismo burocrático", "Para evitar pagar por algo no recibido, duplicados o errores", "Porque el proveedor lo exige", "Solo aplica para compras grandes"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-7",
+        title: "Proyección de Flujo de Caja (Forecasting)",
+        description: "Mirar al futuro, prevenir déficits y tomar decisiones basadas en datos",
+        icon: "LineChart",
+        lessons: [
+          {
+            id: "lesson-conta-7-1",
+            title: "Mirar al Futuro: Tu Superpoder Contable",
+            duration: "25 min",
+            content: `# Proyección de Flujo de Caja (Forecasting)
+
+## Mirar al Futuro: Tu Superpoder Contable
+
+La diferencia entre un asistente contable común y uno excepcional es la capacidad de **ver hacia adelante**. El forecasting de flujo de caja te permite anticipar problemas y oportunidades.
+
+---
+
+## ¿Qué es el Cash Flow Forecast?
+
+Es una proyección de:
+- **Cuánto dinero entrará** (y cuándo)
+- **Cuánto dinero saldrá** (y cuándo)
+- **El saldo resultante** en cada período
+
+---
+
+## El Modelo de 13 Semanas (13-Week Cash Flow)
+
+> **¿Por qué 13 semanas?** Es el período más **accionable** para identificar y resolver crisis de corto plazo. Proyectar a un año es útil para planificación estratégica, pero las decisiones de supervivencia se toman semana a semana.
+
+### Ventajas del Modelo de 13 Semanas
+
+| Característica | Beneficio |
+|----------------|-----------|
+| Horizonte trimestral | Suficiente para ver patrones |
+| Detalle semanal | Precisión para detectar semanas críticas |
+| Actualización constante | Rolling forecast que mejora |
+| Accionable | Tiempo suficiente para reaccionar |
+
+---
+
+## Estructura Básica del Forecast
+
+| Concepto | Sem 1 | Sem 2 | Sem 3 | ... | Sem 13 |
+|----------|-------|-------|-------|-----|--------|
+| **ENTRADAS** | | | | | |
+| Cobros de clientes | $X | $X | $X | | $X |
+| Otros ingresos | $X | $X | $X | | $X |
+| **Total Entradas** | $X | $X | $X | | $X |
+| **SALIDAS** | | | | | |
+| Nómina | $X | $X | $X | | $X |
+| Proveedores | $X | $X | $X | | $X |
+| Alquiler | $X | - | - | | $X |
+| Impuestos | - | - | - | | $X |
+| **Total Salidas** | $X | $X | $X | | $X |
+| **Flujo Neto** | $X | $X | $X | | $X |
+| Saldo Inicial | $X | $X | $X | | $X |
+| **SALDO FINAL** | $X | $X | $X | | $X |
+
+---
+
+## El Poder de Anticipar
+
+**Escenario:** Tu proyección muestra que en Semana 4 el saldo será negativo (-$500), pero esperas un pago grande en Semana 5.
+
+**Sin forecast:** Descubres el problema cuando el banco rechaza un pago.
+
+**Con forecast:** Negocias con un proveedor para retrasar pago una semana, evitando la crisis.
+
+> "El valor del forecasting es ver problemas ANTES de que ocurran."
+`
+          },
+          {
+            id: "lesson-conta-7-2",
+            title: "Jerarquía de Pagos y Rentabilidad vs. Liquidez",
+            duration: "25 min",
+            content: `# Jerarquía de Pagos y Conceptos Críticos
+
+## Jerarquía de Pagos en Crisis de Liquidez
+
+> **Regla de Oro:** Cuando no hay suficiente dinero para pagar todo, la **Nómina (Payroll) siempre es prioridad** sobre proveedores.
+
+### ¿Por Qué la Nómina es Prioritaria?
+
+| Factor | Nómina | Proveedores |
+|--------|--------|-------------|
+| Obligación legal | Alta (leyes laborales) | Menor (contractual) |
+| Riesgo de demandas | Inmediato y costoso | Generalmente negociable |
+| Impacto moral | Empleados dependen de ti | Relación comercial |
+| Flexibilidad | Poca | Alta (planes de pago) |
+
+### Escenario Ejemplo
+
+- Tienes **$4,000** en el banco
+- Debes **$3,000** de nómina mañana
+- Debes **$2,000** a un proveedor (vencido)
+
+**Recomendación:** Asegurar la nómina primero ($3,000) y negociar plan de pago con el proveedor por los $2,000.
+
+---
+
+## Rentabilidad vs. Liquidez: La Diferencia Vital
+
+> ⚠️ **Advertencia Crítica:** Ser **rentable** (tener utilidades) **NO es lo mismo** que tener **liquidez** (dinero en el banco). Puedes quebrar siendo rentable si no cobras.
+
+### La Paradoja del Negocio Rentable pero Quebrado
+
+**El cliente dice:** "Tengo muchas utilidades, soy rico"
+
+**Tú miras:** Flujo Operativo negativo mes tras mes
+
+**¿Qué significa?** El negocio genera utilidades en **papel**, pero no genera **efectivo**
+
+### Causas Típicas
+
+| Causa | Diagnóstico |
+|-------|-------------|
+| Inventario estancado | Dinero atrapado en productos sin vender |
+| Cobranza lenta | Ventas registradas pero no cobradas |
+| Crecimiento mal financiado | Expandirse con capital operativo |
+
+---
+
+## Prevenir Déficits
+
+Un déficit proyectado no es el fin del mundo si lo ves con anticipación:
+
+1. **Acelerar cobros:** Incentivos por pronto pago
+2. **Retrasar pagos:** Negociar con proveedores (no nómina)
+3. **Línea de crédito:** Activarla ANTES de necesitarla
+4. **Reducir gastos:** Identificar lo no esencial
+5. **Aplazar inversiones:** Si no son urgentes
+
+---
+
+## Tu Rol como Forecaster
+
+No solo creas el reporte. Lo **interpretas**, **alertas** sobre riesgos y **recomiendas** acciones.
+
+> "La intuición es valiosa, pero los datos son más confiables."
+
+**El forecast permite responder:**
+- ¿Puedo contratar a alguien nuevo?
+- ¿Cuándo es el mejor momento para comprar equipo?
+- ¿Necesito una línea de crédito?
+- ¿Puedo tomarme vacaciones sin afectar operaciones?
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Proyección de Flujo de Caja",
+          description: "Crea tu primer forecast de 13 semanas",
+          tasks: [
+            {
+              id: "task-conta-7-1",
+              question: "Crea un forecast de flujo de caja de 4 semanas para un negocio ficticio con: ingresos semanales de $5,000, nómina quincenal de $3,000, alquiler mensual de $2,000, y gastos variables de $1,500/semana. Saldo inicial: $4,000."
+            },
+            {
+              id: "task-conta-7-2",
+              question: "En el forecast anterior, identifica la semana con menor saldo y propón 3 acciones específicas para evitar un déficit."
+            },
+            {
+              id: "task-conta-7-3",
+              question: "Tu cliente tiene $4,000, debe $3,500 de nómina y $2,000 a un proveedor. Redacta tu recomendación completa incluyendo: priorización, mensaje al proveedor, y plan de seguimiento."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Proyección de Flujo de Caja",
+          description: "Evalúa tu capacidad de forecasting financiero",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Tu forecast muestra saldo negativo en Semana 4 pero pago esperado en Semana 5. ¿Qué recomiendas HOY?", options: ["No te preocupes, el dinero llega después", "Negociar retrasar un pago o usar línea de crédito temporalmente", "Cerrar el negocio"], correctAnswer: 1 },
+            { id: "q2", question: "El cliente quiere comprar maquinaria de $10,000 al contado, pero eso dejaría caja en $100. ¿Qué sugieres?", options: ["Comprarla de todos modos", "Financiar a plazos para no descapitalizar la operación", "No registrar la compra hasta el año siguiente"], correctAnswer: 1 },
+            { id: "q3", question: "¿Por qué el modelo de 13 semanas es más confiable que proyectar a un año?", options: ["Las previsiones de cobros y pagos son más certeras y accionables a corto plazo", "Excel no permite más columnas", "Al cliente no le importa el largo plazo"], correctAnswer: 0 },
+            { id: "q4", question: "Tienes $4,000, nómina de $3,000 mañana y proveedor vencido de $2,000. ¿Qué priorizas?", options: ["Pagar al proveedor y deber nómina", "Asegurar nómina primero y negociar con proveedor", "Pagar mitad y mitad"], correctAnswer: 1 },
+            { id: "q5", question: "El cliente dice 'tengo muchas utilidades' pero el Flujo Operativo es negativo. ¿Qué significa?", options: ["Que el cliente tiene razón", "El negocio es rentable en papel pero no genera efectivo", "Que hay que pagar menos impuestos"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-8",
+        title: "Auditoría de Nómina (Pre-Procesamiento)",
+        description: "Revisión de horas, comisiones, bonos y cumplimiento de retenciones",
+        icon: "Users",
+        lessons: [
+          {
+            id: "lesson-conta-8-1",
+            title: "Antes de Pagar: Revisar",
+            duration: "25 min",
+            content: `# Auditoría de Nómina (Pre-Procesamiento)
+
+## Antes de Pagar: Revisar
+
+La nómina es probablemente el gasto más grande y más sensible de cualquier negocio. Un error en nómina afecta:
+
+- 😟 La moral de los empleados
+- ⚖️ El cumplimiento legal
+- 💰 Los impuestos de la empresa
+- 🤝 La confianza del equipo
+
+---
+
+## El Pre-Procesamiento: Tu Primera Línea de Defensa
+
+Antes de que se procese cualquier pago, tu rol es **verificar que todo esté correcto**.
+
+---
+
+## Checklist de Horas
+
+- [ ] Horas regulares coinciden con registros de tiempo
+- [ ] Horas extras aprobadas por supervisor
+- [ ] Ausencias registradas (vacaciones, enfermedad, permisos)
+- [ ] Feriados aplicados correctamente
+- [ ] Tiempo de comida descontado según política
+
+---
+
+## Verificación de Comisiones
+
+| Verificación | Acción |
+|--------------|--------|
+| Ventas cerradas | Confirmar con reporte de ventas |
+| Porcentaje correcto | Verificar escala de comisiones |
+| Cliente pagó | Algunas empresas pagan al cobrar |
+| Período correcto | No duplicar ni omitir |
+
+---
+
+## Verificación de Bonos
+
+- ¿Está autorizado por escrito?
+- ¿Es recurrente o extraordinario?
+- ¿Tiene implicaciones fiscales especiales?
+- ¿Está dentro del presupuesto?
+
+---
+
+## Retenciones Obligatorias
+
+En la mayoría de jurisdicciones:
+- **Impuesto sobre la Renta** (retención según tabla)
+- **Seguridad Social / FICA** (empleado y empleador)
+- **Medicare** (si aplica)
+- **Impuestos locales/estatales** (según ubicación)
+
+---
+
+## Documentación Requerida por Empleado
+
+- Formulario de datos fiscales (W-4 o equivalente)
+- Comprobante de identidad
+- Autorización de depósito directo
+- Registro de beneficios y deducciones
+
+---
+
+## Responsabilidad Compartida
+
+> "La nómina incorrecta no es solo un error numérico; es una falla de confianza."
+
+Aunque el procesamiento final pueda estar en manos de otro departamento, tu auditoría previa protege al negocio y a los empleados.
+`
+          },
+          {
+            id: "lesson-conta-8-2",
+            title: "Señales de Alerta y Proceso de Auditoría",
+            duration: "20 min",
+            content: `# Señales de Alerta y Proceso de Auditoría
+
+## Señales de Alerta en Nómina
+
+⚠️ **Investiga inmediatamente si ves:**
+
+| Señal | Posible Problema |
+|-------|------------------|
+| Empleados con horas excesivas sin aprobación | Fraude de tiempo o error de registro |
+| Cambios de cuenta bancaria repentinos | Posible fraude externo |
+| Nuevos empleados sin documentación completa | Riesgo legal y fiscal |
+| Comisiones que no coinciden con ventas | Error o fraude de comisiones |
+| Deducciones inusuales o nuevas | Verificar autorización |
+
+---
+
+## Proceso de Auditoría Pre-Nómina
+
+### Paso 1: Recibir
+Obtener datos de recursos humanos con tiempo suficiente.
+
+### Paso 2: Comparar
+Revisar contra período anterior para identificar variaciones.
+
+### Paso 3: Verificar
+Investigar cada variación significativa.
+
+### Paso 4: Documentar
+Registrar hallazgos y decisiones.
+
+### Paso 5: Aprobar o Rechazar
+Dar visto bueno para procesamiento o devolver para corrección.
+
+### Paso 6: Comunicar
+Informar discrepancias al responsable.
+
+---
+
+## Calendario de Nómina
+
+| Día | Actividad |
+|-----|-----------|
+| **-5** | Recibir información |
+| **-4** | Auditoría inicial |
+| **-3** | Resolver discrepancias |
+| **-2** | Aprobación final |
+| **-1** | Procesamiento |
+| **0** | Día de pago |
+
+---
+
+## Cambios de Cuenta Bancaria: Protocolo de Seguridad
+
+**Escenario:** Un empleado solicita cambiar su cuenta bancaria 2 días antes del pago.
+
+**Protocolo:**
+1. **NUNCA** hagas el cambio solo por email
+2. Verifica identidad del solicitante
+3. Confirma DIRECTAMENTE con el empleado (llamada o en persona)
+4. Documenta la confirmación
+5. Si hay dudas, pospón el cambio al siguiente período
+
+> **¿Por qué?** El fraude de desvío de nómina es común. Un tercero puede hackear el email del empleado y solicitar cambio de cuenta.
+
+---
+
+## Tu Valor como Auditor de Nómina
+
+- Proteges a la empresa de errores costosos
+- Proteges a los empleados de pagos incorrectos
+- Aseguras cumplimiento legal
+- Detectas fraudes potenciales
+- Generas confianza en el proceso
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Auditoría de Nómina",
+          description: "Practica la revisión de nómina antes del procesamiento",
+          tasks: [
+            {
+              id: "task-conta-8-1",
+              question: "Crea un checklist de auditoría de nómina de 15 puntos que usarías antes de aprobar el procesamiento de nómina."
+            },
+            {
+              id: "task-conta-8-2",
+              question: "Un empleado tiene 65 horas en una semana sin aprobación de horas extras. Describe paso a paso tu proceso de investigación y resolución."
+            },
+            {
+              id: "task-conta-8-3",
+              question: "Un empleado solicita cambio de cuenta bancaria por email 2 días antes del pago. Redacta el protocolo completo que seguirías, incluyendo comunicaciones."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Auditoría de Nómina",
+          description: "Evalúa tus habilidades de auditoría de nómina",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Por qué es importante la auditoría pre-procesamiento de nómina?", options: ["Solo para cumplir requisito burocrático", "Para detectar errores antes del pago y mantener confianza", "Porque el software lo exige", "Solo es importante en empresas grandes"], correctAnswer: 1 },
+            { id: "q2", question: "Un empleado muestra 65 horas sin aprobación de horas extras. ¿Qué debes hacer?", options: ["Pagarlo porque ya trabajó las horas", "Verificar con supervisor y solicitar aprobación antes de procesar", "Ignorarlo porque es responsabilidad de RRHH", "Reducir las horas a 40 automáticamente"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué documentación mínima debe tener cada empleado?", options: ["Solo el contrato de trabajo", "Formulario fiscal, identidad, autorización de depósito y deducciones", "Únicamente su currículum", "Solo autorización de depósito"], correctAnswer: 1 },
+            { id: "q4", question: "Un empleado solicita cambiar cuenta bancaria 2 días antes del pago. ¿Qué haces?", options: ["Cambiarlo inmediatamente", "Verificar identidad y confirmar directamente con el empleado", "Ignorar la solicitud hasta próximo mes", "Solo aceptar cambios por carta notariada"], correctAnswer: 1 },
+            { id: "q5", question: "Las comisiones de ventas deben verificarse contra:", options: ["Solo lo que dice el vendedor", "El reporte de ventas confirmadas y, si aplica, el cobro efectivo", "El estimado del gerente", "El presupuesto del año anterior"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-conta-9",
+        title: "El Paquete de Cierre Ejecutivo",
+        description: "Presentación de resultados, paquete ejecutivo y reunión de entrega",
+        icon: "PresentationChart",
+        lessons: [
+          {
+            id: "lesson-conta-9-1",
+            title: "La Entrega que Define tu Profesionalismo",
+            duration: "25 min",
+            content: `# El Paquete de Cierre Ejecutivo
+
+## La Entrega que Define tu Profesionalismo
+
+Después de todo el trabajo del mes, llega el momento de **presentar los resultados**. Esta es tu oportunidad de demostrar que no eres solo un registrador de datos, sino un **aliado estratégico**.
+
+---
+
+## El Resumen Ejecutivo: Tu Entregable Más Importante
+
+> **Concepto Clave:** El entregable más importante NO es el Excel gigante con miles de filas. Es el **Resumen Ejecutivo** de una sola página.
+
+### ¿Por Qué el Resumen Ejecutivo Primero?
+
+El dueño de negocio:
+- ❌ No tiene tiempo para revisar 50 páginas
+- ❌ No entiende terminología contable avanzada
+- ✅ Necesita **decisiones**, no datos
+- ✅ Quiere saber: "¿Cómo va mi negocio?"
+
+---
+
+## Estructura del Resumen Ejecutivo Ideal
+
+**📊 RESUMEN EJECUTIVO - [MES/AÑO]**
+
+### 1. EL MES EN UN VISTAZO
+- Ingresos: $XX,XXX (↑ 5% vs mes anterior)
+- Utilidad Neta: $X,XXX (Meta: $X,XXX)
+- Efectivo disponible: $XX,XXX
+
+### 2. LOS 3-5 PUNTOS CLAVE
+- ✓ [Logro o hallazgo positivo]
+- ⚠️ [Área de atención]
+- 📈 [Tendencia importante]
+
+### 3. SUGERENCIAS DE ACCIÓN
+- → [Recomendación 1]
+- → [Recomendación 2]
+
+### 4. PRÓXIMOS PASOS
+- □ [Pendiente con fecha]
+
+---
+
+## Explicando Variaciones con Contexto
+
+> **Principio Fundamental:** Las variaciones deben explicarse con **contexto de negocio**, no con jerga contable.
+
+### Ejemplo
+
+**Situación:** La utilidad neta bajó $8,000 porque se compró inventario para temporada navideña.
+
+❌ **Mal:** "Gastamos demasiado dinero. Hay que reducir costos."
+
+✅ **Bien:** "Es una baja planificada: tu dinero no desapareció, se transformó en **Activo (Inventario)** para vender más en Navidad. Operativamente seguimos fuertes."
+
+---
+
+## Las Notas a los Estados Financieros
+
+> **Concepto Vital:** Las Notas explican las **anomalías humanas** detrás de los números fríos.
+
+### ¿Qué Incluir en las Notas?
+
+1. Políticas contables aplicadas
+2. Eventos significativos del período
+3. Transacciones inusuales explicadas
+4. Contingencias o riesgos identificados
+5. Comparación con períodos anteriores
+`
+          },
+          {
+            id: "lesson-conta-9-2",
+            title: "La Reunión de Entrega y Demostrar Valor",
+            duration: "20 min",
+            content: `# La Reunión de Entrega
+
+## No Solo Envíes un PDF
+
+> Presenta los resultados en una reunión (virtual o presencial).
+
+---
+
+## Estructura de la Reunión (30 minutos)
+
+| Tiempo | Tema |
+|--------|------|
+| 0-5 min | Resumen ejecutivo: "El mes en un vistazo" |
+| 5-15 min | Hallazgos principales con contexto |
+| 15-20 min | Comparación con meses anteriores/presupuesto |
+| 20-25 min | Recomendaciones y próximos pasos |
+| 25-30 min | Preguntas y aclaraciones |
+
+---
+
+## El Paquete Ejecutivo Completo
+
+Tu entrega final debe incluir:
+
+### 1. Resumen Ejecutivo (Primera Página)
+Lo más importante, lo primero.
+
+### 2. Balance General
+Muestra la posición financiera en un momento específico.
+
+### 3. Estado de Resultados (P&L)
+Muestra el rendimiento durante un período.
+
+### 4. Notas a los Estados Financieros
+Explican lo que los números no pueden decir solos.
+
+---
+
+## Comunicación Proactiva: Tu Valor Agregado
+
+### Detectando Problemas Antes que el Cliente
+
+**Escenario:** Al revisar el Balance, notas que "Impuestos por Pagar" es muy alto y el efectivo es bajo.
+
+❌ **Actitud pasiva:** Enviar el reporte y esperar a que el cliente lo note el día del pago.
+
+✅ **Actitud proactiva:** Crear alerta visual en el reporte y sugerir reunión urgente para planificar flujo de caja.
+
+---
+
+## Demostrando Valor en Cada Interacción
+
+**Escenario:** El cliente dice "Gracias por los reportes, los revisaré luego".
+
+❌ **Respuesta pasiva:** "Está bien, nos vemos el próximo mes para cobrar."
+
+✅ **Respuesta proactiva:** "Perfecto, pero le pido solo 2 minutos para mostrarle una tendencia de gastos que detecté y que podría ahorrarle un 10% si tomamos acción esta semana."
+
+---
+
+## La Diferencia que te Hace Indispensable
+
+> "El contador que solo entrega números es reemplazable. El que entrega claridad y dirección es invaluable."
+
+### Asistente Contable Tradicional:
+- Entrega reportes
+- Espera preguntas
+- Reacciona a problemas
+
+### Asistente Contable Proactivo (TÚ):
+- Presenta insights
+- Anticipa necesidades
+- Propone soluciones
+- Agrega valor estratégico
+
+---
+
+## ¡Felicitaciones! 🎓
+
+Has completado esta especialización. Ahora tienes las herramientas para ser un **Asistente Virtual Contable Proactivo** que no solo registra, sino que **transforma** la relación financiera de tus clientes con sus negocios.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Tu Paquete Ejecutivo",
+          description: "Crea tu propio paquete de cierre ejecutivo",
+          tasks: [
+            {
+              id: "task-conta-9-1",
+              question: "Crea un Resumen Ejecutivo completo de una página para un negocio ficticio, incluyendo: cifras clave, 3-5 hallazgos, 2 recomendaciones y próximos pasos."
+            },
+            {
+              id: "task-conta-9-2",
+              question: "Redacta una Nota a los Estados Financieros explicando por qué el inventario aumentó $20,000 en diciembre (compras para temporada navideña)."
+            },
+            {
+              id: "task-conta-9-3",
+              question: "El cliente dice 'gracias por los reportes, los revisaré luego'. Escribe exactamente qué le dirías para demostrar tu valor y captar su atención en 30 segundos."
+            },
+            {
+              id: "task-conta-9-4",
+              question: "Diseña la agenda de tu reunión de entrega de 30 minutos, incluyendo: temas, tiempos, materiales visuales que usarías, y 3 preguntas que harías al cliente."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen Final: Paquete Ejecutivo",
+          description: "Evalúa tu capacidad de presentación profesional de resultados",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué incluyes como primera página del paquete de cierre para un cliente ocupado?", options: ["El libro diario con todos los débitos y créditos", "Un Resumen Ejecutivo con 3-5 puntos clave y sugerencias de acción", "Solo el Balance General sin explicación"], correctAnswer: 1 },
+            { id: "q2", question: "La Utilidad Neta bajó porque se compró inventario para Navidad. ¿Cómo lo explicas?", options: ["El negocio va mal este mes", "Es una baja planificada: el dinero se transformó en Activo (Inventario) para vender más", "No sé, solo registro facturas"], correctAnswer: 1 },
+            { id: "q3", question: "¿Por qué son vitales las Notas a los Estados Financieros?", options: ["Para llenar espacio en el reporte", "Para explicar variaciones inusuales y dar contexto humano a los números", "Para contar anécdotas personales"], correctAnswer: 1 },
+            { id: "q4", question: "Notas que 'Impuestos por Pagar' es muy alto y el efectivo es bajo. ¿Qué haces?", options: ["Envías el reporte y esperas", "Creas alerta visual y sugieres reunión urgente para planificar flujo de caja", "Ocultas la deuda en otra cuenta"], correctAnswer: 1 },
+            { id: "q5", question: "El cliente dice 'gracias por los reportes, los revisaré luego'. ¿Cómo demuestras valor?", options: ["Está bien, nos vemos el próximo mes", "Le pides 2 minutos para mostrarle una tendencia que detectaste que podría ahorrarle dinero", "Le obligas a escuchar todo el reporte"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "administracion-gestion",
+    title: "Administración y Gestión Empresarial",
+    slug: "administracion",
+    description: "Domina las competencias fundamentales de administración empresarial: planificación estratégica, gestión de proyectos, liderazgo, toma de decisiones y optimización de operaciones para convertirte en un profesional integral.",
+    modules: [
+      {
+        id: "module-admin-1",
+        title: "Fundamentos de la Administración Empresarial",
+        description: "Comprende los principios básicos que rigen toda organización exitosa",
+        icon: "Building2",
+        lessons: [
+          {
+            id: "lesson-admin-1-1",
+            title: "¿Qué es la Administración?",
+            duration: "20 min",
+            content: `# Fundamentos de la Administración Empresarial
+
+## ¿Qué es la Administración?
+
+La administración es el proceso de **planificar, organizar, dirigir y controlar** los recursos de una organización para alcanzar sus objetivos de manera eficiente y eficaz.
+
+---
+
+## Las 4 Funciones Fundamentales
+
+| Función | Descripción | Pregunta Clave |
+|---------|-------------|----------------|
+| **Planificar** | Definir metas y estrategias | ¿Qué queremos lograr? |
+| **Organizar** | Estructurar recursos y tareas | ¿Cómo lo vamos a hacer? |
+| **Dirigir** | Liderar y motivar al equipo | ¿Quién lo va a hacer? |
+| **Controlar** | Monitorear y corregir | ¿Cómo vamos? |
+
+---
+
+## Eficiencia vs. Eficacia
+
+> **Eficiencia:** Hacer las cosas bien (usar recursos óptimamente)
+>
+> **Eficacia:** Hacer las cosas correctas (lograr los objetivos)
+
+| Concepto | Enfoque | Ejemplo |
+|----------|---------|---------|
+| **Eficiencia** | Los medios | Producir más con menos recursos |
+| **Eficacia** | Los fines | Lograr las ventas objetivo del mes |
+| **Ideal** | Ambos | Lograr objetivos usando recursos óptimamente |
+
+---
+
+## Los Niveles de Administración
+
+### 1. Alta Dirección (Nivel Estratégico)
+- CEO, Directores, Gerentes Generales
+- Decisiones a largo plazo
+- Visión global de la organización
+
+### 2. Mandos Medios (Nivel Táctico)
+- Gerentes de área, Jefes de departamento
+- Traducen estrategia en planes operativos
+- Coordinan entre niveles
+
+### 3. Supervisión (Nivel Operativo)
+- Supervisores, Coordinadores
+- Ejecución diaria de tareas
+- Contacto directo con operaciones
+
+---
+
+## Habilidades Administrativas por Nivel
+
+| Habilidad | Alta Dirección | Mandos Medios | Supervisión |
+|-----------|----------------|---------------|-------------|
+| **Conceptuales** | ████████ Alta | ████ Media | █ Baja |
+| **Humanas** | ████ Media | ████████ Alta | ████ Media |
+| **Técnicas** | █ Baja | ████ Media | ████████ Alta |
+
+---
+
+## El Administrador del Siglo XXI
+
+Las competencias modernas incluyen:
+
+- ✅ Pensamiento estratégico y sistémico
+- ✅ Adaptabilidad al cambio
+- ✅ Competencia digital
+- ✅ Inteligencia emocional
+- ✅ Capacidad de innovación
+- ✅ Visión global y multicultural
+`
+          },
+          {
+            id: "lesson-admin-1-2",
+            title: "Evolución del Pensamiento Administrativo",
+            duration: "25 min",
+            content: `# Evolución del Pensamiento Administrativo
+
+## De Taylor a la Era Digital
+
+Conocer la historia de la administración te ayuda a entender por qué las organizaciones funcionan como lo hacen hoy.
+
+---
+
+## Las Principales Escuelas
+
+### 1. Administración Científica (1900s)
+**Frederick Taylor - "El padre de la administración científica"**
+
+| Principio | Aplicación |
+|-----------|------------|
+| Estudio de tiempos y movimientos | Optimizar cada tarea |
+| Selección científica del trabajador | Persona correcta para cada puesto |
+| Cooperación obrero-patronal | Alinear incentivos |
+| División del trabajo | Especialización |
+
+**Legado:** Eficiencia operativa, estándares de producción.
+
+---
+
+### 2. Administración Clásica (1910s)
+**Henri Fayol - "El padre de la administración moderna"**
+
+Los 14 principios de Fayol (los más relevantes hoy):
+
+1. **División del trabajo** - Especialización aumenta eficiencia
+2. **Autoridad y responsabilidad** - El derecho de mandar viene con obligaciones
+3. **Unidad de mando** - Un empleado, un jefe
+4. **Unidad de dirección** - Un plan para cada objetivo
+5. **Subordinación del interés individual** - El bien común primero
+6. **Centralización** - Balance entre concentrar y delegar
+
+---
+
+### 3. Relaciones Humanas (1930s)
+**Elton Mayo - Experimentos de Hawthorne**
+
+> "Los trabajadores no son solo máquinas; son seres sociales motivados por factores emocionales y relacionales."
+
+**Descubrimientos clave:**
+- La productividad aumenta cuando los trabajadores se sienten valorados
+- Los grupos informales influyen en el comportamiento
+- Las relaciones humanas son tan importantes como las condiciones físicas
+
+---
+
+### 4. Teoría de Sistemas (1960s)
+
+La organización como un **sistema abierto**:
+
+- **Entradas:** Recursos, información, personas
+- **Proceso:** Transformación, operaciones
+- **Salidas:** Productos, servicios, resultados
+- **Retroalimentación:** Información del entorno
+
+---
+
+### 5. Administración Moderna (Hoy)
+
+| Enfoque | Característica |
+|---------|----------------|
+| **Calidad Total** | Mejora continua, satisfacción del cliente |
+| **Reingeniería** | Rediseño radical de procesos |
+| **Organizaciones que Aprenden** | Conocimiento como ventaja competitiva |
+| **Agilidad** | Adaptación rápida al cambio |
+| **Transformación Digital** | Tecnología como habilitador |
+
+---
+
+## Lecciones para el Presente
+
+> "No reinventamos la rueda, pero sí la adaptamos al terreno actual."
+
+- De Taylor: La importancia de medir y optimizar
+- De Fayol: Principios de organización claros
+- De Mayo: Las personas son el centro
+- De Sistemas: Todo está conectado
+- De hoy: Adaptarse o quedarse atrás
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Análisis Organizacional",
+          description: "Aplica los fundamentos de administración a casos reales",
+          tasks: [
+            {
+              id: "task-admin-1-1",
+              question: "Elige una empresa que conozcas (puede ser donde trabajas o una famosa). Identifica cómo aplican las 4 funciones administrativas: planificar, organizar, dirigir y controlar. Da un ejemplo concreto de cada una."
+            },
+            {
+              id: "task-admin-1-2",
+              question: "Describe un ejemplo donde una empresa fue eficiente pero no eficaz, y otro donde fue eficaz pero no eficiente. ¿Cuál es el problema en cada caso?"
+            },
+            {
+              id: "task-admin-1-3",
+              question: "Analiza tu propio trabajo o rol actual. ¿En qué nivel administrativo te ubicas? ¿Qué habilidades (conceptuales, humanas, técnicas) necesitas desarrollar más?"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Fundamentos de Administración",
+          description: "Evalúa tu comprensión de los conceptos básicos de administración",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuáles son las 4 funciones fundamentales de la administración?", options: ["Vender, producir, cobrar, pagar", "Planificar, organizar, dirigir, controlar", "Contratar, capacitar, evaluar, despedir", "Comprar, almacenar, distribuir, vender"], correctAnswer: 1 },
+            { id: "q2", question: "¿Cuál es la diferencia entre eficiencia y eficacia?", options: ["Son sinónimos", "Eficiencia es hacer las cosas bien, eficacia es hacer las cosas correctas", "Eficacia es más importante que eficiencia", "No hay diferencia práctica"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué descubrió Elton Mayo en los experimentos de Hawthorne?", options: ["Que las máquinas son más productivas que las personas", "Que los trabajadores son seres sociales motivados por factores emocionales", "Que el salario es el único motivador", "Que la supervisión estricta aumenta productividad"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué nivel administrativo requiere más habilidades técnicas?", options: ["Alta dirección", "Mandos medios", "Nivel de supervisión", "Todos por igual"], correctAnswer: 2 },
+            { id: "q5", question: "El principio de 'unidad de mando' de Fayol establece que:", options: ["Solo debe haber un gerente general", "Un empleado debe tener un solo jefe", "Todos deben ganar el mismo salario", "Las decisiones deben ser unánimes"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-2",
+        title: "Planificación Estratégica",
+        description: "Aprende a definir visión, misión, objetivos y estrategias organizacionales",
+        icon: "Target",
+        lessons: [
+          {
+            id: "lesson-admin-2-1",
+            title: "El Proceso de Planificación",
+            duration: "25 min",
+            content: `# Planificación Estratégica
+
+## ¿Por Qué Planificar?
+
+> "Si no sabes a dónde vas, cualquier camino te llevará allí." - Lewis Carroll
+
+La planificación es el proceso de definir **a dónde queremos llegar** y **cómo vamos a llegar**.
+
+---
+
+## Tipos de Planificación
+
+| Tipo | Horizonte | Nivel | Ejemplo |
+|------|-----------|-------|---------|
+| **Estratégica** | 3-5+ años | Alta dirección | Expandirse a nuevos mercados |
+| **Táctica** | 1-3 años | Mandos medios | Plan de marketing anual |
+| **Operativa** | < 1 año | Supervisión | Programa de producción mensual |
+
+---
+
+## Componentes de la Planificación Estratégica
+
+### 1. Misión
+**¿Por qué existimos?**
+
+La razón de ser de la organización. Define:
+- Qué hace la empresa
+- Para quién lo hace
+- Cómo lo hace (su diferenciador)
+
+**Ejemplo:**
+> "Organizar la información del mundo y hacerla universalmente accesible y útil." - Google
+
+---
+
+### 2. Visión
+**¿A dónde queremos llegar?**
+
+El estado futuro deseado. Debe ser:
+- Inspiradora
+- Desafiante pero alcanzable
+- Clara y memorable
+
+**Ejemplo:**
+> "Ser la empresa más centrada en el cliente del mundo." - Amazon
+
+---
+
+### 3. Valores
+**¿Cómo nos comportamos?**
+
+Los principios que guían las decisiones y acciones:
+- Integridad
+- Innovación
+- Trabajo en equipo
+- Excelencia
+- Responsabilidad social
+
+---
+
+### 4. Objetivos
+**¿Qué queremos lograr específicamente?**
+
+Deben ser **SMART**:
+
+| Letra | Significado | Pregunta |
+|-------|-------------|----------|
+| **S** | Específico | ¿Qué exactamente? |
+| **M** | Medible | ¿Cómo sabremos que lo logramos? |
+| **A** | Alcanzable | ¿Es realista? |
+| **R** | Relevante | ¿Importa para nuestra misión? |
+| **T** | Temporal | ¿Para cuándo? |
+
+**Ejemplo SMART:**
+❌ "Aumentar ventas" (vago)
+✅ "Aumentar ventas en 20% en el mercado latinoamericano para diciembre 2026"
+`
+          },
+          {
+            id: "lesson-admin-2-2",
+            title: "Análisis Estratégico: FODA y más",
+            duration: "30 min",
+            content: `# Análisis Estratégico
+
+## El Análisis FODA (SWOT)
+
+Herramienta fundamental para diagnosticar la situación de una organización.
+
+---
+
+## Matriz FODA
+
+|  | **Positivo** | **Negativo** |
+|--|--------------|--------------|
+| **Interno** | **F**ortalezas | **D**ebilidades |
+| **Externo** | **O**portunidades | **A**menazas |
+
+### Análisis Interno (Fortalezas y Debilidades)
+Lo que **controlamos**:
+- Recursos humanos
+- Recursos financieros
+- Tecnología
+- Procesos
+- Cultura organizacional
+
+### Análisis Externo (Oportunidades y Amenazas)
+Lo que **no controlamos**:
+- Competencia
+- Economía
+- Tecnología del mercado
+- Regulaciones
+- Tendencias sociales
+
+---
+
+## Ejemplo de FODA: Cafetería Local
+
+| Fortalezas | Debilidades |
+|------------|-------------|
+| Ubicación céntrica | Espacio limitado |
+| Café de alta calidad | Precios más altos que cadenas |
+| Servicio personalizado | Poca presencia digital |
+| Clientes fieles | Dependencia de un proveedor |
+
+| Oportunidades | Amenazas |
+|---------------|----------|
+| Crecimiento del trabajo remoto | Nueva Starbucks cerca |
+| Tendencia de café artesanal | Aumento de costos de insumos |
+| Delivery apps en la zona | Crisis económica |
+| Alianzas con oficinas cercanas | Cambios en hábitos post-pandemia |
+
+---
+
+## Estrategias derivadas del FODA
+
+| Estrategia | Combinación | Ejemplo |
+|------------|-------------|---------|
+| **FO (Maxi-Maxi)** | Usar fortalezas para aprovechar oportunidades | Usar calidad para captar trabajadores remotos |
+| **DO (Mini-Maxi)** | Superar debilidades aprovechando oportunidades | Crear presencia digital con delivery apps |
+| **FA (Maxi-Mini)** | Usar fortalezas para mitigar amenazas | Usar clientes fieles como embajadores vs Starbucks |
+| **DA (Mini-Mini)** | Minimizar debilidades y amenazas | Diversificar proveedores ante crisis |
+
+---
+
+## Análisis PESTEL
+
+Para analizar el **macroentorno**:
+
+| Factor | Ejemplos |
+|--------|----------|
+| **P**olítico | Estabilidad, políticas gubernamentales |
+| **E**conómico | Inflación, tasas de interés, PIB |
+| **S**ocial | Demografía, cultura, tendencias |
+| **T**ecnológico | Innovaciones, automatización, IA |
+| **E**cológico | Regulaciones ambientales, sostenibilidad |
+| **L**egal | Leyes laborales, protección al consumidor |
+
+---
+
+## Las 5 Fuerzas de Porter
+
+Para analizar la **industria**:
+
+1. **Rivalidad entre competidores** - ¿Qué tan intensa es la competencia?
+2. **Amenaza de nuevos entrantes** - ¿Es fácil entrar al mercado?
+3. **Poder de los proveedores** - ¿Pueden imponer condiciones?
+4. **Poder de los compradores** - ¿Pueden negociar precios?
+5. **Amenaza de sustitutos** - ¿Hay alternativas al producto/servicio?
+
+> **Tip:** A mayor intensidad de estas fuerzas, menor rentabilidad potencial de la industria.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Tu Plan Estratégico",
+          description: "Desarrolla habilidades de planificación estratégica",
+          tasks: [
+            {
+              id: "task-admin-2-1",
+              question: "Redacta una Misión, Visión y 3 Valores para un negocio ficticio (o real) de tu elección. Asegúrate de que la misión responda: qué hace, para quién, y cómo se diferencia."
+            },
+            {
+              id: "task-admin-2-2",
+              question: "Crea un análisis FODA completo para ese mismo negocio. Incluye al menos 4 elementos en cada cuadrante y sugiere una estrategia FO y una estrategia DA."
+            },
+            {
+              id: "task-admin-2-3",
+              question: "Convierte este objetivo vago en uno SMART: 'Mejorar la satisfacción del cliente'. Especifica qué, cuánto, cómo medirlo y para cuándo."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Planificación Estratégica",
+          description: "Evalúa tu comprensión de la planificación estratégica",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Qué responde la Misión de una organización?", options: ["A dónde queremos llegar en 10 años", "Por qué existimos y qué hacemos", "Cuánto dinero queremos ganar", "Quiénes son nuestros competidores"], correctAnswer: 1 },
+            { id: "q2", question: "En el análisis FODA, las Oportunidades son:", options: ["Factores internos positivos", "Factores externos positivos que podemos aprovechar", "Lo mismo que las fortalezas", "Factores que controlamos"], correctAnswer: 1 },
+            { id: "q3", question: "¿Qué significa la 'M' en objetivos SMART?", options: ["Motivador", "Medible", "Moderno", "Monetario"], correctAnswer: 1 },
+            { id: "q4", question: "El análisis PESTEL evalúa:", options: ["Las fortalezas internas", "El macroentorno externo", "Los objetivos financieros", "La estructura organizacional"], correctAnswer: 1 },
+            { id: "q5", question: "Según Porter, si los proveedores tienen alto poder de negociación:", options: ["Es positivo para la empresa", "Pueden imponer condiciones que reducen rentabilidad", "No afecta a la empresa", "Aumenta la competencia"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-3",
+        title: "Gestión del Tiempo y Productividad",
+        description: "Técnicas y herramientas para maximizar tu efectividad personal y profesional",
+        icon: "Clock",
+        lessons: [
+          {
+            id: "lesson-admin-3-1",
+            title: "Principios de Gestión del Tiempo",
+            duration: "25 min",
+            content: `# Gestión del Tiempo y Productividad
+
+## El Recurso Más Valioso
+
+> "El tiempo es lo que más queremos, pero lo que peor usamos." - William Penn
+
+A diferencia del dinero, el tiempo:
+- No se puede ahorrar
+- No se puede pedir prestado
+- No se puede recuperar
+- Todos tenemos la misma cantidad: 24 horas
+
+---
+
+## La Matriz de Eisenhower
+
+Clasifica tareas según **urgencia** e **importancia**:
+
+| | **Urgente** | **No Urgente** |
+|-|-------------|----------------|
+| **Importante** | **Q1: HACER** Crisis, deadlines | **Q2: PLANIFICAR** Estrategia, desarrollo |
+| **No Importante** | **Q3: DELEGAR** Interrupciones, algunas reuniones | **Q4: ELIMINAR** Distracciones, tiempo perdido |
+
+### Dónde Enfocarte
+
+- **Q2 es donde debes pasar más tiempo** - Previene crisis (Q1)
+- **Q1** - Atiende pero busca reducirlo con mejor planificación
+- **Q3** - Delega o automatiza
+- **Q4** - Elimina sin remordimiento
+
+---
+
+## La Ley de Pareto (80/20)
+
+> "El 80% de los resultados proviene del 20% de los esfuerzos."
+
+**Aplicaciones prácticas:**
+- El 20% de clientes genera el 80% de ingresos
+- El 20% de tareas produce el 80% de resultados
+- El 20% de errores causa el 80% de problemas
+
+**Acción:** Identifica tu 20% de alto impacto y priorízalo.
+
+---
+
+## La Ley de Parkinson
+
+> "El trabajo se expande hasta llenar el tiempo disponible para su realización."
+
+Si tienes 2 horas para una tarea, tomará 2 horas.
+Si tienes 1 hora, probablemente la termines en 1 hora.
+
+**Estrategia:** Establece **deadlines ajustados** pero realistas.
+
+---
+
+## Ladrones del Tiempo
+
+| Ladrón | Solución |
+|--------|----------|
+| **Interrupciones** | Bloques de tiempo protegidos |
+| **Reuniones innecesarias** | Agenda clara, duración limitada |
+| **Email constante** | Revisar en horarios específicos |
+| **Redes sociales** | Bloqueadores, horarios definidos |
+| **Multitasking** | Enfoque en una tarea a la vez |
+| **Procrastinación** | Técnica Pomodoro, dividir tareas |
+| **Perfeccionismo** | "Suficientemente bueno" a veces es mejor |
+
+---
+
+## El Costo de Cambiar de Contexto
+
+Cada vez que cambias de tarea:
+- Pierdes 15-25 minutos en recuperar concentración
+- Aumenta la probabilidad de errores
+- Se reduce la calidad del trabajo
+
+> **Solución:** Agrupa tareas similares (batching) y minimiza interrupciones.
+`
+          },
+          {
+            id: "lesson-admin-3-2",
+            title: "Técnicas y Herramientas de Productividad",
+            duration: "25 min",
+            content: `# Técnicas y Herramientas de Productividad
+
+## Técnica Pomodoro
+
+**Método de Francesco Cirillo:**
+
+1. Elige una tarea
+2. Trabaja 25 minutos (1 Pomodoro)
+3. Descanso corto de 5 minutos
+4. Después de 4 Pomodoros, descanso largo (15-30 min)
+
+**Beneficios:**
+- Combate la procrastinación
+- Mantiene la concentración
+- Previene el agotamiento
+- Permite medir productividad
+
+---
+
+## Time Blocking (Bloques de Tiempo)
+
+Agenda tu día en bloques dedicados:
+
+| Hora | Actividad |
+|------|-----------|
+| 8:00-9:30 | Trabajo profundo (sin interrupciones) |
+| 9:30-10:00 | Revisar emails |
+| 10:00-11:00 | Reuniones |
+| 11:00-12:30 | Trabajo profundo |
+| 12:30-13:30 | Almuerzo |
+| 13:30-14:00 | Tareas administrativas |
+| 14:00-16:00 | Proyectos |
+| 16:00-16:30 | Planificar día siguiente |
+
+---
+
+## Getting Things Done (GTD)
+
+**Método de David Allen en 5 pasos:**
+
+### 1. Capturar
+Registra TODO lo que llega a tu mente (ideas, tareas, compromisos).
+
+### 2. Clarificar
+Para cada ítem pregunta: ¿Es accionable?
+- **No:** Eliminar, archivar o incubar
+- **Sí:** ¿Cuál es la siguiente acción concreta?
+
+### 3. Organizar
+Coloca en el sistema apropiado:
+- Calendario (fecha/hora específica)
+- Lista de próximas acciones
+- Lista de proyectos
+- Lista de "algún día/tal vez"
+
+### 4. Reflexionar
+Revisión semanal para mantener el sistema actualizado.
+
+### 5. Ejecutar
+Elige qué hacer basándote en contexto, tiempo disponible, energía y prioridad.
+
+---
+
+## Herramientas Digitales
+
+### Gestión de Tareas
+- **Todoist** - Simple y potente
+- **Asana** - Ideal para equipos
+- **Notion** - Todo en uno
+- **Trello** - Visual con tableros Kanban
+
+### Calendario y Agenda
+- **Google Calendar** - Integración amplia
+- **Calendly** - Programar reuniones
+
+### Notas y Documentación
+- **Notion** - Base de conocimiento
+- **Evernote** - Captura de información
+- **Obsidian** - Notas vinculadas
+
+### Enfoque y Concentración
+- **Forest** - Gamifica la concentración
+- **Freedom** - Bloquea distracciones
+- **Focus@Will** - Música para concentración
+
+---
+
+## Rituales de Productividad
+
+### Al Iniciar el Día
+1. Revisa tu agenda y prioridades
+2. Identifica las 3 tareas más importantes (MIT)
+3. Empieza con la tarea más difícil ("Eat the Frog")
+
+### Al Terminar el Día
+1. Revisa lo logrado
+2. Planifica el día siguiente
+3. Cierra loops abiertos (responde pendientes)
+4. Desconecta mentalmente
+
+> "La productividad no es hacer más cosas, es hacer las cosas correctas."
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Tu Sistema de Productividad",
+          description: "Diseña tu propio sistema de gestión del tiempo",
+          tasks: [
+            {
+              id: "task-admin-3-1",
+              question: "Lista todas tus tareas de esta semana y clasifícalas en la Matriz de Eisenhower. ¿En qué cuadrante pasas más tiempo? ¿Dónde deberías estar?"
+            },
+            {
+              id: "task-admin-3-2",
+              question: "Identifica tus 3 principales 'ladrones de tiempo'. Para cada uno, describe una estrategia específica que implementarás para neutralizarlo."
+            },
+            {
+              id: "task-admin-3-3",
+              question: "Diseña tu día ideal usando Time Blocking. Crea una agenda de 8 horas que incluya: trabajo profundo, tareas administrativas, descansos, y tiempo para imprevistos."
+            },
+            {
+              id: "task-admin-3-4",
+              question: "Prueba la Técnica Pomodoro durante un día completo de trabajo. Documenta: cuántos Pomodoros completaste, qué interrupciones tuviste, y qué aprendiste."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Gestión del Tiempo",
+          description: "Evalúa tu comprensión de las técnicas de productividad",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "En la Matriz de Eisenhower, ¿dónde debes pasar más tiempo?", options: ["Q1: Urgente e Importante", "Q2: No Urgente pero Importante", "Q3: Urgente pero No Importante", "Q4: Ni Urgente ni Importante"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué establece la Ley de Pareto?", options: ["El trabajo se expande para llenar el tiempo disponible", "El 80% de resultados proviene del 20% de esfuerzos", "Debemos trabajar 80 horas semanales", "20% del tiempo es improductivo"], correctAnswer: 1 },
+            { id: "q3", question: "¿Cuánto dura un 'Pomodoro' en la técnica del mismo nombre?", options: ["15 minutos", "25 minutos", "45 minutos", "60 minutos"], correctAnswer: 1 },
+            { id: "q4", question: "¿Cuál es el costo de cambiar constantemente de tarea (multitasking)?", options: ["No hay costo, es más eficiente", "Pierdes 15-25 minutos en recuperar concentración cada vez", "Solo afecta si cambias más de 10 veces al día", "Es beneficioso para la creatividad"], correctAnswer: 1 },
+            { id: "q5", question: "El concepto 'Eat the Frog' sugiere:", options: ["Desayunar bien antes de trabajar", "Empezar el día con la tarea más difícil o desagradable", "Dividir tareas grandes en pequeñas", "Delegar las tareas que no te gustan"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-4",
+        title: "Gestión de Proyectos",
+        description: "Planifica, ejecuta y controla proyectos exitosamente con metodologías probadas",
+        icon: "FolderKanban",
+        lessons: [
+          {
+            id: "lesson-admin-4-1",
+            title: "Fundamentos de Gestión de Proyectos",
+            duration: "25 min",
+            content: `# Gestión de Proyectos
+
+## ¿Qué es un Proyecto?
+
+Un proyecto es un esfuerzo **temporal** para crear un producto, servicio o resultado **único**.
+
+### Características de un Proyecto
+- **Temporal:** Tiene inicio y fin definidos
+- **Único:** El resultado es diferente a otros
+- **Elaboración progresiva:** Se detalla a medida que avanza
+- **Recursos limitados:** Presupuesto, tiempo, personas
+
+---
+
+## La Triple Restricción
+
+Todo proyecto balancea tres variables:
+
+| Variable | Pregunta |
+|----------|----------|
+| **Alcance** | ¿Qué entregaremos? |
+| **Tiempo** | ¿Para cuándo? |
+| **Costo** | ¿Con qué recursos? |
+
+> Si cambias una, afectas las otras. Más alcance = más tiempo o más costo.
+
+**El cuarto factor:** Calidad (está en el centro, afectada por las tres).
+
+---
+
+## Ciclo de Vida de un Proyecto
+
+### 1. Inicio
+- Definir el proyecto y su justificación
+- Identificar stakeholders
+- Crear el acta de constitución (Project Charter)
+
+### 2. Planificación
+- Detallar el alcance (WBS)
+- Crear cronograma
+- Estimar costos y presupuesto
+- Planificar recursos, riesgos, comunicación
+
+### 3. Ejecución
+- Realizar el trabajo planificado
+- Gestionar el equipo
+- Comunicar avances
+- Gestionar calidad
+
+### 4. Monitoreo y Control
+- Medir avance vs. plan
+- Gestionar cambios
+- Controlar costos y cronograma
+- Reportar estado
+
+### 5. Cierre
+- Verificar completitud
+- Documentar lecciones aprendidas
+- Liberar recursos
+- Cerrar formalmente
+
+---
+
+## El Project Charter (Acta de Constitución)
+
+Documento que autoriza formalmente el proyecto:
+
+| Sección | Contenido |
+|---------|-----------|
+| **Nombre del proyecto** | Título descriptivo |
+| **Justificación** | Por qué se hace el proyecto |
+| **Objetivos** | Qué se logrará (SMART) |
+| **Alcance de alto nivel** | Qué incluye y qué NO incluye |
+| **Hitos principales** | Fechas clave |
+| **Presupuesto estimado** | Recursos financieros |
+| **Stakeholders clave** | Quiénes están involucrados |
+| **Riesgos iniciales** | Amenazas identificadas |
+| **Sponsor** | Quién autoriza y respalda |
+| **Project Manager** | Quién lidera |
+`
+          },
+          {
+            id: "lesson-admin-4-2",
+            title: "Metodologías: Tradicional vs. Ágil",
+            duration: "30 min",
+            content: `# Metodologías de Gestión de Proyectos
+
+## Enfoque Tradicional (Cascada/Waterfall)
+
+### Características
+- Fases secuenciales (una tras otra)
+- Planificación detallada al inicio
+- Requisitos definidos y estables
+- Documentación exhaustiva
+- Cambios costosos y difíciles
+
+### Fases de Waterfall
+1. Requisitos → 2. Diseño → 3. Desarrollo → 4. Pruebas → 5. Implementación → 6. Mantenimiento
+
+### Ideal para:
+- Proyectos con requisitos claros y estables
+- Regulaciones estrictas
+- Presupuestos y fechas fijas
+- Equipos distribuidos o grandes
+
+---
+
+## Enfoque Ágil
+
+### Manifiesto Ágil (Valores)
+1. **Individuos e interacciones** sobre procesos y herramientas
+2. **Software funcionando** sobre documentación extensiva
+3. **Colaboración con el cliente** sobre negociación contractual
+4. **Responder al cambio** sobre seguir un plan
+
+### Características
+- Iteraciones cortas (sprints)
+- Entrega incremental de valor
+- Adaptación continua
+- Colaboración estrecha con cliente
+- Equipos auto-organizados
+
+---
+
+## Scrum (Framework Ágil más popular)
+
+### Roles
+| Rol | Responsabilidad |
+|-----|-----------------|
+| **Product Owner** | Define qué construir, prioriza |
+| **Scrum Master** | Facilita el proceso, remueve obstáculos |
+| **Development Team** | Construye el producto |
+
+### Eventos
+| Evento | Propósito | Duración |
+|--------|-----------|----------|
+| **Sprint** | Iteración de trabajo | 1-4 semanas |
+| **Sprint Planning** | Planificar el sprint | 2-4 horas |
+| **Daily Standup** | Sincronización diaria | 15 minutos |
+| **Sprint Review** | Demostrar lo construido | 1-2 horas |
+| **Sprint Retrospective** | Mejorar el proceso | 1-2 horas |
+
+### Artefactos
+- **Product Backlog:** Lista priorizada de todo lo que se necesita
+- **Sprint Backlog:** Trabajo seleccionado para el sprint actual
+- **Incremento:** Producto funcional al final del sprint
+
+---
+
+## Kanban
+
+### Principios
+1. Visualizar el flujo de trabajo
+2. Limitar el trabajo en progreso (WIP)
+3. Gestionar el flujo
+4. Hacer explícitas las políticas
+5. Implementar ciclos de retroalimentación
+6. Mejorar colaborativamente
+
+### Tablero Kanban Básico
+| Por Hacer | En Progreso (máx 3) | En Revisión | Hecho |
+|-----------|---------------------|-------------|-------|
+| Tarea 1 | Tarea 4 | Tarea 6 | Tarea 8 |
+| Tarea 2 | Tarea 5 | | Tarea 9 |
+| Tarea 3 | | | |
+
+---
+
+## ¿Cuándo usar cada enfoque?
+
+| Criterio | Tradicional | Ágil |
+|----------|-------------|------|
+| Requisitos | Claros y estables | Cambiantes o inciertos |
+| Cliente | Disponibilidad limitada | Muy involucrado |
+| Tamaño de equipo | Grande | Pequeño (5-9) |
+| Documentación | Necesaria y extensa | Mínima necesaria |
+| Cambios | Costosos | Bienvenidos |
+| Entrega | Al final | Incremental |
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Tu Primer Proyecto",
+          description: "Aplica técnicas de gestión de proyectos",
+          tasks: [
+            {
+              id: "task-admin-4-1",
+              question: "Crea un Project Charter para un proyecto de tu elección (puede ser personal o profesional). Incluye: nombre, justificación, objetivos SMART, alcance (qué incluye y qué NO), hitos principales, y riesgos iniciales."
+            },
+            {
+              id: "task-admin-4-2",
+              question: "Diseña un tablero Kanban para gestionar las tareas de ese proyecto. Define las columnas que usarás y el límite de WIP para 'En Progreso'. Explica por qué elegiste esos límites."
+            },
+            {
+              id: "task-admin-4-3",
+              question: "Compara: ¿Usarías enfoque tradicional (Waterfall) o Ágil para tu proyecto? Justifica tu respuesta considerando: claridad de requisitos, disponibilidad del cliente, tamaño del equipo, y tolerancia a cambios."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Gestión de Proyectos",
+          description: "Evalúa tu comprensión de las metodologías de proyectos",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuáles son las tres variables de la 'Triple Restricción'?", options: ["Calidad, Seguridad, Velocidad", "Alcance, Tiempo, Costo", "Personal, Tecnología, Presupuesto", "Inicio, Desarrollo, Cierre"], correctAnswer: 1 },
+            { id: "q2", question: "¿Qué documento autoriza formalmente el inicio de un proyecto?", options: ["El presupuesto", "El Project Charter (Acta de Constitución)", "El cronograma", "El contrato de trabajo"], correctAnswer: 1 },
+            { id: "q3", question: "En Scrum, ¿quién es responsable de definir qué construir y priorizar?", options: ["Scrum Master", "Development Team", "Product Owner", "El cliente directamente"], correctAnswer: 2 },
+            { id: "q4", question: "¿Cuál es el propósito del Daily Standup en Scrum?", options: ["Reportar al jefe", "Sincronización diaria del equipo (15 min)", "Planificar todo el proyecto", "Celebrar logros"], correctAnswer: 1 },
+            { id: "q5", question: "En Kanban, 'WIP' significa:", options: ["Work in Progress - Trabajo en progreso", "Weekly Important Projects", "Work Impact Plan", "Workflow Integration Process"], correctAnswer: 0 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-5",
+        title: "Gestión de Recursos Humanos",
+        description: "Atrae, desarrolla y retén el talento que impulsa a las organizaciones",
+        icon: "Users",
+        lessons: [
+          {
+            id: "lesson-admin-5-1",
+            title: "El Ciclo de Gestión del Talento",
+            duration: "25 min",
+            content: `# Gestión de Recursos Humanos
+
+## Las Personas: El Activo Más Valioso
+
+> "Cuida de tus empleados y ellos cuidarán de tus clientes." - Richard Branson
+
+Los recursos humanos (o gestión del talento) abarca todo el ciclo de vida del empleado en la organización.
+
+---
+
+## El Ciclo de Gestión del Talento
+
+### 1. Atracción y Reclutamiento
+**Objetivo:** Atraer a los mejores candidatos
+
+| Etapa | Acciones |
+|-------|----------|
+| Análisis del puesto | Definir responsabilidades, requisitos, competencias |
+| Publicación | Portales de empleo, redes, referencias |
+| Employer Branding | Construir marca empleadora atractiva |
+| Sourcing | Búsqueda proactiva de candidatos |
+
+### 2. Selección
+**Objetivo:** Elegir al candidato adecuado
+
+- Revisión de CVs
+- Entrevistas (estructuradas, por competencias)
+- Pruebas técnicas y psicométricas
+- Verificación de referencias
+- Decisión y oferta
+
+### 3. Onboarding (Incorporación)
+**Objetivo:** Integrar exitosamente al nuevo empleado
+
+| Semana | Actividades |
+|--------|-------------|
+| Pre-ingreso | Documentación, accesos, bienvenida |
+| Semana 1 | Orientación, presentaciones, cultura |
+| Mes 1 | Capacitación, asignación de mentor |
+| Mes 3 | Evaluación de adaptación, feedback |
+
+### 4. Desarrollo
+**Objetivo:** Potenciar habilidades y carrera
+
+- Capacitación y formación
+- Planes de carrera
+- Mentoring y coaching
+- Rotación de puestos
+- Proyectos desafiantes
+
+### 5. Retención
+**Objetivo:** Mantener al talento comprometido
+
+- Compensación competitiva
+- Ambiente de trabajo positivo
+- Reconocimiento
+- Balance vida-trabajo
+- Oportunidades de crecimiento
+
+### 6. Separación (cuando ocurre)
+**Objetivo:** Gestionar la salida profesionalmente
+
+- Entrevista de salida
+- Transferencia de conocimiento
+- Proceso administrativo
+- Mantener relación positiva
+
+---
+
+## Perfil de Puesto
+
+Documento fundamental que define:
+
+| Sección | Contenido |
+|---------|-----------|
+| **Título del puesto** | Nombre oficial del cargo |
+| **Objetivo** | Para qué existe el puesto |
+| **Responsabilidades** | Qué hace en el día a día |
+| **Requisitos** | Educación, experiencia, idiomas |
+| **Competencias** | Habilidades técnicas y blandas |
+| **Reporta a** | Posición del jefe directo |
+| **Supervisa a** | Puestos bajo su cargo |
+| **Indicadores** | Cómo se mide el éxito |
+`
+          },
+          {
+            id: "lesson-admin-5-2",
+            title: "Evaluación de Desempeño y Compensación",
+            duration: "25 min",
+            content: `# Evaluación de Desempeño y Compensación
+
+## ¿Por Qué Evaluar el Desempeño?
+
+- Alinear objetivos individuales con organizacionales
+- Identificar fortalezas y áreas de mejora
+- Tomar decisiones de compensación y promoción
+- Planificar desarrollo y capacitación
+- Documentar rendimiento
+
+---
+
+## Métodos de Evaluación
+
+### 1. Evaluación por Objetivos (MBO)
+Evalúa el logro de metas específicas acordadas.
+
+| Objetivo | Peso | Meta | Logrado | Calificación |
+|----------|------|------|---------|--------------|
+| Ventas | 40% | $100K | $95K | 95% |
+| Nuevos clientes | 30% | 20 | 25 | 125% |
+| Satisfacción | 30% | 85% | 88% | 103% |
+
+### 2. Evaluación 360°
+Retroalimentación de múltiples fuentes:
+- Jefe directo
+- Pares/colegas
+- Subordinados (si aplica)
+- Clientes (internos/externos)
+- Autoevaluación
+
+### 3. Evaluación por Competencias
+Evalúa comportamientos observables:
+
+| Competencia | 1 | 2 | 3 | 4 | 5 |
+|-------------|---|---|---|---|---|
+| Comunicación | | | | ✓ | |
+| Trabajo en equipo | | | ✓ | | |
+| Orientación a resultados | | | | | ✓ |
+
+---
+
+## Feedback Efectivo
+
+### El Modelo SBI (Situación-Comportamiento-Impacto)
+
+**Estructura:**
+1. **Situación:** Cuándo y dónde ocurrió
+2. **Comportamiento:** Qué hizo la persona (observable)
+3. **Impacto:** Qué efecto tuvo
+
+**Ejemplo:**
+> "En la reunión de ayer (S), cuando interrumpiste a María mientras presentaba (C), ella perdió el hilo y el equipo no entendió su propuesta (I)."
+
+### Feedback Constructivo vs. Destructivo
+
+| Constructivo ✅ | Destructivo ❌ |
+|-----------------|----------------|
+| Específico | Vago o general |
+| Sobre comportamientos | Sobre la persona |
+| Orientado al futuro | Enfocado en culpas |
+| Privado (si es negativo) | Público |
+| Con ejemplos | Sin evidencia |
+
+---
+
+## Compensación Total
+
+La compensación va más allá del salario:
+
+| Componente | Ejemplos |
+|------------|----------|
+| **Salario base** | Pago fijo mensual/anual |
+| **Variable** | Bonos, comisiones, utilidades |
+| **Beneficios** | Seguro médico, plan de pensiones |
+| **Compensación no monetaria** | Flexibilidad, desarrollo, reconocimiento |
+
+### Factores que Determinan el Salario
+
+1. **Mercado:** ¿Cuánto pagan otras empresas?
+2. **Equidad interna:** ¿Es justo vs. otros puestos internos?
+3. **Desempeño:** ¿Cómo rinde el empleado?
+4. **Presupuesto:** ¿Qué puede pagar la empresa?
+5. **Experiencia:** ¿Qué trae el empleado?
+
+---
+
+## Motivación más allá del Dinero
+
+**Teoría de Herzberg:**
+
+| Factores Higiénicos (evitan insatisfacción) | Factores Motivadores (generan satisfacción) |
+|---------------------------------------------|---------------------------------------------|
+| Salario adecuado | Logro y reconocimiento |
+| Condiciones de trabajo | Trabajo interesante |
+| Seguridad laboral | Responsabilidad |
+| Políticas justas | Crecimiento profesional |
+
+> El dinero evita la insatisfacción, pero no necesariamente motiva.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Gestión del Talento",
+          description: "Aplica técnicas de recursos humanos",
+          tasks: [
+            {
+              id: "task-admin-5-1",
+              question: "Crea un perfil de puesto completo para un cargo de tu elección. Incluye: título, objetivo, 5 responsabilidades principales, requisitos (educación, experiencia), 5 competencias clave, y 3 indicadores de éxito."
+            },
+            {
+              id: "task-admin-5-2",
+              question: "Diseña un plan de onboarding de 4 semanas para un nuevo empleado en ese puesto. Detalla las actividades de cada semana y quién es responsable de cada una."
+            },
+            {
+              id: "task-admin-5-3",
+              question: "Redacta un feedback usando el modelo SBI para estas dos situaciones: (a) un empleado que entregó un proyecto antes de tiempo con excelente calidad, (b) un empleado que llegó tarde 3 veces esta semana."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Gestión de Recursos Humanos",
+          description: "Evalúa tu comprensión de la gestión del talento",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es el orden correcto del ciclo de gestión del talento?", options: ["Selección, Reclutamiento, Desarrollo, Retención", "Atracción, Selección, Onboarding, Desarrollo, Retención", "Contratación, Capacitación, Promoción, Despido", "Entrevista, Contrato, Trabajo, Renuncia"], correctAnswer: 1 },
+            { id: "q2", question: "La evaluación 360° incluye feedback de:", options: ["Solo el jefe directo", "Jefe, pares, subordinados, clientes y autoevaluación", "Solo los clientes externos", "Solo el departamento de RRHH"], correctAnswer: 1 },
+            { id: "q3", question: "En el modelo SBI de feedback, la 'I' significa:", options: ["Información", "Impacto", "Intención", "Instrucción"], correctAnswer: 1 },
+            { id: "q4", question: "Según Herzberg, ¿qué tipo de factor es el salario?", options: ["Factor motivador", "Factor higiénico (evita insatisfacción pero no motiva)", "No es relevante", "Es el único factor importante"], correctAnswer: 1 },
+            { id: "q5", question: "Un perfil de puesto debe incluir:", options: ["Solo el salario ofrecido", "Responsabilidades, requisitos, competencias e indicadores de éxito", "Solo la experiencia requerida", "El nombre del candidato seleccionado"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-6",
+        title: "Comunicación Empresarial",
+        description: "Domina las habilidades de comunicación efectiva en entornos profesionales",
+        icon: "MessageSquare",
+        lessons: [
+          {
+            id: "lesson-admin-6-1",
+            title: "Fundamentos de la Comunicación Efectiva",
+            duration: "25 min",
+            content: `# Comunicación Empresarial
+
+## El Proceso de Comunicación
+
+> "El mayor problema de la comunicación es la ilusión de que ha ocurrido." - George Bernard Shaw
+
+---
+
+## Elementos del Proceso
+
+| Elemento | Descripción |
+|----------|-------------|
+| **Emisor** | Quien envía el mensaje |
+| **Mensaje** | La información transmitida |
+| **Canal** | Medio de transmisión (email, verbal, etc.) |
+| **Receptor** | Quien recibe el mensaje |
+| **Retroalimentación** | Respuesta del receptor |
+| **Ruido** | Interferencias que distorsionan |
+
+---
+
+## Barreras de Comunicación
+
+### Barreras Físicas
+- Distancia geográfica
+- Ruido ambiental
+- Problemas técnicos
+
+### Barreras Psicológicas
+- Prejuicios y estereotipos
+- Emociones intensas
+- Falta de atención
+
+### Barreras Semánticas
+- Jerga técnica
+- Diferentes idiomas
+- Ambigüedad
+
+### Barreras Organizacionales
+- Jerarquías rígidas
+- Sobrecarga de información
+- Cultura de desconfianza
+
+---
+
+## Comunicación Verbal vs. No Verbal
+
+| Tipo | Porcentaje de impacto |
+|------|----------------------|
+| Palabras (qué dices) | 7% |
+| Tono de voz (cómo lo dices) | 38% |
+| Lenguaje corporal | 55% |
+
+> **Regla de Mehrabian:** Cuando hay incongruencia, creemos más al lenguaje no verbal.
+
+---
+
+## Elementos de Lenguaje Corporal
+
+| Elemento | Positivo | Negativo |
+|----------|----------|----------|
+| **Contacto visual** | Directo, natural | Evitar mirada, mirar abajo |
+| **Postura** | Erguida, abierta | Encorvada, brazos cruzados |
+| **Gestos** | Manos visibles, moderados | Inquietos, tocarse la cara |
+| **Espacio** | Respetar distancia apropiada | Invadir o alejarse demasiado |
+| **Expresión facial** | Acorde al mensaje | Incongruente, tensa |
+
+---
+
+## Escucha Activa
+
+### Los 5 Niveles de Escucha
+
+1. **Ignorar** - No prestar atención
+2. **Fingir** - Aparentar que escuchas
+3. **Selectiva** - Solo lo que te interesa
+4. **Atenta** - Escuchar las palabras
+5. **Empática** - Entender sentimientos e intención
+
+### Técnicas de Escucha Activa
+
+| Técnica | Ejemplo |
+|---------|---------|
+| **Parafrasear** | "Entonces lo que dices es..." |
+| **Preguntar** | "¿Podrías darme un ejemplo?" |
+| **Resumir** | "En resumen, los puntos principales son..." |
+| **Reflejar emociones** | "Parece que eso te frustró..." |
+| **Silencio** | Dar espacio para pensar |
+`
+          },
+          {
+            id: "lesson-admin-6-2",
+            title: "Comunicación Escrita y Reuniones Efectivas",
+            duration: "25 min",
+            content: `# Comunicación Escrita y Reuniones
+
+## Comunicación Escrita Profesional
+
+### Principios del Email Efectivo
+
+| Principio | Aplicación |
+|-----------|------------|
+| **Claridad** | Un email, un tema principal |
+| **Brevedad** | Ir al punto, eliminar palabrería |
+| **Estructura** | Saludo, cuerpo, cierre, firma |
+| **Acción clara** | ¿Qué necesitas del receptor? |
+| **Revisión** | Ortografía, tono, destinatarios |
+
+### Estructura de Email Profesional
+
+**Asunto:** Específico y descriptivo (no "Consulta")
+
+**Cuerpo:**
+1. Saludo personalizado
+2. Contexto breve (si es necesario)
+3. Mensaje principal (lo más importante primero)
+4. Acción requerida y fecha límite
+5. Cierre cordial
+6. Firma profesional
+
+### Ejemplo
+
+**Asunto:** Aprobación requerida: Presupuesto Marketing Q1 - respuesta antes del viernes
+
+> Hola María,
+>
+> Te comparto el presupuesto de Marketing para Q1 para tu revisión y aprobación.
+>
+> **Resumen:**
+> - Presupuesto total: $50,000
+> - Principales inversiones: Publicidad digital (60%), Eventos (25%), Materiales (15%)
+>
+> **Acción requerida:** Por favor confirma tu aprobación antes del viernes 15 para proceder con la contratación de proveedores.
+>
+> El documento detallado está adjunto. Quedo atenta a tus comentarios.
+>
+> Saludos,
+> Ana
+
+---
+
+## Reuniones Efectivas
+
+### El Costo Oculto de las Reuniones
+
+Una reunión de 1 hora con 8 personas = 8 horas de productividad
+
+> **Pregunta antes de convocar:** ¿Se puede resolver con un email, llamada o chat?
+
+### Anatomía de una Reunión Efectiva
+
+**ANTES:**
+- [ ] Definir objetivo claro
+- [ ] Crear agenda con tiempos
+- [ ] Invitar solo a quienes deben estar
+- [ ] Enviar materiales con anticipación
+
+**DURANTE:**
+- [ ] Empezar y terminar a tiempo
+- [ ] Seguir la agenda
+- [ ] Asignar roles (facilitador, tomador de notas)
+- [ ] Fomentar participación
+- [ ] Documentar decisiones y acciones
+
+**DESPUÉS:**
+- [ ] Enviar minuta con acciones y responsables
+- [ ] Dar seguimiento a compromisos
+
+### Formato de Agenda
+
+| # | Tema | Responsable | Tiempo | Tipo |
+|---|------|-------------|--------|------|
+| 1 | Revisión de ventas | Juan | 10 min | Informativo |
+| 2 | Aprobación de presupuesto | María | 15 min | Decisión |
+| 3 | Brainstorm campaña | Equipo | 20 min | Discusión |
+| 4 | Próximos pasos | Ana | 5 min | Cierre |
+
+### Formato de Minuta
+
+**Reunión:** [Nombre]
+**Fecha:** [Fecha]
+**Asistentes:** [Lista]
+
+**Decisiones tomadas:**
+1. [Decisión]
+
+**Acciones acordadas:**
+| Acción | Responsable | Fecha límite |
+|--------|-------------|--------------|
+| [Qué] | [Quién] | [Cuándo] |
+
+**Próxima reunión:** [Fecha y hora]
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Comunicación Efectiva",
+          description: "Mejora tus habilidades de comunicación profesional",
+          tasks: [
+            {
+              id: "task-admin-6-1",
+              question: "Reescribe este email haciéndolo más profesional y efectivo: 'Hola, te escribo para ver si puedes revisar el documento que te mandé hace unos días, es urgente, gracias.'"
+            },
+            {
+              id: "task-admin-6-2",
+              question: "Crea una agenda para una reunión de 45 minutos cuyo objetivo es decidir la estrategia de lanzamiento de un nuevo producto. Incluye: temas, responsables, tiempos y tipo de discusión."
+            },
+            {
+              id: "task-admin-6-3",
+              question: "Identifica las barreras de comunicación en este escenario: 'El gerente envía un email técnico lleno de siglas a todo el equipo a las 11pm, esperando respuesta para las 7am. El equipo está en 3 zonas horarias diferentes.'"
+            },
+            {
+              id: "task-admin-6-4",
+              question: "Practica escucha activa: La próxima vez que alguien te cuente algo, usa al menos 3 técnicas de escucha activa. Documenta qué técnicas usaste y cómo respondió la otra persona."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Comunicación Empresarial",
+          description: "Evalúa tus habilidades de comunicación profesional",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Según la regla de Mehrabian, ¿qué porcentaje del impacto de la comunicación corresponde al lenguaje corporal?", options: ["7%", "38%", "55%", "100%"], correctAnswer: 2 },
+            { id: "q2", question: "¿Cuál es el nivel más alto de escucha?", options: ["Escucha atenta", "Escucha selectiva", "Escucha empática", "Escucha fingida"], correctAnswer: 2 },
+            { id: "q3", question: "Un email profesional debe tener:", options: ["Asunto vago para generar intriga", "Asunto específico, mensaje claro y acción requerida", "Múltiples temas para ser eficiente", "Emojis para parecer amigable"], correctAnswer: 1 },
+            { id: "q4", question: "Antes de convocar una reunión, debes preguntarte:", options: ["¿Cuántas personas puedo invitar?", "¿Se puede resolver con email, llamada o chat?", "¿Qué snacks servir?", "¿Cuánto durará el café?"], correctAnswer: 1 },
+            { id: "q5", question: "La minuta de una reunión debe incluir:", options: ["Solo la lista de asistentes", "Decisiones tomadas, acciones con responsables y fechas", "La transcripción completa de todo lo dicho", "Solo los temas pendientes"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-7",
+        title: "Toma de Decisiones y Resolución de Problemas",
+        description: "Desarrolla pensamiento crítico para enfrentar desafíos complejos",
+        icon: "Lightbulb",
+        lessons: [
+          {
+            id: "lesson-admin-7-1",
+            title: "El Proceso de Toma de Decisiones",
+            duration: "25 min",
+            content: `# Toma de Decisiones y Resolución de Problemas
+
+## La Importancia de Decidir Bien
+
+> "En cualquier momento de decisión, lo mejor que puedes hacer es lo correcto, lo siguiente mejor es lo incorrecto, y lo peor es no hacer nada." - Theodore Roosevelt
+
+---
+
+## Tipos de Decisiones
+
+| Tipo | Características | Ejemplo |
+|------|-----------------|---------|
+| **Programadas** | Rutinarias, reglas establecidas | Aprobar vacaciones según política |
+| **No programadas** | Nuevas, complejas, sin precedente | Decidir entrar a un nuevo mercado |
+| **Estratégicas** | Largo plazo, alto impacto | Fusión con otra empresa |
+| **Operativas** | Corto plazo, día a día | Asignar tareas del día |
+
+---
+
+## Proceso Racional de Decisiones
+
+### Paso 1: Identificar el Problema
+- ¿Cuál es la situación actual vs. la deseada?
+- ¿Es un síntoma o la causa raíz?
+- ¿Qué tan urgente es?
+
+### Paso 2: Establecer Criterios de Decisión
+- ¿Qué factores son importantes?
+- ¿Cómo priorizarlos?
+
+| Criterio | Peso |
+|----------|------|
+| Costo | 30% |
+| Calidad | 25% |
+| Tiempo | 20% |
+| Riesgo | 15% |
+| Alineación estratégica | 10% |
+
+### Paso 3: Generar Alternativas
+- Lluvia de ideas sin juzgar
+- Considerar opciones creativas
+- No descartar prematuramente
+
+### Paso 4: Evaluar Alternativas
+
+| Alternativa | Costo (30%) | Calidad (25%) | Tiempo (20%) | Total |
+|-------------|-------------|---------------|--------------|-------|
+| Opción A | 8 × 0.3 = 2.4 | 7 × 0.25 = 1.75 | 6 × 0.2 = 1.2 | 5.35 |
+| Opción B | 6 × 0.3 = 1.8 | 9 × 0.25 = 2.25 | 8 × 0.2 = 1.6 | 5.65 |
+
+### Paso 5: Seleccionar la Mejor Alternativa
+- La de mayor puntuación ponderada
+- Considerar intuición y experiencia
+- Validar con stakeholders clave
+
+### Paso 6: Implementar
+- Plan de acción
+- Comunicar la decisión
+- Asignar recursos
+
+### Paso 7: Evaluar Resultados
+- ¿Se logró el objetivo?
+- ¿Qué aprendimos?
+
+---
+
+## Sesgos Cognitivos que Afectan las Decisiones
+
+| Sesgo | Descripción | Cómo evitarlo |
+|-------|-------------|---------------|
+| **Confirmación** | Buscar solo info que confirme tu creencia | Buscar activamente info contraria |
+| **Anclaje** | Depender demasiado de primera información | Considerar múltiples fuentes |
+| **Disponibilidad** | Sobreestimar lo que recuerdas fácilmente | Usar datos, no solo memoria |
+| **Costo hundido** | Continuar por lo ya invertido | Evaluar solo el futuro |
+| **Exceso de confianza** | Creer que sabes más de lo que sabes | Pedir feedback, cuestionar supuestos |
+`
+          },
+          {
+            id: "lesson-admin-7-2",
+            title: "Herramientas de Análisis y Resolución",
+            duration: "25 min",
+            content: `# Herramientas de Análisis y Resolución
+
+## Los 5 Porqués (Root Cause Analysis)
+
+Técnica para llegar a la causa raíz de un problema.
+
+**Ejemplo:**
+
+**Problema:** El cliente está insatisfecho
+
+1. ¿Por qué? → El pedido llegó tarde
+2. ¿Por qué? → El envío se retrasó
+3. ¿Por qué? → El producto no estaba en inventario
+4. ¿Por qué? → El proveedor no entregó a tiempo
+5. ¿Por qué? → No teníamos contrato con fecha de entrega garantizada
+
+**Causa raíz:** Falta de acuerdos de nivel de servicio con proveedores
+
+---
+
+## Diagrama de Ishikawa (Espina de Pescado)
+
+Organiza posibles causas por categorías:
+
+**Las 6 M's:**
+- **Mano de obra** - Personas
+- **Métodos** - Procesos
+- **Máquinas** - Equipos
+- **Materiales** - Insumos
+- **Medición** - Métricas
+- **Medio ambiente** - Entorno
+
+---
+
+## Matriz de Decisión
+
+Para comparar alternativas sistemáticamente:
+
+| Criterio | Peso | Opción A | Opción B | Opción C |
+|----------|------|----------|----------|----------|
+| Costo | 25% | 8 (2.0) | 6 (1.5) | 9 (2.25) |
+| Calidad | 30% | 7 (2.1) | 9 (2.7) | 6 (1.8) |
+| Rapidez | 20% | 9 (1.8) | 5 (1.0) | 7 (1.4) |
+| Riesgo | 25% | 6 (1.5) | 8 (2.0) | 7 (1.75) |
+| **TOTAL** | 100% | **7.4** | **7.2** | **7.2** |
+
+---
+
+## Árbol de Decisiones
+
+Para decisiones con incertidumbre y múltiples escenarios:
+
+**Estructura:**
+- **Nodos de decisión** (cuadrados): Opciones que controlas
+- **Nodos de azar** (círculos): Eventos inciertos con probabilidades
+- **Resultados** (triángulos): Valores finales
+
+**Ejemplo simplificado:**
+
+Decisión: ¿Lanzar producto nuevo?
+
+- Lanzar
+  - Éxito (60%): Ganancia $500K
+  - Fracaso (40%): Pérdida $200K
+  - **Valor esperado:** (0.6 × $500K) + (0.4 × -$200K) = $220K
+- No lanzar
+  - **Valor esperado:** $0
+
+**Decisión recomendada:** Lanzar (valor esperado positivo)
+
+---
+
+## Técnicas de Creatividad
+
+### Brainstorming
+1. Cantidad sobre calidad
+2. Sin críticas durante la generación
+3. Ideas locas bienvenidas
+4. Construir sobre ideas de otros
+
+### SCAMPER
+Preguntas para generar ideas:
+
+| Letra | Pregunta |
+|-------|----------|
+| **S**ustituir | ¿Qué puedo reemplazar? |
+| **C**ombinar | ¿Qué puedo unir? |
+| **A**daptar | ¿Qué puedo ajustar? |
+| **M**odificar | ¿Qué puedo cambiar? |
+| **P**oner otros usos | ¿Para qué más sirve? |
+| **E**liminar | ¿Qué puedo quitar? |
+| **R**eorganizar | ¿Qué puedo reordenar? |
+
+---
+
+## Decisiones en Grupo
+
+### Técnicas de Consenso
+
+| Técnica | Cuándo usar |
+|---------|-------------|
+| **Votación** | Decisiones rápidas, opciones claras |
+| **Consenso** | Compromiso de todos es crítico |
+| **Delegación** | Experto claro, decisión técnica |
+| **Consulta** | Input de varios, uno decide |
+
+### Evitar el Pensamiento Grupal
+
+- Asignar un "abogado del diablo"
+- Pedir opiniones individuales antes de discutir
+- Invitar perspectivas externas
+- Liderazgo no debe expresar preferencia primero
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Análisis y Decisiones",
+          description: "Practica técnicas de resolución de problemas",
+          tasks: [
+            {
+              id: "task-admin-7-1",
+              question: "Aplica los '5 Porqués' a un problema real o ficticio hasta llegar a la causa raíz. Documenta cada 'porqué' y tu análisis final."
+            },
+            {
+              id: "task-admin-7-2",
+              question: "Crea una Matriz de Decisión para elegir entre 3 opciones de tu elección (puede ser comprar un producto, elegir un proveedor, etc.). Define al menos 4 criterios con pesos y califica cada opción."
+            },
+            {
+              id: "task-admin-7-3",
+              question: "Identifica 3 sesgos cognitivos que podrían afectar una decisión importante en tu trabajo o vida personal. Para cada uno, describe una estrategia específica para contrarrestarlo."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Toma de Decisiones",
+          description: "Evalúa tus habilidades de análisis y decisión",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "¿Cuál es el objetivo de la técnica de los '5 Porqués'?", options: ["Hacer muchas preguntas", "Llegar a la causa raíz de un problema", "Evaluar 5 alternativas", "Consultar a 5 personas"], correctAnswer: 1 },
+            { id: "q2", question: "El sesgo de 'costo hundido' nos hace:", options: ["Continuar algo solo porque ya invertimos en ello", "Buscar solo información que confirme nuestra creencia", "Sobreestimar nuestra capacidad", "Depender de la primera información recibida"], correctAnswer: 0 },
+            { id: "q3", question: "En un Árbol de Decisiones, los nodos cuadrados representan:", options: ["Eventos aleatorios", "Decisiones que controlamos", "Resultados finales", "Probabilidades"], correctAnswer: 1 },
+            { id: "q4", question: "¿Qué regla es fundamental en un Brainstorming?", options: ["Criticar ideas para mejorarlas", "No criticar durante la generación de ideas", "Solo el jefe puede proponer ideas", "Limitar a 5 ideas por persona"], correctAnswer: 1 },
+            { id: "q5", question: "Para evitar el 'pensamiento grupal' en decisiones de equipo, se recomienda:", options: ["Que el líder dé su opinión primero", "Asignar un 'abogado del diablo'", "Votar rápidamente sin discutir", "Evitar perspectivas externas"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-8",
+        title: "Liderazgo y Motivación",
+        description: "Desarrolla las habilidades para inspirar y guiar equipos hacia el éxito",
+        icon: "Award",
+        lessons: [
+          {
+            id: "lesson-admin-8-1",
+            title: "Estilos de Liderazgo",
+            duration: "25 min",
+            content: `# Liderazgo y Motivación
+
+## ¿Qué es el Liderazgo?
+
+> "El liderazgo no se trata de estar al mando. Se trata de cuidar a las personas a tu cargo." - Simon Sinek
+
+**Liderazgo:** La capacidad de influir en otros para lograr objetivos comunes.
+
+**Diferencia con la gestión:**
+| Gestión | Liderazgo |
+|---------|-----------|
+| Planifica y presupuesta | Establece dirección |
+| Organiza y asigna | Alinea personas |
+| Controla y resuelve | Motiva e inspira |
+| Produce orden | Produce cambio |
+
+> Lo ideal: Ser líder Y gestor según la situación.
+
+---
+
+## Estilos de Liderazgo
+
+### 1. Autocrático
+- El líder decide solo
+- Comunicación unidireccional
+- **Cuándo usar:** Crisis, decisiones urgentes, equipo inexperto
+
+### 2. Democrático/Participativo
+- Involucra al equipo en decisiones
+- Fomenta la participación
+- **Cuándo usar:** Equipo experimentado, se necesita compromiso
+
+### 3. Laissez-faire (Delegativo)
+- Mínima intervención del líder
+- Alta autonomía del equipo
+- **Cuándo usar:** Equipo muy experimentado y automotivado
+
+### 4. Transformacional
+- Inspira con visión
+- Desarrolla a las personas
+- Genera cambio significativo
+- **Cuándo usar:** Transformación organizacional, desarrollo de talento
+
+### 5. Situacional (Hersey & Blanchard)
+Adapta el estilo según la madurez del colaborador:
+
+| Nivel del Colaborador | Estilo del Líder |
+|----------------------|------------------|
+| Baja competencia, bajo compromiso | **Dirigir** (alta tarea, baja relación) |
+| Alguna competencia, bajo compromiso | **Entrenar** (alta tarea, alta relación) |
+| Alta competencia, variable compromiso | **Apoyar** (baja tarea, alta relación) |
+| Alta competencia, alto compromiso | **Delegar** (baja tarea, baja relación) |
+
+---
+
+## Inteligencia Emocional en el Liderazgo
+
+### Los 5 Componentes (Daniel Goleman)
+
+| Componente | Descripción | Ejemplo |
+|------------|-------------|---------|
+| **Autoconciencia** | Conocer tus emociones | Reconocer cuando estás frustrado |
+| **Autorregulación** | Controlar impulsos | No explotar ante críticas |
+| **Motivación** | Impulso interno | Persistir ante obstáculos |
+| **Empatía** | Entender emociones de otros | Percibir preocupación de un empleado |
+| **Habilidades sociales** | Gestionar relaciones | Resolver conflictos constructivamente |
+
+---
+
+## El Líder como Coach
+
+### El Modelo GROW
+
+| Etapa | Pregunta Clave |
+|-------|----------------|
+| **G**oal (Meta) | ¿Qué quieres lograr? |
+| **R**eality (Realidad) | ¿Dónde estás ahora? |
+| **O**ptions (Opciones) | ¿Qué podrías hacer? |
+| **W**ill (Voluntad) | ¿Qué vas a hacer? |
+
+**Ejemplo de conversación de coaching:**
+
+- **G:** "¿Qué te gustaría lograr en los próximos 6 meses?"
+- **R:** "¿Qué has intentado hasta ahora? ¿Qué obstáculos has encontrado?"
+- **O:** "¿Qué otras opciones podrías considerar? ¿Qué pasaría si...?"
+- **W:** "¿Qué harás específicamente? ¿Para cuándo? ¿Cómo sabré que lo lograste?"
+`
+          },
+          {
+            id: "lesson-admin-8-2",
+            title: "Teorías de Motivación",
+            duration: "25 min",
+            content: `# Teorías de Motivación
+
+## ¿Qué nos Motiva?
+
+> "Las personas trabajan por dinero, pero van más allá por reconocimiento, elogio y recompensas." - Dale Carnegie
+
+---
+
+## Pirámide de Maslow
+
+Las necesidades humanas en orden jerárquico:
+
+| Nivel | Necesidad | En el Trabajo |
+|-------|-----------|---------------|
+| 5 | **Autorrealización** | Desarrollo, creatividad, desafíos |
+| 4 | **Estima** | Reconocimiento, logros, respeto |
+| 3 | **Sociales** | Pertenencia, trabajo en equipo, relaciones |
+| 2 | **Seguridad** | Estabilidad laboral, beneficios, ambiente seguro |
+| 1 | **Fisiológicas** | Salario justo, descansos, condiciones básicas |
+
+> Debemos satisfacer los niveles inferiores antes de aspirar a los superiores.
+
+---
+
+## Teoría de Herzberg (Dos Factores)
+
+| Factores Higiénicos | Factores Motivadores |
+|---------------------|----------------------|
+| Evitan insatisfacción | Generan satisfacción |
+| Salario, condiciones, políticas | Logro, reconocimiento |
+| Seguridad, supervisión | Trabajo interesante |
+| Relaciones laborales | Responsabilidad, crecimiento |
+
+> **Clave:** Mejorar factores higiénicos previene quejas, pero para motivar debes trabajar los motivadores.
+
+---
+
+## Teoría de las Expectativas (Vroom)
+
+**Motivación = Expectativa × Instrumentalidad × Valencia**
+
+| Factor | Pregunta |
+|--------|----------|
+| **Expectativa** | ¿Puedo hacerlo? (esfuerzo → desempeño) |
+| **Instrumentalidad** | ¿Me dará resultado? (desempeño → recompensa) |
+| **Valencia** | ¿Quiero esa recompensa? (valor personal) |
+
+> Si cualquier factor es cero, la motivación es cero.
+
+**Ejemplo:** Un empleado no estará motivado si:
+- No cree poder lograr la meta (baja expectativa)
+- Cree que aunque logre la meta no le darán el bono (baja instrumentalidad)
+- No le importa el bono ofrecido (baja valencia)
+
+---
+
+## Motivación Intrínseca vs. Extrínseca
+
+| Intrínseca | Extrínseca |
+|------------|------------|
+| Desde adentro | Desde afuera |
+| Satisfacción personal | Recompensas externas |
+| "Me gusta lo que hago" | "Me pagan por hacerlo" |
+| Más duradera | Puede disminuir con el tiempo |
+
+---
+
+## Cómo Motivar a tu Equipo
+
+### Estrategias Prácticas
+
+1. **Reconoce logros** - Público para grandes logros, privado para mejoras
+2. **Da autonomía** - Permite decidir el "cómo"
+3. **Conecta con propósito** - Explica el "por qué" importa su trabajo
+4. **Ofrece desarrollo** - Oportunidades de aprender y crecer
+5. **Proporciona feedback** - Frecuente, específico, constructivo
+6. **Elimina obstáculos** - Facilita que puedan hacer su trabajo
+7. **Celebra victorias** - Grandes y pequeñas
+
+### Errores Comunes
+
+❌ Asumir que todos se motivan igual
+❌ Solo reconocer cuando hay problemas
+❌ Prometer lo que no puedes cumplir
+❌ Microgestionar talento experimentado
+❌ Ignorar el balance vida-trabajo
+
+---
+
+## El Poder del Reconocimiento
+
+| Tipo | Ejemplo |
+|------|---------|
+| **Verbal** | "Excelente trabajo en la presentación" |
+| **Escrito** | Email de felicitación copiando al equipo |
+| **Público** | Mención en reunión general |
+| **Tangible** | Bono, día libre, regalo |
+| **Desarrollo** | Asignar proyecto desafiante |
+
+> El reconocimiento sincero, específico y oportuno es una de las herramientas más poderosas y económicas de motivación.
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Tu Liderazgo",
+          description: "Desarrolla tus habilidades de liderazgo y motivación",
+          tasks: [
+            {
+              id: "task-admin-8-1",
+              question: "Reflexiona sobre tu estilo de liderazgo actual. ¿Cuál de los estilos (Autocrático, Democrático, Laissez-faire, Transformacional) usas más frecuentemente? ¿En qué situaciones funciona y en cuáles deberías adaptar?"
+            },
+            {
+              id: "task-admin-8-2",
+              question: "Usando el modelo GROW, diseña una conversación de coaching para ayudar a un colaborador que quiere mejorar sus habilidades de presentación. Escribe al menos 2 preguntas para cada etapa (G, R, O, W)."
+            },
+            {
+              id: "task-admin-8-3",
+              question: "Piensa en un miembro de tu equipo (real o ficticio). Usando la Teoría de las Expectativas, analiza su motivación actual. ¿Cuál de los tres factores (Expectativa, Instrumentalidad, Valencia) podría estar bajo? ¿Qué harías para mejorarlo?"
+            },
+            {
+              id: "task-admin-8-4",
+              question: "Crea un plan de reconocimiento para tu equipo que incluya al menos 5 formas diferentes de reconocer logros (no todas pueden ser monetarias). Especifica cuándo usarías cada una."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen: Liderazgo y Motivación",
+          description: "Evalúa tu comprensión del liderazgo y la motivación",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Según el Liderazgo Situacional, ¿qué estilo usar con alguien de alta competencia y alto compromiso?", options: ["Dirigir", "Entrenar", "Apoyar", "Delegar"], correctAnswer: 3 },
+            { id: "q2", question: "En la Pirámide de Maslow, ¿qué nivel está en la cima?", options: ["Seguridad", "Estima", "Sociales", "Autorrealización"], correctAnswer: 3 },
+            { id: "q3", question: "Según Herzberg, ¿qué tipo de factor es el salario?", options: ["Factor motivador", "Factor higiénico", "Factor de autorrealización", "No es un factor relevante"], correctAnswer: 1 },
+            { id: "q4", question: "En el modelo GROW de coaching, la 'R' significa:", options: ["Resultado", "Realidad", "Recursos", "Reconocimiento"], correctAnswer: 1 },
+            { id: "q5", question: "La motivación intrínseca proviene de:", options: ["Bonos y aumentos", "La satisfacción personal y el interés en la tarea", "La presión del jefe", "Las políticas de la empresa"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "module-admin-9",
+        title: "Gestión del Cambio e Innovación",
+        description: "Lidera transformaciones organizacionales y fomenta la cultura de innovación",
+        icon: "RefreshCw",
+        lessons: [
+          {
+            id: "lesson-admin-9-1",
+            title: "El Proceso del Cambio Organizacional",
+            duration: "25 min",
+            content: `# Gestión del Cambio e Innovación
+
+## ¿Por Qué el Cambio es Difícil?
+
+> "No es la especie más fuerte la que sobrevive, ni la más inteligente, sino la que responde mejor al cambio." - Charles Darwin
+
+### Razones de Resistencia al Cambio
+
+| Razón | Ejemplo |
+|-------|---------|
+| **Miedo a lo desconocido** | "¿Y si no funciona?" |
+| **Pérdida de control** | "Siempre lo hice así" |
+| **Incertidumbre laboral** | "¿Perderé mi trabajo?" |
+| **Esfuerzo adicional** | "Ahora tengo que aprender algo nuevo" |
+| **Malas experiencias pasadas** | "El último cambio fue un desastre" |
+
+---
+
+## El Modelo de Kotter (8 Pasos)
+
+### Fase 1: Crear el Clima para el Cambio
+
+**1. Crear sentido de urgencia**
+- Mostrar por qué el cambio es necesario AHORA
+- Identificar amenazas y oportunidades
+- "Si no cambiamos, esto pasará..."
+
+**2. Formar una coalición poderosa**
+- Reunir líderes influyentes
+- No solo jerárquicos, también informales
+- Equipo diverso y comprometido
+
+**3. Crear una visión para el cambio**
+- Claridad de hacia dónde vamos
+- Inspiradora y alcanzable
+- Fácil de comunicar (30 segundos)
+
+### Fase 2: Involucrar y Habilitar
+
+**4. Comunicar la visión**
+- Repetir, repetir, repetir
+- Múltiples canales
+- Modelar el cambio (walk the talk)
+
+**5. Eliminar obstáculos**
+- Remover barreras estructurales
+- Capacitar en nuevas habilidades
+- Alinear sistemas y procesos
+
+**6. Generar victorias a corto plazo**
+- Planificar éxitos visibles y tempranos
+- Reconocer a quienes contribuyen
+- Demostrar que el cambio funciona
+
+### Fase 3: Implementar y Sostener
+
+**7. Consolidar los logros**
+- Usar credibilidad para más cambio
+- No declarar victoria prematuramente
+- Contratar y promover agentes de cambio
+
+**8. Anclar el cambio en la cultura**
+- Conectar nuevos comportamientos con éxito
+- Institucionalizar las mejoras
+- Desarrollar sucesores que mantengan el cambio
+
+---
+
+## La Curva del Cambio (Kübler-Ross adaptada)
+
+Etapas emocionales durante el cambio:
+
+| Etapa | Comportamiento | Qué hacer |
+|-------|----------------|-----------|
+| **1. Negación** | "Esto no nos afectará" | Comunicar realidad, dar información |
+| **2. Resistencia** | Enojo, frustración | Escuchar, empatizar, no ignorar |
+| **3. Exploración** | Buscar alternativas | Dar espacio para experimentar |
+| **4. Compromiso** | Aceptación activa | Reforzar, celebrar |
+
+> **Clave:** Las personas atraviesan estas etapas a diferente velocidad. Paciencia y apoyo.
+`
+          },
+          {
+            id: "lesson-admin-9-2",
+            title: "Cultura de Innovación",
+            duration: "25 min",
+            content: `# Cultura de Innovación
+
+## ¿Qué es Innovar?
+
+> "Innovación no es solo tener una idea; es ejecutarla y crear valor."
+
+**Tipos de innovación:**
+
+| Tipo | Descripción | Ejemplo |
+|------|-------------|---------|
+| **Incremental** | Mejoras pequeñas y continuas | Nueva versión de software |
+| **Disruptiva** | Cambia reglas del juego | Netflix vs. Blockbuster |
+| **De producto** | Nuevo producto o servicio | iPhone |
+| **De proceso** | Nueva forma de hacer algo | Producción lean |
+| **De modelo de negocio** | Nueva forma de crear valor | Uber, Airbnb |
+
+---
+
+## Creando una Cultura Innovadora
+
+### Elementos Clave
+
+1. **Tolerancia al fracaso**
+   - El fracaso es aprendizaje
+   - "Fail fast, learn fast"
+   - Celebrar los intentos, no solo éxitos
+
+2. **Tiempo para explorar**
+   - Google: 20% del tiempo para proyectos propios
+   - Espacios de experimentación
+   - Hackathons y laboratorios de innovación
+
+3. **Diversidad de perspectivas**
+   - Equipos multidisciplinarios
+   - Inclusión de voces diferentes
+   - Colaboración cross-funcional
+
+4. **Incentivos alineados**
+   - Reconocer innovadores
+   - No castigar el riesgo calculado
+   - Premiar ideas implementadas
+
+---
+
+## Design Thinking
+
+Metodología centrada en el usuario para resolver problemas:
+
+### Las 5 Etapas
+
+| Etapa | Objetivo | Actividades |
+|-------|----------|-------------|
+| **1. Empatizar** | Entender al usuario | Observar, entrevistar, sumergirse |
+| **2. Definir** | Clarificar el problema | Sintetizar insights, definir reto |
+| **3. Idear** | Generar soluciones | Brainstorming, SCAMPER, mapas mentales |
+| **4. Prototipar** | Construir para pensar | Modelos rápidos y baratos |
+| **5. Testear** | Aprender y iterar | Probar con usuarios reales |
+
+---
+
+## Lean Startup
+
+Metodología para innovación con recursos limitados:
+
+### Ciclo Build-Measure-Learn
+
+1. **Build (Construir):** Crear MVP (Producto Mínimo Viable)
+2. **Measure (Medir):** Recolectar datos del mercado
+3. **Learn (Aprender):** Validar o invalidar hipótesis
+
+> **MVP:** La versión más simple del producto que permite aprender del mercado.
+
+### Pivotar vs. Perseverar
+
+| Pivotar | Perseverar |
+|---------|------------|
+| Los datos muestran que la hipótesis es incorrecta | Los datos validan la dirección |
+| Cambiar estrategia basado en aprendizaje | Continuar optimizando |
+| Ejemplo: cambiar segmento de clientes | Ejemplo: escalar lo que funciona |
+
+---
+
+## Barreras a la Innovación
+
+| Barrera | Solución |
+|---------|----------|
+| "Siempre lo hicimos así" | Cuestionar el status quo sistemáticamente |
+| Miedo al fracaso | Crear ambiente seguro para experimentar |
+| Silos organizacionales | Equipos cross-funcionales, colaboración |
+| Falta de recursos | Innovación frugal, tiempo dedicado |
+| Presión por resultados inmediatos | Balance entre corto y largo plazo |
+
+---
+
+## Métricas de Innovación
+
+| Métrica | Qué Mide |
+|---------|----------|
+| # de ideas generadas | Volumen de input creativo |
+| # de experimentos | Actividad de exploración |
+| Tasa de éxito de proyectos | Efectividad de selección |
+| Time-to-market | Velocidad de ejecución |
+| % de ingresos de productos nuevos | Impacto en resultados |
+`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Liderando el Cambio",
+          description: "Aplica técnicas de gestión del cambio e innovación",
+          tasks: [
+            {
+              id: "task-admin-9-1",
+              question: "Piensa en un cambio que tu organización (o una ficticia) necesite implementar. Usando el modelo de Kotter, diseña los primeros 3 pasos: cómo crearías urgencia, quiénes formarían tu coalición, y cómo sería tu visión del cambio."
+            },
+            {
+              id: "task-admin-9-2",
+              question: "Identifica 3 barreras a la innovación en tu entorno de trabajo actual. Para cada una, propón una acción específica para superarla."
+            },
+            {
+              id: "task-admin-9-3",
+              question: "Aplica Design Thinking a un problema real: (1) describe a tu usuario y sus necesidades (Empatizar), (2) define el problema en una oración (Definir), (3) genera 5 posibles soluciones (Idear)."
+            },
+            {
+              id: "task-admin-9-4",
+              question: "Define un MVP (Producto Mínimo Viable) para probar una idea de negocio o mejora. ¿Qué sería lo mínimo que necesitas construir para aprender si tu idea funciona? ¿Qué métricas usarías para evaluar?"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen Final: Cambio e Innovación",
+          description: "Evalúa tu capacidad para liderar cambio y fomentar innovación",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Según Kotter, ¿cuál es el primer paso para liderar un cambio exitoso?", options: ["Comunicar la visión", "Crear sentido de urgencia", "Formar coalición", "Celebrar victorias"], correctAnswer: 1 },
+            { id: "q2", question: "En la Curva del Cambio, después de la Negación viene:", options: ["Compromiso", "Exploración", "Resistencia", "Aceptación"], correctAnswer: 2 },
+            { id: "q3", question: "¿Qué significa MVP en Lean Startup?", options: ["Most Valuable Player", "Minimum Viable Product", "Maximum Value Proposition", "Market Validation Process"], correctAnswer: 1 },
+            { id: "q4", question: "La primera etapa de Design Thinking es:", options: ["Prototipar", "Definir", "Empatizar", "Idear"], correctAnswer: 2 },
+            { id: "q5", question: "¿Qué caracteriza a una innovación disruptiva?", options: ["Pequeñas mejoras graduales", "Cambia las reglas del juego en una industria", "Solo aplica a tecnología", "Es más cara que las alternativas"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
   }
 ];
