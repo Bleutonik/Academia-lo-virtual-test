@@ -7,6 +7,2016 @@ export const getCourseBySlug = (slug: string): CourseData | undefined => {
 
 export const coursesData: CourseData[] = [
   {
+    id: "english-course",
+    title: "Inglés para Asistentes Virtuales",
+    slug: "english-course",
+    description: "Domina el inglés desde nivel básico hasta avanzado. 6 niveles completos (A1-C2) con gramática, vocabulario y ejercicios prácticos.",
+    duration: "~40 horas",
+    totalLessons: "48 Lecciones + Juegos Interactivos",
+    icon: "Globe",
+    color: "from-emerald-500 to-teal-500",
+    certificate: {
+      title: "Certificado de Inglés para Asistentes Virtuales",
+      description: "Ha completado satisfactoriamente el curso de Inglés con todos los niveles A1-C2"
+    },
+    modules: [
+      {
+        id: "mod-english-a1",
+        title: "Nivel A1 - Principiante",
+        description: "Fundamentos del inglés: verbo To Be, presente simple, artículos y vocabulario básico",
+        theory: [
+          {
+            id: "lesson-a1-grammar",
+            title: "Gramática A1: Fundamentos",
+            content: `# Gramática Nivel A1: Fundamentos del Inglés
+
+## 1. Verb To Be (Ser / Estar)
+
+El verbo fundamental del inglés. Se usa para identificar, describir y ubicar.
+
+**Conjugación:**
+| Sujeto | Verbo |
+|--------|-------|
+| I | am |
+| You | are |
+| He/She/It | is |
+| We/They | are |
+
+**Ejemplos:**
+- I **am** happy. (Estoy feliz)
+- She **is** my friend. (Ella es mi amiga)
+
+---
+
+## 2. Present Simple (Presente Simple)
+
+Para rutinas, hábitos y hechos generales.
+
+**Regla:** He/She/It añade -s o -es al verbo.
+
+**Ejemplos:**
+- I **work** every day.
+- He **works** here.
+- She **likes** pizza.
+
+---
+
+## 3. Present Continuous (Presente Continuo)
+
+Para acciones que ocurren AHORA MISMO.
+
+**Regla:** To Be + Verbo-ING
+
+**Ejemplos:**
+- I **am studying** English.
+- They **are sleeping** now.
+- We **are learning** together.
+
+---
+
+## 4. Articles: A / An
+
+**Regla:**
+- **A** + consonante: a car, a book, a house
+- **An** + vocal: an apple, an orange, an umbrella
+
+---
+
+## 5. There is / There are
+
+Para expresar existencia (Haber).
+
+**Regla:**
+- **There is** + singular: There is a cat.
+- **There are** + plural: There are two cars.
+
+---
+
+## 6. Pronouns (Pronombres)
+
+**Sujeto vs Objeto:**
+
+| Sujeto | Objeto |
+|--------|--------|
+| I | me |
+| You | you |
+| He | him |
+| She | her |
+| It | it |
+| We | us |
+| They | them |
+
+**Ejemplo:** I love **him**. (Yo lo amo a él)
+
+---
+
+## 7. WH Questions
+
+Preguntas abiertas:
+- **What** = Qué
+- **Where** = Dónde
+- **When** = Cuándo
+- **Who** = Quién
+- **Why** = Por qué
+- **How** = Cómo
+
+---
+
+## 8. Demonstratives (Demostrativos)
+
+| Singular | Plural | Distancia |
+|----------|--------|-----------|
+| This | These | Cerca |
+| That | Those | Lejos |
+
+---
+
+## 9. Modal: Can
+
+Expresa habilidad o posibilidad.
+
+**Regla:** Can + verbo base (sin "to")
+
+- She **can** swim.
+- **Can** you help me?
+
+---
+
+## 10. Have Got
+
+Para posesión.
+
+**Regla:**
+- I/You/We/They **have got**
+- He/She/It **has got**
+
+**Ejemplo:** I've got a car. He has got a dog.
+
+---
+
+## 11. Imperatives (Imperativos)
+
+Órdenes o instrucciones. Sin sujeto.
+
+- **Sit** down!
+- **Open** the door!
+- **Don't** go there!
+
+---
+
+## 12. Adverbs of Frequency
+
+| Adverbio | Frecuencia |
+|----------|------------|
+| Always | 100% |
+| Usually | 80% |
+| Often | 60% |
+| Sometimes | 40% |
+| Rarely | 20% |
+| Never | 0% |
+
+**Ejemplo:** I **always** eat breakfast.
+
+---
+
+## 13. Prepositions of Place
+
+- **In** = dentro (in the box)
+- **On** = sobre (on the table)
+- **Under** = debajo (under the bed)
+- **Next to** = al lado (next to the door)
+- **Between** = entre (between two chairs)
+
+---
+
+## 14. Prepositions of Time
+
+- **AT** = horas (at 5 o'clock)
+- **ON** = días (on Monday)
+- **IN** = meses/años (in January, in 2024)
+
+---
+
+## 15. Some / Any
+
+- **Some** = oraciones positivas (I have some money)
+- **Any** = negativas/preguntas (I don't have any water)
+
+---
+
+## 16. Past of To Be
+
+| Sujeto | Pasado |
+|--------|--------|
+| I/He/She/It | was |
+| You/We/They | were |
+
+---
+
+## 17. Past Simple: Regular Verbs
+
+Añadir **-ed** al verbo.
+- work → worked
+- play → played
+- watch → watched
+
+---
+
+## 18. Past Simple: Irregular Verbs
+
+Memorizar la forma irregular:
+- go → **went**
+- have → **had**
+- eat → **ate**
+- see → **saw**
+
+---
+
+## 19. Comparatives
+
+Para comparar dos cosas:
+- Short adjectives: add **-er** (tall → taller)
+- Long adjectives: use **more** (expensive → more expensive)
+
+---
+
+## 20. Going To (Future)
+
+Para planes futuros:
+
+**Regla:** To Be + going to + verbo
+
+**Ejemplo:** I **am going to** travel next week.`
+          },
+          {
+            id: "lesson-a1-vocab",
+            title: "Vocabulario A1: Básico",
+            content: `# Vocabulario Nivel A1
+
+## Números (Numbers)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| One | Uno | One apple |
+| Two | Dos | Two cats |
+| Three | Tres | Three dogs |
+| Four | Cuatro | Four cars |
+| Five | Cinco | Five fingers |
+| Ten | Diez | Ten toes |
+| Twenty | Veinte | Number 20 |
+| Fifty | Cincuenta | 50 percent |
+| One Hundred | Cien | 100 points |
+| Zero | Cero | Zero problems |
+
+---
+
+## Saludos (Greetings)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Hello | Hola | Hello friend! |
+| Goodbye | Adiós | Goodbye, see you! |
+| Good morning | Buenos días | Good morning mom |
+| Good night | Buenas noches | Sleep well, good night |
+| How are you? | ¿Cómo estás? | Hi, how are you? |
+| Nice to meet you | Encantado/a | I'm Paul, nice to meet you |
+
+---
+
+## Familia (Family)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Mother | Madre | My mother is nice |
+| Father | Padre | My father works here |
+| Sister | Hermana | I have a sister |
+| Brother | Hermano | My brother is tall |
+| Grandmother | Abuela | Love you grandma |
+| Friend | Amigo/a | Best friend |
+
+---
+
+## Colores (Colors)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Red | Rojo | Red apple |
+| Blue | Azul | Blue sky |
+| Green | Verde | Green grass |
+| Yellow | Amarillo | Yellow sun |
+| Black | Negro | Black cat |
+| White | Blanco | White snow |
+
+---
+
+## Tiempo (Time)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Monday | Lunes | On Monday |
+| Friday | Viernes | Party on Friday |
+| Sunday | Domingo | Sunday morning |
+| Today | Hoy | Today is hot |
+| Tomorrow | Mañana | See you tomorrow |
+| Week | Semana | This week |
+
+---
+
+## Práctica de Vocabulario
+
+**Ejercicio:** Completa las oraciones:
+
+1. My _______ is nice. (madre)
+2. The sky is _______. (azul)
+3. Today is _______. (lunes)
+4. _______, how are you? (hola)
+5. I have _______ cats. (dos)
+
+**Respuestas:** 1. mother, 2. blue, 3. Monday, 4. Hello, 5. two`
+          }
+        ],
+        sprint: {
+          title: "Sprint A1: Fundamentos",
+          description: "Demuestra tu dominio del inglés básico",
+          tasks: [
+            {
+              id: "task-a1-1",
+              question: "Escribe 5 oraciones usando el verbo TO BE en diferentes personas (I, You, He, She, They)."
+            },
+            {
+              id: "task-a1-2",
+              question: "Traduce al inglés: Mi hermano tiene un carro azul. Ella está en la casa. Nosotros vamos al parque mañana."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen A1",
+          description: "Evalúa tus conocimientos del nivel A1",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "She ___ happy.", options: ["is", "are", "am"], correctAnswer: 0 },
+            { id: "q2", question: "They ___ play soccer.", options: ["doesn't", "don't", "not"], correctAnswer: 1 },
+            { id: "q3", question: "___ you speak English?", options: ["Does", "Is", "Do"], correctAnswer: 2 },
+            { id: "q4", question: "I am ___ TV now.", options: ["watch", "watching", "watched"], correctAnswer: 1 },
+            { id: "q5", question: "There ___ two cats.", options: ["is", "are", "am"], correctAnswer: 1 },
+            { id: "q6", question: "I have ___ money.", options: ["some", "any", "a"], correctAnswer: 0 },
+            { id: "q7", question: "Past of 'Go'?", options: ["Goed", "Gone", "Went"], correctAnswer: 2 },
+            { id: "q8", question: "She ___ play piano.", options: ["can", "cans", "can to"], correctAnswer: 0 },
+            { id: "q9", question: "Big → ___ (Comparative)", options: ["More big", "Bigger", "Bigest"], correctAnswer: 1 },
+            { id: "q10", question: "___ apple.", options: ["A", "An", "Two"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-english-a2",
+        title: "Nivel A2 - Elemental",
+        description: "Pasado simple, presente perfecto, futuro con Will/Going to y modales",
+        theory: [
+          {
+            id: "lesson-a2-grammar",
+            title: "Gramática A2: Intermedio Bajo",
+            content: `# Gramática Nivel A2: Consolidando las Bases
+
+## 1. Past Simple (Pasado Simple)
+
+Acciones terminadas en el pasado.
+
+**Verbos Regulares:** añadir -ed
+- play → played
+- work → worked
+
+**Verbos Irregulares:** forma especial
+- go → went
+- see → saw
+- have → had
+
+**Ejemplo:** I **visited** London last year.
+
+---
+
+## 2. Past Continuous (Pasado Continuo)
+
+Acciones en progreso en el pasado.
+
+**Regla:** Was/Were + Verb-ING
+
+**Ejemplos:**
+- I **was watching** TV at 8pm.
+- They **were sleeping** when I called.
+
+---
+
+## 3. Present Perfect (Presente Perfecto)
+
+Experiencias de vida (sin fecha exacta).
+
+**Regla:** Have/Has + Participio (3ª columna)
+
+**Ejemplos:**
+- I **have been** to Paris.
+- She **has eaten** sushi.
+- Have you ever **visited** Japan?
+
+---
+
+## 4. Future: Will vs Going to
+
+| Will | Going to |
+|------|----------|
+| Decisión rápida | Plan previo |
+| Predicción sin evidencia | Predicción con evidencia |
+
+**Ejemplos:**
+- I'**ll** help you. (decisión del momento)
+- I'**m going to** fly to Madrid. (plan)
+- Look at those clouds! It'**s going to** rain. (evidencia)
+
+---
+
+## 5. Must & Have to (Obligación)
+
+| Must | Have to |
+|------|---------|
+| Obligación interna | Obligación externa |
+| Personal | Reglas/Leyes |
+
+**Ejemplos:**
+- You **must** be honest. (convicción personal)
+- You **have to** wear a uniform. (regla del trabajo)
+- You **mustn't** smoke here. (prohibido)
+
+---
+
+## 6. Should (Consejo)
+
+Para dar consejos.
+
+**Regla:** Should + Infinitivo
+
+**Ejemplos:**
+- You **should** study more.
+- You **shouldn't** eat so much sugar.
+- I have a headache. → You **should** rest.
+
+---
+
+## 7. First Conditional
+
+Situaciones reales/posibles en el futuro.
+
+**Regla:** If + Present Simple, Will + Verb
+
+**Ejemplos:**
+- **If** it rains, I **will** stay home.
+- **If** she comes, I **will be** happy.
+- **If** you study, you **will** pass.
+
+---
+
+## 8. Comparatives (Avanzado)
+
+**Igualdad:** as...as
+- He is **as tall as** me.
+
+**Superioridad:** more...than / -er than
+- This car is **faster than** that one.
+- English is **more difficult than** Spanish.
+
+---
+
+## 9. Superlatives
+
+El más... del grupo.
+
+**Regla:**
+- Short adjectives: the + adj-**est**
+- Long adjectives: the **most** + adj
+
+**Ejemplos:**
+- She is the **tallest** student.
+- This is the **most interesting** book.
+
+---
+
+## 10. Relative Clauses
+
+Para unir frases y dar información extra.
+
+| Pronombre | Uso |
+|-----------|-----|
+| Who | Personas |
+| Which | Cosas/Animales |
+| Where | Lugares |
+
+**Ejemplos:**
+- The man **who** called me.
+- The book **which** I read.
+- The city **where** I was born.
+
+---
+
+## 11. Quantifiers
+
+| Contables | Incontables |
+|-----------|-------------|
+| Many | Much |
+| A few | A little |
+| How many? | How much? |
+
+**A lot of** = para ambos
+
+---
+
+## 12. Adverbs of Manner
+
+Cómo se hace algo. Formación: Adjetivo + **-ly**
+
+- slow → slow**ly**
+- careful → careful**ly**
+- beautiful → beautiful**ly**
+
+**Excepción:** good → **well**
+
+---
+
+## 13. Prepositions of Movement
+
+| Preposition | Significado |
+|-------------|-------------|
+| Into | Hacia dentro |
+| Out of | Hacia fuera |
+| Through | A través de |
+| Across | Cruzar |
+| Over | Por encima |
+
+---
+
+## 14. Possessive Pronouns
+
+| Adj. Posesivo | Pron. Posesivo |
+|---------------|----------------|
+| my | mine |
+| your | yours |
+| his | his |
+| her | hers |
+| our | ours |
+| their | theirs |
+
+**Ejemplo:** This bag is **mine**. (No: my)
+
+---
+
+## 15. Gerund vs Infinitive
+
+| + Gerund (-ing) | + Infinitive (to) |
+|-----------------|-------------------|
+| enjoy | want |
+| like/love/hate | hope |
+| finish | decide |
+| avoid | need |
+
+**Ejemplos:**
+- I enjoy **swimming**.
+- I want **to go** home.
+
+---
+
+## 16. Phrasal Verbs (Básicos)
+
+| Phrasal Verb | Significado |
+|--------------|-------------|
+| Get up | Levantarse |
+| Look for | Buscar |
+| Turn on/off | Encender/Apagar |
+| Try on | Probarse (ropa) |
+| Put on | Ponerse |
+
+---
+
+## 17. Conjunctions
+
+| Conjunción | Uso |
+|------------|-----|
+| Because | Razón |
+| So | Consecuencia |
+| Although | Aunque |
+| But | Pero |
+
+---
+
+## 18. Used to
+
+Hábitos del pasado que ya no existen.
+
+**Regla:** Used to + Infinitivo
+
+**Ejemplo:** I **used to** play tennis. (Ya no lo hago)
+
+---
+
+## 19. Passive Voice (Introducción)
+
+Cuando el objeto es más importante.
+
+**Regla:** Be + Participio
+
+**Ejemplos:**
+- The letter **was written** by Paul.
+- This cake **was made** by me.
+- English **is spoken** worldwide.
+
+---
+
+## 20. Suggestions
+
+Para proponer planes.
+
+| Expresión | Ejemplo |
+|-----------|---------|
+| Shall we...? | Shall we go? |
+| Let's... | Let's go! |
+| How about...? | How about pizza? |
+| Why don't we...? | Why don't we rest? |`
+          },
+          {
+            id: "lesson-a2-vocab",
+            title: "Vocabulario A2: Intermedio",
+            content: `# Vocabulario Nivel A2
+
+## Viajes (Travel)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Airport | Aeropuerto | Arrive at the airport |
+| Luggage | Equipaje | Lost luggage |
+| Flight | Vuelo | The flight is delayed |
+| Passport | Pasaporte | Show your passport |
+| Ticket | Billete | One way ticket |
+| Passenger | Pasajero | Passengers please board |
+| Delay | Retraso | Sorry for the delay |
+| Customs | Aduana | Go through customs |
+| Platform | Andén | The train is at platform 4 |
+| Suitcase | Maleta | Pack your suitcase |
+
+---
+
+## Trabajo (Work)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Boss | Jefe | My boss is busy |
+| Colleague | Compañero | She is my colleague |
+| Meeting | Reunión | I have a meeting at 10 |
+| Earn | Ganar (dinero) | Earn a salary |
+| Staff | Personal | Staff only |
+| Factory | Fábrica | Work in a factory |
+| Desk | Escritorio | Sit at the desk |
+| Job | Empleo | Apply for a job |
+| Customer | Cliente | Help the customer |
+| Manager | Gerente | Speak to the manager |
+
+---
+
+## Tiempo Atmosférico (Weather)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Cloudy | Nublado | It is cloudy today |
+| Foggy | Nebuloso | Drive carefully, it's foggy |
+| Storm | Tormenta | A storm is coming |
+| Thunder | Trueno | Loud thunder |
+| Lightning | Rayo | Lightning struck the tree |
+| Windy | Ventoso | It is very windy |
+| Degrees | Grados | It's 25 degrees |
+| Wet | Mojado/Húmedo | The grass is wet |
+| Dry | Seco | Keep it dry |
+| Snowing | Nevando | It is snowing outside |
+
+---
+
+## Salud (Health)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Headache | Dolor de cabeza | I have a headache |
+| Stomachache | Dolor de estómago | He has a stomachache |
+| Medicine | Medicina | Take your medicine |
+| Appointment | Cita médica | Doctor's appointment |
+| Sick | Enfermo | I feel sick |
+| Hurt | Doler/Herir | My leg hurts |
+| Broken | Roto | A broken arm |
+| Fever | Fiebre | High fever |
+| Dentist | Dentista | Visit the dentist |
+| Ambulance | Ambulancia | Call an ambulance |
+
+---
+
+## Tecnología (Tech)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Download | Descargar | Download the file |
+| Website | Sitio web | Visit our website |
+| Keyboard | Teclado | Type on the keyboard |
+| Screen | Pantalla | Touch screen |
+| Mouse | Ratón | Click the mouse |
+| Password | Contraseña | Enter your password |
+| File | Archivo | Save the file |
+| Online | En línea | Chat online |
+| Text | Mensaje de texto | Send a text |
+| Digital | Digital | Digital camera |
+
+---
+
+## Práctica: Completa las oraciones
+
+1. I need to show my _______ at customs. (pasaporte)
+2. My _______ asked me to finish the report. (jefe)
+3. It's very _______ today, take an umbrella! (ventoso)
+4. I have a _______, I need medicine. (dolor de cabeza)
+5. Please enter your _______ to log in. (contraseña)
+
+**Respuestas:** 1. passport, 2. boss, 3. windy, 4. headache, 5. password`
+          }
+        ],
+        sprint: {
+          title: "Sprint A2: Consolidación",
+          description: "Demuestra tu dominio del nivel A2",
+          tasks: [
+            {
+              id: "task-a2-1",
+              question: "Escribe un párrafo corto sobre tus vacaciones pasadas usando Past Simple y Past Continuous (mínimo 5 oraciones)."
+            },
+            {
+              id: "task-a2-2",
+              question: "Crea 3 oraciones con First Conditional sobre situaciones de trabajo como asistente virtual."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen A2",
+          description: "Evalúa tus conocimientos del nivel A2",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Yesterday, I ___ to the cinema.", options: ["go", "gone", "went"], correctAnswer: 2 },
+            { id: "q2", question: "While I ___ reading, the phone rang.", options: ["was", "were", "am"], correctAnswer: 0 },
+            { id: "q3", question: "Have you ever ___ to London?", options: ["be", "been", "was"], correctAnswer: 1 },
+            { id: "q4", question: "If it rains, I ___ stay at home.", options: ["will", "would", "am"], correctAnswer: 0 },
+            { id: "q5", question: "You ___ smoke in the hospital.", options: ["must", "don't have to", "mustn't"], correctAnswer: 2 },
+            { id: "q6", question: "This car is ___ than that one.", options: ["expensive", "more expensive", "expensiver"], correctAnswer: 1 },
+            { id: "q7", question: "She is the ___ girl in class.", options: ["tall", "taller", "tallest"], correctAnswer: 2 },
+            { id: "q8", question: "I enjoy ___ football.", options: ["playing", "play", "to play"], correctAnswer: 0 },
+            { id: "q9", question: "I ___ to play piano when I was young.", options: ["use", "used", "using"], correctAnswer: 1 },
+            { id: "q10", question: "___ we go to the beach?", options: ["Let's", "Shall", "How"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-english-b1",
+        title: "Nivel B1 - Intermedio",
+        description: "Present Perfect Continuous, Past Perfect, condicionales avanzados y estilo indirecto",
+        theory: [
+          {
+            id: "lesson-b1-grammar",
+            title: "Gramática B1: Intermedio",
+            content: `# Gramática Nivel B1: Nivel Intermedio
+
+## 1. Present Perfect Continuous
+
+Acciones que empezaron en el pasado y continúan (énfasis en duración).
+
+**Regla:** Have/Has + been + Verb-ING
+
+**Ejemplos:**
+- I **have been waiting** for 2 hours.
+- She **has been watching** TV all day.
+- How long **have you been** learning English?
+
+---
+
+## 2. Past Perfect
+
+El pasado del pasado. Una acción anterior a otra.
+
+**Regla:** Had + Participio (3ª columna)
+
+**Ejemplos:**
+- When I arrived, the train **had left**.
+- By the time I woke up, he **had** already **gone**.
+- I realized I **had forgotten** my keys.
+
+---
+
+## 3. Passive Voice (Completo)
+
+Cuando el objeto es más importante que el sujeto.
+
+**Regla:** To Be + Participio (+ by...)
+
+**Tiempos:**
+| Tiempo | Ejemplo |
+|--------|---------|
+| Present | The letter **is written** |
+| Past | The bridge **was built** in 1990 |
+| Future | The work **will be finished** |
+| Perfect | The car **has been repaired** |
+
+---
+
+## 4. Reported Speech (Estilo Indirecto)
+
+Contar lo que alguien dijo.
+
+**Backshift (retroceso de tiempo):**
+| Direct | Reported |
+|--------|----------|
+| Present → | Past |
+| Past → | Past Perfect |
+| Will → | Would |
+| Can → | Could |
+
+**Ejemplo:**
+- She said: "I am tired" → She said she **was** tired.
+- He said: "I will call" → He said he **would** call.
+
+---
+
+## 5. Second Conditional
+
+Situaciones imaginarias o hipotéticas en el presente.
+
+**Regla:** If + Past Simple, Would + Verb
+
+**Ejemplos:**
+- If I **were** rich, I **would** travel the world.
+- If I **had** more time, I **would** learn Japanese.
+- What **would** you do if you **won** the lottery?
+
+---
+
+## 6. Third Conditional
+
+Arrepentimientos del pasado (imposible de cambiar).
+
+**Regla:** If + Past Perfect, Would have + Participio
+
+**Ejemplos:**
+- If I **had studied**, I **would have passed**.
+- If I **had seen** him, I **would have told** him.
+- She **would have come** if she **had known**.
+
+---
+
+## 7. Modals of Deduction
+
+Especular sobre la verdad.
+
+| Modal | Certeza | Ejemplo |
+|-------|---------|---------|
+| Must | 95% seguro | He **must be** rich |
+| Might/May | 50% posible | She **might be** at home |
+| Can't | 95% imposible | He **can't be** sleeping |
+
+---
+
+## 8. Used to vs Be used to
+
+| Used to | Be used to |
+|---------|------------|
+| Hábito pasado | Costumbre actual |
+| + Infinitive | + Gerund (-ing) |
+
+**Ejemplos:**
+- I **used to** smoke. (Ya no fumo)
+- I **am used to** getting up early. (Estoy acostumbrado)
+
+---
+
+## 9. Future Continuous
+
+Acción en progreso en un momento futuro.
+
+**Regla:** Will + be + Verb-ING
+
+**Ejemplos:**
+- At 8pm, I **will be having** dinner.
+- This time tomorrow, I **will be flying** to London.
+
+---
+
+## 10. Quantifiers (Avanzado)
+
+| Contables | Incontables |
+|-----------|-------------|
+| A few | A little |
+| Few (casi ninguno) | Little (casi nada) |
+| Several | Plenty of |
+
+---
+
+## 11. Relative Clauses: Defining vs Non-defining
+
+**Defining:** Información esencial (sin comas)
+- The woman **who called** is my sister.
+
+**Non-defining:** Información extra (con comas)
+- My mom, **who is 60**, cooks well.
+
+**Nota:** Non-defining NO usa "that"
+
+---
+
+## 12. Connectors
+
+| Conector | Uso | Ejemplo |
+|----------|-----|---------|
+| Although | Aunque | **Although** it rained, we went |
+| Despite | A pesar de | **Despite** the rain, we went |
+| However | Sin embargo | It rained. **However**, we went |
+
+---
+
+## 13. Indirect Questions
+
+Preguntas educadas (orden afirmativo).
+
+**Regla:** Can you tell me + afirmación?
+
+**Ejemplos:**
+- Can you tell me where **the station is**? ✓
+- Can you tell me where **is the station**? ✗
+- Do you know what time **it is**?
+
+---
+
+## 14. Gerund vs Infinitive: Cambio de Significado
+
+| Verbo | + Gerund | + Infinitive |
+|-------|----------|--------------|
+| Stop | Stop smoking (dejar de) | Stop to smoke (parar para) |
+| Remember | Remember locking (recordar haber) | Remember to lock (acordarse de) |
+| Try | Try eating (probar) | Try to eat (intentar) |
+
+---
+
+## 15. The Causative
+
+Que alguien haga algo por ti.
+
+**Regla:** Have/Get + Object + Past Participle
+
+**Ejemplos:**
+- I **had my car repaired**.
+- I need to **get my hair cut**.
+- She **had her nails done**.
+
+---
+
+## 16. So vs Such
+
+| So | Such |
+|----|------|
+| So + Adjective | Such + (Adj) + Noun |
+| It was **so** good | It was **such** a good movie |
+
+---
+
+## 17. Both / Neither / Either
+
+| Palabra | Significado |
+|---------|-------------|
+| Both | Los dos (ambos) |
+| Neither | Ninguno de los dos |
+| Either | Cualquiera de los dos |
+
+---
+
+## 18. Question Tags
+
+¿Verdad? al final de la frase.
+
+**Regla:** Positivo → Negativo / Negativo → Positivo
+
+**Ejemplos:**
+- You are Spanish, **aren't you**?
+- She lives here, **doesn't she**?
+- They didn't come, **did they**?
+
+---
+
+## 19. Phrasal Verbs B1
+
+| Phrasal | Significado |
+|---------|-------------|
+| Look after | Cuidar |
+| Run out of | Quedarse sin |
+| Give up | Rendirse / Dejar |
+| Put off | Posponer |
+| Turn down | Rechazar |
+
+---
+
+## 20. Make vs Do
+
+| Make | Do |
+|------|-----|
+| Make a mistake | Do homework |
+| Make a decision | Do exercise |
+| Make a phone call | Do the dishes |
+| Make friends | Do your best |`
+          },
+          {
+            id: "lesson-b1-vocab",
+            title: "Vocabulario B1: Avanzado",
+            content: `# Vocabulario Nivel B1
+
+## Negocios (Business)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Employee | Empleado | The company has 50 employees |
+| Salary | Salario/Sueldo | She earns a good salary |
+| Applying | Solicitando | I am applying for a new job |
+| Colleague | Compañero de trabajo | My colleagues are very helpful |
+| Promotion | Ascenso | He got a promotion last week |
+| Profit | Beneficio/Ganancia | The business made a huge profit |
+| Meeting | Reunión | I have a meeting with the boss |
+| CV / Resume | Currículum | Send your CV by email |
+| Full-time | Jornada completa | It is a full-time job |
+| Resign | Dimitir/Renunciar | She decided to resign |
+
+---
+
+## Sentimientos (Feelings)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Delighted | Encantado/a | I'm delighted with the news |
+| Disappointed | Decepcionado/a | He was disappointed with the result |
+| Embarrassed | Avergonzado/a | She felt embarrassed about the mistake |
+| Anxious | Ansioso/Inquieto | I feel anxious before exams |
+| Frightened | Asustado/a | Are you frightened of spiders? |
+| Proud | Orgulloso/a | I am proud of my son |
+| Upset | Disgustado/Molesto | Don't get upset about it |
+| Relieved | Aliviado/a | I was relieved to hear you are safe |
+| Jealous | Celoso/a | He is jealous of her success |
+| Keen on | Interesado/Aficionado a | I am keen on football |
+
+---
+
+## Medio Ambiente (Environment)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Pollution | Contaminación | Air pollution is a problem |
+| Global warming | Calentamiento global | We must stop global warming |
+| Recycle | Reciclar | You should recycle paper and plastic |
+| Waste | Desperdiciar/Residuos | Don't waste water |
+| Flood | Inundación | The rain caused a flood |
+| Drought | Sequía | Plants died due to the drought |
+| Environment | Medio ambiente | Protect the environment |
+| Renewable | Renovable | Solar energy is renewable |
+| Wildlife | Vida salvaje | Africa has amazing wildlife |
+| Litter | Basura (en la calle) | Pick up your litter |
+
+---
+
+## Tecnología Avanzada (Advanced Tech)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Upload | Subir (archivos) | Upload the photo to Instagram |
+| Software | Software/Programas | Update your antivirus software |
+| Backup | Copia de seguridad | Always make a backup |
+| Crash | Colgarse (sistema) | My computer crashed |
+| Hardware | Componentes físicos | I need new hardware |
+| Router | Router | Reset the router |
+| Stream | Retransmitir | Stream a movie online |
+| Browser | Navegador | Open your browser |
+| Bandwidth | Ancho de banda | Not enough bandwidth |
+| Data | Datos | Protect your data |
+
+---
+
+## Expresiones Útiles para el Trabajo
+
+| Expresión | Significado |
+|-----------|-------------|
+| I'm in charge of... | Estoy a cargo de... |
+| Could you clarify...? | ¿Podrías aclarar...? |
+| I'll get back to you | Te responderé después |
+| Let me double-check | Déjame verificar |
+| I'll keep you posted | Te mantendré informado |
+| As soon as possible (ASAP) | Lo antes posible |
+| Please find attached | Adjunto encontrarás |
+| I apologize for the delay | Disculpa la demora |`
+          }
+        ],
+        sprint: {
+          title: "Sprint B1: Intermedio",
+          description: "Demuestra tu dominio del nivel B1",
+          tasks: [
+            {
+              id: "task-b1-1",
+              question: "Escribe un email profesional a un cliente explicando un retraso en la entrega de un proyecto, usando Reported Speech y expresiones formales."
+            },
+            {
+              id: "task-b1-2",
+              question: "Crea 3 oraciones usando Second Conditional y 3 usando Third Conditional sobre situaciones laborales."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen B1",
+          description: "Evalúa tus conocimientos del nivel B1",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "I ___ for you for 2 hours!", options: ["have waited", "have been waiting", "wait"], correctAnswer: 1 },
+            { id: "q2", question: "When I arrived, she ___ already left.", options: ["have", "had", "has"], correctAnswer: 1 },
+            { id: "q3", question: "The letter ___ sent yesterday.", options: ["was", "is", "were"], correctAnswer: 0 },
+            { id: "q4", question: "She said she ___ come the next day.", options: ["will", "would", "is going to"], correctAnswer: 1 },
+            { id: "q5", question: "If I ___ you, I would accept.", options: ["was", "am", "were"], correctAnswer: 2 },
+            { id: "q6", question: "If I had known, I ___ you.", options: ["would have called", "would call", "called"], correctAnswer: 0 },
+            { id: "q7", question: "She ___ be at home, her car is there.", options: ["must", "can't", "might not"], correctAnswer: 0 },
+            { id: "q8", question: "I am used to ___ early.", options: ["wake", "waking", "woke"], correctAnswer: 1 },
+            { id: "q9", question: "Do you know where ___?", options: ["is she", "she is", "does she"], correctAnswer: 1 },
+            { id: "q10", question: "I need to ___ a decision.", options: ["do", "make", "take"], correctAnswer: 1 }
+          ]
+        }
+      },
+      {
+        id: "mod-english-b2",
+        title: "Nivel B2 - Intermedio Alto",
+        description: "Mixed conditionals, inversión, futuro perfecto, wish/regrets y estructuras avanzadas",
+        theory: [
+          {
+            id: "lesson-b2-grammar",
+            title: "Gramática B2: Avanzado",
+            content: `# Gramática Nivel B2: Intermedio Alto
+
+## 1. Mixed Conditionals
+
+Mezcla tiempos del 2º y 3º condicional para situaciones irreales en tiempos distintos.
+
+**Tipo 1: Pasado → Presente**
+If + Past Perfect, ... would + Infinitivo
+- If I **had studied** harder, I **would be** rich now.
+
+**Tipo 2: Presente → Pasado**
+If + Past Simple, ... would have + Participio
+- If I **were** braver, I **would have told** her.
+
+---
+
+## 2. Inversion
+
+Usada para énfasis, colocando el verbo auxiliar antes del sujeto.
+
+**Regla:** Negative Adverb + Auxiliar + Sujeto
+
+| Adverbio | Ejemplo |
+|----------|---------|
+| Never | **Never have I** seen such beauty |
+| Rarely | **Rarely do we** see such talent |
+| Seldom | **Seldom does she** complain |
+| Not only | **Not only did** he win, but... |
+
+---
+
+## 3. Future Perfect
+
+Una acción que estará terminada en un momento concreto del futuro.
+
+**Regla:** Will + have + Participio
+
+**Ejemplos:**
+- By 2030, we **will have bought** a house.
+- By next week, I **will have finished** the report.
+- By then, they **will have left**.
+
+---
+
+## 4. Reporting Passives
+
+Formas impersonales de reportar creencias o hechos (Se dice que...).
+
+**Estructuras:**
+- It is said/believed/thought that...
+- Subject + is said/believed + to + Infinitive
+
+**Ejemplos:**
+- **It is believed that** he is a millionaire.
+- He **is believed to be** a millionaire.
+- She **is said to have** studied in Paris.
+
+---
+
+## 5. Wish & Regrets
+
+Expresar arrepentimiento o deseos sobre distintos tiempos.
+
+| Tiempo | Estructura | Ejemplo |
+|--------|-----------|---------|
+| Presente | wish + Past Simple | I wish I **had** more time |
+| Pasado | wish + Past Perfect | I wish I **hadn't said** that |
+| Futuro | wish + would | I wish you **would** stop |
+
+**If only** = más enfático que "wish"
+
+---
+
+## 6. Cleft Sentences
+
+Estructuras partidas para enfatizar información específica.
+
+**What-cleft:**
+- **What I need** is a holiday.
+- **What she said** was important.
+
+**It-cleft:**
+- **It was John** who/that broke the window.
+- **It is this** that concerns me.
+
+---
+
+## 7. Participle Clauses
+
+Reducción de frases relativas o adverbiales.
+
+**Present Participle (-ing):** Activa
+- **Feeling** tired, I went to bed.
+- **Working** hard, she achieved success.
+
+**Past Participle (-ed):** Pasiva
+- **Shocked** by the news, she cried.
+- **Built** in 1990, the bridge is old.
+
+---
+
+## 8. Past Modals
+
+Deducciones o especulaciones sobre eventos pasados.
+
+| Modal | Significado | Ejemplo |
+|-------|-------------|---------|
+| must have | Seguro que sí | He **must have missed** the bus |
+| can't have | Seguro que no | She **can't have known** |
+| might have | Posiblemente | They **might have forgotten** |
+| should have | Debería haber | I **should have called** |
+
+---
+
+## 9. Advanced Relative Clauses
+
+Cláusulas relativas con cuantificadores.
+
+**Ejemplos:**
+- I have two brothers, **neither of whom** is married.
+- I have many friends, **most of whom** are students.
+- The books, **all of which** were old, were expensive.
+
+---
+
+## 10. Would vs Used to
+
+Matices para hábitos en el pasado.
+
+| Would | Used to |
+|-------|---------|
+| Solo acciones repetidas | Acciones y estados |
+| ✗ No para estados | ✓ Para todo |
+
+**Ejemplo:**
+- I **used to** live in London. (estado)
+- My grandma **would** always bake cakes. (acción repetida)
+
+---
+
+## 11. Gerund/Infinitive: Cambios Sutiles
+
+| Verbo | + Gerund | + Infinitive |
+|-------|----------|--------------|
+| Mean | Implicar (This means working) | Intentar (I mean to go) |
+| Regret | Lamentar pasado | Lamentar presente |
+| Try | Experimentar | Hacer esfuerzo |
+
+---
+
+## 12. The Subjunctive
+
+Uso formal tras verbos de demanda/sugerencia.
+
+**Verbos:** suggest, demand, insist, recommend, require
+
+**Regla:** Verb + that + Subject + Base Verb (sin 's')
+
+**Ejemplos:**
+- I suggest that he **be** present.
+- It is essential that she **arrive** on time.
+- He demanded that the evidence **be** revealed.
+
+---
+
+## 13. Bound to / Likely to
+
+| Expresión | Certeza |
+|-----------|---------|
+| Bound to | Seguro que |
+| Likely to | Probable |
+| Unlikely to | Improbable |
+
+---
+
+## 14. Whatever/Whenever/Whoever
+
+Indica "no importa qué/cuándo/quién".
+
+- **Whatever** you do, don't give up.
+- **Whoever** calls, tell them I'm busy.
+- **Whenever** you're ready, let me know.
+
+---
+
+## 15. Advanced So/Such
+
+Inversión con So/Such para énfasis.
+
+**Regla:** So + Adj + Aux + Subject
+
+**Ejemplos:**
+- **So angry was he** that he left.
+- **So beautiful was** the view that we stayed.
+- **Such was** the impact that...
+
+---
+
+## 16. Advanced Connectors
+
+| Conector | Uso |
+|----------|-----|
+| Nevertheless | Sin embargo (formal) |
+| Furthermore | Además |
+| Whereas | Mientras que (contraste) |
+| Hence | Por lo tanto |
+
+---
+
+## 17. Phrasal Verbs B2
+
+| Phrasal | Significado |
+|---------|-------------|
+| Look forward to | Esperar con ilusión |
+| Come up with | Idear/Proponer |
+| Put up with | Tolerar/Soportar |
+| Get along with | Llevarse bien con |
+| Run into | Encontrarse con |
+
+---
+
+## 18. Common Idioms
+
+| Idiom | Significado |
+|-------|-------------|
+| Break a leg | ¡Buena suerte! |
+| Piece of cake | Pan comido |
+| Once in a blue moon | Muy raramente |
+| Cost an arm and a leg | Costar un ojo de la cara |
+
+---
+
+## 19. Narrative Tenses
+
+Combinar pasados para contar historias.
+
+**Estructura:**
+- Past Continuous: fondo/ambiente
+- Past Simple: acción principal
+- Past Perfect: acción anterior
+
+**Ejemplo:** The sun **was shining** when I **woke up**. I **had slept** well.
+
+---
+
+## 20. Articles: Advanced
+
+**Excepciones geográficas:**
+- The Netherlands, The USA, The UK
+- (sin artículo) France, Spain, Everest
+
+**Instituciones:**
+- Go to hospital (como paciente)
+- Go to **the** hospital (a visitar)`
+          },
+          {
+            id: "lesson-b2-vocab",
+            title: "Vocabulario B2: Profesional",
+            content: `# Vocabulario Nivel B2
+
+## Empleo (Employment)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Vacancy | Vacante | There is a vacancy in HR |
+| Redundancy | Despido (por reducción) | He faced redundancy last year |
+| Perks | Beneficios extra | One of the perks is a company car |
+| Shift work | Trabajo a turnos | I hate doing shift work |
+| Resign | Dimitir | She resigned due to stress |
+| Deadline | Fecha límite | The deadline is tomorrow |
+| Workload | Carga de trabajo | My workload is very heavy |
+| Freelance | Autónomo | I work freelance from home |
+| Internship | Prácticas | She is doing a summer internship |
+| Recruitment | Contratación/Selección | The recruitment process is long |
+
+---
+
+## Personalidad (Personality)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Conscientious | Meticuloso/Concienzudo | He is a conscientious worker |
+| Stubborn | Terco/Cabezota | He is too stubborn to admit it |
+| Sympathetic | Compasivo/Empático | She was very sympathetic to my problem |
+| Narrow-minded | De mente cerrada | Don't be so narrow-minded |
+| Down-to-earth | Con los pies en la tierra | She is very down-to-earth |
+| Reliable | Fiable | Is your car reliable? |
+| Outgoing | Extrovertido | He is an outgoing person |
+| Self-confident | Seguro de sí mismo | You need to be self-confident |
+| Bad-tempered | Malhumorado | He gets bad-tempered when hungry |
+| Sensible | Sensato | It was a sensible decision |
+
+**Nota:** "Sensible" ≠ Sensible (falso amigo). "Sensitive" = Sensible.
+
+---
+
+## Medios y Tecnología (Media)
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Bias | Sesgo/Parcialidad | The article showed political bias |
+| Censorship | Censura | Censorship is common in dictatorships |
+| Coverage | Cobertura (mediática) | The event got huge media coverage |
+| Headline | Titular | I only read the headlines |
+| Paparazzi | Paparazzi | Paparazzi chased the actor |
+| Breakthrough | Avance importante | A major scientific breakthrough |
+| Cutting-edge | De vanguardia | This is cutting-edge technology |
+| Outdated | Obsoleto/Anticuado | This software is outdated |
+| Viral | Viral | The video went viral |
+| Streaming | Transmisión en directo | Watch streaming services |
+
+---
+
+## Expresiones Idiomáticas (Idioms)
+
+| Idiom | Significado | Ejemplo |
+|-------|-------------|---------|
+| Break a leg | ¡Mucha suerte! | Break a leg in your exam! |
+| Piece of cake | Pan comido | The test was a piece of cake |
+| Once in a blue moon | Muy raramente | I see her once in a blue moon |
+| Hit the nail on the head | Dar en el clavo | You hit the nail on the head |
+| Under the weather | Pachucho/Indispuesto | I'm feeling under the weather |
+| Cost an arm and a leg | Costar un ojo de la cara | That car cost an arm and a leg |
+| Speak of the devil | Hablando del rey de Roma | Speak of the devil! Hi John! |
+| Kill two birds with one stone | Matar dos pájaros de un tiro | I killed two birds with one stone |
+
+---
+
+## Expresiones para Emails Profesionales
+
+| Expresión | Uso |
+|-----------|-----|
+| I am writing to inquire about... | Para preguntar formalmente |
+| Please find attached... | Adjunto encontrarás |
+| I would appreciate if you could... | Agradecería si pudieras |
+| I look forward to hearing from you | Espero tu respuesta |
+| Should you have any questions... | Si tienes alguna pregunta |
+| Thank you for your prompt response | Gracias por tu pronta respuesta |
+| Please do not hesitate to contact me | No dudes en contactarme |`
+          }
+        ],
+        sprint: {
+          title: "Sprint B2: Avanzado",
+          description: "Demuestra tu dominio del nivel B2",
+          tasks: [
+            {
+              id: "task-b2-1",
+              question: "Escribe un párrafo usando Mixed Conditionals sobre cómo sería tu vida si hubieras tomado decisiones diferentes en el pasado."
+            },
+            {
+              id: "task-b2-2",
+              question: "Reescribe estas oraciones usando Inversión: 1) I have never seen such a thing. 2) She not only finished but also won. 3) We rarely go out."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen B2",
+          description: "Evalúa tus conocimientos del nivel B2",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "If I ___ harder, I would be successful now.", options: ["worked", "had worked", "work"], correctAnswer: 1 },
+            { id: "q2", question: "Rarely ___ such a beautiful view.", options: ["I see", "do I see", "I saw"], correctAnswer: 1 },
+            { id: "q3", question: "By next year, I ___ graduated.", options: ["will", "will have", "would have"], correctAnswer: 1 },
+            { id: "q4", question: "He is believed ___ very rich.", options: ["be", "to be", "being"], correctAnswer: 1 },
+            { id: "q5", question: "I wish I ___ told him the truth.", options: ["have", "hadn't", "didn't"], correctAnswer: 1 },
+            { id: "q6", question: "___ I need is a holiday.", options: ["That", "Which", "What"], correctAnswer: 2 },
+            { id: "q7", question: "___ by the news, she cried.", options: ["Shocked", "Shocking", "Shock"], correctAnswer: 0 },
+            { id: "q8", question: "He must ___ the bus.", options: ["miss", "have missed", "missing"], correctAnswer: 1 },
+            { id: "q9", question: "I ___ live in Paris.", options: ["would", "used to", "use to"], correctAnswer: 1 },
+            { id: "q10", question: "It is bound ___ rain.", options: ["to", "for", "of"], correctAnswer: 0 }
+          ]
+        }
+      },
+      {
+        id: "mod-english-c1",
+        title: "Nivel C1 - Avanzado",
+        description: "Inversión avanzada, subjuntivo formal, cláusulas de participio y conectores sofisticados",
+        theory: [
+          {
+            id: "lesson-c1-grammar",
+            title: "Gramática C1: Nivel Avanzado",
+            content: `# Gramática Nivel C1: Avanzado
+
+## 1. Inversion (Advanced)
+
+Inversión negativa formal para énfasis dramático o retórico.
+
+**Estructuras avanzadas:**
+
+| Expresión | Ejemplo |
+|-----------|---------|
+| Little did... | **Little did** she know what awaited |
+| No sooner... than | **No sooner had** I arrived **than** it started |
+| Under no circumstances | **Under no circumstances** should you leave |
+| Not until | **Not until** he called **did** I realize |
+| Scarcely... when | **Scarcely had** I sat **when** the bell rang |
+
+---
+
+## 2. Cleft Sentences (Avanzado)
+
+Dividir oraciones para enfatizar una parte específica.
+
+**It-clefts:**
+- **It was** her resilience **that** surprised me.
+- **It is** this issue **that** we must address.
+
+**What-clefts:**
+- **What I object to is** the way he spoke.
+- **What distinguishes this** is its quality.
+
+**All-clefts:**
+- **All** he did **was** complain.
+- **All** I want **is** some peace.
+
+---
+
+## 3. Formal Subjunctive
+
+Uso en contextos formales, legales o de urgencia.
+
+**Verbos que requieren subjuntivo:**
+suggest, demand, insist, recommend, require, request, propose
+
+**Regla:** It is vital/imperative/essential that + S + (should) + Base Verb
+
+**Ejemplos:**
+- The judge insisted that the evidence **be** revealed.
+- It is essential that he **be** informed immediately.
+- I recommend that she **take** a break.
+
+---
+
+## 4. Participle Clauses (Avanzado)
+
+Economía del lenguaje: reducir oraciones adverbiales.
+
+**Present Participle (-ing): Activa/Simultánea**
+- **Not wanting** to offend him, I stayed silent.
+- **Working** late, she finished the project.
+
+**Past Participle (-ed/-en): Pasiva**
+- **Stung** by the criticism, he resigned.
+- **Surrounded** by enemies, he surrendered.
+
+**Perfect Participle: Acción anterior**
+- **Having finished** the work, I went home.
+- **Having been warned**, he was careful.
+
+---
+
+## 5. Mixed Conditionals (Advanced)
+
+Mezcla compleja de tiempos.
+
+**Estado permanente → Evento pasado:**
+- If I **weren't** so stubborn, I **would have** apologized yesterday.
+
+**Evento pasado → Situación presente:**
+- If she **had taken** the job, she **would be** happy now.
+
+---
+
+## 6. Future in the Past
+
+Planes fallidos o perspectivas pasadas sobre el futuro.
+
+**Estructuras:**
+| Estructura | Ejemplo |
+|------------|---------|
+| Was/Were to have + PP | The meeting **was to have taken** place Monday |
+| Was/Were going to | I **was going to** call you |
+| Was meaning to | I **was meaning to** tell you |
+| Would have | She **would have** come, but... |
+
+---
+
+## 7. Nominalisation
+
+Transformar verbos/adjetivos en sustantivos para tono académico.
+
+| Verbo/Adj | Sustantivo |
+|-----------|------------|
+| implement | implementation |
+| analyze | analysis |
+| significant | significance |
+| possible | possibility |
+
+**Ejemplo:**
+- We **analyzed** the data → The **analysis** of the data
+- This is very **significant** → The **significance** of this
+
+---
+
+## 8. Discourse Markers
+
+Conectores sofisticados para argumentación y fluidez.
+
+| Marker | Uso |
+|--------|-----|
+| Albeit | Aunque (formal) |
+| Notwithstanding | A pesar de |
+| Hence | Por lo tanto |
+| Thus | Así pues |
+| Thereby | De ese modo |
+| Whereby | Por medio del cual |
+
+**Ejemplo:** It was a difficult, **albeit** necessary, decision.`
+          },
+          {
+            id: "lesson-c1-vocab",
+            title: "Vocabulario C1: Académico y Profesional",
+            content: `# Vocabulario Nivel C1
+
+## Academic & Abstract
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Ubiquitous | Omnipresente / Ubicuo | Smartphones have become ubiquitous |
+| Paradigm | Paradigma / Modelo | A shift in the cultural paradigm |
+| Anomaly | Anomalía | The result was a statistical anomaly |
+| Epitome | Epítome / Ejemplo perfecto | She is the epitome of elegance |
+| Pragmatic | Pragmático / Práctico | We need a pragmatic solution |
+| Ambiguous | Ambiguo | The instructions were rather ambiguous |
+| Scrutinize | Escrutar / Examinar a fondo | The contract was carefully scrutinized |
+| Alleviate | Aliviar / Mitigar | Measures to alleviate poverty |
+
+---
+
+## Nuanced Personality
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Apathetic | Apático / Indiferente | Voters are becoming increasingly apathetic |
+| Conscientious | Concienzudo / Esmerado | A conscientious worker |
+| Gregarious | Gregario / Sociable | He is a gregarious and outgoing person |
+| Meticulous | Meticuloso | Meticulous attention to detail |
+| Obstinate | Obstinado / Terco | Don't be so obstinate |
+| Diffident | Tímido / Falto de confianza | He was diffident about his own success |
+| Exuberant | Exuberante / Entusiasta | She has an exuberant personality |
+| Cynical | Cínico / Escéptico | He is cynical about politicians |
+
+---
+
+## Professional & Business
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Lucrative | Lucrativo / Rentable | A lucrative business deal |
+| Deficit | Déficit | The trade deficit is growing |
+| Incentivize | Incentivar | We need to incentivize productivity |
+| Merger | Fusión (empresas) | The merger of the two banks |
+| Niche | Nicho (mercado) | They found a niche in the market |
+| Turnover | Facturación / Rotación | The company has an annual turnover of $1M |
+| Arbitration | Arbitraje | The dispute went to arbitration |
+| Asset | Activo / Recurso valioso | She is a great asset to the team |
+
+---
+
+## Advanced Idioms
+
+| Idiom | Significado | Ejemplo |
+|-------|-------------|---------|
+| Sit on the fence | No decidirse / Ser neutral | You can't sit on the fence forever |
+| Take with a pinch of salt | No creer del todo | Take his advice with a pinch of salt |
+| Jump on the bandwagon | Seguir la moda | Everyone jumped on the bandwagon |
+| Devil's advocate | Abogado del diablo | I'm just playing devil's advocate |
+| Beat around the bush | Andarse con rodeos | Stop beating around the bush |
+| Once in a blue moon | Muy raramente | It happens once in a blue moon |
+| Blessing in disguise | Hay mal que por bien no venga | Losing that job was a blessing in disguise |
+| Cut corners | Ahorrar esfuerzos/dinero (mal) | Don't cut corners on safety |
+
+---
+
+## Formal Academic Expressions
+
+| Expresión | Uso |
+|-----------|-----|
+| It is worth noting that... | Vale la pena señalar que... |
+| It stands to reason that... | Es lógico que... |
+| It is incumbent upon... | Es responsabilidad de... |
+| Notwithstanding the challenges... | A pesar de los desafíos... |
+| This warrants further investigation | Esto merece más investigación |
+| The findings corroborate... | Los hallazgos corroboran... |`
+          }
+        ],
+        sprint: {
+          title: "Sprint C1: Avanzado",
+          description: "Demuestra tu dominio del nivel C1",
+          tasks: [
+            {
+              id: "task-c1-1",
+              question: "Escribe un párrafo académico sobre un tema de tu elección usando nominalización y al menos 3 conectores formales (albeit, notwithstanding, hence, etc.)."
+            },
+            {
+              id: "task-c1-2",
+              question: "Transforma estas oraciones usando inversión formal: 1) I had never experienced such hospitality. 2) She not only finished the project but also won an award. 3) I realized the truth only when he confessed."
+            }
+          ]
+        },
+        exam: {
+          title: "Examen C1",
+          description: "Evalúa tus conocimientos del nivel C1",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Barely ___ sat down when the waiter brought the menu.", options: ["I had", "had I", "have I"], correctAnswer: 1 },
+            { id: "q2", question: "It is vital that the application ___ submitted by noon.", options: ["is", "be", "will be"], correctAnswer: 1 },
+            { id: "q3", question: "The Prime Minister is believed ___ on the verge of resigning.", options: ["to be", "that he is", "being"], correctAnswer: 0 },
+            { id: "q4", question: "___ for your help, I would have failed.", options: ["If it not", "Had it not been", "Were it not"], correctAnswer: 1 },
+            { id: "q5", question: "It was only when I arrived ___ I realized I had forgotten my keys.", options: ["than", "that", "then"], correctAnswer: 1 },
+            { id: "q6", question: "He is, ___ doubt, the best player in the world.", options: ["without", "beyond", "no"], correctAnswer: 0 },
+            { id: "q7", question: "Not only ___ talented, but he is also hardworking.", options: ["he is", "is he", "he was"], correctAnswer: 1 },
+            { id: "q8", question: "Little ___ she know what was about to happen.", options: ["did", "does", "was"], correctAnswer: 0 },
+            { id: "q9", question: "By the time you arrive, we ___ dinner.", options: ["will finish", "will have finished", "finish"], correctAnswer: 1 },
+            { id: "q10", question: "___ rain, the event will be cancelled.", options: ["Should it", "If it", "Unless it"], correctAnswer: 0 }
+          ]
+        }
+      },
+      {
+        id: "mod-english-c2",
+        title: "Nivel C2 - Maestría",
+        description: "Dominio total: condicionales invertidos, subjuntivo fijo, hedging académico y vocabulario de élite",
+        theory: [
+          {
+            id: "lesson-c2-grammar",
+            title: "Gramática C2: Maestría",
+            content: `# Gramática Nivel C2: Maestría del Inglés
+
+## 1. Inverted Conditionals
+
+Supresión de "If" mediante inversión auxiliar para registros altamente formales.
+
+**Estructuras:**
+
+| Tipo | Estructura | Ejemplo |
+|------|-----------|---------|
+| 2nd | Were + S + to | **Were you to** change your mind, let us know |
+| 3rd | Had + S + PP | **Had** the government not intervened, chaos would have ensued |
+| Mixed | Should + S | **Should** you require assistance, contact us |
+
+---
+
+## 2. Fixed Subjunctive Phrases
+
+Expresiones fosilizadas que mantienen la forma base del verbo.
+
+**Expresiones comunes:**
+- **Suffice it to say** (Basta con decir)
+- **Be that as it may** (Sea como fuere)
+- **So be it** (Así sea)
+- **Come what may** (Pase lo que pase)
+- **God forbid** (Dios no lo quiera)
+- **Heaven help us** (Que Dios nos ayude)
+
+**Ejemplo:** Be that as it may, we must continue with the original plan.
+
+---
+
+## 3. Advanced Cleft Sentences
+
+Estructuras de énfasis complejas.
+
+**Pseudo-clefts con what:**
+- **What distinguishes** this theory **is** its reliance on empirical data.
+- **What I realized was** how late it had become.
+
+**All-clefts:**
+- **All** he ever did **was** complain.
+- **The only thing** I want **is** peace.
+
+**Negative clefts:**
+- **It was not until** the evidence was presented **that** they believed.
+
+---
+
+## 4. Perfect Participle Clauses
+
+Reducción de oraciones temporales o causales complejas.
+
+**Estructura:** Having + Past Participle, [Main Clause]
+
+**Ejemplos:**
+- **Having been warned** twice, he was finally dismissed.
+- **Not having read** the instructions carefully, he failed.
+- **Having completed** the training, she was promoted.
+
+---
+
+## 5. Future Perfect Continuous
+
+Proyección de duración en un punto futuro específico.
+
+**Regla:** Will have been + Verb-ing
+
+**Ejemplos:**
+- By 2030, we **will have been living** here for twenty years.
+- Next month, I **will have been working** here for a decade.
+- By then, they **will have been waiting** for hours.
+
+---
+
+## 6. Sophisticated Discourse Markers
+
+Conectores arcaicos o literarios para cohesión textual.
+
+| Marker | Significado | Uso |
+|--------|-------------|-----|
+| Albeit | Aunque | Formal, concesivo |
+| Notwithstanding | A pesar de | Muy formal |
+| Hereby | Por la presente | Legal/oficial |
+| Thereafter | Después de eso | Narrativo formal |
+| Whereby | Por medio del cual | Explicativo |
+| Hitherto | Hasta ahora | Académico |
+
+**Ejemplo:** The decision was risky, notwithstanding the potential rewards.
+
+---
+
+## 7. Passive Reporting Structures
+
+Distanciamiento periodístico o académico sobre hechos no verificados.
+
+**Estructura:** S + is said/thought/alleged + to have + PP
+
+**Ejemplos:**
+- The fugitive **is alleged to have crossed** the border last night.
+- The painting **is believed to have been painted** by Da Vinci.
+- He **is reported to have fled** the country.
+
+---
+
+## 8. Hedging & Boosters
+
+Matizar afirmaciones (Epistemic modality) para precisión académica.
+
+**Hedging (atenuadores):**
+| Expresión | Ejemplo |
+|-----------|---------|
+| Seemingly | It **seemingly** had no effect |
+| Arguably | It is **arguably** the best |
+| In all likelihood | **In all likelihood**, they knew |
+| It would appear that | **It would appear that** |
+| To some extent | **To some extent**, true |
+
+**Boosters (intensificadores):**
+| Expresión | Ejemplo |
+|-----------|---------|
+| Undoubtedly | **Undoubtedly** the finest |
+| It stands to reason | **It stands to reason** that |
+| There is no denying | **There is no denying** that |`
+          },
+          {
+            id: "lesson-c2-vocab",
+            title: "Vocabulario C2: Vocabulario de Élite",
+            content: `# Vocabulario Nivel C2
+
+## Literary & Cultured
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Epiphany | Epifanía / Revelación súbita | He had a sudden epiphany about his career |
+| Cacophony | Cacofonía / Discordancia | A cacophony of car horns filled the street |
+| Ephemeral | Efímero / Fugaz | Fashion trends are often ephemeral |
+| Serendipity | Serendipia / Chiripa afortunada | Meeting her there was pure serendipity |
+| Obfuscate | Ofuscar / Confundir deliberadamente | He tried to obfuscate the issue with jargon |
+| Mellifluous | Melifluo / Dulce al oído | She had a rich, mellifluous voice |
+| Quintessential | Por excelencia / Quintesencial | He is the quintessential gentleman |
+| Vicarious | Vicario / Indirecto | She gets a vicarious thrill from reading |
+
+---
+
+## Academic & Abstract
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Acquiesce | Consentir / Acceder (a regañadientes) | She eventually acquiesced to their demands |
+| Ameliorate | Mejorar / Mitigar (situación) | Steps to ameliorate the housing crisis |
+| Disseminate | Diseminar / Difundir (info) | The internet allows us to disseminate information |
+| Empirical | Empírico / Basado en observación | There is no empirical evidence to support this |
+| Paradigm | Paradigma / Modelo ejemplar | A shift in the prevailing economic paradigm |
+| Substantiate | Fundamentar / Corroborar | Can you substantiate your claims with data? |
+| Proliferate | Proliferar / Multiplicarse | Rumors proliferated on social media |
+| Exacerbate | Exacerbar / Empeorar | Stress can exacerbate existing health problems |
+
+---
+
+## Idioms & Fixed Phrases
+
+| Idiom | Significado | Ejemplo |
+|-------|-------------|---------|
+| A bone of contention | Manzana de la discordia | Money was a major bone of contention |
+| Cut no ice | No convencer / No importar | His excuses cut no ice with the manager |
+| Go against the grain | Ir contra la corriente | It goes against the grain to lie |
+| Play second fiddle | Estar en segundo plano | He tired of playing second fiddle |
+| Take umbrage | Ofenderse / Resentirse | She took umbrage at his remarks |
+| The tip of the iceberg | La punta del iceberg | The reported cases are just the tip |
+| Throw caution to the wind | Arriesgarse totalmente | They threw caution to the wind |
+| Wreak havoc | Causar estragos | The storm wreaked havoc on the coast |
+
+---
+
+## Precision & Nuance
+
+| Inglés | Español | Ejemplo |
+|--------|---------|---------|
+| Fastidious | Exigente / Meticuloso | He is fastidious about personal hygiene |
+| Inadvertently | Inadvertidamente / Sin querer | I inadvertently deleted the file |
+| Ostensibly | Aparentemente / Supuestamente | He went to the library, ostensibly to study |
+| Plausible | Verosímil / Creíble | A perfectly plausible explanation |
+| Scathing | Mordaz / Cáustico (crítica) | He delivered a scathing attack on the policy |
+| Uncanny | Insólito / Misterioso | An uncanny resemblance to her mother |
+| Voracious | Voraz | A voracious reader of history books |
+| Astute | Astuto / Sagaz | An astute observation about human nature |
+
+---
+
+## Advanced Academic Phrases
+
+| Expresión | Uso |
+|-----------|-----|
+| It behooves us to... | Nos corresponde/incumbe... |
+| This warrants scrutiny | Esto merece escrutinio |
+| The ramifications of... | Las ramificaciones de... |
+| It is incumbent upon... | Es responsabilidad de... |
+| The findings corroborate... | Los hallazgos corroboran... |
+| This phenomenon transcends... | Este fenómeno trasciende... |
+| The dichotomy between... | La dicotomía entre... |
+| To discern the nuances... | Discernir los matices... |`
+          }
+        ],
+        sprint: {
+          title: "Sprint C2: Maestría",
+          description: "Demuestra tu dominio total del inglés",
+          tasks: [
+            {
+              id: "task-c2-1",
+              question: "Escribe un ensayo corto (200-250 palabras) sobre un tema académico usando inversión condicional, hedging, y al menos 5 palabras de vocabulario C2."
+            },
+            {
+              id: "task-c2-2",
+              question: "Traduce al inglés usando estructuras C2: 'De no haber sido por su intervención, la crisis habría empeorado. Sea como fuere, los resultados fueron mejores de lo esperado. Basta con decir que su contribución fue inestimable.'"
+            }
+          ]
+        },
+        exam: {
+          title: "Examen C2",
+          description: "Evalúa tu maestría del inglés",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Scarcely had the announcement been made ___ the protests began.", options: ["than", "when", "then"], correctAnswer: 1 },
+            { id: "q2", question: "Whatever ___ to him, I will never forgive him.", options: ["happens", "may happen", "happened"], correctAnswer: 1 },
+            { id: "q3", question: "Were it not for his assistance, we ___ completed the project.", options: ["would not have", "had not", "did not"], correctAnswer: 0 },
+            { id: "q4", question: "The Prime Minister is alleged ___ a secret deal.", options: ["to sign", "to have signed", "signing"], correctAnswer: 1 },
+            { id: "q5", question: "So intense was the heat ___ we couldn't go outside.", options: ["as", "when", "that"], correctAnswer: 2 },
+            { id: "q6", question: "___ for the traffic, I would have arrived on time.", options: ["But", "Had it not been", "Were it not"], correctAnswer: 1 },
+            { id: "q7", question: "I'm at a ___ to understand his motives.", options: ["loss", "lack", "miss"], correctAnswer: 0 },
+            { id: "q8", question: "It stands to ___ that practice makes perfect.", options: ["reason", "say", "logic"], correctAnswer: 0 },
+            { id: "q9", question: "Little ___ he know what fate had in store.", options: ["did", "does", "was"], correctAnswer: 0 },
+            { id: "q10", question: "Be that as it ___.", options: ["may", "will", "is"], correctAnswer: 0 }
+          ]
+        }
+      }
+    ]
+  },
+  {
     id: "intro-lovirtual",
     title: "Introducción a LoVirtual",
     slug: "introduccion-lovirtual",
