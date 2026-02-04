@@ -8473,17 +8473,23 @@ Pueden pedirte:
     title: "Contabilidad para Asistentes Virtuales",
     slug: "contabilidad",
     description: "Transforma tu rol de digitador a consultor estratégico. Domina conciliaciones, análisis financiero, gestión de flujo de caja y presentación ejecutiva para convertirte en un aliado indispensable para cualquier negocio.",
+    duration: "~30 horas",
+    totalLessons: "18 Lecciones + Proyectos Prácticos",
+    icon: "Calculator",
+    color: "from-blue-500 to-cyan-500",
+    certificate: {
+      title: "Certificado en Contabilidad para Asistentes Virtuales",
+      description: "Ha completado satisfactoriamente el curso de Contabilidad con dominio en conciliaciones, análisis financiero y gestión de flujo de caja"
+    },
     modules: [
       {
         id: "module-conta-intro",
         title: "El Rol del Asistente Contable Proactivo",
         description: "Descubre cómo transformar tu rol de digitador a consultor estratégico",
-        icon: "Briefcase",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-intro-1",
             title: "Más Allá de la Digitación",
-            duration: "15 min",
             content: `# El Rol del Asistente Contable Proactivo
 
 ## Más Allá de la Digitación
@@ -8575,12 +8581,10 @@ Tu objetivo como profesional contable proactivo es lograr:
         id: "module-conta-1",
         title: "Fundamentos y Precisión Conceptual",
         description: "Domina los conceptos base: caja vs. devengado, categorización y GAAP",
-        icon: "BookOpen",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-1-1",
             title: "Contabilidad de Caja vs. Devengado",
-            duration: "20 min",
             content: `# Fundamentos y Precisión Conceptual
 
 ## La Base de Todo: Entender Cómo Fluye el Dinero
@@ -8646,7 +8650,6 @@ Registrar una transacción con el método equivocado distorsiona completamente l
           {
             id: "lesson-conta-1-2",
             title: "Categorización y Principios GAAP",
-            duration: "20 min",
             content: `# La Importancia de la Categorización y GAAP
 
 ## La Categorización Exacta es Crítica
@@ -8750,12 +8753,10 @@ Enfocarse en lo **significativo**. Un error de $5 no amerita el mismo tratamient
         id: "module-conta-2",
         title: "La Conciliación Manual en Excel",
         description: "Domina el cruce manual de datos y detección de errores",
-        icon: "FileSpreadsheet",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-2-1",
             title: "Fundamentos de Conciliación Bancaria",
-            duration: "25 min",
             content: `# La Conciliación Manual en Excel
 
 ## ¿Por Qué No Confiar Ciegamente en la Automatización?
@@ -8822,7 +8823,6 @@ Tu conciliación debe mostrar:
           {
             id: "lesson-conta-2-2",
             title: "Técnicas de Cruce en Excel y Detección de Errores",
-            duration: "30 min",
             content: `# Técnicas de Cruce en Excel
 
 ## Preparación de Datos
@@ -8940,12 +8940,10 @@ Si tienes transacciones "pendientes de conciliar" de hace meses o años:
         id: "module-conta-3",
         title: "Gestión de Cartera (Cuentas por Cobrar)",
         description: "Seguimiento de facturas, etiqueta de cobro y reportes de antigüedad",
-        icon: "Receipt",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-3-1",
             title: "El Dinero que Te Deben",
-            duration: "20 min",
             content: `# Gestión de Cartera (Cuentas por Cobrar - A/R)
 
 ## El Dinero que Te Deben: Tu Responsabilidad
@@ -9008,7 +9006,6 @@ Las Cuentas por Cobrar (Accounts Receivable o A/R) representan el dinero que los
           {
             id: "lesson-conta-3-2",
             title: "Aging Reports e Indicadores Clave",
-            duration: "20 min",
             content: `# Reportes de Antigüedad e Indicadores
 
 ## El Aging Report: Tu Mapa del Tesoro
@@ -9123,12 +9120,10 @@ El Aging Report muestra exactamente dónde está el dinero pendiente y su antig�
         id: "module-conta-4",
         title: "Investigación Analítica y Cierre de Mes",
         description: "Checklist de cierre, investigación de transacciones y validación",
-        icon: "CheckSquare",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-4-1",
             title: "El Checklist de Cierre Mensual",
-            duration: "25 min",
             content: `# Investigación Analítica y Cierre de Mes Integral
 
 ## El Cierre: Tu Momento de Brillar
@@ -9195,7 +9190,6 @@ El cierre de mes no es solo "cerrar los libros". Es tu oportunidad de demostrar 
           {
             id: "lesson-conta-4-2",
             title: "Investigación de Transacciones Sin Clasificar",
-            duration: "20 min",
             content: `# Investigación de Transacciones Sin Clasificar
 
 ## La Cuenta "Ask my Accountant"
@@ -9300,12 +9294,10 @@ Al finalizar, prepara un resumen ejecutivo:
         id: "module-conta-5",
         title: "Análisis de Variación (P&L vs. Presupuesto)",
         description: "Comparar real vs. planeado e identificar fugas de dinero",
-        icon: "TrendingUp",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-5-1",
             title: "El Arte de Explicar los Números",
-            duration: "25 min",
             content: `# Análisis de Variación (P&L vs. Presupuesto)
 
 ## El Arte de Explicar los Números
@@ -9373,7 +9365,6 @@ La diferencia entre ambos es la **variación**, y tu trabajo es explicar el **po
           {
             id: "lesson-conta-5-2",
             title: "Timing, CAPEX vs OPEX y Accruals",
-            duration: "30 min",
             content: `# Conceptos Clave para el Análisis
 
 ## Timing Difference (Diferencia Temporal)
@@ -9477,12 +9468,10 @@ La diferencia entre ambos es la **variación**, y tu trabajo es explicar el **po
         id: "module-conta-6",
         title: "Gestión de Cuentas por Pagar y Flujo de Caja",
         description: "Organización de facturas, programación de pagos y liquidez",
-        icon: "CreditCard",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-6-1",
             title: "El Otro Lado de la Moneda: A/P",
-            duration: "20 min",
             content: `# Gestión de Cuentas por Pagar (A/P) y Flujo de Caja
 
 ## El Otro Lado de la Moneda
@@ -9557,7 +9546,6 @@ Si las Cuentas por Cobrar son el dinero que te deben, las **Cuentas por Pagar (A
           {
             id: "lesson-conta-6-2",
             title: "Programación Estratégica de Pagos",
-            duration: "20 min",
             content: `# Programación Estratégica de Pagos
 
 ## El Balance: No Demasiado Rápido, No Demasiado Tarde
@@ -9666,12 +9654,10 @@ Días de Inventario + Días de Cobro - Días de Pago = Ciclo de Efectivo
         id: "module-conta-7",
         title: "Proyección de Flujo de Caja (Forecasting)",
         description: "Mirar al futuro, prevenir déficits y tomar decisiones basadas en datos",
-        icon: "LineChart",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-7-1",
             title: "Mirar al Futuro: Tu Superpoder Contable",
-            duration: "25 min",
             content: `# Proyección de Flujo de Caja (Forecasting)
 
 ## Mirar al Futuro: Tu Superpoder Contable
@@ -9738,7 +9724,6 @@ Es una proyección de:
           {
             id: "lesson-conta-7-2",
             title: "Jerarquía de Pagos y Rentabilidad vs. Liquidez",
-            duration: "25 min",
             content: `# Jerarquía de Pagos y Conceptos Críticos
 
 ## Jerarquía de Pagos en Crisis de Liquidez
@@ -9847,12 +9832,10 @@ No solo creas el reporte. Lo **interpretas**, **alertas** sobre riesgos y **reco
         id: "module-conta-8",
         title: "Auditoría de Nómina (Pre-Procesamiento)",
         description: "Revisión de horas, comisiones, bonos y cumplimiento de retenciones",
-        icon: "Users",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-8-1",
             title: "Antes de Pagar: Revisar",
-            duration: "25 min",
             content: `# Auditoría de Nómina (Pre-Procesamiento)
 
 ## Antes de Pagar: Revisar
@@ -9931,7 +9914,6 @@ Aunque el procesamiento final pueda estar en manos de otro departamento, tu audi
           {
             id: "lesson-conta-8-2",
             title: "Señales de Alerta y Proceso de Auditoría",
-            duration: "20 min",
             content: `# Señales de Alerta y Proceso de Auditoría
 
 ## Señales de Alerta en Nómina
@@ -10043,12 +10025,10 @@ Informar discrepancias al responsable.
         id: "module-conta-9",
         title: "El Paquete de Cierre Ejecutivo",
         description: "Presentación de resultados, paquete ejecutivo y reunión de entrega",
-        icon: "PresentationChart",
-        lessons: [
+        theory: [
           {
             id: "lesson-conta-9-1",
             title: "La Entrega que Define tu Profesionalismo",
-            duration: "25 min",
             content: `# El Paquete de Cierre Ejecutivo
 
 ## La Entrega que Define tu Profesionalismo
@@ -10124,7 +10104,6 @@ El dueño de negocio:
           {
             id: "lesson-conta-9-2",
             title: "La Reunión de Entrega y Demostrar Valor",
-            duration: "20 min",
             content: `# La Reunión de Entrega
 
 ## No Solo Envíes un PDF
@@ -10250,17 +10229,23 @@ Has completado esta especialización. Ahora tienes las herramientas para ser un 
     title: "Administración y Gestión Empresarial",
     slug: "administracion",
     description: "Domina las competencias fundamentales de administración empresarial: planificación estratégica, gestión de proyectos, liderazgo, toma de decisiones y optimización de operaciones para convertirte en un profesional integral.",
+    duration: "~35 horas",
+    totalLessons: "18 Lecciones + Casos Prácticos",
+    icon: "Briefcase",
+    color: "from-indigo-500 to-violet-500",
+    certificate: {
+      title: "Certificado en Administración y Gestión Empresarial",
+      description: "Ha completado satisfactoriamente el curso de Administración con dominio en planificación estratégica, gestión de proyectos y liderazgo"
+    },
     modules: [
       {
         id: "module-admin-1",
         title: "Fundamentos de la Administración Empresarial",
         description: "Comprende los principios básicos que rigen toda organización exitosa",
-        icon: "Building2",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-1-1",
             title: "¿Qué es la Administración?",
-            duration: "20 min",
             content: `# Fundamentos de la Administración Empresarial
 
 ## ¿Qué es la Administración?
@@ -10338,7 +10323,6 @@ Las competencias modernas incluyen:
           {
             id: "lesson-admin-1-2",
             title: "Evolución del Pensamiento Administrativo",
-            duration: "25 min",
             content: `# Evolución del Pensamiento Administrativo
 
 ## De Taylor a la Era Digital
@@ -10459,12 +10443,10 @@ La organización como un **sistema abierto**:
         id: "module-admin-2",
         title: "Planificación Estratégica",
         description: "Aprende a definir visión, misión, objetivos y estrategias organizacionales",
-        icon: "Target",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-2-1",
             title: "El Proceso de Planificación",
-            duration: "25 min",
             content: `# Planificación Estratégica
 
 ## ¿Por Qué Planificar?
@@ -10546,7 +10528,6 @@ Deben ser **SMART**:
           {
             id: "lesson-admin-2-2",
             title: "Análisis Estratégico: FODA y más",
-            duration: "30 min",
             content: `# Análisis Estratégico
 
 ## El Análisis FODA (SWOT)
@@ -10673,12 +10654,10 @@ Para analizar la **industria**:
         id: "module-admin-3",
         title: "Gestión del Tiempo y Productividad",
         description: "Técnicas y herramientas para maximizar tu efectividad personal y profesional",
-        icon: "Clock",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-3-1",
             title: "Principios de Gestión del Tiempo",
-            duration: "25 min",
             content: `# Gestión del Tiempo y Productividad
 
 ## El Recurso Más Valioso
@@ -10762,7 +10741,6 @@ Cada vez que cambias de tarea:
           {
             id: "lesson-admin-3-2",
             title: "Técnicas y Herramientas de Productividad",
-            duration: "25 min",
             content: `# Técnicas y Herramientas de Productividad
 
 ## Técnica Pomodoro
@@ -10906,12 +10884,10 @@ Elige qué hacer basándote en contexto, tiempo disponible, energía y prioridad
         id: "module-admin-4",
         title: "Gestión de Proyectos",
         description: "Planifica, ejecuta y controla proyectos exitosamente con metodologías probadas",
-        icon: "FolderKanban",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-4-1",
             title: "Fundamentos de Gestión de Proyectos",
-            duration: "25 min",
             content: `# Gestión de Proyectos
 
 ## ¿Qué es un Proyecto?
@@ -10996,7 +10972,6 @@ Documento que autoriza formalmente el proyecto:
           {
             id: "lesson-admin-4-2",
             title: "Metodologías: Tradicional vs. Ágil",
-            duration: "30 min",
             content: `# Metodologías de Gestión de Proyectos
 
 ## Enfoque Tradicional (Cascada/Waterfall)
@@ -11128,12 +11103,10 @@ Documento que autoriza formalmente el proyecto:
         id: "module-admin-5",
         title: "Gestión de Recursos Humanos",
         description: "Atrae, desarrolla y retén el talento que impulsa a las organizaciones",
-        icon: "Users",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-5-1",
             title: "El Ciclo de Gestión del Talento",
-            duration: "25 min",
             content: `# Gestión de Recursos Humanos
 
 ## Las Personas: El Activo Más Valioso
@@ -11222,7 +11195,6 @@ Documento fundamental que define:
           {
             id: "lesson-admin-5-2",
             title: "Evaluación de Desempeño y Compensación",
-            duration: "25 min",
             content: `# Evaluación de Desempeño y Compensación
 
 ## ¿Por Qué Evaluar el Desempeño?
@@ -11360,12 +11332,10 @@ La compensación va más allá del salario:
         id: "module-admin-6",
         title: "Comunicación Empresarial",
         description: "Domina las habilidades de comunicación efectiva en entornos profesionales",
-        icon: "MessageSquare",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-6-1",
             title: "Fundamentos de la Comunicación Efectiva",
-            duration: "25 min",
             content: `# Comunicación Empresarial
 
 ## El Proceso de Comunicación
@@ -11459,7 +11429,6 @@ La compensación va más allá del salario:
           {
             id: "lesson-admin-6-2",
             title: "Comunicación Escrita y Reuniones Efectivas",
-            duration: "25 min",
             content: `# Comunicación Escrita y Reuniones
 
 ## Comunicación Escrita Profesional
@@ -11600,12 +11569,10 @@ Una reunión de 1 hora con 8 personas = 8 horas de productividad
         id: "module-admin-7",
         title: "Toma de Decisiones y Resolución de Problemas",
         description: "Desarrolla pensamiento crítico para enfrentar desafíos complejos",
-        icon: "Lightbulb",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-7-1",
             title: "El Proceso de Toma de Decisiones",
-            duration: "25 min",
             content: `# Toma de Decisiones y Resolución de Problemas
 
 ## La Importancia de Decidir Bien
@@ -11686,7 +11653,6 @@ Una reunión de 1 hora con 8 personas = 8 horas de productividad
           {
             id: "lesson-admin-7-2",
             title: "Herramientas de Análisis y Resolución",
-            duration: "25 min",
             content: `# Herramientas de Análisis y Resolución
 
 ## Los 5 Porqués (Root Cause Analysis)
@@ -11837,12 +11803,10 @@ Preguntas para generar ideas:
         id: "module-admin-8",
         title: "Liderazgo y Motivación",
         description: "Desarrolla las habilidades para inspirar y guiar equipos hacia el éxito",
-        icon: "Award",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-8-1",
             title: "Estilos de Liderazgo",
-            duration: "25 min",
             content: `# Liderazgo y Motivación
 
 ## ¿Qué es el Liderazgo?
@@ -11934,7 +11898,6 @@ Adapta el estilo según la madurez del colaborador:
           {
             id: "lesson-admin-8-2",
             title: "Teorías de Motivación",
-            duration: "25 min",
             content: `# Teorías de Motivación
 
 ## ¿Qué nos Motiva?
@@ -12077,12 +12040,10 @@ Las necesidades humanas en orden jerárquico:
         id: "module-admin-9",
         title: "Gestión del Cambio e Innovación",
         description: "Lidera transformaciones organizacionales y fomenta la cultura de innovación",
-        icon: "RefreshCw",
-        lessons: [
+        theory: [
           {
             id: "lesson-admin-9-1",
             title: "El Proceso del Cambio Organizacional",
-            duration: "25 min",
             content: `# Gestión del Cambio e Innovación
 
 ## ¿Por Qué el Cambio es Difícil?
@@ -12168,7 +12129,6 @@ Etapas emocionales durante el cambio:
           {
             id: "lesson-admin-9-2",
             title: "Cultura de Innovación",
-            duration: "25 min",
             content: `# Cultura de Innovación
 
 ## ¿Qué es Innovar?
