@@ -3772,5 +3772,531 @@ La mejor forma de evitar sanciones es:
         }
       }
     ]
+  },
+  {
+    id: "herramientas-digitales",
+    title: "Herramientas Digitales",
+    slug: "herramientas-digitales",
+    description: "Domina Google Workspace, Microsoft 365, gestores de proyectos y las herramientas esenciales del trabajo remoto.",
+    duration: "3 Semanas",
+    totalLessons: "24 Lecciones",
+    icon: "Laptop",
+    color: "from-purple-500 to-pink-500",
+    certificate: {
+      title: "Certificado en Herramientas Digitales",
+      description: "Ha demostrado dominio de las herramientas digitales esenciales para el trabajo remoto"
+    },
+    modules: [
+      {
+        id: "mod-hd-1",
+        title: "Google Workspace Profesional",
+        description: "Domina el ecosistema de Google para maximizar tu productividad",
+        theory: [
+          {
+            id: "lesson-hd-1-1",
+            title: "Gmail: Gestión Profesional del Correo",
+            content: `# Gmail: Gestión Profesional del Correo
+
+## Inbox Zero: El Santo Grial de la Productividad
+
+El método Inbox Zero no significa tener cero emails, sino tener **cero emails sin procesar**. Cada email debe tener una acción clara.
+
+## Configuración Profesional de Gmail
+
+### 1. Organización con Etiquetas
+
+Las etiquetas son más poderosas que las carpetas porque un email puede tener múltiples etiquetas.
+
+**Sistema de etiquetas recomendado:**
+- 📁 CLIENTES (con subcarpetas por cliente)
+- 📁 PROYECTOS (activos)
+- 📁 ACCIÓN (Urgente, Esta semana, Cuando pueda)
+- 📁 REFERENCIA (Plantillas, Recursos, Facturas)
+
+### 2. Filtros Automáticos
+
+Procesan emails automáticamente:
+- **Newsletters** → Etiqueta "Leer después", archivar
+- **Notificaciones automáticas** → Archivar sin bandeja
+- **Emails de cliente específico** → Etiqueta del cliente
+
+### 3. Plantillas de Respuesta
+
+Plantillas que todo AV necesita:
+- Confirmación de recepción
+- Solicitud de más información
+- Confirmación de tarea completada
+- Propuesta de reunión
+
+### 4. Programación de Envío
+
+Mejores prácticas:
+- Envía en horario laboral del destinatario
+- Programa emails del fin de semana para lunes
+
+## Atajos de Teclado Esenciales
+
+| Atajo | Acción |
+|-------|--------|
+| C | Redactar nuevo email |
+| R | Responder |
+| E | Archivar |
+| L | Aplicar etiqueta |
+
+## El Método de los 4 D's
+
+1. **Delete**: No necesitas → Borrar/archivar
+2. **Do**: Menos de 2 minutos → Hazlo ahora
+3. **Delegate**: No es tu tarea → Reenvía
+4. **Defer**: Más de 2 minutos → Lista de tareas`
+          },
+          {
+            id: "lesson-hd-1-2",
+            title: "Google Calendar: Gestión del Tiempo",
+            content: `# Google Calendar: Gestión Experta del Tiempo
+
+## Configuración Avanzada
+
+### Múltiples Calendarios por Propósito
+- 📅 Personal: Citas médicas, familia
+- 💼 Trabajo General: Reuniones, deadlines
+- 🎯 Deep Work: Bloques de trabajo enfocado
+- 👤 Por Cliente: Calendario por cliente
+
+### Zonas Horarias Múltiples
+Como AV trabajarás con clientes globales. Configura zonas secundarias.
+
+## Técnicas de Bloqueo de Tiempo
+
+**Ejemplo de día bloqueado:**
+- 8:00 - 8:30 ☀️ Planificación
+- 8:30 - 9:00 📧 Email
+- 9:00 - 11:00 🎯 Deep Work
+- 11:00 - 11:15 ☕ Descanso
+- 11:15 - 12:30 💬 Reuniones
+- 12:30 - 1:30 🍽️ Almuerzo
+- 1:30 - 3:30 🎯 Deep Work
+- 3:30 - 4:00 📧 Email
+- 4:00 - 5:00 📋 Tareas administrativas
+
+### Buffer Time
+Nunca agendes reuniones consecutivas. Agrega 15-30 minutos entre ellas.`
+          },
+          {
+            id: "lesson-hd-1-3",
+            title: "Google Drive y Docs",
+            content: `# Google Drive y Docs: Colaboración Efectiva
+
+## Estructura de Carpetas Profesional
+
+**Sistema recomendado:**
+- 📁 1. CLIENTES (subcarpetas por cliente)
+- 📁 2. PERSONAL (Portafolio, Plantillas, Certificaciones)
+- 📁 3. RECURSOS (Tutoriales, Referencias)
+- 📁 4. ARCHIVO (proyectos terminados)
+
+## Funciones Clave de Drive
+
+**Búsqueda Avanzada:**
+- type:document - Solo Docs
+- owner:email - Por dueño
+- before:2024-01-01 - Antes de fecha
+
+**Niveles de Compartir:**
+| Nivel | Uso |
+|-------|-----|
+| Viewer | Solo ver |
+| Commenter | Ver y comentar |
+| Editor | Modificar |
+
+## Google Docs
+
+Para revisión con clientes: **SIEMPRE usa modo sugerencias**
+
+## Google Sheets
+
+Funciones esenciales:
+- BUSCARV: Buscar valores
+- Formato Condicional: Reglas visuales
+- Validación de Datos: Desplegables
+- Tablas Dinámicas: Análisis de datos`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Google Workspace",
+          description: "Demuestra tu dominio del ecosistema Google",
+          tasks: [
+            { id: "task-hd-1", question: "Configura tu Gmail con sistema de etiquetas, 2 filtros automáticos y 2 plantillas profesionales." },
+            { id: "task-hd-2", question: "Diseña tu día ideal en Google Calendar con time blocking y múltiples calendarios." },
+            { id: "task-hd-3", question: "Crea estructura de carpetas en Drive con plantillas de informe semanal y tracking de tiempo." }
+          ]
+        },
+        exam: {
+          title: "Evaluación: Google Workspace",
+          description: "Evalúa tus conocimientos",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "El método 'Inbox Zero' significa:", options: ["Eliminar todos los emails", "Tener cero emails sin procesar", "Responder todo inmediatamente", "No usar email"], correctAnswer: 1 },
+            { id: "q2", question: "Ventaja de etiquetas sobre carpetas:", options: ["Tienen colores", "Un email puede tener múltiples etiquetas", "Son más fáciles", "Ocupan menos espacio"], correctAnswer: 1 },
+            { id: "q3", question: "Para revisión con clientes usar:", options: ["Modo edición", "Modo sugerencia", "PDF", "Permisos de propietario"], correctAnswer: 1 },
+            { id: "q4", question: "Buffer time entre reuniones sirve para:", options: ["Parecer ocupado", "Procesar notas y prepararse", "Requisito de Calendar", "Cobrar más"], correctAnswer: 1 },
+            { id: "q5", question: "El método de los 4 D's incluye:", options: ["Download, Delete, Draft, Done", "Delete, Do, Delegate, Defer", "Decide, Deliver, Document, Discuss", "Ninguna"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "comunicacion-efectiva",
+    title: "Comunicación Efectiva",
+    slug: "comunicacion-efectiva",
+    description: "Domina el arte de la comunicación escrita y verbal para destacar en el entorno profesional remoto.",
+    duration: "2 Semanas",
+    totalLessons: "12 Lecciones",
+    icon: "MessageSquare",
+    color: "from-green-500 to-teal-500",
+    certificate: {
+      title: "Certificado en Comunicación Efectiva",
+      description: "Ha demostrado excelencia en comunicación profesional remota"
+    },
+    modules: [
+      {
+        id: "mod-ce-1",
+        title: "Comunicación Escrita Profesional",
+        description: "Domina el arte de escribir emails y mensajes efectivos",
+        theory: [
+          {
+            id: "lesson-ce-1-1",
+            title: "Principios de Comunicación Escrita",
+            content: `# Principios de la Comunicación Escrita Profesional
+
+## Por Qué la Escritura es tu Superpoder
+
+En el trabajo remoto, el 90% de tu comunicación es escrita.
+
+## El Framework CLEAR
+
+### C - Conciso
+Elimina palabras innecesarias. Cada palabra debe aportar valor.
+
+### L - Legible
+- Párrafos cortos (3-4 líneas)
+- Bullets para listas
+- Negritas para puntos clave
+
+### E - Específico
+Sé preciso con fechas, cantidades y responsables.
+
+### A - Accionable
+Cada comunicación debe tener un propósito claro.
+
+### R - Respetuoso
+Mantén un tono profesional.
+
+## Anatomía del Email Perfecto
+
+### Asunto
+- [Acción requerida] + Tema + Fecha límite
+- [Para tu información] + Resumen
+
+### Cuerpo
+- Un tema por email
+- Información más importante primero
+- Bullets para múltiples puntos
+
+### Cierre
+- ¿Qué necesitas del lector?
+- ¿Para cuándo?`
+          },
+          {
+            id: "lesson-ce-1-2",
+            title: "Mensajería Instantánea",
+            content: `# Comunicación en Mensajería Instantánea
+
+## La Regla del Mensaje Completo
+
+**NO hagas esto:**
+- Hola
+- ¿Cómo estás?
+- Tengo una pregunta
+
+**SÍ haz esto:**
+- Hola María, pregunta sobre proyecto ABC: ¿El deadline sigue siendo el viernes?
+
+## Principios
+
+### Contexto Antes de Pregunta
+### Usa Hilos (Threads)
+### Estados y Disponibilidad
+- 🟢 Disponible
+- 🟡 Ausente
+- 🔴 No molestar
+
+## La Regla de los 3 Mensajes
+
+Si un tema requiere más de 3 intercambios, probablemente es mejor una llamada.
+
+## Expectativas con Clientes
+
+"Respondo mensajes dentro de 2-4 horas en horario laboral. Para urgencias, llámame."`
+          },
+          {
+            id: "lesson-ce-1-3",
+            title: "Documentación y Reportes",
+            content: `# Documentación y Reportes Profesionales
+
+## El Poder de Documentar
+
+- Reduce preguntas repetitivas
+- Facilita handoffs
+- Demuestra profesionalismo
+
+## Tipos de Documentación
+
+### 1. SOPs (Standard Operating Procedures)
+- Objetivo
+- Frecuencia
+- Tiempo estimado
+- Herramientas
+- Pasos detallados
+- Problemas comunes
+
+### 2. Reportes Semanales
+- Resumen ejecutivo (2-3 oraciones)
+- Logros de la semana
+- Métricas clave
+- Desafíos y soluciones
+- Próxima semana
+
+### 3. Actas de Reunión
+- Fecha, Hora, Participantes
+- Agenda
+- Resumen
+- Decisiones
+- Action Items
+- Próxima reunión
+
+## Principios
+
+1. Escribe para tu Yo del Futuro
+2. Usa Formato Consistente
+3. Actualiza Regularmente
+4. Hazla Encontrable
+5. Incluye Screenshots`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Comunicación Profesional",
+          description: "Demuestra dominio de la comunicación escrita",
+          tasks: [
+            { id: "task-ce-1", question: "Reescribe estos emails aplicando CLEAR: 'hola como estas necesito ayuda con algo' y 'URGENTE!!! Necesito el reporte YA!!!'" },
+            { id: "task-ce-2", question: "Crea 3 plantillas: onboarding, aviso de retraso, y cierre semanal." },
+            { id: "task-ce-3", question: "Crea un SOP completo para un proceso de asistencia virtual." }
+          ]
+        },
+        exam: {
+          title: "Evaluación: Comunicación",
+          description: "Evalúa tus conocimientos",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "En CLEAR, la 'E' significa:", options: ["Elegante", "Específico", "Extenso", "Emotivo"], correctAnswer: 1 },
+            { id: "q2", question: "Mejor práctica en Slack:", options: ["Enviar 'Hola' primero", "Mensaje completo con contexto", "Muchos mensajes cortos", "Notas de voz"], correctAnswer: 1 },
+            { id: "q3", question: "Regla de los 3 Mensajes:", options: ["Responder 3 veces al día", "Más de 3 intercambios = llamada", "3 mensajes por conversación", "Esperar 3 horas"], correctAnswer: 1 },
+            { id: "q4", question: "Asunto de email profesional:", options: ["Solo 'Hola'", "[Acción requerida] + Tema + Fecha", "Email completo en asunto", "Muchos !!!"], correctAnswer: 1 },
+            { id: "q5", question: "Un SOP debe incluir:", options: ["Solo pasos", "Objetivo, pasos, herramientas, problemas y soluciones", "Solo video", "Referencias"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "gestion-tiempo",
+    title: "Gestión del Tiempo",
+    slug: "gestion-tiempo",
+    description: "Aprende técnicas avanzadas de productividad para maximizar tu eficiencia como profesional remoto.",
+    duration: "2 Semanas",
+    totalLessons: "12 Lecciones",
+    icon: "Clock",
+    color: "from-orange-500 to-amber-500",
+    certificate: {
+      title: "Certificado en Gestión del Tiempo",
+      description: "Ha demostrado dominio de técnicas de productividad profesional"
+    },
+    modules: [
+      {
+        id: "mod-gt-1",
+        title: "Fundamentos de Productividad",
+        description: "Principios y técnicas para gestionar tu tiempo",
+        theory: [
+          {
+            id: "lesson-gt-1-1",
+            title: "La Ciencia de la Productividad",
+            content: `# La Ciencia de la Productividad
+
+## Productividad Real vs Percibida
+
+**Ocupado:** Muchas horas, muchas tareas, siempre corriendo
+**Productivo:** Resultados significativos en tiempo razonable
+
+## Ecuación de la Productividad
+
+Productividad = Valor del Output / (Tiempo + Energía)
+
+## Los Enemigos
+
+### 1. La Multitarea
+- El cerebro NO puede hacer multitarea cognitiva
+- Cada cambio cuesta 15-25 minutos
+- Reduce productividad hasta 40%
+
+### 2. Las Interrupciones
+- Interrumpido cada 3-5 minutos
+- Recuperar enfoque: 23 minutos
+- Solo 2 horas de trabajo enfocado en 8 horas
+
+### 3. La Procrastinación
+- Tareas muy grandes
+- Tareas aburridas
+- Perfeccionismo
+- Falta de claridad
+
+## Técnicas Fundamentales
+
+### Time Blocking
+Bloques de tiempo específicos para tareas específicas.
+
+### Técnica Pomodoro
+25 minutos trabajo, 5 minutos descanso.
+
+### Matriz de Eisenhower
+| | Urgente | No Urgente |
+|---|---------|------------|
+| Importante | HACER YA | AGENDAR |
+| No Importante | DELEGAR | ELIMINAR |
+
+### Regla de 2 Minutos
+Si toma menos de 2 minutos, hazlo ahora.
+
+### Eat the Frog
+Tarea más difícil primero en la mañana.`
+          },
+          {
+            id: "lesson-gt-1-2",
+            title: "Planificación Efectiva",
+            content: `# Planificación Efectiva
+
+## Los 3 Niveles
+
+### Nivel 1: Planificación Diaria
+**Cuándo:** Noche anterior o primera hora
+**Duración:** 10-15 minutos
+
+Proceso:
+1. Revisar calendario
+2. Identificar 3 MITs (Most Important Tasks)
+3. Estimar tiempo
+4. Bloquear en calendario
+5. Dejar 20-30% para imprevistos
+
+### Nivel 2: Planificación Semanal
+**Cuándo:** Domingo o lunes
+**Duración:** 30-45 minutos
+
+Proceso:
+1. Revisar semana anterior
+2. Revisar compromisos
+3. Definir 3-5 objetivos
+4. Distribuir en días
+
+### Nivel 3: Planificación Mensual
+
+## Estimación de Tiempo
+
+### Técnicas
+1. **Multiplica por 1.5-2x** tu estimación inicial
+2. **Descompón** la tarea en pasos
+3. **Usa datos históricos**
+
+## Manejo de Deadlines
+
+Trabajar hacia atrás desde la fecha límite.
+
+Si no llegarás:
+- Avisa con anticipación
+- Explica brevemente
+- Propón nueva fecha
+- Ofrece solución parcial`
+          },
+          {
+            id: "lesson-gt-1-3",
+            title: "Eliminación de Distracciones",
+            content: `# Eliminación de Distracciones
+
+## El Costo Real
+
+Cada distracción tiene costo triple:
+1. Tiempo de la interrupción
+2. Tiempo para recuperar enfoque (23 min)
+3. Errores por pérdida de contexto
+
+5 distracciones de 1 min = **2 horas perdidas**
+
+## Estrategias
+
+### 1. Control de Notificaciones
+- Email: Desactivar push, revisar en bloques
+- Slack: Solo mensajes directos
+- Teléfono: Modo avión en deep work
+
+### 2. Bloqueadores
+- Freedom, Cold Turkey, RescueTime
+- Forest, Screen Time
+
+### 3. Diseño del Entorno
+- Escritorio limpio
+- Teléfono fuera de vista
+- Audífonos con cancelación de ruido
+
+### 4. Técnicas de Enfoque
+- Time Blocking: 90-120 minutos de deep work
+- Parking Lot: Anota pensamientos, vuelve a la tarea
+- Rituales de Inicio
+
+### 5. Manejo de Personas
+- Horarios de disponibilidad claros
+- Definir emergencias reales vs puede esperar
+
+## Recuperación del Enfoque
+
+1. Reconoce que te distrajiste
+2. Anota dónde estabas
+3. Respira 3 veces
+4. Relee las últimas líneas
+5. Continúa`
+          }
+        ],
+        sprint: {
+          title: "Sprint: Sistema de Productividad",
+          description: "Diseña tu sistema personal de gestión del tiempo",
+          tasks: [
+            { id: "task-gt-1", question: "Auditoría de 3 días: registra actividades en bloques de 30 min. Analiza horas de trabajo enfocado y principales distracciones." },
+            { id: "task-gt-2", question: "Diseña tu día ideal con time blocking, Pomodoro y Eat the Frog. Implementa 5 días y reporta resultados." },
+            { id: "task-gt-3", question: "Crea plan anti-distracciones: notificaciones a desactivar, herramientas, cambios físicos, y ritual de inicio." }
+          ]
+        },
+        exam: {
+          title: "Evaluación: Gestión del Tiempo",
+          description: "Evalúa tus conocimientos de productividad",
+          passingScore: 70,
+          questions: [
+            { id: "q1", question: "Tiempo para recuperar enfoque después de interrupción:", options: ["2-3 min", "5-10 min", "23 minutos", "45 min"], correctAnswer: 2 },
+            { id: "q2", question: "En Matriz de Eisenhower, tu tiempo debe estar en:", options: ["Cuadrante 1: Urgente e Importante", "Cuadrante 2: No Urgente pero Importante", "Cuadrante 3: Urgente No Importante", "Cuadrante 4"], correctAnswer: 1 },
+            { id: "q3", question: "Eat the Frog recomienda:", options: ["Dejar tareas difíciles al final", "Hacer tarea difícil primero", "Dividir tareas", "Delegar"], correctAnswer: 1 },
+            { id: "q4", question: "Regla de 2 Minutos: si toma menos de 2 min:", options: ["Agendar", "Delegar", "Hacerlo inmediatamente", "Anotar"], correctAnswer: 2 },
+            { id: "q5", question: "MITs significa:", options: ["Meetings In Time", "Most Important Tasks", "Monthly Important Targets", "Minutes In Total"], correctAnswer: 1 }
+          ]
+        }
+      }
+    ]
   }
 ];
