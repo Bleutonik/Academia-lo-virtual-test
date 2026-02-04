@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   BookOpen, LogOut, Award, Clock, CheckCircle, XCircle,
-  ChevronRight, GraduationCap, User
+  ChevronRight, GraduationCap, User, Lightbulb, Target
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -13,15 +13,18 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/contexts/ProgressContext";
 import { useSprintReview } from "@/contexts/SprintReviewContext";
+import { useToast } from "@/hooks/use-toast";
 import { coursesData } from "@/data/courses";
 import * as Icons from "lucide-react";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
   const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress } = useProgress();
   const { getSubmissionsByUser, refreshSubmissions, submissions } = useSprintReview();
   const [isRefreshing, setIsRefreshing] = useState(true);
+  const [hasShownWelcome, setHasShownWelcome] = useState(false);
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -74,6 +77,20 @@ const StudentDashboard = () => {
     };
   }, [isAuthenticated, currentUser]); // Re-run if auth changes
 
+  // Welcome toast - show only once per session
+  useEffect(() => {
+    if (isAuthenticated && currentUser && !hasShownWelcome && !authLoading) {
+      const timer = setTimeout(() => {
+        toast({
+          title: "¡Bienvenido!",
+          description: `Hola ${currentUser.fullName.split(' ')[0]}, acceso exitoso.`,
+        });
+        setHasShownWelcome(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isAuthenticated, currentUser, hasShownWelcome, authLoading, toast]);
+
   if (authLoading || !isAuthenticated || !currentUser) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -91,6 +108,41 @@ const StudentDashboard = () => {
   const pendingSubmissions = userSubmissions.filter(s => s.status === 'pending');
   const approvedSubmissions = userSubmissions.filter(s => s.status === 'approved');
   const rejectedSubmissions = userSubmissions.filter(s => s.status === 'rejected');
+
+  // Tips del día rotativos
+  const tips = [
+    "La clave del éxito es la consistencia. Dedica al menos 30 minutos diarios a tu capacitación y verás resultados extraordinarios.",
+    "La comunicación proactiva es tu mejor herramienta. Mantén a tu cliente informado antes de que pregunte.",
+    "Organiza tu día la noche anterior. Los AVs más exitosos planifican sus tareas con anticipación.",
+    "Aprende una herramienta nueva cada semana. La versatilidad te hace más valioso.",
+    "Tu reputación se construye con cada tarea completada. Trata cada proyecto como si fuera el más importante.",
+    "El feedback negativo es una oportunidad de mejora. Agradécelo y actúa sobre él.",
+    "Establece límites claros desde el inicio. Un AV profesional sabe decir no cuando es necesario."
+  ];
+  const tipOfTheDay = tips[new Date().getDay()];
+
+  // Encontrar el próximo paso del estudiante
+  const getNextStep = () => {
+    for (const course of assignedCourses) {
+      const progress = getCourseProgress(course.id, course.modules.map(m => m.id));
+      if (progress < 100) {
+        for (const module of course.modules) {
+          const moduleComplete = isCourseComplete(course.id, [module.id]);
+          if (!moduleComplete) {
+            return {
+              courseSlug: course.slug,
+              courseName: course.title,
+              moduleId: module.id,
+              moduleName: module.title,
+              lessonNumber: 1
+            };
+          }
+        }
+      }
+    }
+    return null;
+  };
+  const nextStep = getNextStep();
 
   const handleLogout = () => {
     logout();
@@ -224,6 +276,66 @@ const StudentDashboard = () => {
                       ).length}
                     </p>
                     <p className="text-sm text-muted-foreground">Cursos completados</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+
+        {/* Tip del día y Tu próximo paso */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Card className="h-full">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-5 h-5 text-yellow-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary mb-2">Tip del día</h3>
+                    <p className="text-sm text-muted-foreground italic">
+                      "{tipOfTheDay}"
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Card className="h-full bg-gradient-to-r from-primary/5 to-secondary/5">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-primary mb-2">Tu próximo paso</h3>
+                    {nextStep ? (
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm text-muted-foreground">
+                          Continúa con <span className="font-medium text-foreground">{nextStep.moduleName}</span> y avanza hacia tu meta.
+                        </p>
+                        <Button size="sm" asChild className="ml-2 flex-shrink-0">
+                          <Link to={`/curso/${nextStep.courseSlug}`}>
+                            Continuar
+                          </Link>
+                        </Button>
+                      </div>
+                    ) : (
+                      <p className="text-sm text-muted-foreground">
+                        ¡Felicidades! Has completado todos tus cursos asignados.
+                      </p>
+                    )}
                   </div>
                 </div>
               </CardContent>
