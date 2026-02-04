@@ -164,6 +164,12 @@ class ApiService {
     });
   }
 
+  async deleteSubmission(submissionId: number) {
+    return this.request<{ message: string }>(`/api/submissions/${submissionId}`, {
+      method: 'DELETE',
+    });
+  }
+
   // Certificates
   async generateCertificate(courseId: string) {
     return this.request<{ certificateId: string; obtainedAt: string }>('/api/certificates', {

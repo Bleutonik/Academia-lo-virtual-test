@@ -58,7 +58,7 @@ const AdminDashboard = () => {
   const location = useLocation();
   const { toast } = useToast();
   const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading, refreshUsers } = useAuth();
-  const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, refreshSubmissions } = useSprintReview();
+  const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, deleteSubmission, refreshSubmissions } = useSprintReview();
 
   const [activeTab, setActiveTab] = useState("overview");
   const [searchTerm, setSearchTerm] = useState("");
@@ -68,6 +68,7 @@ const AdminDashboard = () => {
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [selectedSubmission, setSelectedSubmission] = useState<SprintSubmission | null>(null);
   const [deleteConfirmUser, setDeleteConfirmUser] = useState<User | null>(null);
+  const [deleteConfirmSubmission, setDeleteConfirmSubmission] = useState<SprintSubmission | null>(null);
   const [reviewFeedback, setReviewFeedback] = useState("");
 
   // Form states
@@ -239,6 +240,25 @@ const AdminDashboard = () => {
         variant: "destructive"
       });
     }
+  };
+
+  const handleDeleteSubmission = async () => {
+    if (!deleteConfirmSubmission) return;
+
+    try {
+      await deleteSubmission(deleteConfirmSubmission.id);
+      toast({
+        title: "Sprint eliminado",
+        description: "El sprint ha sido eliminado exitosamente.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Error al eliminar el sprint",
+        variant: "destructive"
+      });
+    }
+    setDeleteConfirmSubmission(null);
   };
 
   const handleLogout = () => {
@@ -678,6 +698,7 @@ const AdminDashboard = () => {
                                 setSelectedSubmission(submission);
                                 setIsReviewOpen(true);
                               }}
+                              onDelete={() => setDeleteConfirmSubmission(submission)}
                             />
                           ))}
                         </div>
@@ -696,6 +717,7 @@ const AdminDashboard = () => {
                               setSelectedSubmission(submission);
                               setIsReviewOpen(true);
                             }}
+                            onDelete={() => setDeleteConfirmSubmission(submission)}
                           />
                         ))}
                       </div>
@@ -713,6 +735,7 @@ const AdminDashboard = () => {
                               setSelectedSubmission(submission);
                               setIsReviewOpen(true);
                             }}
+                            onDelete={() => setDeleteConfirmSubmission(submission)}
                           />
                         ))}
                       </div>
@@ -730,6 +753,7 @@ const AdminDashboard = () => {
                               setSelectedSubmission(submission);
                               setIsReviewOpen(true);
                             }}
+                            onDelete={() => setDeleteConfirmSubmission(submission)}
                           />
                         ))}
                       </div>
@@ -1003,7 +1027,7 @@ const AdminDashboard = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Delete Confirmation */}
+      {/* Delete User Confirmation */}
       <AlertDialog open={!!deleteConfirmUser} onOpenChange={() => setDeleteConfirmUser(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -1024,6 +1048,29 @@ const AdminDashboard = () => {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      {/* Delete Submission Confirmation */}
+      <AlertDialog open={!!deleteConfirmSubmission} onOpenChange={() => setDeleteConfirmSubmission(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>¿Eliminar sprint?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Esta acción no se puede deshacer. Se eliminará permanentemente el sprint de{' '}
+              <strong>{deleteConfirmSubmission?.userName}</strong> del módulo{' '}
+              <strong>{deleteConfirmSubmission?.moduleName}</strong>.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancelar</AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              onClick={handleDeleteSubmission}
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };
@@ -1031,10 +1078,12 @@ const AdminDashboard = () => {
 // Submission Card Component
 const SubmissionCard = ({
   submission,
-  onReview
+  onReview,
+  onDelete
 }: {
   submission: SprintSubmission;
   onReview: () => void;
+  onDelete: () => void;
 }) => (
   <div className="flex items-center justify-between p-4 border rounded-lg">
     <div className="flex items-center gap-4">
@@ -1057,10 +1106,15 @@ const SubmissionCard = ({
         </p>
       </div>
     </div>
-    <Button size="sm" variant="outline" onClick={onReview}>
-      <Eye className="w-4 h-4 mr-1" />
-      Ver
-    </Button>
+    <div className="flex items-center gap-2">
+      <Button size="sm" variant="outline" onClick={onReview}>
+        <Eye className="w-4 h-4 mr-1" />
+        Ver
+      </Button>
+      <Button size="sm" variant="destructive" onClick={onDelete}>
+        <Trash2 className="w-4 h-4" />
+      </Button>
+    </div>
   </div>
 );
 

@@ -28,6 +28,7 @@ interface SprintReviewContextType {
   submitSprint: (submission: SubmitSprintData) => Promise<void>;
   approveSubmission: (submissionId: number, reviewerId: number, feedback?: string) => Promise<void>;
   rejectSubmission: (submissionId: number, reviewerId: number, feedback: string) => Promise<void>;
+  deleteSubmission: (submissionId: number) => Promise<void>;
   getSubmissionsByUser: (userId: number) => SprintSubmission[];
   getSubmissionByUserAndSprint: (userId: number, courseId: string, moduleId: string) => SprintSubmission | undefined;
   getPendingSubmissions: () => SprintSubmission[];
@@ -116,6 +117,16 @@ export const SprintReviewProvider: React.FC<{ children: ReactNode }> = ({ childr
     }
   };
 
+  const deleteSubmission = async (submissionId: number) => {
+    try {
+      await api.deleteSubmission(submissionId);
+      await refreshSubmissions();
+    } catch (error) {
+      console.error('Failed to delete submission:', error);
+      throw error;
+    }
+  };
+
   const getSubmissionsByUser = (userId: number): SprintSubmission[] => {
     return submissions.filter(s => s.userId === userId);
   };
@@ -159,6 +170,7 @@ export const SprintReviewProvider: React.FC<{ children: ReactNode }> = ({ childr
       submitSprint,
       approveSubmission,
       rejectSubmission,
+      deleteSubmission,
       getSubmissionsByUser,
       getSubmissionByUserAndSprint,
       getPendingSubmissions,
