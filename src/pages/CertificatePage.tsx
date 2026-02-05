@@ -429,7 +429,11 @@ _Certificado generado por Academia LoVirtual_`;
     });
   };
 
-  const certificate = existingCertificate || (localName ? {
+  // Asegurar que el certificado siempre tenga el nombre del curso
+  const certificate = existingCertificate ? {
+    ...existingCertificate,
+    courseName: existingCertificate.courseName || course.title
+  } : (localName ? {
     userName: localName,
     courseName: course.title,
     completionDate: new Date().toLocaleDateString('es-ES', {
@@ -553,7 +557,7 @@ _Certificado generado por Academia LoVirtual_`;
                 {/* Course Name */}
                 <div className="inline-block px-4 md:px-6 py-2 md:py-3 bg-primary/10 rounded-full mb-6 md:mb-8 border border-primary/20">
                   <span className="text-base md:text-xl font-semibold text-foreground">
-                    {existingCertificate.courseName}
+                    {existingCertificate.courseName || course.title}
                   </span>
                 </div>
 
@@ -636,7 +640,7 @@ _Certificado generado por Academia LoVirtual_`;
 
 Hola, soy ${existingCertificate.userName} y acabo de completar exitosamente el curso:
 
-📚 ${existingCertificate.courseName}
+📚 ${existingCertificate.courseName || course.title}
 
 📅 Fecha: ${existingCertificate.completionDate}
 🏆 ID: ${existingCertificate.certificateId}
