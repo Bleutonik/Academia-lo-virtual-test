@@ -93,7 +93,10 @@ const CertificatePage = () => {
   };
 
   const handleDownloadPDF = () => {
-    const certificate = existingCertificate || {
+    const certificate = existingCertificate ? {
+      ...existingCertificate,
+      courseName: existingCertificate.courseName || course.title
+    } : {
       userName: localName,
       courseName: course.title,
       completionDate: new Date().toLocaleDateString('es-ES', {
@@ -384,7 +387,10 @@ const CertificatePage = () => {
   };
 
   const handleSendWhatsApp = () => {
-    const certificate = existingCertificate || {
+    const certificate = existingCertificate ? {
+      ...existingCertificate,
+      courseName: existingCertificate.courseName || course.title
+    } : {
       userName: localName,
       courseName: course.title,
       completionDate: new Date().toLocaleDateString('es-ES', {
