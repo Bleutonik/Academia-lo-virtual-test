@@ -54,7 +54,6 @@ import { useSprintReview } from "@/contexts/SprintReviewContext";
 import type { SprintSubmission } from "@/contexts/SprintReviewContext";
 import { coursesData } from "@/data/courses";
 import { useToast } from "@/hooks/use-toast";
-import api from "@/services/api";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -114,10 +113,19 @@ const AdminDashboard = () => {
   const calculateAnalytics = useCallback(() => {
     if (!isAdmin) return;
 
+    // Get data directly from context functions
+    const currentStudents = getStudents() || [];
+    const currentSubmissions = getAllSubmissions() || [];
+
+    // Skip if no data available yet
+    if (currentStudents.length === 0 && currentSubmissions.length === 0) {
+      return;
+    }
+
     // Group approved submissions by course to estimate completions
     const approvedByStudentCourse: Record<string, Record<string, Set<string>>> = {};
 
-    allSubmissions.filter(s => s.status === 'approved').forEach(sub => {
+    currentSubmissions.filter(s => s.status === 'approved').forEach(sub => {
       const key = `${sub.userId}`;
       if (!approvedByStudentCourse[key]) {
         approvedByStudentCourse[key] = {};
@@ -130,7 +138,7 @@ const AdminDashboard = () => {
 
     // Calculate course statistics
     const courseStats = coursesData.map(course => {
-      const studentsWithCourse = students.filter(s => s.assignedCourses.includes(course.id));
+      const studentsWithCourse = currentStudents.filter(s => s.assignedCourses.includes(course.id));
       const totalStudents = studentsWithCourse.length;
       const totalModules = course.modules.length;
 
@@ -166,7 +174,7 @@ const AdminDashboard = () => {
       { range: '100%', min: 100, max: 100, count: 0 }
     ];
 
-    students.forEach(student => {
+    currentStudents.forEach(student => {
       const studentKey = `${student.id}`;
       let totalCourseProgress = 0;
       let coursesCount = 0;
@@ -195,7 +203,7 @@ const AdminDashboard = () => {
     // Count recent certificates
     const now = new Date();
     const monthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
-    const recentCertificates = allSubmissions.filter(
+    const recentCertificates = currentSubmissions.filter(
       s => s.status === 'approved' && new Date(s.reviewedAt || s.submittedAt) > monthAgo
     ).length;
 
@@ -204,7 +212,7 @@ const AdminDashboard = () => {
       studentProgress: progressRanges.map(r => ({ range: r.range, count: r.count })),
       recentCertificates
     });
-  }, [isAdmin, students, allSubmissions]);
+  }, [isAdmin, getStudents, getAllSubmissions]);
 
   // Redirect if not admin
   useEffect(() => {
