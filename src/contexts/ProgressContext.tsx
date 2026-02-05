@@ -37,6 +37,7 @@ interface ProgressContextType {
   isLessonComplete: (courseId: string, moduleId: string, lessonId: string) => boolean;
   isSprintComplete: (courseId: string, moduleId: string) => boolean;
   isExamComplete: (courseId: string, moduleId: string) => boolean;
+  isExamPassed: (courseId: string, moduleId: string) => boolean;
   getExamScore: (courseId: string, moduleId: string) => number;
   isModuleComplete: (courseId: string, moduleId: string) => boolean;
   isCourseComplete: (courseId: string, moduleIds: string[]) => boolean;
@@ -234,6 +235,10 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
     return getModuleProgress(courseId, moduleId).examCompleted;
   };
 
+  const isExamPassed = (courseId: string, moduleId: string): boolean => {
+    return getModuleProgress(courseId, moduleId).examPassed;
+  };
+
   const getExamScore = (courseId: string, moduleId: string): number => {
     return getModuleProgress(courseId, moduleId).examScore;
   };
@@ -318,6 +323,7 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
       isLessonComplete,
       isSprintComplete,
       isExamComplete,
+      isExamPassed,
       getExamScore,
       isModuleComplete,
       isCourseComplete,

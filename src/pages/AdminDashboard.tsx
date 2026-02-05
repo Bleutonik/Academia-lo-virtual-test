@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import {
   Users, BookOpen, ClipboardCheck, Settings, LogOut, Plus,
   Search, MoreVertical, CheckCircle, XCircle, Clock, Eye,
-  UserPlus, Trash2, Edit, Shield, GraduationCap, User as UserIcon
+  UserPlus, Trash2, Edit, Shield, GraduationCap, User as UserIcon,
+  BarChart3, TrendingUp, Download, FileSpreadsheet, Award, Target, Percent
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -14,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
+import { Progress } from "@/components/ui/progress";
 import {
   Dialog,
   DialogContent,
@@ -52,6 +54,7 @@ import { useSprintReview } from "@/contexts/SprintReviewContext";
 import type { SprintSubmission } from "@/contexts/SprintReviewContext";
 import { coursesData } from "@/data/courses";
 import { useToast } from "@/hooks/use-toast";
+import api from "@/services/api";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -70,6 +73,24 @@ const AdminDashboard = () => {
   const [deleteConfirmUser, setDeleteConfirmUser] = useState<User | null>(null);
   const [deleteConfirmSubmission, setDeleteConfirmSubmission] = useState<SprintSubmission | null>(null);
   const [reviewFeedback, setReviewFeedback] = useState("");
+  const [analyticsData, setAnalyticsData] = useState<{
+    courseStats: Array<{
+      courseId: string;
+      courseName: string;
+      totalStudents: number;
+      completedStudents: number;
+      avgProgress: number;
+    }>;
+    studentProgress: Array<{
+      range: string;
+      count: number;
+    }>;
+    recentCertificates: number;
+  }>({
+    courseStats: [],
+    studentProgress: [],
+    recentCertificates: 0
+  });
 
   // Form states
   const [newUser, setNewUser] = useState({
@@ -89,6 +110,102 @@ const AdminDashboard = () => {
     }
   }, [isAdmin, refreshSubmissions, refreshUsers]);
 
+  // Calculate analytics data based on submissions and course assignments
+  const calculateAnalytics = useCallback(() => {
+    if (!isAdmin) return;
+
+    // Group approved submissions by course to estimate completions
+    const approvedByStudentCourse: Record<string, Record<string, Set<string>>> = {};
+
+    allSubmissions.filter(s => s.status === 'approved').forEach(sub => {
+      const key = `${sub.userId}`;
+      if (!approvedByStudentCourse[key]) {
+        approvedByStudentCourse[key] = {};
+      }
+      if (!approvedByStudentCourse[key][sub.courseId]) {
+        approvedByStudentCourse[key][sub.courseId] = new Set();
+      }
+      approvedByStudentCourse[key][sub.courseId].add(sub.moduleId);
+    });
+
+    // Calculate course statistics
+    const courseStats = coursesData.map(course => {
+      const studentsWithCourse = students.filter(s => s.assignedCourses.includes(course.id));
+      const totalStudents = studentsWithCourse.length;
+      const totalModules = course.modules.length;
+
+      let completedStudents = 0;
+      let totalProgress = 0;
+
+      studentsWithCourse.forEach(student => {
+        const studentKey = `${student.id}`;
+        const completedModules = approvedByStudentCourse[studentKey]?.[course.id]?.size || 0;
+        const progressPercent = totalModules > 0 ? (completedModules / totalModules) * 100 : 0;
+        totalProgress += progressPercent;
+
+        if (completedModules >= totalModules) {
+          completedStudents++;
+        }
+      });
+
+      return {
+        courseId: course.id,
+        courseName: course.title,
+        totalStudents,
+        completedStudents,
+        avgProgress: totalStudents > 0 ? Math.round(totalProgress / totalStudents) : 0
+      };
+    });
+
+    // Calculate student progress distribution
+    const progressRanges = [
+      { range: '0-25%', min: 0, max: 25, count: 0 },
+      { range: '26-50%', min: 26, max: 50, count: 0 },
+      { range: '51-75%', min: 51, max: 75, count: 0 },
+      { range: '76-99%', min: 76, max: 99, count: 0 },
+      { range: '100%', min: 100, max: 100, count: 0 }
+    ];
+
+    students.forEach(student => {
+      const studentKey = `${student.id}`;
+      let totalCourseProgress = 0;
+      let coursesCount = 0;
+
+      student.assignedCourses.forEach(courseId => {
+        const course = coursesData.find(c => c.id === courseId);
+        if (!course) return;
+
+        const totalModules = course.modules.length;
+        const completedModules = approvedByStudentCourse[studentKey]?.[courseId]?.size || 0;
+        const progressPercent = totalModules > 0 ? (completedModules / totalModules) * 100 : 0;
+        totalCourseProgress += progressPercent;
+        coursesCount++;
+      });
+
+      const avgProgress = coursesCount > 0 ? totalCourseProgress / coursesCount : 0;
+
+      for (const range of progressRanges) {
+        if (avgProgress >= range.min && avgProgress <= range.max) {
+          range.count++;
+          break;
+        }
+      }
+    });
+
+    // Count recent certificates
+    const now = new Date();
+    const monthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+    const recentCertificates = allSubmissions.filter(
+      s => s.status === 'approved' && new Date(s.reviewedAt || s.submittedAt) > monthAgo
+    ).length;
+
+    setAnalyticsData({
+      courseStats,
+      studentProgress: progressRanges.map(r => ({ range: r.range, count: r.count })),
+      recentCertificates
+    });
+  }, [isAdmin, students, allSubmissions]);
+
   // Redirect if not admin
   useEffect(() => {
     if (!authLoading && !isAdmin) {
@@ -100,6 +217,13 @@ const AdminDashboard = () => {
   useEffect(() => {
     loadDashboardData();
   }, [location.key, loadDashboardData]);
+
+  // Load analytics when tab changes to analytics
+  useEffect(() => {
+    if (activeTab === 'analytics') {
+      calculateAnalytics();
+    }
+  }, [activeTab, calculateAnalytics]);
 
   if (authLoading || !isAdmin) {
     return (
@@ -261,6 +385,67 @@ const AdminDashboard = () => {
     setDeleteConfirmSubmission(null);
   };
 
+  // Export functions
+  const exportStudentsCSV = () => {
+    const headers = ['Nombre', 'Usuario', 'Email', 'Rol', 'Estado', 'Cursos Asignados'];
+    const rows = students.map(student => [
+      student.fullName,
+      student.username,
+      student.email,
+      student.role,
+      student.isActive ? 'Activo' : 'Inactivo',
+      student.assignedCourses.map(id => coursesData.find(c => c.id === id)?.title || id).join('; ')
+    ]);
+
+    downloadCSV(headers, rows, 'estudiantes_academia.csv');
+  };
+
+  const exportSubmissionsCSV = () => {
+    const headers = ['Estudiante', 'Curso', 'Módulo', 'Estado', 'Fecha Envío', 'Fecha Revisión', 'Retroalimentación'];
+    const rows = allSubmissions.map(sub => [
+      sub.userName,
+      sub.courseName,
+      sub.moduleName,
+      sub.status === 'approved' ? 'Aprobado' : sub.status === 'rejected' ? 'Rechazado' : 'Pendiente',
+      new Date(sub.submittedAt).toLocaleDateString('es-ES'),
+      sub.reviewedAt ? new Date(sub.reviewedAt).toLocaleDateString('es-ES') : '',
+      sub.feedback || ''
+    ]);
+
+    downloadCSV(headers, rows, 'sprints_academia.csv');
+  };
+
+  const exportAnalyticsCSV = () => {
+    const headers = ['Curso', 'Estudiantes Total', 'Completaron', 'Progreso Promedio (%)'];
+    const rows = analyticsData.courseStats.map(stat => [
+      stat.courseName,
+      stat.totalStudents.toString(),
+      stat.completedStudents.toString(),
+      stat.avgProgress.toString()
+    ]);
+
+    downloadCSV(headers, rows, 'analytics_cursos.csv');
+  };
+
+  const downloadCSV = (headers: string[], rows: string[][], filename: string) => {
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row => row.map(cell => `"${cell.replace(/"/g, '""')}"`).join(','))
+    ].join('\n');
+
+    const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(link.href);
+
+    toast({
+      title: "Descarga iniciada",
+      description: `El archivo ${filename} se está descargando.`,
+    });
+  };
+
   const handleLogout = () => {
     logout();
     navigate("/login");
@@ -300,10 +485,14 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <main className="container max-w-7xl mx-auto py-8 px-4">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4 lg:w-auto lg:inline-grid">
+          <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:inline-grid">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <BookOpen className="w-4 h-4" />
               <span className="hidden sm:inline">Resumen</span>
+            </TabsTrigger>
+            <TabsTrigger value="analytics" className="flex items-center gap-2">
+              <BarChart3 className="w-4 h-4" />
+              <span className="hidden sm:inline">Analytics</span>
             </TabsTrigger>
             <TabsTrigger value="users" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
@@ -443,6 +632,246 @@ const AdminDashboard = () => {
                 </CardContent>
               </Card>
             )}
+          </TabsContent>
+
+          {/* Analytics Tab */}
+          <TabsContent value="analytics">
+            <div className="space-y-6">
+              {/* KPIs Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+                  <Card className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 border-blue-200">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Tasa de Completación</p>
+                          <p className="text-3xl font-bold text-blue-600">
+                            {students.length > 0
+                              ? Math.round(
+                                  (analyticsData.courseStats.reduce((acc, s) => acc + s.completedStudents, 0) /
+                                    Math.max(analyticsData.courseStats.reduce((acc, s) => acc + s.totalStudents, 0), 1)) * 100
+                                )
+                              : 0}%
+                          </p>
+                        </div>
+                        <Target className="w-10 h-10 text-blue-500 opacity-50" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                  <Card className="bg-gradient-to-br from-green-500/10 to-green-600/5 border-green-200">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Sprints Aprobados</p>
+                          <p className="text-3xl font-bold text-green-600">
+                            {allSubmissions.length > 0
+                              ? Math.round((allSubmissions.filter(s => s.status === 'approved').length / allSubmissions.length) * 100)
+                              : 0}%
+                          </p>
+                        </div>
+                        <CheckCircle className="w-10 h-10 text-green-500 opacity-50" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 border-purple-200">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Certificados Totales</p>
+                          <p className="text-3xl font-bold text-purple-600">
+                            {analyticsData.courseStats.reduce((acc, s) => acc + s.completedStudents, 0)}
+                          </p>
+                        </div>
+                        <Award className="w-10 h-10 text-purple-500 opacity-50" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+                  <Card className="bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-orange-200">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Progreso Promedio</p>
+                          <p className="text-3xl font-bold text-orange-600">
+                            {analyticsData.courseStats.length > 0
+                              ? Math.round(
+                                  analyticsData.courseStats.reduce((acc, s) => acc + s.avgProgress, 0) /
+                                  analyticsData.courseStats.length
+                                )
+                              : 0}%
+                          </p>
+                        </div>
+                        <TrendingUp className="w-10 h-10 text-orange-500 opacity-50" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+
+              {/* Charts Row */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Course Progress Chart */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <BarChart3 className="w-5 h-5" />
+                      Progreso por Curso
+                    </CardTitle>
+                    <CardDescription>Progreso promedio de estudiantes por curso</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {analyticsData.courseStats.map((stat, index) => (
+                        <div key={stat.courseId} className="space-y-2">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="font-medium truncate max-w-[200px]">{stat.courseName}</span>
+                            <span className="text-muted-foreground">{stat.avgProgress}%</span>
+                          </div>
+                          <div className="h-4 bg-muted rounded-full overflow-hidden">
+                            <motion.div
+                              initial={{ width: 0 }}
+                              animate={{ width: `${stat.avgProgress}%` }}
+                              transition={{ delay: index * 0.1, duration: 0.5 }}
+                              className={`h-full rounded-full ${
+                                index % 5 === 0 ? 'bg-blue-500' :
+                                index % 5 === 1 ? 'bg-green-500' :
+                                index % 5 === 2 ? 'bg-purple-500' :
+                                index % 5 === 3 ? 'bg-orange-500' : 'bg-pink-500'
+                              }`}
+                            />
+                          </div>
+                          <div className="flex justify-between text-xs text-muted-foreground">
+                            <span>{stat.completedStudents} de {stat.totalStudents} completaron</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Student Distribution Chart */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Percent className="w-5 h-5" />
+                      Distribución de Progreso
+                    </CardTitle>
+                    <CardDescription>Cantidad de estudiantes por rango de progreso</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {analyticsData.studentProgress.map((range, index) => {
+                        const maxCount = Math.max(...analyticsData.studentProgress.map(r => r.count), 1);
+                        const percentage = (range.count / maxCount) * 100;
+
+                        return (
+                          <div key={range.range} className="space-y-2">
+                            <div className="flex items-center justify-between text-sm">
+                              <span className="font-medium">{range.range}</span>
+                              <span className="text-muted-foreground">{range.count} estudiantes</span>
+                            </div>
+                            <div className="h-6 bg-muted rounded-full overflow-hidden flex items-center">
+                              <motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: `${percentage}%` }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                                className={`h-full rounded-full ${
+                                  index === 4 ? 'bg-green-500' :
+                                  index === 3 ? 'bg-blue-500' :
+                                  index === 2 ? 'bg-yellow-500' :
+                                  index === 1 ? 'bg-orange-500' : 'bg-red-500'
+                                }`}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Sprint Statistics */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>Estadísticas de Sprints</CardTitle>
+                  <CardDescription>Resumen de entregas de sprints</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg">
+                      <Clock className="w-8 h-8 mx-auto mb-2 text-amber-500" />
+                      <p className="text-2xl font-bold text-amber-600">{pendingSubmissions.length}</p>
+                      <p className="text-sm text-muted-foreground">Pendientes</p>
+                    </div>
+                    <div className="text-center p-4 bg-green-50 dark:bg-green-950/30 rounded-lg">
+                      <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-500" />
+                      <p className="text-2xl font-bold text-green-600">
+                        {allSubmissions.filter(s => s.status === 'approved').length}
+                      </p>
+                      <p className="text-sm text-muted-foreground">Aprobados</p>
+                    </div>
+                    <div className="text-center p-4 bg-red-50 dark:bg-red-950/30 rounded-lg">
+                      <XCircle className="w-8 h-8 mx-auto mb-2 text-red-500" />
+                      <p className="text-2xl font-bold text-red-600">
+                        {allSubmissions.filter(s => s.status === 'rejected').length}
+                      </p>
+                      <p className="text-sm text-muted-foreground">Rechazados</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Export Section */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Download className="w-5 h-5" />
+                    Descargar Reportes
+                  </CardTitle>
+                  <CardDescription>Exporta datos en formato CSV para análisis externo</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <Button
+                      variant="outline"
+                      className="h-auto py-4 flex flex-col items-center gap-2"
+                      onClick={exportStudentsCSV}
+                    >
+                      <Users className="w-6 h-6 text-blue-500" />
+                      <span className="font-medium">Lista de Estudiantes</span>
+                      <span className="text-xs text-muted-foreground">Datos de usuarios</span>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="h-auto py-4 flex flex-col items-center gap-2"
+                      onClick={exportSubmissionsCSV}
+                    >
+                      <ClipboardCheck className="w-6 h-6 text-green-500" />
+                      <span className="font-medium">Sprints Enviados</span>
+                      <span className="text-xs text-muted-foreground">Historial de entregas</span>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="h-auto py-4 flex flex-col items-center gap-2"
+                      onClick={exportAnalyticsCSV}
+                    >
+                      <FileSpreadsheet className="w-6 h-6 text-purple-500" />
+                      <span className="font-medium">Analytics de Cursos</span>
+                      <span className="text-xs text-muted-foreground">Métricas por curso</span>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </TabsContent>
 
           {/* Users Tab */}

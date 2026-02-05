@@ -265,14 +265,22 @@ const CertificatePage = () => {
           .footer {
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             margin-top: auto;
             padding-top: 10mm;
           }
 
           .footer-item {
             text-align: center;
+          }
+
+          .footer-item .signature-img {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 4px;
           }
 
           .footer-item .line {
@@ -296,6 +304,16 @@ const CertificatePage = () => {
             font-weight: 500;
           }
 
+          .seal-container {
+            text-align: center;
+          }
+
+          .seal-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+          }
+
           .certificate-id {
             position: absolute;
             bottom: 12mm;
@@ -303,23 +321,6 @@ const CertificatePage = () => {
             font-size: 8px;
             color: #bbb;
             letter-spacing: 1px;
-          }
-
-          .seal {
-            position: absolute;
-            bottom: 20mm;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            border: 2px solid #667eea;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: #667eea;
-            opacity: 0.5;
           }
 
           @media print {
@@ -363,7 +364,11 @@ const CertificatePage = () => {
                 <div class="label">Fecha de emisión</div>
                 <div class="value">${certificate.completionDate}</div>
               </div>
+              <div class="seal-container">
+                <img src="${window.location.origin}/sello.jpeg" alt="Sello" class="seal-img" />
+              </div>
               <div class="footer-item">
+                <img src="${window.location.origin}/firma.jpeg" alt="Firma" class="signature-img" />
                 <div class="line"></div>
                 <div class="label">Dirección Académica</div>
                 <div class="value">Academia LoVirtual</div>
@@ -568,13 +573,17 @@ _Certificado generado por Academia LoVirtual_`;
                 </div>
 
                 {/* Footer */}
-                <div className="flex justify-center gap-8 md:gap-16 pt-6 md:pt-8 border-t">
+                <div className="flex justify-center items-end gap-6 md:gap-12 pt-6 md:pt-8 border-t">
                   <div className="text-center">
                     <div className="w-24 md:w-32 h-px bg-muted-foreground/30 mx-auto mb-2" />
                     <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide">Fecha de emisión</p>
                     <p className="text-xs md:text-sm font-medium">{existingCertificate.completionDate}</p>
                   </div>
                   <div className="text-center">
+                    <img src="/sello.jpeg" alt="Sello" className="w-16 h-16 md:w-20 md:h-20 object-contain mx-auto" />
+                  </div>
+                  <div className="text-center">
+                    <img src="/firma.jpeg" alt="Firma" className="w-20 h-10 md:w-24 md:h-12 object-contain mx-auto mb-1" />
                     <div className="w-24 md:w-32 h-px bg-muted-foreground/30 mx-auto mb-2" />
                     <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide">Dirección Académica</p>
                     <p className="text-xs md:text-sm font-medium">Academia LoVirtual</p>

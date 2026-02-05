@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   BookOpen, LogOut, Award, Clock, CheckCircle, XCircle,
-  ChevronRight, GraduationCap, User, Lightbulb, Target
+  ChevronRight, GraduationCap, User, Lightbulb, Target,
+  ChevronDown, FileText, Zap, ClipboardCheck, TrendingUp, BarChart3
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -21,10 +22,12 @@ const StudentDashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
-  const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress } = useProgress();
+  const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress, isModuleComplete, isLessonComplete, isSprintComplete, isExamPassed } = useProgress();
   const { getSubmissionsByUser, refreshSubmissions, submissions } = useSprintReview();
   const [isRefreshing, setIsRefreshing] = useState(true);
   const [hasShownWelcome, setHasShownWelcome] = useState(false);
+  const [expandedCourseProgress, setExpandedCourseProgress] = useState<string | null>(null);
+  const [showDetailedProgress, setShowDetailedProgress] = useState(false);
 
   // Redirect if not authenticated
   useEffect(() => {
@@ -143,6 +146,60 @@ const StudentDashboard = () => {
     return null;
   };
   const nextStep = getNextStep();
+
+  // Calcular estadísticas de progreso detallado
+  const getDetailedStats = () => {
+    let totalLessons = 0;
+    let completedLessons = 0;
+    let totalSprints = 0;
+    let completedSprints = 0;
+    let totalExams = 0;
+    let passedExams = 0;
+
+    for (const course of assignedCourses) {
+      for (const module of course.modules) {
+        // Contar lecciones
+        if (module.theory) {
+          totalLessons += module.theory.length;
+          for (const lesson of module.theory) {
+            if (isLessonComplete(course.id, module.id, lesson.id)) {
+              completedLessons++;
+            }
+          }
+        }
+        // Contar sprints
+        if (module.sprint) {
+          totalSprints++;
+          if (isSprintComplete(course.id, module.id)) {
+            completedSprints++;
+          }
+        }
+        // Contar exámenes
+        if (module.exam) {
+          totalExams++;
+          if (isExamPassed(course.id, module.id)) {
+            passedExams++;
+          }
+        }
+      }
+    }
+
+    return { totalLessons, completedLessons, totalSprints, completedSprints, totalExams, passedExams };
+  };
+
+  const detailedStats = getDetailedStats();
+
+  // Obtener detalles de progreso por módulo
+  const getModuleDetails = (course: typeof assignedCourses[0], module: typeof assignedCourses[0]['modules'][0]) => {
+    const lessonsCompleted = module.theory
+      ? module.theory.filter(l => isLessonComplete(course.id, module.id, l.id)).length
+      : 0;
+    const totalLessonsInModule = module.theory?.length || 0;
+    const sprintDone = module.sprint ? isSprintComplete(course.id, module.id) : null;
+    const examDone = module.exam ? isExamPassed(course.id, module.id) : null;
+
+    return { lessonsCompleted, totalLessonsInModule, sprintDone, examDone };
+  };
 
   const handleLogout = () => {
     logout();
@@ -282,6 +339,180 @@ const StudentDashboard = () => {
             </Card>
           </motion.div>
         </div>
+
+        {/* Progreso Detallado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+          className="mb-8"
+        >
+          <Card>
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="w-5 h-5 text-primary" />
+                  <CardTitle className="text-lg">Mi Progreso Detallado</CardTitle>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowDetailedProgress(!showDetailedProgress)}
+                  className="text-primary"
+                >
+                  {showDetailedProgress ? "Ocultar detalles" : "Ver detalles"}
+                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${showDetailedProgress ? 'rotate-180' : ''}`} />
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {/* Resumen General */}
+              <div className="grid grid-cols-3 gap-4 mb-4">
+                <div className="text-center p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <FileText className="w-4 h-4 text-blue-500" />
+                    <span className="text-xs text-muted-foreground">Lecciones</span>
+                  </div>
+                  <p className="text-lg font-bold text-blue-600">
+                    {detailedStats.completedLessons}/{detailedStats.totalLessons}
+                  </p>
+                  <Progress
+                    value={(detailedStats.completedLessons / (detailedStats.totalLessons || 1)) * 100}
+                    className="h-1 mt-2"
+                  />
+                </div>
+                <div className="text-center p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <Zap className="w-4 h-4 text-orange-500" />
+                    <span className="text-xs text-muted-foreground">Sprints</span>
+                  </div>
+                  <p className="text-lg font-bold text-orange-600">
+                    {detailedStats.completedSprints}/{detailedStats.totalSprints}
+                  </p>
+                  <Progress
+                    value={(detailedStats.completedSprints / (detailedStats.totalSprints || 1)) * 100}
+                    className="h-1 mt-2"
+                  />
+                </div>
+                <div className="text-center p-3 bg-green-50 dark:bg-green-950/30 rounded-lg">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <ClipboardCheck className="w-4 h-4 text-green-500" />
+                    <span className="text-xs text-muted-foreground">Exámenes</span>
+                  </div>
+                  <p className="text-lg font-bold text-green-600">
+                    {detailedStats.passedExams}/{detailedStats.totalExams}
+                  </p>
+                  <Progress
+                    value={(detailedStats.passedExams / (detailedStats.totalExams || 1)) * 100}
+                    className="h-1 mt-2"
+                  />
+                </div>
+              </div>
+
+              {/* Detalles por curso */}
+              <AnimatePresence>
+                {showDetailedProgress && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="space-y-4 pt-4 border-t"
+                  >
+                    {assignedCourses.map((course) => {
+                      const courseProgress = getCourseProgress(course.id, course.modules.map(m => m.id));
+                      const isExpanded = expandedCourseProgress === course.id;
+
+                      return (
+                        <div key={course.id} className="border rounded-lg overflow-hidden">
+                          <button
+                            onClick={() => setExpandedCourseProgress(isExpanded ? null : course.id)}
+                            className="w-full flex items-center justify-between p-3 hover:bg-muted/50 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${course.color} flex items-center justify-center`}>
+                                {(() => {
+                                  const IconComp = Icons[course.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+                                  return IconComp ? <IconComp className="w-4 h-4 text-white" /> : null;
+                                })()}
+                              </div>
+                              <div className="text-left">
+                                <p className="font-medium text-sm">{course.title}</p>
+                                <p className="text-xs text-muted-foreground">{course.modules.length} módulos</p>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div className="text-right">
+                                <p className="font-bold text-sm">{courseProgress}%</p>
+                              </div>
+                              <div className="w-24">
+                                <Progress value={courseProgress} className="h-2" />
+                              </div>
+                              <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                            </div>
+                          </button>
+
+                          <AnimatePresence>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="border-t bg-muted/30"
+                              >
+                                <div className="p-3 space-y-2">
+                                  {course.modules.map((module, idx) => {
+                                    const details = getModuleDetails(course, module);
+                                    const moduleComplete = isModuleComplete(course.id, module.id);
+
+                                    return (
+                                      <div key={module.id} className="flex items-center gap-3 p-2 bg-background rounded-lg">
+                                        <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                                          moduleComplete
+                                            ? 'bg-green-500 text-white'
+                                            : 'bg-muted text-muted-foreground'
+                                        }`}>
+                                          {moduleComplete ? <CheckCircle className="w-4 h-4" /> : idx + 1}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <p className="text-sm font-medium truncate">{module.title}</p>
+                                          <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                                            <span className="flex items-center gap-1">
+                                              <FileText className="w-3 h-3" />
+                                              {details.lessonsCompleted}/{details.totalLessonsInModule}
+                                            </span>
+                                            {details.sprintDone !== null && (
+                                              <span className={`flex items-center gap-1 ${details.sprintDone ? 'text-green-600' : ''}`}>
+                                                <Zap className="w-3 h-3" />
+                                                {details.sprintDone ? 'Completado' : 'Pendiente'}
+                                              </span>
+                                            )}
+                                            {details.examDone !== null && (
+                                              <span className={`flex items-center gap-1 ${details.examDone ? 'text-green-600' : ''}`}>
+                                                <ClipboardCheck className="w-3 h-3" />
+                                                {details.examDone ? 'Aprobado' : 'Pendiente'}
+                                              </span>
+                                            )}
+                                          </div>
+                                        </div>
+                                        {moduleComplete && (
+                                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                                        )}
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         {/* Tip del día y Tu próximo paso */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
