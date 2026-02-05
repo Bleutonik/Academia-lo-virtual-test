@@ -5,7 +5,8 @@ import {
   Users, BookOpen, ClipboardCheck, Settings, LogOut, Plus,
   Search, MoreVertical, CheckCircle, XCircle, Clock, Eye,
   UserPlus, Trash2, Edit, Shield, GraduationCap, User as UserIcon,
-  BarChart3, TrendingUp, Download, FileSpreadsheet, Award, Target, Percent
+  BarChart3, TrendingUp, Download, FileSpreadsheet, Award, Target, Percent,
+  Sun, Moon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -54,11 +55,13 @@ import { useSprintReview } from "@/contexts/SprintReviewContext";
 import type { SprintSubmission } from "@/contexts/SprintReviewContext";
 import { coursesData } from "@/data/courses";
 import { useToast } from "@/hooks/use-toast";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { toast } = useToast();
+  const { theme, toggleTheme } = useTheme();
   const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading, refreshUsers } = useAuth();
   const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, deleteSubmission, refreshSubmissions } = useSprintReview();
 
@@ -477,6 +480,15 @@ const AdminDashboard = () => {
             <span className="text-white/80 text-sm hidden md:block">
               Hola, {currentUser?.fullName}
             </span>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:bg-white/20"
+              onClick={toggleTheme}
+              title={theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
+            >
+              {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            </Button>
             <Button
               variant="ghost"
               size="sm"

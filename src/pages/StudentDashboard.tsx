@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   BookOpen, LogOut, Award, Clock, CheckCircle, XCircle,
   ChevronRight, GraduationCap, User, Lightbulb, Target,
-  ChevronDown, FileText, Zap, ClipboardCheck, TrendingUp, BarChart3
+  ChevronDown, FileText, Zap, ClipboardCheck, TrendingUp, BarChart3,
+  Sun, Moon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -16,11 +17,13 @@ import { useProgress } from "@/contexts/ProgressContext";
 import { useSprintReview } from "@/contexts/SprintReviewContext";
 import { useToast } from "@/hooks/use-toast";
 import { coursesData } from "@/data/courses";
+import { useTheme } from "@/contexts/ThemeContext";
 import * as Icons from "lucide-react";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { theme, toggleTheme } = useTheme();
   const { currentUser, logout, isAuthenticated, isLoading: authLoading } = useAuth();
   const { getCourseProgress, isCourseComplete, hasCertificate, refreshProgress, isModuleComplete, isLessonComplete, isSprintComplete, isExamPassed } = useProgress();
   const { getSubmissionsByUser, refreshSubmissions, submissions } = useSprintReview();
@@ -225,6 +228,15 @@ const StudentDashboard = () => {
               <User className="w-4 h-4" />
               <span className="text-sm">{currentUser.fullName}</span>
             </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:bg-white/20"
+              onClick={toggleTheme}
+              title={theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
+            >
+              {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            </Button>
             <Button
               variant="ghost"
               size="sm"

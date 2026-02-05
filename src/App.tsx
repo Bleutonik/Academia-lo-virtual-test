@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProgressProvider } from "@/contexts/ProgressContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { SprintReviewProvider } from "@/contexts/SprintReviewContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import CoursePage from "./pages/CoursePage";
 import ModulePage from "./pages/ModulePage";
@@ -19,28 +20,30 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <SprintReviewProvider>
-        <ProgressProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/admin" element={<AdminDashboard />} />
-                <Route path="/estudiante" element={<StudentDashboard />} />
-                <Route path="/curso/:slug" element={<CoursePage />} />
-                <Route path="/curso/:slug/modulo/:moduleId" element={<ModulePage />} />
-                <Route path="/curso/:slug/certificado" element={<CertificatePage />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </ProgressProvider>
-      </SprintReviewProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <SprintReviewProvider>
+          <ProgressProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/admin" element={<AdminDashboard />} />
+                  <Route path="/estudiante" element={<StudentDashboard />} />
+                  <Route path="/curso/:slug" element={<CoursePage />} />
+                  <Route path="/curso/:slug/modulo/:moduleId" element={<ModulePage />} />
+                  <Route path="/curso/:slug/certificado" element={<CertificatePage />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </TooltipProvider>
+          </ProgressProvider>
+        </SprintReviewProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
