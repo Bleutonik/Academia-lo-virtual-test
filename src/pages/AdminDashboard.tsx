@@ -6,7 +6,7 @@ import {
   Search, MoreVertical, CheckCircle, XCircle, Clock, Eye,
   UserPlus, Trash2, Edit, Shield, GraduationCap, User as UserIcon,
   BarChart3, TrendingUp, Download, FileSpreadsheet, Award, Target, Percent,
-  Sun, Moon
+  Sun, Moon, FileQuestion, ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -56,6 +56,7 @@ import type { SprintSubmission } from "@/contexts/SprintReviewContext";
 import { coursesData } from "@/data/courses";
 import { useToast } from "@/hooks/use-toast";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useExamResults } from "@/contexts/ExamResultsContext";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ const AdminDashboard = () => {
   const { toast } = useToast();
   const { theme, toggleTheme } = useTheme();
   const { currentUser, users, logout, createUser, updateUser, deleteUser, getStudents, isAdmin, isLoading: authLoading, refreshUsers } = useAuth();
+  const { examResults, refreshExamResults } = useExamResults();
   const { getPendingSubmissions, getAllSubmissions, approveSubmission, rejectSubmission, deleteSubmission, refreshSubmissions } = useSprintReview();
 
   const [activeTab, setActiveTab] = useState("overview");
@@ -75,6 +77,7 @@ const AdminDashboard = () => {
   const [deleteConfirmUser, setDeleteConfirmUser] = useState<User | null>(null);
   const [deleteConfirmSubmission, setDeleteConfirmSubmission] = useState<SprintSubmission | null>(null);
   const [reviewFeedback, setReviewFeedback] = useState("");
+  const [expandedExamId, setExpandedExamId] = useState<number | null>(null);
   const [analyticsData, setAnalyticsData] = useState<{
     courseStats: Array<{
       courseId: string;
@@ -108,9 +111,9 @@ const AdminDashboard = () => {
   // Memoize refresh function
   const loadDashboardData = useCallback(async () => {
     if (isAdmin) {
-      await Promise.all([refreshSubmissions(), refreshUsers()]);
+      await Promise.all([refreshSubmissions(), refreshUsers(), refreshExamResults()]);
     }
-  }, [isAdmin, refreshSubmissions, refreshUsers]);
+  }, [isAdmin, refreshSubmissions, refreshUsers, refreshExamResults]);
 
   // Calculate analytics data based on submissions and course assignments
   const calculateAnalytics = useCallback(() => {
@@ -505,7 +508,7 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <main className="container max-w-7xl mx-auto py-8 px-4">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:inline-grid">
+          <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:inline-grid">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <BookOpen className="w-4 h-4" />
               <span className="hidden sm:inline">Resumen</span>
@@ -513,6 +516,10 @@ const AdminDashboard = () => {
             <TabsTrigger value="analytics" className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4" />
               <span className="hidden sm:inline">Analytics</span>
+            </TabsTrigger>
+            <TabsTrigger value="exams" className="flex items-center gap-2">
+              <FileQuestion className="w-4 h-4" />
+              <span className="hidden sm:inline">Exámenes</span>
             </TabsTrigger>
             <TabsTrigger value="users" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
@@ -892,6 +899,140 @@ const AdminDashboard = () => {
                 </CardContent>
               </Card>
             </div>
+          </TabsContent>
+
+          {/* Exams Tab */}
+          <TabsContent value="exams">
+            <Card>
+              <CardHeader>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <CardTitle className="flex items-center gap-2">
+                      <FileQuestion className="w-5 h-5" />
+                      Resultados de Exámenes
+                    </CardTitle>
+                    <CardDescription>
+                      Historial de respuestas de exámenes de los estudiantes
+                    </CardDescription>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span>{examResults.filter(e => e.passed).length} aprobados</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <XCircle className="w-4 h-4 text-red-500" />
+                        <span>{examResults.filter(e => !e.passed).length} reprobados</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                {examResults.length === 0 ? (
+                  <div className="text-center py-12 text-muted-foreground">
+                    <FileQuestion className="w-12 h-12 mx-auto mb-4 opacity-50" />
+                    <p>No hay resultados de exámenes aún</p>
+                    <p className="text-sm">Los resultados aparecerán cuando los estudiantes completen exámenes</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {examResults
+                      .sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime())
+                      .map((result) => (
+                      <Card key={result.id} className={`border-l-4 ${result.passed ? 'border-l-green-500' : 'border-l-red-500'}`}>
+                        <CardContent className="py-4">
+                          {/* Header */}
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-4">
+                              <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${
+                                result.passed
+                                  ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300'
+                                  : 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
+                              }`}>
+                                {result.score}%
+                              </div>
+                              <div>
+                                <p className="font-semibold">{result.userName}</p>
+                                <p className="text-sm text-muted-foreground">
+                                  {result.courseName} - {result.moduleName}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                  {new Date(result.submittedAt).toLocaleString('es-ES')}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div className="text-right text-sm">
+                                <p className={result.passed ? 'text-green-600' : 'text-red-600'}>
+                                  {result.passed ? 'Aprobado' : 'Reprobado'}
+                                </p>
+                                <p className="text-muted-foreground">
+                                  {result.correctAnswers}/{result.totalQuestions} correctas
+                                </p>
+                              </div>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => setExpandedExamId(expandedExamId === result.id ? null : result.id)}
+                              >
+                                <ChevronDown className={`w-5 h-5 transition-transform ${
+                                  expandedExamId === result.id ? 'rotate-180' : ''
+                                }`} />
+                              </Button>
+                            </div>
+                          </div>
+
+                          {/* Expanded Details */}
+                          {expandedExamId === result.id && result.answers && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              className="mt-4 pt-4 border-t space-y-3"
+                            >
+                              <h4 className="font-semibold text-sm">Detalle de respuestas:</h4>
+                              {result.answers.map((answer, idx) => (
+                                <div
+                                  key={answer.questionId}
+                                  className={`p-3 rounded-lg ${
+                                    answer.isCorrect
+                                      ? 'bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800'
+                                      : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'
+                                  }`}
+                                >
+                                  <div className="flex items-start gap-2">
+                                    {answer.isCorrect ? (
+                                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                    ) : (
+                                      <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                                    )}
+                                    <div className="flex-1">
+                                      <p className="font-medium text-sm">{idx + 1}. {answer.question}</p>
+                                      <p className="text-sm mt-1">
+                                        <span className="text-muted-foreground">Respondió: </span>
+                                        <span className={answer.isCorrect ? 'text-green-600' : 'text-red-600'}>
+                                          {answer.options[answer.selectedOption]}
+                                        </span>
+                                      </p>
+                                      {!answer.isCorrect && (
+                                        <p className="text-sm text-green-600 dark:text-green-400">
+                                          Correcta: {answer.options[answer.correctOption]}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </motion.div>
+                          )}
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
           </TabsContent>
 
           {/* Users Tab */}

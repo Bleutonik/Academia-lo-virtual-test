@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CourseData, Module } from "@/types/course";
 import { useProgress } from "@/contexts/ProgressContext";
+import { useExamResults } from "@/contexts/ExamResultsContext";
 import { useNavigate } from "react-router-dom";
 
 interface ExamContentProps {
@@ -18,6 +19,7 @@ interface ExamContentProps {
 const ExamContent = ({ course, module }: ExamContentProps) => {
   const navigate = useNavigate();
   const { markExamComplete, isExamComplete, getExamScore, isModuleComplete } = useProgress();
+  const { submitExamResult } = useExamResults();
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
@@ -29,12 +31,20 @@ const ExamContent = ({ course, module }: ExamContentProps) => {
   const alreadyCompleted = isExamComplete(course.id, module.id);
   const previousScore = getExamScore(course.id, module.id);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let correct = 0;
-    exam.questions.forEach(question => {
-      if (answers[question.id] === question.correctAnswer) {
-        correct++;
-      }
+    const examAnswers = exam.questions.map(question => {
+      const isCorrect = answers[question.id] === question.correctAnswer;
+      if (isCorrect) correct++;
+
+      return {
+        questionId: question.id,
+        question: question.question,
+        selectedOption: answers[question.id],
+        correctOption: question.correctAnswer,
+        options: question.options,
+        isCorrect
+      };
     });
 
     const calculatedScore = Math.round((correct / exam.questions.length) * 100);
@@ -45,7 +55,22 @@ const ExamContent = ({ course, module }: ExamContentProps) => {
     setSubmitted(true);
     setIsRetrying(false);
 
+    // Save to progress context
     markExamComplete(course.id, module.id, calculatedScore, hasPassed);
+
+    // Submit detailed exam results
+    await submitExamResult({
+      courseId: course.id,
+      courseName: course.title,
+      moduleId: module.id,
+      moduleName: module.title,
+      examTitle: exam.title,
+      score: calculatedScore,
+      passed: hasPassed,
+      totalQuestions: exam.questions.length,
+      correctAnswers: correct,
+      answers: examAnswers
+    });
   };
 
   const handleRetry = () => {

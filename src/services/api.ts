@@ -181,6 +181,22 @@ class ApiService {
   async getCertificates() {
     return this.request<Certificates>('/api/certificates');
   }
+
+  // Exam Results
+  async submitExamResult(data: SubmitExamData) {
+    return this.request<{ id: number; message: string }>('/api/exam-results', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getMyExamResults() {
+    return this.request<ExamResult[]>('/api/exam-results/me');
+  }
+
+  async getAllExamResults() {
+    return this.request<ExamResult[]>('/api/exam-results');
+  }
 }
 
 // Types
@@ -258,6 +274,45 @@ export interface Certificates {
     certificateId: string;
     obtainedAt: string;
   };
+}
+
+export interface ExamAnswer {
+  questionId: string;
+  question: string;
+  selectedOption: number;
+  correctOption: number;
+  options: string[];
+  isCorrect: boolean;
+}
+
+export interface SubmitExamData {
+  courseId: string;
+  courseName: string;
+  moduleId: string;
+  moduleName: string;
+  examTitle: string;
+  score: number;
+  passed: boolean;
+  totalQuestions: number;
+  correctAnswers: number;
+  answers: ExamAnswer[];
+}
+
+export interface ExamResult {
+  id: number;
+  userId: number;
+  userName: string;
+  courseId: string;
+  courseName: string;
+  moduleId: string;
+  moduleName: string;
+  examTitle: string;
+  score: number;
+  passed: boolean;
+  totalQuestions: number;
+  correctAnswers: number;
+  answers: ExamAnswer[];
+  submittedAt: string;
 }
 
 export const api = new ApiService();

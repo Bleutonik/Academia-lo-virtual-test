@@ -7,6 +7,7 @@ import { ProgressProvider } from "@/contexts/ProgressContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { SprintReviewProvider } from "@/contexts/SprintReviewContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ExamResultsProvider } from "@/contexts/ExamResultsContext";
 import Index from "./pages/Index";
 import CoursePage from "./pages/CoursePage";
 import ModulePage from "./pages/ModulePage";
@@ -23,8 +24,9 @@ const App = () => (
     <ThemeProvider>
       <AuthProvider>
         <SprintReviewProvider>
-          <ProgressProvider>
-            <TooltipProvider>
+          <ExamResultsProvider>
+            <ProgressProvider>
+              <TooltipProvider>
               <Toaster />
               <Sonner />
               <BrowserRouter>
@@ -39,8 +41,9 @@ const App = () => (
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>
-            </TooltipProvider>
-          </ProgressProvider>
+              </TooltipProvider>
+            </ProgressProvider>
+          </ExamResultsProvider>
         </SprintReviewProvider>
       </AuthProvider>
     </ThemeProvider>
