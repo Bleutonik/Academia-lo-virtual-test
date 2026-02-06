@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle, ChevronRight, ChevronLeft, BookOpen, Clock, Sparkles } from "lucide-react";
+import { CheckCircle, ChevronRight, ChevronLeft, BookOpen, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Progress } from "@/components/ui/progress";
 import { CourseData, Module } from "@/types/course";
 import { useProgress } from "@/contexts/ProgressContext";
-import ReactMarkdown from 'react-markdown';
+import { LessonRenderer } from "@/components/lesson/LessonRenderer";
 
 interface TheoryContentProps {
   course: CourseData;
@@ -171,27 +171,7 @@ const TheoryContent = ({ course, module, onComplete }: TheoryContentProps) => {
 
               {/* Contenido */}
               <CardContent className="p-8 md:p-12 lg:p-16">
-                <article className="prose prose-lg dark:prose-invert max-w-none
-                  prose-headings:font-bold prose-headings:tracking-tight
-                  prose-h1:text-3xl prose-h1:mb-8 prose-h1:mt-12
-                  prose-h2:text-2xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:pb-3 prose-h2:border-b
-                  prose-h3:text-xl prose-h3:mb-5 prose-h3:mt-10
-                  prose-h4:text-lg prose-h4:mb-4 prose-h4:mt-8
-                  prose-p:text-base prose-p:leading-[2] prose-p:mb-8 prose-p:text-muted-foreground
-                  prose-li:text-base prose-li:leading-[1.9] prose-li:mb-3 prose-li:text-muted-foreground
-                  prose-ul:my-8 prose-ul:space-y-3 prose-ul:pl-6
-                  prose-ol:my-8 prose-ol:space-y-3 prose-ol:pl-6
-                  prose-strong:text-foreground prose-strong:font-semibold
-                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-8 prose-blockquote:py-4 prose-blockquote:my-10 prose-blockquote:bg-muted/50 prose-blockquote:rounded-r-lg prose-blockquote:italic
-                  prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-code:text-sm prose-code:font-mono
-                  prose-pre:bg-muted prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-8
-                  prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                  prose-img:rounded-xl prose-img:shadow-lg prose-img:my-10
-                  [&>*:first-child]:mt-0
-                  [&>*:last-child]:mb-0
-                ">
-                  <ReactMarkdown>{currentLesson.content}</ReactMarkdown>
-                </article>
+                <LessonRenderer content={currentLesson.content} />
 
                 {/* Navegación */}
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-12 pt-8 border-t">
